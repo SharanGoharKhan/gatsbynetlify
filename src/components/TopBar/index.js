@@ -1,0 +1,243 @@
+import React, { useEffect, useState } from 'react';
+import {
+    AppBar,
+    Toolbar,
+    Badge,
+    Hidden,
+    IconButton,
+    Typography,
+    Button,
+    Modal,
+    Backdrop,
+    Fade,
+    Grid,
+    Paper,
+    useMediaQuery,
+    Box
+} from '@material-ui/core';
+import MenuIcon from '@material-ui/icons/Menu';
+import ClearIcon from '@material-ui/icons/Clear';
+import { makeStyles } from '@material-ui/core/styles';
+import './TopBar.css'
+import { Link, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
+
+const useStyles = makeStyles((theme) => ({
+    root: {
+        flexGrow: 1,
+    },
+    menuButton: {
+        marginRight: theme.spacing(2),
+    },
+    title: {
+        fontSize: 24,
+        fontWeight: 700,
+        fontSize: '24px',
+        color: '#070707',
+        fontFamily: 'Montserrat'
+    },
+    sectionDesktop: {
+        display: 'none',
+        [theme.breakpoints.up('md')]: {
+            display: 'flex',
+        },
+        alignItems:'center'
+    },
+    sectionMobile: {
+        display: 'flex',
+        [theme.breakpoints.up('md')]: {
+            display: 'none',
+        },
+    },
+    modal: {
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+
+    },
+    paper: {
+        padding: theme.spacing(2),
+        textAlign: 'center',
+        backgroundColor: 'inherit'
+    },
+    boxContainer: {
+        background: 'linear-gradient(to bottom, #179AFB 0%, #3751FF 100%)',
+        height: '100%',
+        width: '100%',
+    },
+    coolLink: {
+        display: 'inline-block',
+        color: '#000',
+        textDecoration: 'none'
+    },
+    textHeading: {
+        color: '#fff',
+        fontWeight: '700',
+        textAlign: 'center',
+        margin: 'auto'
+    },
+    icon: {
+        color: '#fff'
+    },
+    paper1: {
+        padding: theme.spacing(2),
+        textAlign: 'center',
+        color: theme.palette.text.secondary,
+    },
+}));
+
+const TopBar = (props) => {
+
+    console.log('props', props)
+    const classes = useStyles();
+
+    const [anchorEl, setAnchorEl] = React.useState(null);
+
+    const [closeMenu, setCloseMenu] = useState(false);
+
+    const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
+
+    const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
+
+    const mobileMenuId = 'primary-search-account-menu-mobile';
+
+    const matches = useMediaQuery('(min-width:960px)');
+
+    // console.log('matches use media', matches)
+
+
+
+    const handleMobileMenuClose = () => {
+        setMobileMoreAnchorEl(null);
+    };
+
+    useEffect(() => {
+        if (matches) {
+            handleMobileMenuClose()
+        }
+    })
+
+    const handleMobileMenuOpen = (event) => {
+        setMobileMoreAnchorEl(event.currentTarget);
+    };
+
+    const renderMobileMenu = (
+        <Modal
+            aria-labelledby="transition-modal-title"
+            aria-describedby="transition-modal-description"
+            className={classes.modal}
+            open={isMobileMenuOpen}
+            onClose={handleMobileMenuClose}
+            closeAfterTransition
+            BackdropComponent={Backdrop}
+            BackdropProps={{
+                timeout: 500,
+            }}
+        >
+            <Fade in={isMobileMenuOpen}>
+                <Box component="span" m={1} className={classes.boxContainer}>
+                    <Box style={{ textAlign: 'end', paddingTop: '2%' }}>
+                        <IconButton aria-label="close" onClick={handleMobileMenuClose}>
+                            <ClearIcon className={classes.icon} fontSize="large" />
+                        </IconButton>
+                    </Box>
+                    <Box style={{ width: "50%", margin: 'auto', height: '100%' }}>
+                        <Grid
+                            container
+                            direction="row"
+                            justify="center"
+                            alignItems="center"
+                            spacing={6}
+                        >
+                            <Grid item xs={12}>
+                                <Paper elevation={0} className={classes.paper}>
+                                    <Link href={'#'} className="cool-link" onClick={handleMobileMenuClose} activeClass="active" to="feature" spy={true} smooth={true} offset={-30} duration={1500}>
+                                        Our Main Products
+                                </Link>
+                                </Paper>
+                            </Grid>
+                            <Grid item xs={12}>
+                                <Paper elevation={0} className={classes.paper}>
+                                    <Link href={'#'} className="cool-link" onClick={handleMobileMenuClose} activeClass="active" to="whyus" spy={true} smooth={true} offset={-30} duration={1500}>
+                                        Why Us Section
+                                </Link>
+                                </Paper>
+                            </Grid>
+                            <Grid item xs={12}>
+                                <Paper elevation={0} className={classes.paper}>
+                                    <Link href={'#'} className="cool-link" onClick={handleMobileMenuClose} activeClass="active" to="faq" spy={true} smooth={true} offset={-30} duration={1500}>
+                                        FAQ's
+                                </Link>
+                                </Paper>
+                            </Grid>
+                            <Grid item xs={12}>
+                                <Paper elevation={0} className={classes.paper}>
+                                    <Link href={'#'} className="cool-link" onClick={handleMobileMenuClose} activeClass="active" to="test" spy={true} smooth={true} offset={-30} duration={1500}>
+                                        Testimonial
+                                </Link>
+                                </Paper>
+                            </Grid>
+                        </Grid>
+                    </Box>
+                </Box>
+            </Fade>
+        </Modal>
+    );
+    return (
+        <div className={classes.root}>
+            <AppBar
+                style={{
+                    background: props.barColor,
+                    width: '100%'
+                }}
+                position="static"
+                elevation={0}
+            >
+                <Toolbar>
+                    <Link activeClass="active" to="/" spy={true} smooth={true} offset={-30} duration={500} className={classes.root} >
+                        <IconButton color={'blue'} className={classes.title}>
+                            <Typography style={{
+                                fontSize: 24,
+                                fontWeight: 700,
+                                fontSize: '24px',
+                                color: props.fontColor,
+                                fontFamily: 'Montserrat'
+                            }}> Ninjas Code </Typography>
+                        </IconButton>
+                    </Link>
+                    <div className={classes.sectionDesktop}>
+                        <Link style={{color:props.fontColor}} className="button-link" href="#" activeClass="active" to="feature" spy={true} smooth={true} offset={-30} duration={500}>
+                            Our Main Products
+                        </Link>
+                        <Link style={{color:props.fontColor}} className="button-link" href="#" activeClass="active" to="whyus" spy={true} smooth={true} offset={-30} duration={500}>
+                            Why Us Section
+                        </Link>
+                        <Link style={{color:props.fontColor}} className="button-link" href="#" activeClass="active" to="faq" spy={true} smooth={true} offset={-30} duration={500}>
+                            FAQ's
+                        </Link>
+                        <Link style={{color:props.fontColor}} className="button-link" href="#" activeClass="active" to="test" spy={true} smooth={true} offset={-30} duration={500}>
+                            Testimonial
+                        </Link>
+                        <Link style={{color:props.fontColor, borderWidth:1,borderRadius:5, borderStyle:'solid', padding:8}} className="button-link" href="#" activeClass="active" to="test" spy={true} smooth={true} offset={-30} duration={500}>
+                            Contact Us
+                        </Link>
+
+                    </div>
+                    <div className={classes.sectionMobile}>
+                        <IconButton
+                            aria-label="show more"
+                            aria-controls={mobileMenuId}
+                            aria-haspopup="true"
+                            onClick={handleMobileMenuOpen}
+                            color={props.barColor}
+                        >
+                            <MenuIcon />
+                        </IconButton>
+                    </div>
+                </Toolbar>
+            </AppBar>
+            {renderMobileMenu}
+        </div>
+    );
+};
+
+export default TopBar;

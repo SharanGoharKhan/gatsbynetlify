@@ -1,0 +1,26 @@
+.background {
+    background: linear-gradient(to bottom, #179AFB 0%, #3751FF 100%) ;
+    height: fit-content;
+    border-bottom-left-radius: 40% 15% ;
+    border-bottom-right-radius: 40% 15%;
+    box-shadow: 0px 3px 2px rgb(206, 202, 202);
+    margin-bottom: 100px;
+  }
+.imgDiv{
+    margin-top: 25px;
+    /* margin-bottom: 25px; */
+}
+
+ .img {
+    border-width: 1px;
+    height: 15px;
+    width: 8px;
+    border-style: solid;
+    padding-left: 13px;
+    padding-right: 13px;
+    padding-top: 9px;
+    padding-bottom: 9px;
+    border-color: #fff;
+    border-radius: 4px;
+    margin-right:12px;
+ } 
