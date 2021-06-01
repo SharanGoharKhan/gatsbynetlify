@@ -7,9 +7,12 @@ import Seo from "../components/seo"
 
 import TopBar from '../components/TopBar/index'
 import { Grid, Card, Paper, Typography, makeStyles, Box, useMediaQuery } from '@material-ui/core';
-import FacebookLogo from  '../images/facebook.png'
+import FacebookLogo from '../images/facebook.png'
 import twitterLogo from '../images/twitter.png'
 import linkedinLogo from '../images/linkedin.png'
+import Facebook from "../svg/facebook";
+import Twitter from "../svg/twitter";
+import LinkedIn from "../svg/linkedin";
 
 const useStyles = makeStyles((theme) => ({
   container: {
@@ -74,16 +77,18 @@ const IndexPage = () => {
                          </Typography>
             <Typography variant="h3" gutterBottom className={classes.subtitle}>
               Multiply together. Moved given years multiply for. Saw, can't second. Firmament fish had midst make signs. God multiply form.
-                         </Typography>
-            <div className="imgDiv">
-              <StaticImage src="../images/facebook.png" imgClassName="img" formats={["AUTO", "WEBP", "AVIF"]} quality={95} alt="facebook"/>
-              <StaticImage src="../images/twitter.png" imgClassName="img" formats={["AUTO", "WEBP", "AVIF"]} quality={95} alt="twitter"/>
-              <StaticImage src="../images/linkedin.png" imgClassName="img" formats={["AUTO", "WEBP", "AVIF"]} quality={95} alt="linkedin"/>
-              
-              {/* <img src={FacebookLogo} className="img" />
-              <img src={twitterLogo} className="img" style={{ width: 15 }} />
-              <img src={linkedinLogo} className="img" style={{ width: 15 }} /> */}
-            </div>
+            </Typography>
+            <Box style={{ display: 'flex', marginTop: '25px'}}>
+              <Box style={{ borderWidth: 1, borderColor: 'white', borderStyle: 'solid', display: 'flex', width: '40px', height: '40px', justifyContent:'center', alignItems:'center', marginRight: '10px', borderRadius: '4px' }}>
+                <Facebook />
+              </Box>
+              <Box style={{ borderWidth: 1, borderColor: 'white', borderStyle: 'solid', display: 'flex', width: '40px', height: '40px', justifyContent:'center', alignItems:'center', marginRight: '10px', borderRadius: '4px' }}>
+                <Twitter />
+              </Box>
+              <Box style={{ borderWidth: 1, borderColor: 'white', borderStyle: 'solid',display: 'flex', width: '40px', height: '40px', justifyContent:'center', alignItems:'center', marginRight: '10px', borderRadius: '4px' }}>
+                <LinkedIn />
+              </Box>
+            </Box>
           </Grid>
           <Grid item lg={7}>
             <Grid container direction='row' style={{ marginTop: '40px' }} alignItems="center" justify='center' spacing={2}>
@@ -162,8 +167,8 @@ const IndexPage = () => {
     //   <Seo title="Home" />
     //   <h1>Hi people</h1>
     //   <p>Welcome to your updated Gatsby site.</p>
-  //   <p>Now go build something great.</p>
-  //   <StaticImage
+    //   <p>Now go build something great.</p>
+    //   <StaticImage
     //     src="../images/gatsby-astronaut.png"
     //     width={300}
     //     quality={95}
