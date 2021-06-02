@@ -148,7 +148,7 @@ const IndexPage = () => {
                         </div>
                       </div>
                       <Typography gutterBottom>
-                        Venture capitals are no longer giving investments for just an idea. You have to prove that you put your skin in the.
+                        Venturse capitals are no longer giving investments for just an idea. You have to prove that you put your skin in the.
                       </Typography>
                     </Paper>
                   </Grid>
