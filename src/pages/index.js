@@ -5,11 +5,8 @@ import "./index.css";
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 
-import TopBar from '../components/TopBar/index'
+import { TopBar, FeaturedWork, WhyUs, Testimonal, FAQ, Logos, ContactUs, Footer } from '../components'
 import { Grid, Card, Paper, Typography, makeStyles, Box, useMediaQuery } from '@material-ui/core';
-import FacebookLogo from '../images/facebook.png'
-import twitterLogo from '../images/twitter.png'
-import linkedinLogo from '../images/linkedin.png'
 import Facebook from "../svg/facebook";
 import Twitter from "../svg/twitter";
 import LinkedIn from "../svg/linkedin";
@@ -78,14 +75,14 @@ const IndexPage = () => {
             <Typography variant="h3" gutterBottom className={classes.subtitle}>
               Multiply together. Moved given years multiply for. Saw, can't second. Firmament fish had midst make signs. God multiply form.
             </Typography>
-            <Box style={{ display: 'flex', marginTop: '25px'}}>
-              <Box style={{ borderWidth: 1, borderColor: 'white', borderStyle: 'solid', display: 'flex', width: '40px', height: '40px', justifyContent:'center', alignItems:'center', marginRight: '10px', borderRadius: '4px' }}>
+            <Box style={{ display: 'flex', marginTop: '25px' }}>
+              <Box style={{ borderWidth: 1, borderColor: 'white', borderStyle: 'solid', display: 'flex', width: '40px', height: '40px', justifyContent: 'center', alignItems: 'center', marginRight: '10px', borderRadius: '4px' }}>
                 <Facebook />
               </Box>
-              <Box style={{ borderWidth: 1, borderColor: 'white', borderStyle: 'solid', display: 'flex', width: '40px', height: '40px', justifyContent:'center', alignItems:'center', marginRight: '10px', borderRadius: '4px' }}>
+              <Box style={{ borderWidth: 1, borderColor: 'white', borderStyle: 'solid', display: 'flex', width: '40px', height: '40px', justifyContent: 'center', alignItems: 'center', marginRight: '10px', borderRadius: '4px' }}>
                 <Twitter />
               </Box>
-              <Box style={{ borderWidth: 1, borderColor: 'white', borderStyle: 'solid',display: 'flex', width: '40px', height: '40px', justifyContent:'center', alignItems:'center', marginRight: '10px', borderRadius: '4px' }}>
+              <Box style={{ borderWidth: 1, borderColor: 'white', borderStyle: 'solid', display: 'flex', width: '40px', height: '40px', justifyContent: 'center', alignItems: 'center', marginRight: '10px', borderRadius: '4px' }}>
                 <LinkedIn />
               </Box>
             </Box>
@@ -162,26 +159,14 @@ const IndexPage = () => {
           </Grid>
         </Grid>
       </div>
+      <FeaturedWork />
+      <WhyUs />
+      <Testimonal />
+      <FAQ />
+      <Logos />
+      <ContactUs />
+      <Footer />
     </>
-    // <Layout>
-    //   <Seo title="Home" />
-    //   <h1>Hi people</h1>
-    //   <p>Welcome to your updated Gatsby site.</p>
-    //   <p>Now go build something great.</p>
-    //   <StaticImage
-    //     src="../images/gatsby-astronaut.png"
-    //     width={300}
-    //     quality={95}
-    //     formats={["AUTO", "WEBP", "AVIF"]}
-    //     alt="A Gatsby astronaut"
-    //     style={{ marginBottom: `1.45rem` }}
-    //   />
-    //   <p>
-    //     <Link to="/page-2/">Go to page 2</Link> <br />
-    //     <Link to="/page-3/">Go to page 3</Link> <br />
-    //     <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
-    //   </p>
-    // </Layout>
   )
 }
 
