@@ -4,7 +4,7 @@ import { ContactUs, Footer, TopBar } from "../../components";
 import "./SenseChat.css";
 import enategaMobile  from "../../images/enategaSenseChat.png";
 import FormatQuoteIcon from '@material-ui/icons/FormatQuote';
-import { Introduction, Problem, Approach, Solution, OutComeAndBenefits } from "./Component";
+import { Introduction, Problem, Approach, Solution, OutComeAndBenefits } from "./component";
 
 
 const SenseChat = () => {
