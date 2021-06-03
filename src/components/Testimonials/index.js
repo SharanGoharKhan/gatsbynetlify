@@ -1,11 +1,12 @@
 import React, { useRef } from "react";
-import { Divider, Button, Paper, Typography, Card, Box, useMediaQuery, CardActionArea, Avatar, CardActions, CardContent, CardMedia, makeStyles, Grid, GridList, GridListTile, IconButton, GridListTileBar } from '@material-ui/core';
 import StarIcon from '@material-ui/icons/Star';
 import profile from '../../images/profile.jpeg'
 import DrawKitLogo from '../../images/DrawKit.png'
 import video from '../../images/video.mp4'
 import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
 import KeyboardBackspaceIcon from '@material-ui/icons/KeyboardBackspace';
+import { Divider, Button, Typography, Card, Box, useMediaQuery, CardActionArea, Avatar, CardContent, CardMedia, makeStyles, Grid, GridList, GridListTile, IconButton } from '@material-ui/core';
+
 const useStyles = makeStyles((theme) => ({
     root: {
         display: 'flex',
@@ -25,30 +26,37 @@ const useStyles = makeStyles((theme) => ({
     titleText: {
         color: '#1E266D',
         fontWeight: 600,
-        padding: 20
+        padding: 20,
+        fontSize: '6vmin',
+        fontFamily: 'Montserrat'
     },
     media: {
-        height: 140,
+        height: '10vmin',
     },
     large: {
-        width: theme.spacing(10),
-        height: theme.spacing(10),
+        width: theme.spacing(8),
+        height: theme.spacing(8),
     },
     BoxContainer: {
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'space-evenly',
-        padding: '10%'
+        padding: '3.8vmin'
     },
     cardTitle: {
-        color: '#1E266D'
+        color: '#1E266D',
+        fontFamily: 'Montserrat',
+        fontSize: '3.8vmin'
     },
     cardSubTitle: {
         color: '#455880',
-        letterSpacing: 1
+        letterSpacing: 1,
+        lineHeight: '4vmin',
+        fontFamily: 'Montserrat',
+        fontSize: '2vmin'
     },
     divider: {
-        margin: theme.spacing(5)
+        margin: theme.spacing(3)
     },
     star: {
         color: '#FBC917'
@@ -85,58 +93,91 @@ const tileData = [
 
 const Testimonial = () => {
     const classes = useStyles();
-    
+
     const ref = useRef([]);
 
     const matches = useMediaQuery('(min-width:800px)');
 
-      function scroll(scrollOffset) {
+    function scroll(scrollOffset) {
         ref.current.scrollTo({
             left: ref.current.scrollLeft + scrollOffset,
             behavior: 'smooth'
         })
-      };
-    
+    };
+
     return (
         <Grid id="test" container justify="center" alignItems="center" style={{ textAlign: 'center',width:'100%',padding:10, marginTop: 30 }} spacing={3}>
-            <Grid item xs={12} sm={12} md={4}>
-                <Button variant="contained" size="large" style={{ color: '#3751FF', backgroundColor: '#F3F5FE' }}>
-                    Testimonial
-        </Button>
-                <Typography className={classes.titleText} variant="h3" gutterBottom>
-                    WHAT OUR CLIENTS TELL ABOUT US
-      </Typography>
-      {/* <Button variant="contained" size="large" onClick={()=>scroll(200)} >Right</Button> */}
-      <IconButton onClick={()=>scroll(-400)}>
-         <div style={{backgroundColor:'#fff',textAlign:'center',justifyContent:'center',alignItems:'center', width:'70px', height:'70px', borderRadius:'40px', boxShadow:'-10px 10px 20px #e6e5e3'}}>
-            <KeyboardBackspaceIcon color="primary" style={{paddingTop:17}} fontSize="large" />
-         </div>
-     </IconButton>
-      <IconButton onClick={()=>scroll(400)}>
-         <div style={{backgroundColor:'#fff',textAlign:'center',justifyContent:'center',alignItems:'center', width:'70px', height:'70px', borderRadius:'40px', boxShadow:'-10px 10px 20px #e6e5e3'}}>
-            <ArrowForwardIcon color="primary" style={{paddingTop:17}} fontSize="large" />
-         </div>
-     </IconButton>
-   
-            </Grid>
-            <Grid item xs={12} sm={12} md={8}>
-                <div className={classes.root}>
-                    <GridList cellHeight={'auto'} className={classes.gridList} ref={ref} cols={matches ? 2.2 : 1.3}>
-                        <GridListTile key={'image0'}>
+        <Grid item xs={12} sm={12} md={4}>
+            <Button variant="contained" size="large" style={{ color: '#3751FF',fontSize:'3vmin', fontFamily:'Montserrat', backgroundColor: '#F3F5FE' }}>
+                Testimonial
+    </Button>
+            <Typography className={classes.titleText} variant="h3" gutterBottom>
+                WHAT OUR CLIENTS TELL ABOUT US
+  </Typography>
+  {/* <Button variant="contained" size="large" onClick={()=>scroll(200)} >Right</Button> */}
+  <IconButton onClick={()=>scroll(-400)}>
+     <div style={{backgroundColor:'#fff',textAlign:'center',justifyContent:'center',alignItems:'center', width:'70px', height:'70px', borderRadius:'40px', boxShadow:'-10px 10px 20px #e6e5e3'}}>
+        <KeyboardBackspaceIcon color="primary" style={{paddingTop:17}} fontSize="large" />
+     </div>
+ </IconButton>
+  <IconButton onClick={()=>scroll(400)}>
+     <div style={{backgroundColor:'#fff',textAlign:'center',justifyContent:'center',alignItems:'center', width:'70px', height:'70px', borderRadius:'40px', boxShadow:'-10px 10px 20px #e6e5e3'}}>
+        <ArrowForwardIcon color="primary" style={{paddingTop:17}} fontSize="large" />
+     </div>
+ </IconButton>
+
+        </Grid>
+        <Grid item xs={12} sm={12} md={8}>
+            <div className={classes.root}>
+                <GridList cellHeight={'auto'} className={classes.gridList} ref={ref} cols={matches ? 2.2 : 1.2}>
+                    <GridListTile key={'image0'}>
+                        <Card elevation={5} style={{ width: '90%' }}>
+                            <CardActionArea>
+                                <CardContent>
+                                    <CardMedia
+                                        component='video'
+                                        className={classes.media}
+                                        image={video}
+                                        autoPlay
+                                        controls
+                                        style={{ height: '30vmin', width:'50vmin' }}
+                                    />
+                                    <Divider className={classes.divider} variant="middle" />
+                                    <Typography variant="body2" className={classes.cardSubTitle} color="textSecondary" component="p">
+                                        Ninjas Code helped me very much by designing our app. And the whole process from the beginning of the first contact to the delivery of the final designs was really satisfying so I can recommend work together with Purrweb. I'm really happy with them!
+                                    </Typography>
+                                </CardContent>
+                                <Box component="span" className={classes.BoxContainer} m={1}>
+                                    <Box component="span" >
+                                        <StarIcon className={classes.star} />
+                                        <StarIcon className={classes.star} />
+                                        <StarIcon className={classes.star} />
+                                        <StarIcon className={classes.star} />
+                                    </Box>
+                                    <img alt="logo" src={DrawKitLogo} />
+                                </Box>
+                            </CardActionArea>
+                        </Card>
+                    </GridListTile>
+                    {tileData.map((tile, index1) => (
+                        <GridListTile key={index1}>
                             <Card elevation={5} style={{ width: '90%' }}>
                                 <CardActionArea>
                                     <CardContent>
-                                        <CardMedia
-                                            component='video'
-                                            className={classes.media}
-                                            image={video}
-                                            autoPlay
-                                            controls
-                                            style={{ height: '195px' }}
-                                        />
+                                        <Box component="span" className={classes.BoxContainer} >
+                                            <Avatar alt="Remy Sharp" src={profile} className={classes.large} />
+                                            <Box component="span" m={1}>
+                                                <Typography gutterBottom variant="h5" className={classes.cardTitle} component="h2">
+                                                    Bethany Morales
+                                                 </Typography>
+                                                <Typography gutterBottom variant="body2" className={classes.cardSubTitle} component="p">
+                                                    CEO, Sports web application
+                                                </Typography>
+                                            </Box>
+                                        </Box>
                                         <Divider className={classes.divider} variant="middle" />
                                         <Typography variant="body2" className={classes.cardSubTitle} color="textSecondary" component="p">
-                                            Ninjas COde helped me very much by designing our app. And the whole process from the beginning of the first contact to the delivery of the final designs was really satisfying so I can recommend work together with Purrweb. I'm really happy with them!
+                                            Ninjas Code helped me very much by designing our app. And the whole process from the beginning of the first contact to the delivery of the final designs was really satisfying so I can recommend work together with Purrweb. I'm really happy with them!
                                         </Typography>
                                     </CardContent>
                                     <Box component="span" className={classes.BoxContainer} m={1}>
@@ -146,51 +187,18 @@ const Testimonial = () => {
                                             <StarIcon className={classes.star} />
                                             <StarIcon className={classes.star} />
                                         </Box>
-                                        <img src={DrawKitLogo} />
+                                        <img alt="logo" src={DrawKitLogo} />
                                     </Box>
                                 </CardActionArea>
                             </Card>
                         </GridListTile>
-                        {tileData.map((tile, index1) => (
-                            <GridListTile key={index1}>
-                                <Card elevation={5} style={{ width: '90%' }}>
-                                    <CardActionArea>
-                                        <CardContent>
-                                            <Box component="span" className={classes.BoxContainer} >
-                                                <Avatar alt="Remy Sharp" src={profile} className={classes.large} />
-                                                <Box component="span" m={1}>
-                                                    <Typography gutterBottom variant="h5" className={classes.cardTitle} component="h2">
-                                                        Bethany Morales
-                                                     </Typography>
-                                                    <Typography gutterBottom variant="body2" className={classes.cardSubTitle} component="p">
-                                                        CEO, Sports web application
-                                                    </Typography>
-                                                </Box>
-                                            </Box>
-                                            <Divider className={classes.divider} variant="middle" />
-                                            <Typography variant="body2" className={classes.cardSubTitle} color="textSecondary" component="p">
-                                                Ninjas Code helped me very much by designing our app. And the whole process from the beginning of the first contact to the delivery of the final designs was really satisfying so I can recommend work together with Purrweb. I'm really happy with them!
-                                            </Typography>
-                                        </CardContent>
-                                        <Box component="span" className={classes.BoxContainer} m={1}>
-                                            <Box component="span" >
-                                                <StarIcon className={classes.star} />
-                                                <StarIcon className={classes.star} />
-                                                <StarIcon className={classes.star} />
-                                                <StarIcon className={classes.star} />
-                                            </Box>
-                                            <img src={DrawKitLogo} />
-                                        </Box>
-                                    </CardActionArea>
-                                </Card>
-                            </GridListTile>
-                        ))}
-                    </GridList>
-                </div>
-            </Grid>
-
-
+                    ))}
+                </GridList>
+            </div>
         </Grid>
+
+
+    </Grid>
     );
 }
 

@@ -1,0 +1,7 @@
+export {default as Feature} from './Features'
+export {default as Flows} from './Flows'
+export {default as Dashboard} from './Dashboard'
+export {default as DashbRiderAndRestaurantoard} from './RiderAndRestaurant'
+export {default as Typographys} from './Typography'
+export {default as ColorScheme} from './ColorScheme'
+export {default as VideoDemo} from './VideoDemo'

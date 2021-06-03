@@ -1,6 +1,6 @@
 
 import React from "react";
-import { makeStyles, Grid, Typography, Box, Link, Divider } from '@material-ui/core';
+import { makeStyles, Grid, Typography, Box, Link,Button, Divider } from '@material-ui/core';
 import instaLogo from "../../images/instaRound.png";
 import twitterLogo from "../../images/twitterRound.png";
 import FacebookLogo from "../../images/facebookRound.png";
@@ -38,7 +38,7 @@ const useStyles = makeStyles((theme) => ({
     footerText:{
         color:'#755A7D',
         fontWeight:500,
-        fontSize:'14px',
+        fontSize:'2.6vmin',
         fontFamily:'Montserrat'
     }
 }));
@@ -128,22 +128,22 @@ const Footer = () => {
             <Grid container direction="row" spacing={1} justify="center" alignItems="center">
             <Grid item xs={3}>
            <Link href={'#'}>
-            <img src={FacebookLogo} />
+            <img alt="Ninjas code Facebook" src={FacebookLogo} />
             </Link>
             </Grid>
             <Grid item xs={3}>
             <Link href={'#'}>
-            <img src={twitterLogo} />
+            <img alt="Ninjas code Twitter" src={twitterLogo} />
             </Link>
             </Grid>
             <Grid item xs={3}>
             <Link href={'#'}>
-            <img src={linkedinLogo} />
+            <img alt="Ninjas code Linkedin" src={linkedinLogo} />
             </Link>
             </Grid>
             <Grid item xs={3}>
             <Link href={'#'}>
-            <img src={instaLogo} />
+            <img alt="Ninjas code instagram" src={instaLogo} />
             </Link>
             </Grid>
             </Grid>
@@ -157,9 +157,11 @@ const Footer = () => {
             <Typography className={classes.footerText} gutterBottom>
             NinjasCode - © 2021 All Rights Reserved
              </Typography>
+             <Button onClick={()=>History.push('/TermsAndConditions')}>
              <Typography className={classes.footerText} gutterBottom>
              Terms and conditions - Privacy Policy
              </Typography>
+             </Button>
             </Box>
             </Grid>
         </Grid>

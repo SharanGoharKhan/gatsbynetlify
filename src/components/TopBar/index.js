@@ -1,12 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import {
     AppBar,
     Toolbar,
-    Badge,
-    Hidden,
     IconButton,
-    Typography,
-    Button,
     Modal,
     Backdrop,
     Fade,
@@ -15,25 +11,24 @@ import {
     useMediaQuery,
     Box
 } from '@material-ui/core';
-import MenuIcon from '@material-ui/icons/Menu';
 import ClearIcon from '@material-ui/icons/Clear';
 import { makeStyles } from '@material-ui/core/styles';
 import './TopBar.css'
-import { Link, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
+import { Link} from 'react-scroll'
+import { Link as GatsbyLink } from "gatsby";
+import Logo from "../../images/NinjasCode.svg";
+import LogoBlack from "../../images/NinjasCodeBlack.svg";
+import BarChartIcon from '@material-ui/icons/BarChart';
 
 const useStyles = makeStyles((theme) => ({
     root: {
         flexGrow: 1,
     },
-    menuButton: {
-        marginRight: theme.spacing(2),
-    },
     title: {
         fontSize: 24,
         fontWeight: 700,
-        fontSize: '24px',
         color: '#070707',
-        fontFamily: 'Montserrat'
+        fontFamily: 'Montserrat',
     },
     sectionDesktop: {
         display: 'none',
@@ -55,12 +50,12 @@ const useStyles = makeStyles((theme) => ({
 
     },
     paper: {
-        padding: theme.spacing(2),
+        padding: theme.spacing(1),
         textAlign: 'center',
-        backgroundColor: 'inherit'
+        backgroundColor: 'inherit',
     },
     boxContainer: {
-        background: 'linear-gradient(to bottom, #179AFB 0%, #3751FF 100%)',
+        background: 'linear-gradient(to bottom, #179AFB 0%, #301E5B 100%)',
         height: '100%',
         width: '100%',
     },
@@ -85,14 +80,15 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
+
 const TopBar = (props) => {
 
-    console.log('props', props)
+    // console.log('props', props)
     const classes = useStyles();
 
-    const [anchorEl, setAnchorEl] = React.useState(null);
+    // const [anchorEl, setAnchorEl] = React.useState(null);
 
-    const [closeMenu, setCloseMenu] = useState(false);
+    // const [closeMenu, setCloseMenu] = useState(false);
 
     const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
 
@@ -101,6 +97,7 @@ const TopBar = (props) => {
     const mobileMenuId = 'primary-search-account-menu-mobile';
 
     const matches = useMediaQuery('(min-width:960px)');
+    
 
     // console.log('matches use media', matches)
 
@@ -128,6 +125,7 @@ const TopBar = (props) => {
             open={isMobileMenuOpen}
             onClose={handleMobileMenuClose}
             closeAfterTransition
+            onBackdropClick={handleMobileMenuClose}
             BackdropComponent={Backdrop}
             BackdropProps={{
                 timeout: 500,
@@ -146,7 +144,7 @@ const TopBar = (props) => {
                             direction="row"
                             justify="center"
                             alignItems="center"
-                            spacing={6}
+                            spacing={2}
                         >
                             <Grid item xs={12}>
                                 <Paper elevation={0} className={classes.paper}>
@@ -176,6 +174,13 @@ const TopBar = (props) => {
                                 </Link>
                                 </Paper>
                             </Grid>
+                            <Grid item xs={12}>
+                                <Paper elevation={0} className={classes.paper}>
+                                    <Link href={'#'} style={{borderWidth:1,borderRadius:5, borderStyle:'solid', padding:8}} className="cool-link" onClick={handleMobileMenuClose} activeClass="active" to="contact" spy={true} smooth={true} offset={-30} duration={1500}>
+                                        Contact Us
+                                </Link>
+                                </Paper>
+                            </Grid>
                         </Grid>
                     </Box>
                 </Box>
@@ -194,30 +199,31 @@ const TopBar = (props) => {
             >
                 <Toolbar>
                     <Link activeClass="active" to="/" spy={true} smooth={true} offset={-30} duration={500} className={classes.root} >
-                        <IconButton color={'blue'} className={classes.title}>
-                            <Typography style={{
+                        <IconButton className={classes.title}>
+                            {/* <Typography style={{
                                 fontSize: 24,
                                 fontWeight: 700,
                                 fontSize: '24px',
                                 color: props.fontColor,
                                 fontFamily: 'Montserrat'
-                            }}> Ninjas Code </Typography>
+                            }}> Ninjas Code </Typography> */}
+                           <GatsbyLink to="/"> <img style={{width:'30vmin', marginTop:20}} src={props.fontColor === '#fff' ? Logo : LogoBlack} /></GatsbyLink>
                         </IconButton>
                     </Link>
                     <div className={classes.sectionDesktop}>
-                        <Link style={{color:props.fontColor}} className="button-link" href="#" activeClass="active" to="feature" spy={true} smooth={true} offset={-30} duration={500}>
+                        <Link style={{color:props.fontColor}} className={props.fontColor === '#fff' ? "button-link" : 'button-link-black'}  href="#" activeClass="active" to="feature" spy={true} smooth={true} offset={-30} duration={500}>
                             Our Main Products
                         </Link>
-                        <Link style={{color:props.fontColor}} className="button-link" href="#" activeClass="active" to="whyus" spy={true} smooth={true} offset={-30} duration={500}>
+                        <Link style={{color:props.fontColor}} className={props.fontColor === '#fff' ? "button-link" : 'button-link-black'} href="#" activeClass="active" to="whyus" spy={true} smooth={true} offset={-30} duration={500}>
                             Why Us Section
                         </Link>
-                        <Link style={{color:props.fontColor}} className="button-link" href="#" activeClass="active" to="faq" spy={true} smooth={true} offset={-30} duration={500}>
+                        <Link style={{color:props.fontColor}} className={props.fontColor === '#fff' ? "button-link" : 'button-link-black'} href="#" activeClass="active" to="faq" spy={true} smooth={true} offset={-30} duration={500}>
                             FAQ's
                         </Link>
-                        <Link style={{color:props.fontColor}} className="button-link" href="#" activeClass="active" to="test" spy={true} smooth={true} offset={-30} duration={500}>
+                        <Link style={{color:props.fontColor}} className={props.fontColor === '#fff' ? "button-link" : 'button-link-black'} href="#" activeClass="active" to="test" spy={true} smooth={true} offset={-30} duration={500}>
                             Testimonial
                         </Link>
-                        <Link style={{color:props.fontColor, borderWidth:1,borderRadius:5, borderStyle:'solid', padding:8}} className="button-link" href="#" activeClass="active" to="test" spy={true} smooth={true} offset={-30} duration={500}>
+                        <Link style={{color:props.fontColor, borderWidth:1,borderRadius:5, borderStyle:'solid', padding:8}} className={props.fontColor === '#fff' ? "button-link" : 'button-link-black'} href="#" activeClass="active" to="contact" spy={true} smooth={true} offset={-30} duration={500}>
                             Contact Us
                         </Link>
 
@@ -228,9 +234,8 @@ const TopBar = (props) => {
                             aria-controls={mobileMenuId}
                             aria-haspopup="true"
                             onClick={handleMobileMenuOpen}
-                            color={props.barColor}
                         >
-                            <MenuIcon />
+                            <BarChartIcon  style={{color:props.fontColor, transform:'rotate(-90deg)', fontSize:30}} />
                         </IconButton>
                     </div>
                 </Toolbar>

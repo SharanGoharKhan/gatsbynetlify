@@ -5,5 +5,6 @@
  */
 
 import "@fontsource/montserrat"
+import '@fontsource/poppins'
 
 // You can delete this file if you're not using it

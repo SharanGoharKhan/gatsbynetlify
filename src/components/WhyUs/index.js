@@ -1,10 +1,9 @@
 import React from 'react'
-import speedometer from '../../images/speedometer.png'
-import ribbon from '../../images/Ribbon.png'
-import cost from '../../images/cost.png'
-import spark from '../../images/spark.png'
-
-import { Divider, Typography, makeStyles, Paper, Box, Grid, Button, Icon } from '@material-ui/core';
+import SpeedIcon from '@material-ui/icons/Speed';
+import ShutterSpeedIcon from '@material-ui/icons/ShutterSpeed';
+import TimerIcon from '@material-ui/icons/Timer';
+import FlashOnIcon from '@material-ui/icons/FlashOn';
+import { Typography, makeStyles, Grid } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
     paper: {
@@ -25,17 +24,20 @@ const useStyles = makeStyles((theme) => ({
       subTitle:{
         fontWeight:400, 
         padding:theme.spacing(3),
-        width:'40%',
+        width:'100%',
+        lineHeight:'3vmin',
+        fontSize:'3vmin',
         margin:'auto', 
-        color:'#fff'
+        color:'#fff',
+        fontFamily:'Montserrat'
     },
     image: {
         borderStyle:'solid',
-        padding:'10%',
-        borderWidth:2, 
+        padding:'4vmin',
+        borderWidth:1, 
         borderColor:'#fff', 
         borderRadius:10, 
-        boxShadow:'4px -4px 5px #e8e3e3'
+        boxShadow:'2px -3vmin 1vmin #faf9f7'
     }
 }));
 
@@ -43,24 +45,28 @@ const WhyUs = () => {
     const classes = useStyles();
     return (
         <div id="whyus" className={classes.background}>
-        <Typography style={{color:'#fff'}} variant='h4'>
+        <Typography style={{color:'#fff', fontFamily:'Montserrat',fontSize:'5vmin', fontWeight:'700'}} variant='h4'>
             Why Us
         </Typography>
-        <Grid container spacing={3} className={classes.grid}>
-        <Grid item xs={12} sm={6} md={6} lg={3}>
-         <img src={speedometer} className={classes.image} />
+        <Grid container spacing={3} justify="center" className={classes.grid}>
+        <Grid item xs={6} sm={6} md={6} lg={3}>
+        
+         <SpeedIcon className={classes.image} style={{color:'#fff', fontSize:'12vmin'}} />
           <div className={classes.subTitle}>UX driven approach</div>
         </Grid>
-        <Grid item xs={12} sm={6} md={6} lg={3}>
-        <img src={ribbon} className={classes.image} />
+        <Grid item xs={6} sm={6} md={6} lg={3}>
+        
+        <ShutterSpeedIcon className={classes.image} style={{color:'#fff', fontSize:'12vmin'}} />
         <div className={classes.subTitle}>3 months time to market</div>
         </Grid>
-        <Grid item xs={12} sm={6} md={6} lg={3}>
-        <img src={cost} className={classes.image} /> 
-        <div className={classes.subTitle}>$30,000 costs limit</div>
+        <Grid item xs={6} sm={6} md={6} lg={3}>
+        
+        <TimerIcon className={classes.image} style={{color:'#fff', fontSize:'12vmin'}} />
+        <div className={classes.subTitle}>$3000 costs limit</div>
         </Grid>
-        <Grid item xs={12} sm={6} md={6} lg={3}>
-        <img src={spark} className={classes.image} />
+        <Grid item xs={6} sm={6} md={6} lg={3}>
+        
+        <FlashOnIcon className={classes.image} style={{color:'#fff', fontSize:'12vmin'}} />
         <div className={classes.subTitle}>Complete process transparency</div>
         </Grid>
         </Grid>

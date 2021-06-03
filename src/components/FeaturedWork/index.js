@@ -1,15 +1,13 @@
-
 import React from 'react'
-import { Divider, Typography, makeStyles, Paper, Box, Grid, Button, Icon } from '@material-ui/core';
-import "./FeaturedWork.css";
-import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
 import featureImage from '../../images/Feature.png'
 import macbookImage from '../../images/macbook.png'
 import FeaturedWorkComponent from "./FeaturedWork";
 import iphoneImage from '../../images/iphone.png'
+import { Divider, Typography, makeStyles, useMediaQuery, useTheme } from '@material-ui/core';
+import "./FeaturedWork.css";
+
 
 const useStyles = makeStyles((theme) => ({
-
   title: {
     fontFamily: theme.typography
   },
@@ -34,20 +32,23 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const FeaturedWork = () => {
+  const theme = useTheme();
+  const matches = useMediaQuery(theme.breakpoints.up('sm'));
   const classes = useStyles();
+
   return (
     <div id="feature">
       <div style={{ justifyContent: 'center', alignItems: 'center', textAlign: 'center' }}>
-        <Typography style={{ fontWeight: 700, fontSize: '40px' }} variant="h3" gutterBottom>
+        <Typography style={{ fontWeight: 700, fontSize: '6vmin', fontFamily: 'Poppins' }} variant="h3" gutterBottom>
           Featured Works
-      </Typography>
-        <Typography style={{ fontWeight: 400, color: '#333333', fontSize: '21px', width: '50%', margin: 'auto' }} gutterBottom>
+  </Typography>
+        <Typography style={{ fontWeight: 400, color: '#333333', fontFamily: 'Poppins', fontSize: '3vmin', width: matches ? '50%' : '90%', margin: 'auto' }} gutterBottom>
           We are not intimidated by unconventional ideas. Our past projects involved social networking, geolocation, booking software, assisted typing and more.
-      </Typography>
+  </Typography>
         <Divider className={classes.divider} />
-        <FeaturedWorkComponent heading={'ENATEGA'} src={featureImage} />
-        <FeaturedWorkComponent heading={'ECOMMERO'} src={macbookImage} />
-        <FeaturedWorkComponent heading={'GKHAIR'} src={iphoneImage} />
+        <FeaturedWorkComponent heading={'ENATEGA'} route="Enatega" src={featureImage} />
+        <FeaturedWorkComponent heading={'Sense.Chat'} route="SenseChat" src={macbookImage} />
+        {/* <FeaturedWorkComponent heading={'GKHAIR'} src={iphoneImage} /> */}
       </div>
     </div>
   );
