@@ -4,8 +4,13 @@ import './Enatega.css'
 import enategaHome1 from '../../images/enategaHome1.png'
 import enategaHome2 from '../../images/enategaHome2.png'
 import {TopBar} from '../../components'
-import { ColorScheme, Dashboard, Feature, Flows, Typographys, VideoDemo } from "./componensts";
-import RiderAndRestaurant from './componensts/RiderAndRestaurant';
+import ColorScheme from "./components/ColorScheme";
+import Feature from "./components/Features";
+import Flows from "./components/Flows";
+import Typographys from "./components/Typography";
+import VideoDemo from "./components/VideoDemo";
+import Dashboard from "./components/Dashboard";
+import RiderAndRestaurant from './components/RiderAndRestaurant';
 import { ContactUs, Footer } from "../../components";
 
 const useStyles = makeStyles((theme) => ({
