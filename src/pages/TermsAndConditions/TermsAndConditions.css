@@ -1,0 +1,11 @@
+.container{
+    /* height:fit-content; */
+    /* width:100%; */
+    padding: 1rem;
+    background-color: #FAFBFF;
+    text-align: flex-start;
+    margin:auto;
+    width:70%;
+    box-shadow: 1px 1px 5px 5px #fafafa;
+    /* padding-bottom: 10rem; */
+}

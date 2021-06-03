@@ -5,6 +5,7 @@ import "./FeaturedWork.css";
 import { Typography, makeStyles, Grid, Button, useTheme, useMediaQuery } from '@material-ui/core';
 import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
 import { Link } from "gatsby";
+import {  MacBookSvg} from "../../svg/mackbook";
 
 const useStyles = makeStyles((theme) => ({
     divider: {

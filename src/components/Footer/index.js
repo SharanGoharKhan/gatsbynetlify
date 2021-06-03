@@ -5,6 +5,7 @@ import instaLogo from "../../images/instaRound.png";
 import twitterLogo from "../../images/twitterRound.png";
 import FacebookLogo from "../../images/facebookRound.png";
 import linkedinLogo from "../../images/linkedRound.png";
+import { Link as GatsbyLink } from "gatsby";
 
 const useStyles = makeStyles((theme) => ({
 
@@ -157,11 +158,13 @@ const Footer = () => {
             <Typography className={classes.footerText} gutterBottom>
             NinjasCode - © 2021 All Rights Reserved
              </Typography>
-             <Button onClick={()=>History.push('/TermsAndConditions')}>
+             <GatsbyLink to="/TermsAndConditions">
+             <Button>
              <Typography className={classes.footerText} gutterBottom>
              Terms and conditions - Privacy Policy
              </Typography>
              </Button>
+             </GatsbyLink>
             </Box>
             </Grid>
         </Grid>
