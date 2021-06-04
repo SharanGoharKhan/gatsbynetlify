@@ -57,12 +57,12 @@ const WhyUs = () => {
         <Grid item xs={6} sm={6} md={6} lg={3}>
         
         <ShutterSpeedIcon className={classes.image} style={{color:'#fff', fontSize:'15vmin'}} />
-        <div className={classes.subTitle}>3 months time to market</div>
+        <div className={classes.subTitle}>1 month time to market</div>
         </Grid>
         <Grid item xs={6} sm={6} md={6} lg={3}>
         
         <TimerIcon className={classes.image} style={{color:'#fff', fontSize:'15vmin'}} />
-        <div className={classes.subTitle}>$3000 costs limit</div>
+        <div className={classes.subTitle}>$10,000 costs limit</div>
         </Grid>
         <Grid item xs={6} sm={6} md={6} lg={3}>
         

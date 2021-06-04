@@ -69,24 +69,28 @@ const useStyles = makeStyles((theme) => ({
 
 const questions = [
   {
-    title: 'What is needed from me to get started with MVP development?',
-    subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vitae viverra neque, vitae porttitor erat. Vivamus suscipit rhoncus efficitur. Vestibulum mattis elit porta malesuada consectetur. Fusce ac accumsan ligula. Mauris a ipsum ac justo tincidunt rutrum eu eget mi. Etiam quis ullamcorper magna, et pellentesque velit. Pellentesque felis ex, viverra sed efficitur suscipit, egestas in dolor. Mauris vestibulum arcu sit amet volutpat lobortis. Nam luctus purus et ante vulputate mollis. Quisque ut tellus varius, efficitur arcu ut, faucibus enim. Aenean sed pretium enim. Nullam ultrices porta libero, rhoncus elementum metus suscipit eu.'
+    title: 'Estimated budget of your idea?',
+    subtitle: 'We value your time & budget we iterate fast this is the reason that we give ourself a very short timeline of just one month. Within that budget and timeline you get flexibility for marketing.'
   },
   {
-    title: 'So, why 3 months to build MVP?',
-    subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vitae viverra neque, vitae porttitor erat. Vivamus suscipit rhoncus efficitur. Vestibulum mattis elit porta malesuada consectetur. Fusce ac accumsan ligula. Mauris a ipsum ac justo tincidunt rutrum eu eget mi. Etiam quis ullamcorper magna, et pellentesque velit. Pellentesque felis ex, viverra sed efficitur suscipit, egestas in dolor. Mauris vestibulum arcu sit amet volutpat lobortis. Nam luctus purus et ante vulputate mollis. Quisque ut tellus varius, efficitur arcu ut, faucibus enim. Aenean sed pretium enim. Nullam ultrices porta libero, rhoncus elementum metus suscipit eu.'
+    title: 'How long does it take to execute your idea?',
+    subtitle: 'We already have designed, developed solution. So your idea is going to be customizations which takes roughly one month.'
   },
   {
-    title: 'Is MVP anyhow different from prototypes?',
-    subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vitae viverra neque, vitae porttitor erat. Vivamus suscipit rhoncus efficitur. Vestibulum mattis elit porta malesuada consectetur. Fusce ac accumsan ligula. Mauris a ipsum ac justo tincidunt rutrum eu eget mi. Etiam quis ullamcorper magna, et pellentesque velit. Pellentesque felis ex, viverra sed efficitur suscipit, egestas in dolor. Mauris vestibulum arcu sit amet volutpat lobortis. Nam luctus purus et ante vulputate mollis. Quisque ut tellus varius, efficitur arcu ut, faucibus enim. Aenean sed pretium enim. Nullam ultrices porta libero, rhoncus elementum metus suscipit eu.'
+    title: 'What happens after the project is completed?',
+    subtitle: 'After you launch your product you can ask for feedback, our team is always going to be available to you to make any changes that you want to make. A project can never be complete because it will always require changes from constant feedback loop.'
   },
   {
-    title: 'So, why 3 months to build MVP?',
-    subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vitae viverra neque, vitae porttitor erat. Vivamus suscipit rhoncus efficitur. Vestibulum mattis elit porta malesuada consectetur. Fusce ac accumsan ligula. Mauris a ipsum ac justo tincidunt rutrum eu eget mi. Etiam quis ullamcorper magna, et pellentesque velit. Pellentesque felis ex, viverra sed efficitur suscipit, egestas in dolor. Mauris vestibulum arcu sit amet volutpat lobortis. Nam luctus purus et ante vulputate mollis. Quisque ut tellus varius, efficitur arcu ut, faucibus enim. Aenean sed pretium enim. Nullam ultrices porta libero, rhoncus elementum metus suscipit eu.'
+    title: 'What is needed to get started?',
+    subtitle: 'No fancy documentation or white paper is required. We will conduct an interview and go through your idea. All requirements will be documented in a proper way by us.'
   },
   {
-    title: 'Is MVP anyhow different from prototypes?',
-    subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vitae viverra neque, vitae porttitor erat. Vivamus suscipit rhoncus efficitur. Vestibulum mattis elit porta malesuada consectetur. Fusce ac accumsan ligula. Mauris a ipsum ac justo tincidunt rutrum eu eget mi. Etiam quis ullamcorper magna, et pellentesque velit. Pellentesque felis ex, viverra sed efficitur suscipit, egestas in dolor. Mauris vestibulum arcu sit amet volutpat lobortis. Nam luctus purus et ante vulputate mollis. Quisque ut tellus varius, efficitur arcu ut, faucibus enim. Aenean sed pretium enim. Nullam ultrices porta libero, rhoncus elementum metus suscipit eu.'
+    title: 'Will you sign NDA?',
+    subtitle: 'No problem.'
+  },
+  {
+    title: 'Do you provide marketing services?',
+    subtitle: 'UI/UX, Web, Mobile development and QA management. We do not strive for average results so it is better to find marketing expert.'
   }
 ]
 
@@ -108,10 +112,10 @@ const FAQ = () => {
     <div id="faq" style={{ justifyContent: 'center', marginTop: 50, padding: 10, alignItems: 'center', textAlign: 'center' }}>
       <Button variant="contained" size="large" className={classes.heading}>
         Frequently Asked Questions
- </Button>
+      </Button>
       <Typography className={classes.subHeading} variant="h3" gutterBottom>
         What People Frequently Asked to us
-</Typography>
+      </Typography>
       <Divider className={classes.divider} />
       {
         questions.map((item, index) => {

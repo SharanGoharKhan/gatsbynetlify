@@ -41,14 +41,22 @@ const FeaturedWork = () => {
       <div style={{ justifyContent: 'center', alignItems: 'center', textAlign: 'center' }}>
         <Typography style={{ fontWeight: 700, fontSize: '6vmin', fontFamily: 'Poppins' }} variant="h3" gutterBottom>
           Featured Works
-  </Typography>
+        </Typography>
         <Typography style={{ fontWeight: 400, color: '#333333', fontFamily: 'Poppins', fontSize: '3vmin', width: matches ? '50%' : '90%', margin: 'auto' }} gutterBottom>
-          We are not intimidated by unconventional ideas. Our past projects involved social networking, geolocation, booking software, assisted typing and more.
-  </Typography>
+          If you have an idea we will execute it. Our premade solution range
+          from ecommerce, food delivery, listing apps and more.
+        </Typography>
         <Divider className={classes.divider} />
-        <FeaturedWorkComponent heading={'ENATEGA'} route="Enatega" src={featureImage} />
-        <FeaturedWorkComponent heading={'Sense.Chat'} route="SenseChat" src={macbookImage} />
-        {/* <FeaturedWorkComponent heading={'GKHAIR'} src={iphoneImage} /> */}
+        <FeaturedWorkComponent
+          details="Enatega is a full fledge food delivery solution. We have two premade solution for single vendor and multiple vendors for multiple restaurants."
+          heading={'ENATEGA'}
+          route="Enatega"
+          src={featureImage} />
+        <FeaturedWorkComponent
+          details="Sense Chat is decentralized chat application that is used for communication as well as awarding users with crypto tokens for their participation"
+          heading={'Sense.Chat'}
+          route="SenseChat"
+          src={macbookImage} />
       </div>
     </div>
   );

@@ -42,7 +42,7 @@ const FeaturedWorkComponent = (props) => {
                         {props.heading}
                     </Typography>
                     <Typography style={{ color: '#455880', fontSize: '2.5vmin', fontFamily: 'Poppins', marginTop: 30 }} >
-                        We are not intimidated by unconventional ideas. Our past projects involved social networking, geolocation, booking software, assisted typing and more.
+                        {props.details}
                     </Typography>
                     <Link style={{textDecoration:'none'}} to={`/${props.route}`}>
                     <Button
