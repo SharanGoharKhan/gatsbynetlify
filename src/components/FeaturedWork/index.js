@@ -1,8 +1,7 @@
 import React from 'react'
-import featureImage from '../../images/Feature.png'
-import macbookImage from '../../images/macbook.png'
+import featureImage from '../../../public/static/Feature.png'
+import macbookImage from '../../../public/static/macbook.png'
 import FeaturedWorkComponent from "./FeaturedWork";
-import iphoneImage from '../../images/iphone.png'
 import { Divider, Typography, makeStyles, useMediaQuery, useTheme } from '@material-ui/core';
 import "./FeaturedWork.css";
 

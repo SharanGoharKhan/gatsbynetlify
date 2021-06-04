@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react'
 import { Typography, makeStyles, Grid, Button, Icon, useMediaQuery, useTheme } from '@material-ui/core';
 import './Enatega.css'
-import enategaHome1 from '../../images/enategaHome1.svg'
-import enategaHome2 from '../../images/enategaHome2.svg'
+import enategaHome1 from '../../../public/static/enategaHome1.png'
+import enategaHome2 from '../../../public/static/enategaHome2.png'
 import {TopBar} from '../../components'
 import ColorScheme from "./components/ColorScheme";
 import Feature from "./components/Features";

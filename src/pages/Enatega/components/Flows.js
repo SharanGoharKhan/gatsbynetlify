@@ -1,21 +1,21 @@
 import React from 'react';
 import { Typography, makeStyles, Grid } from '@material-ui/core';
-import ios1 from "../../../images/ios1.svg";
-import ios2 from "../../../images/ios2.png";
-import ios3 from "../../../images/ios3.png";
-import ios4 from "../../../images/ios4.png";
-import ios5 from "../../../images/ios5.png";
-import ios6 from "../../../images/ios6.png";
-import ios7 from "../../../images/ios7.png";
-import ios8 from "../../../images/ios8.png";
-import ios9 from "../../../images/ios9.png";
-import ios10 from "../../../images/ios10.png";
-import ios11 from "../../../images/ios11.png";
-import ios12 from "../../../images/ios12.png";
-import ios13 from "../../../images/ios13.png";
-import ios14 from "../../../images/ios14.png";
-import ios15 from "../../../images/ios15.png";
-import ios16 from "../../../images/ios16.png";
+import ios1 from "../../../../public/static/ios1.png";
+import ios2 from "../../../../public/static/ios2.png";
+import ios3 from "../../../../public/static/ios3.png";
+import ios4 from "../../../../public/static/ios4.png";
+import ios5 from "../../../../public/static/ios5.png";
+import ios6 from "../../../../public/static/ios6.png";
+import ios7 from "../../../../public/static/ios7.png";
+import ios8 from "../../../../public/static/ios8.png";
+import ios9 from "../../../../public/static/ios9.png";
+import ios10 from "../../../../public/static/ios10.png";
+import ios11 from "../../../../public/static/ios11.png";
+import ios12 from "../../../../public/static/ios12.png";
+import ios13 from "../../../../public/static/ios13.png";
+import ios14 from "../../../../public/static/ios14.png";
+import ios15 from "../../../../public/static/ios15.png";
+import ios16 from "../../../../public/static/ios16.png";
 
 const useStyles = makeStyles((theme) => ({
     divider: {

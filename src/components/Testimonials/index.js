@@ -2,7 +2,7 @@ import React, { useRef } from "react";
 import StarIcon from '@material-ui/icons/Star';
 import profile from '../../images/profile.jpeg'
 import DrawKitLogo from '../../images/DrawKit.png'
-import video from '../../images/video.mp4'
+import video from '../../../public/static/video.mp4'
 import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
 import KeyboardBackspaceIcon from '@material-ui/icons/KeyboardBackspace';
 import { Divider, Button, Typography, Card, Box, useMediaQuery, CardActionArea, Avatar, CardContent, CardMedia, makeStyles, Grid, GridList, GridListTile, IconButton } from '@material-ui/core';

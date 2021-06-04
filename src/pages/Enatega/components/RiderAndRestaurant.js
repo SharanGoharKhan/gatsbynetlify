@@ -1,7 +1,7 @@
 import React from 'react';
-import {Typography, makeStyles,Grid, Button } from '@material-ui/core';
-import enategaMobile from "../../../images/enategaMobile.png";
-import ios2 from "../../../images/ios2.png";
+import {Typography, makeStyles,Grid,useMediaQuery,useTheme, Button } from '@material-ui/core';
+import enategaMobile from '../../../../public/static/iPhone.png';
+import enategaMobile2 from "../../../../public/static/iPhone2.png";
 import CheckCircleSharpIcon from '@material-ui/icons/CheckCircleSharp';
 
 const useStyles = makeStyles((theme) => ({
@@ -50,6 +50,8 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const RiderAndRestaurant = (props) => {
+    const theme = useTheme();
+    const matches = useMediaQuery(theme.breakpoints.up('sm'));
     const classes = useStyles();
 
     return (
@@ -126,7 +128,10 @@ const RiderAndRestaurant = (props) => {
                             </Grid>
                         </Grid>
                         <Grid item xs={12} style={{textAlign:'center'}} lg={5}>
-                            <img alt="Enatega" style={{width:'50%', textAlign:'center', marginTop:20}} src={enategaMobile} />
+                          <div style={{marginTop: matches ? 0 : 50, textAlign:'center'}}>
+                            <img alt="Enatega" style={{textAlign:'center',width:'40vmin', position:'relative', top:'-7.4vmin'}} src={enategaMobile} />
+                            <img alt="Enatega" style={{textAlign:'center',width:'40vmin', position:'relative', bottom:"-9.8vmin", left:-80}} src={enategaMobile2} />
+                            </div>
                         </Grid>
 
                     </Grid>
