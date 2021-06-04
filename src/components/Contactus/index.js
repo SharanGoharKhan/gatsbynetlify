@@ -57,7 +57,7 @@ const ContactUs = () => {
     return (
         <div id="contact" className={classes.container}>
             <Grid container justify="center" direction="row" spacing={5} alignItems="center" >
-                <form name="contact" method="POST" netlify>
+                <form name="contact" action="POST" data-netlify="true">
                     <Grid item xs={12}>
                         <Typography className={classes.heading} variant="h3" gutterBottom>
                             Let's Talk with us
