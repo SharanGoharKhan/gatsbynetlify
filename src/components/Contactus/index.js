@@ -48,7 +48,7 @@ const useStyles = makeStyles((theme) => ({
 const ContactUs = () => {
     const classes = useStyles();
     return (
-        <div id="contact" className={classes.container}>
+        <div id="contactus" className={classes.container}>
             <Grid container justify="center" direction="row" spacing={5} alignItems="center" >
                 <Grid item xs={12}>
                     <form name="contact" method="post" data-netlify="true" netlify-honeypot="bot-field">
@@ -87,7 +87,7 @@ const ContactUs = () => {
                                 Phone Number
                             </Typography>
                             <Typography className={classes.iconText2} >
-                                (62) 1829017
+                                (92) 3339461270
                             </Typography>
                         </Box>
                     </Box>
@@ -100,7 +100,7 @@ const ContactUs = () => {
                                 Email
                             </Typography>
                             <Typography className={classes.iconText2} >
-                                Hello@studio.co
+                                sharan@ninjascode.com
                             </Typography>
                         </Box>
                     </Box>
@@ -113,7 +113,7 @@ const ContactUs = () => {
                                 Map Street
                             </Typography>
                             <Typography className={classes.iconText2} >
-                                John Bucarest st 100
+                                Islamabad, Pakistan
                             </Typography>
                         </Box>
                     </Box>

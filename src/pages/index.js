@@ -7,7 +7,7 @@ import "../components/layout.css"
 import Seo from "../components/seo"
 
 import { TopBar, FeaturedWork, WhyUs, Testimonal, FAQ, Logos, ContactUs, Footer } from '../components'
-import { Grid, Card, Paper, Typography, makeStyles, Box, useMediaQuery } from '@material-ui/core';
+import { Grid, Card, Paper, Typography, makeStyles, Box, useMediaQuery, Link as MaterialUILink } from '@material-ui/core';
 import Facebook from "../svg/facebook";
 import Twitter from "../svg/twitter";
 import LinkedIn from "../svg/linkedin";
@@ -81,20 +81,33 @@ const IndexPage = () => {
         <Grid container direction="row" justify="center" alignItems="center" spacing={matches ? 0 : 0} className={classes.grid}>
           <Grid style={{ textAlign: matches ? 'start' : 'center' }} item xs={12} lg={4} >
             <Typography variant="h3" gutterBottom className={classes.title}>
-              How Can We Level Up Your Business
-                         </Typography>
+              We provide solution for your business
+              </Typography>
             <Typography variant="h3" gutterBottom className={classes.subtitle}>
-              Multiply together. Moved given years multiply for. Saw, can't second. Firmament fish had midst make signs. God multiply form.
-                         </Typography>
+              Ready made solutions. Fully customizable with documentation and
+              source code. Quickly and cheaply launch your MVP.
+            </Typography>
             <Box style={{ display: 'flex', marginTop: '25px' }}>
               <Box className={classes.logoContainer}>
-                <Facebook />
+                <MaterialUILink
+                  href="https://www.facebook.com/ninjascodeofficial"
+                  target="_blank">
+                  <Facebook />
+                </MaterialUILink>
               </Box>
               <Box className={classes.logoContainer}>
-                <Twitter />
+                <MaterialUILink
+                  href="https://twitter.com/gohar_001"
+                  target="_blank">
+                  <Twitter />
+                </MaterialUILink>
               </Box>
               <Box className={classes.logoContainer}>
-                <LinkedIn />
+                <MaterialUILink
+                  href="https://www.linkedin.com/company/14512538"
+                  target="_blank">
+                  <LinkedIn />
+                </MaterialUILink>
               </Box>
             </Box>
           </Grid>
@@ -112,16 +125,18 @@ const IndexPage = () => {
                       <div style={{ display: 'flex', justifyContent: 'space-between' }}>
                         <Typography className={classes.cardHeaderText} gutterBottom>
                           Raise Funds
-                             </Typography>
+                        </Typography>
                         <div style={{ width: '40px', textAlign: 'center', height: '40px', backgroundColor: '#175CFF', borderRadius: '50%' }}>
                           <Typography className={classes.number}>
                             01
-                             </Typography>
+                          </Typography>
                         </div>
                       </div>
                       <Typography className={classes.cardText} gutterBottom>
-                        Venture capitals are no longer giving investments for just an idea. You have to prove that you put your skin in the.
-                             </Typography>
+                        Venture capitals now need a working product not just an
+                        idea. You have to prove that you are able to execute
+                        your idea.
+                      </Typography>
                     </Paper>
                   </Grid>
                 </Grid>
@@ -132,35 +147,38 @@ const IndexPage = () => {
                     <Paper className={classes.paper}>
                       <div style={{ display: 'flex', justifyContent: 'space-between' }}>
                         <Typography className={classes.cardHeaderText} gutterBottom>
-                          Raise Funds
-                             </Typography>
+                          Get feedback
+                        </Typography>
 
                         <div style={{ width: 40, textAlign: 'center', height: 40, backgroundColor: '#175CFF', borderRadius: '50%' }}>
                           <Typography className={classes.number}>
                             02
-                             </Typography>
+                          </Typography>
                         </div>
                       </div>
                       <Typography className={classes.cardText} gutterBottom>
-                        Venture capitals are no longer giving investments for just an idea. You have to prove that you put your skin in the.
-                             </Typography>
+                        Project budget is always tight, development cost needs
+                        to be minimized for marketing budget to test your idea.
+                      </Typography>
                     </Paper>
                   </Grid>
                   <Grid item xs={12}>
                     <Paper className={classes.paper}>
                       <div style={{ display: 'flex', justifyContent: 'space-between' }}>
                         <Typography className={classes.cardHeaderText} gutterBottom>
-                          Raise Funds
-                             </Typography>
+                          Check Feasibility
+                        </Typography>
                         <div style={{ width: 40, textAlign: 'center', height: 40, backgroundColor: '#175CFF', borderRadius: '50%' }}>
                           <Typography className={classes.number}>
                             03
-                             </Typography>
+                          </Typography>
                         </div>
                       </div>
                       <Typography className={classes.cardText} gutterBottom>
-                        Venture capitals are no longer giving investments for just an idea. You have to prove that you put your skin in the.
-                             </Typography>
+                        You don't need to worry if your project will be executed
+                        on time. We already have a pre-made solution that gives
+                        your assurance about how the final product will be like.
+                      </Typography>
                     </Paper>
                   </Grid>
                 </Grid>
