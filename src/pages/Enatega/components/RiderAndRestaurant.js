@@ -1,6 +1,6 @@
 import React from 'react';
 import {Typography, makeStyles,Grid,useMediaQuery,useTheme, Button } from '@material-ui/core';
-import enategaMobile from '../../../images/iPhone.png';
+import enategaMobile from '../../../images/iphone.png';
 import enategaMobile2 from "../../../images/iPhone2.png";
 import CheckCircleSharpIcon from '@material-ui/icons/CheckCircleSharp';
 
