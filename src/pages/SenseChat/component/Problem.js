@@ -1,6 +1,8 @@
 import React from 'react';
 import { Typography, makeStyles, Grid } from '@material-ui/core';
-import Mockup1 from "../../../images/iphoneSense.png";
+import Mockup1 from "../../../images/Mockup1.svg";
+import Mockup2 from "../../../images/Mockup2.svg";
+import Mockup3 from "../../../images/Mockup3.svg";
 
 
 
@@ -56,13 +58,13 @@ const Problem = (props) => {
                 <div className={classes.imagesContainer}>
                     <Grid container justify="center" alignItems="center">
                         <Grid item xs={12} sm={6} md={3} >
-                        <img style={{width:'36vh'}} src={Mockup1} />
+                        <img style={{width:'36vmin'}} src={Mockup1} />
                         </Grid>
                         <Grid item xs={12} sm={6} md={3}>
-                        <img style={{width:'36vh'}} src={Mockup1} />
+                        <img style={{width:'36vmin'}} src={Mockup2} />
                         </Grid>
                         <Grid item xs={12} sm={6} md={3}>
-                        <img style={{width:'36vh'}} src={Mockup1} />
+                        <img style={{width:'36vmin'}} src={Mockup3} />
                         </Grid>
                     </Grid>
                 </div>

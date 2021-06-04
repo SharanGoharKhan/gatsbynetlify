@@ -120,7 +120,7 @@ const RiderAndRestaurant = (props) => {
                             </Grid>
                             <Grid  item xs={12}>
                             <div className={classes.button}>
-                                <Button className={classes.buttonInner}>Buy Now $3500</Button>
+                                <Button color="inherit" variant="contained" className={classes.buttonInner}>Buy Now $3500</Button>
                             </div>
                             </Grid>
                             </Grid>

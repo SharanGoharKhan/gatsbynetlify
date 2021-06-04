@@ -1,9 +1,9 @@
 
 import React, { useState } from "react";
 import { makeStyles, Grid, Typography, TextareaAutosize,Button, Box } from '@material-ui/core';
-import callIcon from '../../images/callIcon.png'
-import emailIcon from '../../images/emailIcon.png'
-import mapIcon from '../../images/mapIcon.png'
+import CallIcon from "../../svg/callIcon";
+import AddressIcon from "../../svg/addressIcon";
+import EmailIcon from "../../svg/emailIcon";
 
 const useStyles = makeStyles((theme) => ({
 
@@ -83,7 +83,8 @@ const ContactUs = () => {
             </Grid>
             <Grid style={{textAlign:'center'}} item xs={6} sm={6} md={6} lg={4}>
             <Box style={{display:'block',textAlign:'center', alignItems:'center'}}>
-            <img alt="call" style={{width:'9vmin'}} src={callIcon} />
+            {/* <img alt="call" style={{width:'9vmin'}} src={callIcon} /> */}
+            <CallIcon />
             <Box style={{padding:'2vmin'}}> 
             <Typography className={classes.iconText}>
                 Phone Number
@@ -96,7 +97,8 @@ const ContactUs = () => {
             </Grid>
             <Grid style={{textAlign:'center'}} item xs={6} sm={6} md={6} lg={4}>
             <Box style={{display:'block',textAlign:'center', alignItems:'center'}}>
-            <img alt="email" style={{width:'9vmin'}} src={emailIcon} />
+            {/* <img alt="email" style={{width:'9vmin'}} src={emailIcon} /> */}
+            <EmailIcon />
             <Box style={{textAlign:'center',padding:'2vmin'}}> 
             <Typography className={classes.iconText}>
             Email
@@ -109,7 +111,8 @@ const ContactUs = () => {
             </Grid>
             <Grid style={{textAlign:'center'}} item xs={8} sm={6} md={6} lg={4}>
             <Box style={{display:'block',textAlign:'center', alignItems:'center'}}>
-            <img alt="location" style={{width:'9vmin'}} src={mapIcon} />
+            {/* <img alt="location" style={{width:'9vmin'}} src={mapIcon} /> */}
+            <AddressIcon />
             <Box style={{padding:'2vmin'}}> 
             <Typography className={classes.iconText}>
             Map Street
