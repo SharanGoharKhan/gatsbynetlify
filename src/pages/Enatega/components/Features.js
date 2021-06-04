@@ -1,11 +1,11 @@
 import React from 'react';
 import {Typography, makeStyles, Paper,Grid } from '@material-ui/core';
-import Artboard1 from "../../../../public/static/artboard1.svg";
-import Artboard2 from "../../../../public/static/artboard2.svg";
-import Artboard3 from "../../../../public/static/artboard3.svg";
-import Artboard4 from "../../../../public/static/artboard4.svg";
-import Artboard5 from "../../../../public/static/artboard5.svg";
-import Artboard6 from "../../../../public/static/artboard6.svg";
+import Artboard1 from "../../../images/artboard1.svg";
+import Artboard2 from "../../../images/artboard2.svg";
+import Artboard3 from "../../../images/artboard3.svg";
+import Artboard4 from "../../../images/artboard4.svg";
+import Artboard5 from "../../../images/artboard5.svg";
+import Artboard6 from "../../../images/artboard6.svg";
 
 
 const useStyles = makeStyles((theme) => ({

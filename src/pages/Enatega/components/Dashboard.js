@@ -1,7 +1,7 @@
 import React from 'react';
 import {Typography, makeStyles, Grid } from '@material-ui/core';
-import dashboard from "../../../../public/static/Dashboard.png";
 import CheckCircleSharpIcon from '@material-ui/icons/CheckCircleSharp';
+import { StaticImage } from "gatsby-plugin-image";
 
 const useStyles = makeStyles((theme) => ({
     divider: {
@@ -102,7 +102,7 @@ const Dashboard = (props) => {
                             
                         </Grid>
                         <Grid style={{textAlign:'center'}} item xs={12} lg={5}>
-                            <img alt="dashboard" style={{ width: '70vmin' }} src={dashboard} />
+                            <StaticImage alt="dashboard" style={{ width: '70vmin' }} src={'../../../images/dashboard.png'} />
                         </Grid>
 
                     </Grid>

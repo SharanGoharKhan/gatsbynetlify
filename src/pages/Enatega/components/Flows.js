@@ -1,21 +1,22 @@
 import React from 'react';
 import { Typography, makeStyles, Grid } from '@material-ui/core';
-import ios1 from "../../../../public/static/ios1.png";
-import ios2 from "../../../../public/static/ios2.png";
-import ios3 from "../../../../public/static/ios3.png";
-import ios4 from "../../../../public/static/ios4.png";
-import ios5 from "../../../../public/static/ios5.png";
-import ios6 from "../../../../public/static/ios6.png";
-import ios7 from "../../../../public/static/ios7.png";
-import ios8 from "../../../../public/static/ios8.png";
-import ios9 from "../../../../public/static/ios9.png";
-import ios10 from "../../../../public/static/ios10.png";
-import ios11 from "../../../../public/static/ios11.png";
-import ios12 from "../../../../public/static/ios12.png";
-import ios13 from "../../../../public/static/ios13.png";
-import ios14 from "../../../../public/static/ios14.png";
-import ios15 from "../../../../public/static/ios15.png";
-import ios16 from "../../../../public/static/ios16.png";
+import ios1 from "../../../images/ios1.png";
+import ios2 from "../../../images/ios2.png";
+import ios3 from "../../../images/ios3.png";
+import ios4 from "../../../images/ios4.png";
+import ios5 from "../../../images/ios5.png";
+import ios6 from "../../../images/ios6.png";
+import ios7 from "../../../images/ios7.png";
+import ios8 from "../../../images/ios8.png";
+import ios9 from "../../../images/ios9.png";
+import ios10 from "../../../images/ios10.png";
+import ios11 from "../../../images/ios11.png";
+import ios12 from "../../../images/ios12.png";
+import ios13 from "../../../images/ios13.png";
+import ios14 from "../../../images/ios14.png";
+import ios15 from "../../../images/ios15.png";
+import ios16 from "../../../images/ios16.png";
+import {StaticImage} from 'gatsby-plugin-image'
 
 const useStyles = makeStyles((theme) => ({
     divider: {
@@ -54,33 +55,16 @@ const Flow = (props) => {
                     <Typography variant="h5" gutterBottom style={{ textAlign: 'center', fontSize: '2vmin', letterSpacing: 1, lineHeight: '90px', marginTop: 10, fontFamily: 'Montserrat', fontWeight: '700' }}>On Boarding & Registration</Typography>
                     <Grid container justify="center" alignItems="center" spacing={10}>
                         <Grid item xs={12} lg={3}>
-                            <img alt="Enatega App" style={{ border: '1px solid #EBE8E8',  borderRadius: 20, padding: 10, width:'30vmin' }} src={ios1} />
+                            <StaticImage alt="Enatega App" style={{ border: '1px solid #EBE8E8',  borderRadius: 20, padding: 10, width:'30vmin' }} src="../../../images/ios1.png" />
                         </Grid>
                         <Grid item xs={12} lg={3}>
-                            <img alt="Enatega App" style={{ border: '1px solid #EBE8E8', borderRadius: 20, padding: 10, width:'30vmin' }} src={ios2} />
+                            <StaticImage alt="Enatega App" style={{ border: '1px solid #EBE8E8', borderRadius: 20, padding: 10, width:'30vmin' }} src="../../../images/ios2.png" />
                         </Grid>
                         <Grid item xs={12} lg={3}>
-                            <img alt="Enatega App" style={{ border: '1px solid #EBE8E8', borderRadius: 20, padding: 10, width:'30vmin' }} src={ios3} />
+                            <StaticImage alt="Enatega App" style={{ border: '1px solid #EBE8E8', borderRadius: 20, padding: 10, width:'30vmin' }} src="../../../images/ios3.png" />
                         </Grid>
                         <Grid item xs={12} lg={3}>
-                            <img alt="Enatega App" style={{ border: '1px solid #EBE8E8', borderRadius: 20, padding: 10, width:'30vmin' }} src={ios4} />
-                        </Grid>
-                    </Grid>
-                </div>
-                <div className={classes.images1}>
-                    <Typography variant="h5" gutterBottom style={{ textAlign: 'center', fontSize: 15, letterSpacing: 1, lineHeight: '90px', marginTop: 10, fontFamily: 'Montserrat', fontWeight: '700' }}>On Boarding & Registration</Typography>
-                    <Grid container spacing={10}>
-                        <Grid item xs={12} lg={3}>
-                            <img alt="Enatega App" style={{ border: '1px solid #EBE8E8', borderRadius: 20, padding: 10, width:'30vmin' }} src={ios5} />
-                        </Grid>
-                        <Grid item xs={12} lg={3}>
-                            <img alt="Enatega App" style={{ border: '1px solid #EBE8E8', borderRadius: 20, padding: 10, width:'30vmin' }} src={ios6} />
-                        </Grid>
-                        <Grid item xs={12} lg={3}>
-                            <img alt="Enatega App" style={{ border: '1px solid #EBE8E8', borderRadius: 20, padding: 10, width:'30vmin' }} src={ios7} />
-                        </Grid>
-                        <Grid item xs={12} lg={3}>
-                            <img alt="Enatega App" style={{ border: '1px solid #EBE8E8', borderRadius: 20, padding: 10, width:'30vmin' }} src={ios8} />
+                            <StaticImage alt="Enatega App" style={{ border: '1px solid #EBE8E8', borderRadius: 20, padding: 10, width:'30vmin' }} src="../../../images/ios4.png" />
                         </Grid>
                     </Grid>
                 </div>
@@ -88,16 +72,16 @@ const Flow = (props) => {
                     <Typography variant="h5" gutterBottom style={{ textAlign: 'center', fontSize: 15, letterSpacing: 1, lineHeight: '90px', marginTop: 10, fontFamily: 'Montserrat', fontWeight: '700' }}>On Boarding & Registration</Typography>
                     <Grid container spacing={10}>
                         <Grid item xs={12} lg={3}>
-                            <img alt="Enatega App" style={{ border: '1px solid #EBE8E8', borderRadius: 20, padding: 10, width:'30vmin' }} src={ios9} />
+                            <StaticImage alt="Enatega App" style={{ border: '1px solid #EBE8E8', borderRadius: 20, padding: 10, width:'30vmin' }} src="../../../images/ios5.png" />
                         </Grid>
                         <Grid item xs={12} lg={3}>
-                            <img alt="Enatega App" style={{ border: '1px solid #EBE8E8', borderRadius: 20, padding: 10, width:'30vmin' }} src={ios10} />
+                            <StaticImage alt="Enatega App" style={{ border: '1px solid #EBE8E8', borderRadius: 20, padding: 10, width:'30vmin' }} src="../../../images/ios6.png" />
                         </Grid>
                         <Grid item xs={12} lg={3}>
-                            <img alt="Enatega App" style={{ border: '1px solid #EBE8E8', borderRadius: 20, padding: 10, width:'30vmin' }} src={ios11} />
+                            <StaticImage alt="Enatega App" style={{ border: '1px solid #EBE8E8', borderRadius: 20, padding: 10, width:'30vmin' }} src="../../../images/ios7.png" />
                         </Grid>
                         <Grid item xs={12} lg={3}>
-                            <img alt="Enatega App" style={{ border: '1px solid #EBE8E8', borderRadius: 20, padding: 10, width:'30vmin' }} src={ios12} />
+                            <StaticImage alt="Enatega App" style={{ border: '1px solid #EBE8E8', borderRadius: 20, padding: 10, width:'30vmin' }} src="../../../images/ios8.png" />
                         </Grid>
                     </Grid>
                 </div>
@@ -105,16 +89,33 @@ const Flow = (props) => {
                     <Typography variant="h5" gutterBottom style={{ textAlign: 'center', fontSize: 15, letterSpacing: 1, lineHeight: '90px', marginTop: 10, fontFamily: 'Montserrat', fontWeight: '700' }}>On Boarding & Registration</Typography>
                     <Grid container spacing={10}>
                         <Grid item xs={12} lg={3}>
-                            <img alt="Enatega App" style={{ border: '1px solid #EBE8E8', borderRadius: 20, padding: 10, width:'30vmin' }} src={ios13} />
+                            <StaticImage alt="Enatega App" style={{ border: '1px solid #EBE8E8', borderRadius: 20, padding: 10, width:'30vmin' }} src="../../../images/ios9.png" />
                         </Grid>
                         <Grid item xs={12} lg={3}>
-                            <img alt="Enatega App" style={{ border: '1px solid #EBE8E8', borderRadius: 20, padding: 10, width:'30vmin' }} src={ios14} />
+                            <StaticImage alt="Enatega App" style={{ border: '1px solid #EBE8E8', borderRadius: 20, padding: 10, width:'30vmin' }} src="../../../images/ios10.png" />
                         </Grid>
                         <Grid item xs={12} lg={3}>
-                            <img alt="Enatega App" style={{ border: '1px solid #EBE8E8', borderRadius: 20, padding: 10, width:'30vmin' }} src={ios15} />
+                            <StaticImage alt="Enatega App" style={{ border: '1px solid #EBE8E8', borderRadius: 20, padding: 10, width:'30vmin' }} src="../../../images/ios11.png" />
                         </Grid>
                         <Grid item xs={12} lg={3}>
-                            <img alt="Enatega App" style={{ border: '1px solid #EBE8E8', borderRadius: 20, padding: 10, width:'30vmin' }} src={ios16} />
+                            <StaticImage alt="Enatega App" style={{ border: '1px solid #EBE8E8', borderRadius: 20, padding: 10, width:'30vmin' }} src="../../../images/ios12.png" />
+                        </Grid>
+                    </Grid>
+                </div>
+                <div className={classes.images1}>
+                    <Typography variant="h5" gutterBottom style={{ textAlign: 'center', fontSize: 15, letterSpacing: 1, lineHeight: '90px', marginTop: 10, fontFamily: 'Montserrat', fontWeight: '700' }}>On Boarding & Registration</Typography>
+                    <Grid container spacing={10}>
+                        <Grid item xs={12} lg={3}>
+                            <StaticImage alt="Enatega App" style={{ border: '1px solid #EBE8E8', borderRadius: 20, padding: 10, width:'30vmin' }} src="../../../images/ios13.png" />
+                        </Grid>
+                        <Grid item xs={12} lg={3}>
+                            <StaticImage alt="Enatega App" style={{ border: '1px solid #EBE8E8', borderRadius: 20, padding: 10, width:'30vmin' }} src="../../../images/ios14.png" />
+                        </Grid>
+                        <Grid item xs={12} lg={3}>
+                            <StaticImage alt="Enatega App" style={{ border: '1px solid #EBE8E8', borderRadius: 20, padding: 10, width:'30vmin' }} src="../../../images/ios15.png" />
+                        </Grid>
+                        <Grid item xs={12} lg={3}>
+                            <StaticImage alt="Enatega App" style={{ border: '1px solid #EBE8E8', borderRadius: 20, padding: 10, width:'30vmin' }} src="../../../images/ios16.png" />
                         </Grid>
                     </Grid>
                 </div>

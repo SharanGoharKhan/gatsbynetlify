@@ -2,14 +2,13 @@ import React,{useEffect} from 'react'
 import {Typography } from '@material-ui/core';
 import { ContactUs, Footer, TopBar } from "../../components";
 import "./SenseChat.css";
-import enategaMobile  from "../../images/enategaSenseChat.png";
 import FormatQuoteIcon from '@material-ui/icons/FormatQuote';
 import Introduction from "./component/Introduction";
 import Problem from "./component/Problem";
 import Approach from "./component/Approach";
 import Solution from "./component/Solution";
 import OutComeAndBenefits from "./component/OutCome";
-
+import { StaticImage } from "gatsby-plugin-image";
 
 const SenseChat = () => {
 
@@ -25,7 +24,7 @@ const SenseChat = () => {
         <Typography style={{fontWeight:'700',lineHeight:'60px',  textAlign:'center', fontFamily:'Montserrat',fontSize:30, color:'#fff'}} >A better messenger</Typography>
         <Typography style={{textAlign:'center',width:'40%',margin:'auto',marginBottom:50, fontFamily:'Montserrat', color:'#fff'}} >A new messenger built to communicate, organize, and reward your communities and friends.</Typography>   
         <div style={{textAlign:'center',height: 200}}>
-        <img style={{width:'53vmin', height:'70vmin'}} src={enategaMobile} />
+        <StaticImage style={{width:'53vmin', height:'70vmin'}} src="../../images/enategaSenseChat.png" />
         </div>
         </div>
         <div style={{textAlign:'center',marginTop:250}}>

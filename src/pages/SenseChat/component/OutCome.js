@@ -1,9 +1,6 @@
 import React from 'react';
-import { Divider, Typography, makeStyles, Paper, Box, Grid, Button, Icon } from '@material-ui/core';
-import Mockup7 from "../../../images/Mockup7.svg";
-import Mockup8 from "../../../images/Mockup8.svg";
-import Mockup9 from "../../../images/Mockup9.svg";
-
+import {Typography, makeStyles,Grid } from '@material-ui/core';
+import { StaticImage } from "gatsby-plugin-image";
 
 
 const useStyles = makeStyles((theme) => ({
@@ -55,13 +52,13 @@ const OutComeAndBenefits = (props) => {
                 <div className={classes.imagesContainer}>
                     <Grid container justify="center" alignItems="center">
                         <Grid item xs={12} sm={6} md={3} >
-                        <img style={{width:'36vmin'}} src={Mockup7} />
+                        <StaticImage style={{width:'36vmin'}} src="../../../images/Mockup7.svg" />
                         </Grid>
                         <Grid item xs={12} sm={6} md={3}>
-                        <img style={{width:'36vmin'}} src={Mockup8} />
+                        <StaticImage style={{width:'36vmin'}} src={"../../../images/Mockup8.svg"} />
                         </Grid>
                         <Grid item xs={12} sm={6} md={3}>
-                        <img style={{width:'36vmin'}} src={Mockup9} />
+                        <StaticImage style={{width:'36vmin'}} src="../../../images/Mockup9.svg" />
                         </Grid>
                     </Grid>
                 </div>

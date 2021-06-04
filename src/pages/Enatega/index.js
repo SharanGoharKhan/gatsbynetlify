@@ -1,8 +1,6 @@
 import React, { useEffect } from 'react'
 import { Typography, makeStyles, Grid, Button, Icon, useMediaQuery, useTheme } from '@material-ui/core';
 import './Enatega.css'
-import enategaHome1 from '../../../public/static/enategaHome1.png'
-import enategaHome2 from '../../../public/static/enategaHome2.png'
 import {TopBar} from '../../components'
 import ColorScheme from "./components/ColorScheme";
 import Feature from "./components/Features";
@@ -12,6 +10,7 @@ import VideoDemo from "./components/VideoDemo";
 import Dashboard from "./components/Dashboard";
 import RiderAndRestaurant from './components/RiderAndRestaurant';
 import { ContactUs, Footer } from "../../components";
+import { StaticImage } from "gatsby-plugin-image";
 
 const useStyles = makeStyles((theme) => ({
     divider: {
@@ -105,11 +104,12 @@ const Enatega = () => {
              
                       <Grid container justify="center" style={{marginRight:'20%', marginTop:'10%'}} alignItems="center">
                       <Grid item xs={6} sm={6} style={{zIndex:1}}>
-                      <img style={{width:'130%', height:'60%'  }} src={enategaHome2} />
+                      <StaticImage style={{width:'120%', height:'60%'  }} src='../../images/enategaHome2.png' />
                     
                         </Grid>
                         <Grid item xs={6} sm={6}>
-                        <img style={{marginLeft:'-35%',width:'100%', height:'100%'}} src={enategaHome1} />
+                        <StaticImage style={{marginLeft:'-35%',width:'100%', height:'100%'}} src='../../images/enategaHome1.png' />
+                        
                         </Grid>
                       </Grid>
                     

@@ -10,48 +10,50 @@ const useStyles = makeStyles((theme) => ({
     container: {
         backgroundColor: '#283646',
         padding: theme.spacing(6),
-        height: 'fit-content',
-        textAlign: 'center',
-        marginTop: theme.spacing(6)
+        height:'fit-content',
+        textAlign:'center',
+        // paddingLeft:theme.spacing(10),
+        // paddingRight:theme.spacing(10),
+        marginTop:theme.spacing(6)
     },
     textInput: {
         width: "100%",
         height: '7vmin',
         borderRadius: 2,
-        borderWidth: 1,
+        borderWidth:1,
         padding: 10,
-        fontFamily: 'Montserrat',
-        fontWeight: '600',
-        fontSize: '2.5vmin'
+        fontFamily:'Montserrat',
+        fontWeight:'600',
+        fontSize:'2.5vmin'
     },
-    heading: {
-        fontWeight: 700,
-        color: '#fff',
-        fontSize: '5vmin',
+    heading:{
+        fontWeight: 700, 
+        color: '#fff', 
+        fontSize: '5vmin' ,
         textAlign: 'center',
-        fontFamily: 'Montserrat'
+        fontFamily:'Montserrat' 
     },
-    iconText: {
-        fontSize: '3vmin',
-        fontWeight: 600,
-        color: '#CFD3D7',
-        fontFamily: 'Montserrat'
+    iconText:{
+        fontSize:'3vmin',
+        fontWeight:600,
+        color:'#CFD3D7',
+        fontFamily:'Montserrat'
     },
-    iconText2: {
-        fontSize: '3vmin',
-        fontWeight: 700,
-        color: '#fff',
-        fontFamily: 'Montserrat'
+    iconText2:{
+        fontSize:'3vmin',
+        fontWeight:700,
+        color:'#fff',
+        fontFamily:'Montserrat'
     }
 }));
 
 const ContactUs = () => {
     const classes = useStyles();
     return (
-        <div id="contactus" className={classes.container}>
+        <div id="contact" className={classes.container}>
             <Grid container justify="center" direction="row" spacing={5} alignItems="center" >
-                <Grid item xs={12}>
-                    <form name="contact" method="post" data-netlify="true" netlify-honeypot="bot-field">
+                
+                    {/* <form name="contact" method="post" style={{textAlign:'center'}} data-netlify="true" netlify-honeypot="bot-field"> */}
                         <input type="hidden" name="form-name" value="contact" />
                         <Grid item xs={12}>
                             <Typography className={classes.heading} variant="h3" gutterBottom>
@@ -72,8 +74,8 @@ const ContactUs = () => {
                                 <Typography style={{ fontFamily: 'Montserrat', color: '#fff', fontSize: '3vmin', fontWeight: '600' }}>Send</Typography>
                             </Button>
                         </Grid>
-                    </form>
-                </Grid>
+                    {/* </form> */}
+                
                 <Grid item xs={12}>
                     <Typography className={classes.heading} variant="h3" gutterBottom>
                         Get in Touch
