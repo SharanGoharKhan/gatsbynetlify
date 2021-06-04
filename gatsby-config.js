@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Ninjas Code`,
+    title: `We provide solution for your business`,
     description: `Top Software development company for mobile and web development`,
     author: `@ninjascode`,
   },
