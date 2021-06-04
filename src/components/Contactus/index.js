@@ -24,7 +24,7 @@ const useStyles = makeStyles((theme) => ({
         padding: 10,
         fontFamily:'Montserrat',
         fontWeight:'600',
-        fontSize:'2.5vmin'
+        fontSize:'2vmin'
     },
     heading:{
         fontWeight: 700, 
@@ -52,30 +52,34 @@ const ContactUs = () => {
     return (
         <div id="contact" className={classes.container}>
             <Grid container justify="center" direction="row" spacing={5} alignItems="center" >
-                
-                    {/* <form name="contact" method="post" style={{textAlign:'center'}} data-netlify="true" netlify-honeypot="bot-field"> */}
+                    
                         <input type="hidden" name="form-name" value="contact" />
                         <Grid item xs={12}>
                             <Typography className={classes.heading} variant="h3" gutterBottom>
                                 Let's Talk with us
                         </Typography>
                         </Grid>
-                        <Grid item xs={12} md={4}>
-                            <input name="name" type="text" className={classes.textInput} placeholder="Enter your name" />
-                        </Grid>
-                        <Grid item xs={12} md={4}>
-                            <input name="email" type="email" className={classes.textInput} placeholder="Enter your email" />
-                        </Grid>
-                        <Grid item xs={12} md={8}>
-                            <TextareaAutosize name="quote" style={{ width: '100%', height: '20vh', fontFamily: 'Montserrat', fontWeight: '600', borderRadius: '8px', padding: 10 }} aria-label="empty textarea" placeholder="Message..." />
-                        </Grid>
-                        <Grid item style={{ textAlign: 'end' }} xs={12} md={8}>
-                            <Button type="submit" variant="contained" size="large" style={{ width: '15%', color: '#3751FF', fontFamily: 'Montserrat', backgroundColor: '#3A86FF' }}>
+                        <Grid container justify="center" alignItems='center'>
+                        <form style={{width:'80%', textAlign:'center'}} name="contact" method="post" data-netlify="true" netlify-honeypot="bot-field">
+                        <div style={{textAlign:'center', width:'100%', margin:'auto'}}>
+                        
+                            <div style={{display:'flex', justifyContent:'space-between', marginBottom:20}}>
+                            <input name="name" type="text" className={classes.textInput} style={{width:'45%'}} placeholder="Enter your name" />
+                        
+                        
+                            <input name="email" type="email" className={classes.textInput} style={{width:'45%'}} placeholder="Enter your email" />
+                            </div>
+                        
+                            <TextareaAutosize name="quote" style={{ width: '100%', height: '20vh', fontFamily: 'Montserrat',fontSize:'2vmin', fontWeight: '600', borderRadius: '8px', padding: 10 }} aria-label="empty textarea" placeholder="Message..." />
+                        
+                        
+                            <Button type="submit" variant="contained" size="large" style={{ width: '15%', color: '#3751FF',marginTop:20, fontFamily: 'Montserrat', backgroundColor: '#3A86FF' }}>
                                 <Typography style={{ fontFamily: 'Montserrat', color: '#fff', fontSize: '3vmin', fontWeight: '600' }}>Send</Typography>
                             </Button>
-                        </Grid>
-                    {/* </form> */}
-                
+                        
+                        </div>
+                    </form>
+                    </Grid>
                 <Grid item xs={12}>
                     <Typography className={classes.heading} variant="h3" gutterBottom>
                         Get in Touch
