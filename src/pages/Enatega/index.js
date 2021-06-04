@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react'
 import { Typography, makeStyles, Grid, Button, Icon, useMediaQuery, useTheme } from '@material-ui/core';
 import './Enatega.css'
-import enategaHome1 from '../../images/enategaHome1.png'
-import enategaHome2 from '../../images/enategaHome2.png'
+import enategaHome1 from '../../images/enategaHome1.svg'
+import enategaHome2 from '../../images/enategaHome2.svg'
 import {TopBar} from '../../components'
 import ColorScheme from "./components/ColorScheme";
 import Feature from "./components/Features";
@@ -30,8 +30,10 @@ const useStyles = makeStyles((theme) => ({
         backgroundColor: '#6BCF93',
         borderRadius: 4,
         height: 52,
-        width: 160
-
+        width: 160,
+        borderWidth: 1,
+        borderColor: '#6BCF93',
+        borderStyle:'solid',
     },
     button2: {
         marginTop: theme.spacing(6),
@@ -77,24 +79,24 @@ const Enatega = () => {
                     <Grid container justify="flex-start" alignItems="center">
                         <Grid item xs={12} sm={4}>
                             <Button
-                                variant="contained"
+                                // variant="contained"
                                 color="primary"
                                 size="large"
                                 className={classes.button}
-                                autoCapitalize={true}
+                                autoCapitalize={false}
                             >
-                                <Typography autoCapitalize={false} style={{ fontSize: 14, fontWeight: 600, fontFamily:'Montserrat', }} >Contact Us</Typography>
+                                <Typography autoCapitalize={false} style={{ fontSize: 14,color:'#fff', fontWeight: 600, fontFamily:'Montserrat', }} >Contact Us</Typography>
                             </Button>
                         </Grid>
                         <Grid item xs={12} sm={4}>
                             <Button
-                                variant="contained"
+                                // variant="contained"
                                 color="primary"
                                 size="large"
                                 className={classes.button2}
-                                autoCapitalize={true}
+                                autoCapitalize={false}
                             >
-                                <Typography autoCapitalize={false} style={{ fontSize: 14, color: '#4F4F4F',fontFamily:'Montserrat', fontWeight: 600 }} >Docs</Typography>
+                                <Typography autoCapitalize={false} style={{ fontSize: 14, color: '#4F4F4F', fontFamily:'Montserrat', fontWeight: 600 }} >Docs</Typography>
                             </Button>
                         </Grid>
                     </Grid>
@@ -107,7 +109,7 @@ const Enatega = () => {
                     
                         </Grid>
                         <Grid item xs={6} sm={6}>
-                        <img style={{marginLeft:'-35%',width:'130%', height:'60%'}} src={enategaHome1} />
+                        <img style={{marginLeft:'-35%',width:'100%', height:'100%'}} src={enategaHome1} />
                         </Grid>
                       </Grid>
                     

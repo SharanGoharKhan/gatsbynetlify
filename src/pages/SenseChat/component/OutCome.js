@@ -1,6 +1,8 @@
 import React from 'react';
 import { Divider, Typography, makeStyles, Paper, Box, Grid, Button, Icon } from '@material-ui/core';
-import Mockup1 from "../../../images/solution1.png";
+import Mockup7 from "../../../images/Mockup7.svg";
+import Mockup8 from "../../../images/Mockup8.svg";
+import Mockup9 from "../../../images/Mockup9.svg";
 
 
 
@@ -53,13 +55,13 @@ const OutComeAndBenefits = (props) => {
                 <div className={classes.imagesContainer}>
                     <Grid container justify="center" alignItems="center">
                         <Grid item xs={12} sm={6} md={3} >
-                        <img style={{width:'36vh'}} src={Mockup1} />
+                        <img style={{width:'36vmin'}} src={Mockup7} />
                         </Grid>
                         <Grid item xs={12} sm={6} md={3}>
-                        <img style={{width:'36vh'}} src={Mockup1} />
+                        <img style={{width:'36vmin'}} src={Mockup8} />
                         </Grid>
                         <Grid item xs={12} sm={6} md={3}>
-                        <img style={{width:'36vh'}} src={Mockup1} />
+                        <img style={{width:'36vmin'}} src={Mockup9} />
                         </Grid>
                     </Grid>
                 </div>

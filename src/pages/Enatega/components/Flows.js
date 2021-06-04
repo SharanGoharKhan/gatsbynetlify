@@ -1,6 +1,6 @@
 import React from 'react';
 import { Typography, makeStyles, Grid } from '@material-ui/core';
-import ios1 from "../../../images/ios1.png";
+import ios1 from "../../../images/ios1.svg";
 import ios2 from "../../../images/ios2.png";
 import ios3 from "../../../images/ios3.png";
 import ios4 from "../../../images/ios4.png";

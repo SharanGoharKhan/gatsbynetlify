@@ -174,7 +174,6 @@ const IndexPage = () => {
       <WhyUs />
       <Testimonal />
       <FAQ />
-      <Logos />
       <ContactUs />
       <Footer />
     </>

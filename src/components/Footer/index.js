@@ -1,11 +1,11 @@
 
 import React from "react";
 import { makeStyles, Grid, Typography, Box, Link,Button, Divider } from '@material-ui/core';
-import instaLogo from "../../images/instaRound.png";
-import twitterLogo from "../../images/twitterRound.png";
-import FacebookLogo from "../../images/facebookRound.png";
-import linkedinLogo from "../../images/linkedRound.png";
+import FacebookRound from "../../svg/FacebookRound";
 import { Link as GatsbyLink } from "gatsby";
+import InstaRound from "../../svg/InstaRound";
+import TwitterRound from "../../svg/TwitterRound";
+import LinkedInRound from "../../svg/LinkedInRound";
 
 const useStyles = makeStyles((theme) => ({
 
@@ -129,22 +129,22 @@ const Footer = () => {
             <Grid container direction="row" spacing={1} justify="center" alignItems="center">
             <Grid item xs={3}>
            <Link href={'#'}>
-            <img alt="Ninjas code Facebook" src={FacebookLogo} />
+            <FacebookRound />
             </Link>
             </Grid>
             <Grid item xs={3}>
             <Link href={'#'}>
-            <img alt="Ninjas code Twitter" src={twitterLogo} />
+            <TwitterRound />
             </Link>
             </Grid>
             <Grid item xs={3}>
             <Link href={'#'}>
-            <img alt="Ninjas code Linkedin" src={linkedinLogo} />
+            <LinkedInRound />
             </Link>
             </Grid>
             <Grid item xs={3}>
             <Link href={'#'}>
-            <img alt="Ninjas code instagram" src={instaLogo} />
+            <InstaRound />
             </Link>
             </Grid>
             </Grid>

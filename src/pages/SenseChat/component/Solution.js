@@ -1,6 +1,8 @@
 import React from 'react';
 import { Typography, makeStyles,Grid } from '@material-ui/core';
-import Mockup1 from "../../../images/solution1.png";
+import Mockup4 from "../../../images/Mockup4.svg";
+import Mockup5 from "../../../images/Mockup5.svg";
+import Mockup6 from "../../../images/Mockup6.svg";
 import CheckCircleIcon from '@material-ui/icons/CheckCircle';
 
 
@@ -79,14 +81,14 @@ const Solution = (props) => {
                            
                         </Grid>
                         <Grid itemxs={12} md={4}>
-                            <img style={{}} src={Mockup1} />
+                            <img style={{width:'35vmin'}} src={Mockup4} />
                         </Grid>
                     </Grid>
                 </div>
                 <div className={classes.topConatainer}>
                     <Grid container justify="center" alignItems="center">
                         <Grid item xs={12} direction="row" justify="flex-end" md={4}>
-                            <img style={{}} src={Mockup1} />
+                            <img style={{width:'35vmin'}} src={Mockup5} />
                         </Grid>
                         <Grid item xs={12} direction="row" md={8} >
                             <Typography variant="h5" gutterBottom style={{ marginTop: 10, lineHeight: '30px', fontFamily: 'Poppins', fontSize: '90%' }}>The first order of business was making the code architecture compliant with Clean Architecture.</Typography>
@@ -102,7 +104,7 @@ const Solution = (props) => {
             
                         </Grid>
                         <Grid item xs={12} direction="row" justify="flex-end" md={4}>
-                            <img style={{}} src={Mockup1} />
+                            <img style={{width:'35vmin'}} src={Mockup6} />
                         </Grid>
                     </Grid>
                 </div>

@@ -1,9 +1,9 @@
 
 import React, { useState } from "react";
-import { makeStyles, Grid, Typography, TextareaAutosize, Button, Box, FormControl } from '@material-ui/core';
-import callIcon from '../../images/callIcon.png'
-import emailIcon from '../../images/emailIcon.png'
-import mapIcon from '../../images/mapIcon.png'
+import { makeStyles, Grid, Typography, TextareaAutosize,Button, Box } from '@material-ui/core';
+import CallIcon from "../../svg/callIcon";
+import AddressIcon from "../../svg/addressIcon";
+import EmailIcon from "../../svg/emailIcon";
 
 const useStyles = makeStyles((theme) => ({
 
@@ -82,39 +82,42 @@ const ContactUs = () => {
                     <Typography className={classes.heading} variant="h3" gutterBottom>
                         Get in Touch
             </Typography>
-                </Grid>
-                <Grid style={{ textAlign: 'center' }} item xs={6} sm={6} md={6} lg={4}>
-                    <Box style={{ display: 'block', textAlign: 'center', alignItems: 'center' }}>
-                        <img alt="call" style={{ width: '9vmin' }} src={callIcon} />
-                        <Box style={{ padding: '2vmin' }}>
-                            <Typography className={classes.iconText}>
-                                Phone Number
+            </Grid>
+            <Grid style={{textAlign:'center'}} item xs={6} sm={6} md={6} lg={4}>
+            <Box style={{display:'block',textAlign:'center', alignItems:'center'}}>
+            {/* <img alt="call" style={{width:'9vmin'}} src={callIcon} /> */}
+            <CallIcon />
+            <Box style={{padding:'2vmin'}}> 
+            <Typography className={classes.iconText}>
+                Phone Number
             </Typography>
                             <Typography className={classes.iconText2} >
                                 (62) 1829017
             </Typography>
-                        </Box>
-                    </Box>
-                </Grid>
-                <Grid style={{ textAlign: 'center' }} item xs={6} sm={6} md={6} lg={4}>
-                    <Box style={{ display: 'block', textAlign: 'center', alignItems: 'center' }}>
-                        <img alt="email" style={{ width: '9vmin' }} src={emailIcon} />
-                        <Box style={{ textAlign: 'center', padding: '2vmin' }}>
-                            <Typography className={classes.iconText}>
-                                Email
+            </Box>
+                 </Box>
+            </Grid>
+            <Grid style={{textAlign:'center'}} item xs={6} sm={6} md={6} lg={4}>
+            <Box style={{display:'block',textAlign:'center', alignItems:'center'}}>
+            {/* <img alt="email" style={{width:'9vmin'}} src={emailIcon} /> */}
+            <EmailIcon />
+            <Box style={{textAlign:'center',padding:'2vmin'}}> 
+            <Typography className={classes.iconText}>
+            Email
             </Typography>
                             <Typography className={classes.iconText2} >
                                 Hello@studio.co
             </Typography>
-                        </Box>
-                    </Box>
-                </Grid>
-                <Grid style={{ textAlign: 'center' }} item xs={8} sm={6} md={6} lg={4}>
-                    <Box style={{ display: 'block', textAlign: 'center', alignItems: 'center' }}>
-                        <img alt="location" style={{ width: '9vmin' }} src={mapIcon} />
-                        <Box style={{ padding: '2vmin' }}>
-                            <Typography className={classes.iconText}>
-                                Map Street
+            </Box>
+                 </Box>
+            </Grid>
+            <Grid style={{textAlign:'center'}} item xs={8} sm={6} md={6} lg={4}>
+            <Box style={{display:'block',textAlign:'center', alignItems:'center'}}>
+            {/* <img alt="location" style={{width:'9vmin'}} src={mapIcon} /> */}
+            <AddressIcon />
+            <Box style={{padding:'2vmin'}}> 
+            <Typography className={classes.iconText}>
+            Map Street
             </Typography>
                             <Typography className={classes.iconText2} >
                                 John Bucarest st 100

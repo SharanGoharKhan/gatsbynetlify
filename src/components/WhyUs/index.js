@@ -51,22 +51,22 @@ const WhyUs = () => {
         <Grid container spacing={3} justify="center" className={classes.grid}>
         <Grid item xs={6} sm={6} md={6} lg={3}>
         
-         <SpeedIcon className={classes.image} style={{color:'#fff', fontSize:'12vmin'}} />
+         <SpeedIcon className={classes.image} style={{color:'#fff', fontSize:'15vmin'}} />
           <div className={classes.subTitle}>UX driven approach</div>
         </Grid>
         <Grid item xs={6} sm={6} md={6} lg={3}>
         
-        <ShutterSpeedIcon className={classes.image} style={{color:'#fff', fontSize:'12vmin'}} />
+        <ShutterSpeedIcon className={classes.image} style={{color:'#fff', fontSize:'15vmin'}} />
         <div className={classes.subTitle}>3 months time to market</div>
         </Grid>
         <Grid item xs={6} sm={6} md={6} lg={3}>
         
-        <TimerIcon className={classes.image} style={{color:'#fff', fontSize:'12vmin'}} />
+        <TimerIcon className={classes.image} style={{color:'#fff', fontSize:'15vmin'}} />
         <div className={classes.subTitle}>$3000 costs limit</div>
         </Grid>
         <Grid item xs={6} sm={6} md={6} lg={3}>
         
-        <FlashOnIcon className={classes.image} style={{color:'#fff', fontSize:'12vmin'}} />
+        <FlashOnIcon className={classes.image} style={{color:'#fff', fontSize:'15vmin'}} />
         <div className={classes.subTitle}>Complete process transparency</div>
         </Grid>
         </Grid>
