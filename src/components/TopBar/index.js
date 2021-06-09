@@ -82,26 +82,11 @@ const useStyles = makeStyles((theme) => ({
 
 
 const TopBar = (props) => {
-
-    // console.log('props', props)
     const classes = useStyles();
-
-    // const [anchorEl, setAnchorEl] = React.useState(null);
-
-    // const [closeMenu, setCloseMenu] = useState(false);
-
     const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
-
     const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
-
     const mobileMenuId = 'primary-search-account-menu-mobile';
-
     const matches = useMediaQuery('(min-width:960px)');
-    
-
-    // console.log('matches use media', matches)
-
-
 
     const handleMobileMenuClose = () => {
         setMobileMoreAnchorEl(null);
@@ -200,14 +185,7 @@ const TopBar = (props) => {
                 <Toolbar>
                     <Link activeClass="active" to="/" spy={true} smooth={true} offset={-30} duration={500} className={classes.root} >
                         <IconButton className={classes.title}>
-                            {/* <Typography style={{
-                                fontSize: 24,
-                                fontWeight: 700,
-                                fontSize: '24px',
-                                color: props.fontColor,
-                                fontFamily: 'Montserrat'
-                            }}> Ninjas Code </Typography> */}
-                           <GatsbyLink to="/"> <img style={{width:'30vmin', marginTop:20}} src={props.fontColor === '#fff' ? Logo : LogoBlack} /></GatsbyLink>
+                           <GatsbyLink to="/"> <img alt="ninjas code" style={{width:'30vmin', marginTop:20}} src={props.fontColor === '#fff' ? Logo : LogoBlack} /></GatsbyLink>
                         </IconButton>
                     </Link>
                     <div className={classes.sectionDesktop}>

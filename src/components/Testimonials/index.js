@@ -1,11 +1,8 @@
 import React, { useRef } from "react";
 import StarIcon from '@material-ui/icons/Star';
-import profile from '../../images/profile.jpeg'
-import DrawKitLogo from '../../images/DrawKit.png'
-import video from '../../images/video.mp4'
-import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
-import KeyboardBackspaceIcon from '@material-ui/icons/KeyboardBackspace';
-import { Divider, Button, Typography, Card, Box, useMediaQuery, CardActionArea, Avatar, CardContent, CardMedia, makeStyles, Grid, GridList, GridListTile, IconButton } from '@material-ui/core';
+import { Divider, Button, Typography, Card, Box, useMediaQuery, CardActionArea, Avatar, CardContent, makeStyles, Grid, GridList, GridListTile, IconButton } from '@material-ui/core';
+import ArrowLeftIcon from "../../svg/arrowLeftIcon";
+import ArrowRightIcon from "../../svg/arrowRightIcon";
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -20,7 +17,6 @@ const useStyles = makeStyles((theme) => ({
     },
     gridList: {
         flexWrap: 'nowrap',
-        // Promote the list into his own layer on Chrome. This cost memory but helps keeping high FPS.
         transform: 'translateZ(0)',
     },
     titleText: {
@@ -70,24 +66,23 @@ const useStyles = makeStyles((theme) => ({
 
 const tileData = [
     {
-        img: 'https://images.unsplash.com/photo-1593642632559-0c6d3fc62b89?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80',
-        title: 'Image1',
-        author: 'author',
+        name: 'Crystal Rose',
+        designation: 'Founder at Sense.chat',
+        quote: 'Ninjas Code has the best software developers I have worked with. They jump right into codebase without too much hand holding. They are responsive and professional. Having experience with multiple agencies. I can confidently say Ninjas Code are simply the best.',
+        img: '../../images/crystal.jpeg',
     },
     {
-        img: 'https://images.unsplash.com/photo-1593642632559-0c6d3fc62b89?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80',
-        title: 'Image2',
-        author: 'author',
+        name: 'Raleigh Melancon',
+        designation: 'Founder at StylizeNow',
+        quote: `Thanks to Ninjas Code, the app was published in both the App Store and Google Play. The team communicated via Slack during the engagement. They delivered the project on time, meeting the client's expectations.`,
+        img: '../../images/crystal.jpeg',
+
     },
     {
-        img: 'https://images.unsplash.com/photo-1593642632559-0c6d3fc62b89?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80',
-        title: 'Image3',
-        author: 'author',
-    },
-    {
-        img: 'https://images.unsplash.com/photo-1593642632559-0c6d3fc62b89?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80',
-        title: 'Image4',
-        author: 'author',
+        name: 'Kevin Sun',
+        designation: 'CTO, Bundl Technologies',
+        quote: `The team was excellent at meeting the needs of a growing startup. They efficiently delivered a functional MVP that has gained over 100 users after a month in the app store. Their investment in the project and driven attitude were highlights.`,
+        img: '../../images/crystal.jpeg',
     }
 ];
 
@@ -106,99 +101,69 @@ const Testimonial = () => {
     };
 
     return (
-        <Grid id="test" container justify="center" alignItems="center" style={{ textAlign: 'center',width:'100%',padding:10, marginTop: 30 }} spacing={3}>
-        <Grid item xs={12} sm={12} md={4}>
-            <Button variant="contained" size="large" style={{ color: '#3751FF',fontSize:'3vmin', fontFamily:'Montserrat', backgroundColor: '#F3F5FE' }}>
-                Testimonial
-    </Button>
-            <Typography className={classes.titleText} variant="h3" gutterBottom>
-                WHAT OUR CLIENTS TELL ABOUT US
-  </Typography>
-  {/* <Button variant="contained" size="large" onClick={()=>scroll(200)} >Right</Button> */}
-  <IconButton onClick={()=>scroll(-400)}>
-     <div style={{backgroundColor:'#fff',textAlign:'center',justifyContent:'center',alignItems:'center', width:'70px', height:'70px', borderRadius:'40px', boxShadow:'-10px 10px 20px #e6e5e3'}}>
-        <KeyboardBackspaceIcon color="primary" style={{paddingTop:17}} fontSize="large" />
-     </div>
- </IconButton>
-  <IconButton onClick={()=>scroll(400)}>
-     <div style={{backgroundColor:'#fff',textAlign:'center',justifyContent:'center',alignItems:'center', width:'70px', height:'70px', borderRadius:'40px', boxShadow:'-10px 10px 20px #e6e5e3'}}>
-        <ArrowForwardIcon color="primary" style={{paddingTop:17}} fontSize="large" />
-     </div>
- </IconButton>
+        <Grid id="test" container justify="center" alignItems="center" style={{ textAlign: 'center', width: '100%', padding: 10, marginTop: 30 }} spacing={3}>
+            <Grid item xs={12} sm={12} md={4}>
+                <Button variant="contained" size="large" style={{ color: '#3751FF', fontSize: '3vmin', fontFamily: 'Montserrat', backgroundColor: '#F3F5FE' }}>
+                    <Typography style={{ fontFamily: 'Montserrat', fontWeight: 500, fontSize: '20px' }}>Testimonials</Typography>
+                </Button>
+                <Typography className={classes.titleText} variant="h3" gutterBottom>
+                    WHAT OUR CLIENTS TELL ABOUT US
+                </Typography>
+                <IconButton onClick={() => scroll(-400)}>
+                    <div style={{ backgroundColor: '#fff', display: 'flex', textAlign: 'center', justifyContent: 'center', alignItems: 'center', width: '70px', height: '70px', borderRadius: '40px', boxShadow: '-10px 10px 20px #e6e5e3' }}>
+                        <ArrowLeftIcon />
+                    </div>
+                </IconButton>
+                <IconButton onClick={() => scroll(400)}>
+                    <div style={{ backgroundColor: '#fff', display: 'flex', textAlign: 'center', justifyContent: 'center', alignItems: 'center', width: '70px', height: '70px', borderRadius: '40px', boxShadow: '-10px 10px 20px #e6e5e3' }}>
+                        <ArrowRightIcon />
+                    </div>
+                </IconButton>
 
-        </Grid>
-        <Grid item xs={12} sm={12} md={8}>
-            <div className={classes.root}>
-                <GridList cellHeight={'auto'} className={classes.gridList} ref={ref} cols={matches ? 2.2 : 1.2}>
-                    <GridListTile key={'image0'}>
-                        <Card elevation={5} style={{ width: '90%' }}>
-                            <CardActionArea>
-                                <CardContent>
-                                    <CardMedia
-                                        component='video'
-                                        className={classes.media}
-                                        image={video}
-                                        autoPlay
-                                        controls
-                                        style={{ height: '30vmin', width:'50vmin' }}
-                                    />
-                                    <Divider className={classes.divider} variant="middle" />
-                                    <Typography variant="body2" className={classes.cardSubTitle} color="textSecondary" component="p">
-                                        Ninjas Code helped me very much by designing our app. And the whole process from the beginning of the first contact to the delivery of the final designs was really satisfying so I can recommend work together with Purrweb. I'm really happy with them!
-                                    </Typography>
-                                </CardContent>
-                                <Box component="span" className={classes.BoxContainer} m={1}>
-                                    <Box component="span" >
-                                        <StarIcon className={classes.star} />
-                                        <StarIcon className={classes.star} />
-                                        <StarIcon className={classes.star} />
-                                        <StarIcon className={classes.star} />
-                                    </Box>
-                                    <img alt="logo" src={DrawKitLogo} />
-                                </Box>
-                            </CardActionArea>
-                        </Card>
-                    </GridListTile>
-                    {tileData.map((tile, index1) => (
-                        <GridListTile key={index1}>
-                            <Card elevation={5} style={{ width: '90%' }}>
-                                <CardActionArea>
-                                    <CardContent>
-                                        <Box component="span" className={classes.BoxContainer} >
-                                            <Avatar alt="Remy Sharp" src={profile} className={classes.large} />
-                                            <Box component="span" m={1}>
-                                                <Typography gutterBottom variant="h5" className={classes.cardTitle} component="h2">
-                                                    Bethany Morales
-                                                 </Typography>
-                                                <Typography gutterBottom variant="body2" className={classes.cardSubTitle} component="p">
-                                                    CEO, Sports web application
-                                                </Typography>
+            </Grid>
+            <Grid item xs={12} sm={12} md={8}>
+                <div className={classes.root}>
+                    <GridList cellHeight={'auto'} className={classes.gridList} ref={ref} cols={matches ? 2.2 : 1.2}>
+                        {tileData.map((tile, index1) => (
+                            <GridListTile key={index1}>
+                                <Card elevation={5} style={{ width: '90%' }}>
+                                    <CardActionArea>
+                                        <CardContent>
+                                            <Box component="span" className={classes.BoxContainer} >
+                                                <Avatar alt={tile.name} src={tile.img} className={classes.large} />
+                                                <Box component="span" m={1}>
+                                                    <Typography gutterBottom variant="h5" className={classes.cardTitle} component="h2">
+                                                        {tile.name}
+                                                    </Typography>
+                                                    <Typography gutterBottom variant="body2" className={classes.cardSubTitle} component="p">
+                                                        {tile.designation}
+                                                    </Typography>
+                                                </Box>
+                                            </Box>
+                                            <Divider className={classes.divider} variant="middle" />
+                                            <Typography variant="body2" className={classes.cardSubTitle} color="textSecondary" component="p">
+                                                {tile.quote}
+                                            </Typography>
+                                        </CardContent>
+                                        <Box component="span" className={classes.BoxContainer} m={1}>
+                                            <Box component="span" >
+                                                <StarIcon className={classes.star} />
+                                                <StarIcon className={classes.star} />
+                                                <StarIcon className={classes.star} />
+                                                <StarIcon className={classes.star} />
+                                                <StarIcon className={classes.star} />
                                             </Box>
                                         </Box>
-                                        <Divider className={classes.divider} variant="middle" />
-                                        <Typography variant="body2" className={classes.cardSubTitle} color="textSecondary" component="p">
-                                            Ninjas Code helped me very much by designing our app. And the whole process from the beginning of the first contact to the delivery of the final designs was really satisfying so I can recommend work together with Purrweb. I'm really happy with them!
-                                        </Typography>
-                                    </CardContent>
-                                    <Box component="span" className={classes.BoxContainer} m={1}>
-                                        <Box component="span" >
-                                            <StarIcon className={classes.star} />
-                                            <StarIcon className={classes.star} />
-                                            <StarIcon className={classes.star} />
-                                            <StarIcon className={classes.star} />
-                                        </Box>
-                                        <img alt="logo" src={DrawKitLogo} />
-                                    </Box>
-                                </CardActionArea>
-                            </Card>
-                        </GridListTile>
-                    ))}
-                </GridList>
-            </div>
+                                    </CardActionArea>
+                                </Card>
+                            </GridListTile>
+                        ))}
+                    </GridList>
+                </div>
+            </Grid>
+
+
         </Grid>
-
-
-    </Grid>
     );
 }
 

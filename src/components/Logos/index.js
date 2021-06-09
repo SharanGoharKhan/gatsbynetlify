@@ -13,7 +13,6 @@ const useStyles = makeStyles((theme) => ({
         padding:theme.spacing(6),
         marginTop:theme.spacing(10),
         height:'fit-content'
-        // width:'100%'
     },
     logo:{
         width:'20vmin'

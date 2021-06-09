@@ -35,8 +35,6 @@ const useStyles = makeStyles((theme) => ({
     width: '60%',
     margin: 'auto',
     marginTop: theme.spacing(3),
-    // boxShadow:'5px 5px 5px 2px #F3F5FE',
-
   },
   button: {
     marginTop: theme.spacing(6),
@@ -100,7 +98,6 @@ const FAQ = () => {
   const [open, setOpen] = React.useState([false, false, false]);
 
   const handleClick = (index) => {
-    // console.log('handle', index)
     let tempOpen = [...open];
     tempOpen[index] = !open[index]
     console.log('temp', tempOpen)

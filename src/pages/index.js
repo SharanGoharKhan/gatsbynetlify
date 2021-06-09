@@ -1,13 +1,10 @@
 import * as React from "react"
-import { Link } from "gatsby"
-import { StaticImage } from "gatsby-plugin-image"
 import "./index.css";
-import Layout from "../components/layout"
 import "../components/layout.css"
 import Seo from "../components/seo"
 
-import { TopBar, FeaturedWork, WhyUs, Testimonal, FAQ, Logos, ContactUs, Footer } from '../components'
-import { Grid, Card, Paper, Typography, makeStyles, Box, useMediaQuery, Link as MaterialUILink } from '@material-ui/core';
+import { TopBar, FeaturedWork, WhyUs, Testimonal, FAQ as Faq, ContactUs, Footer } from '../components'
+import { Grid, Paper, Typography, makeStyles, Box, useMediaQuery, Link as MaterialUILink } from '@material-ui/core';
 import Facebook from "../svg/facebook";
 import Twitter from "../svg/twitter";
 import LinkedIn from "../svg/linkedin";
@@ -41,15 +38,12 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: 500,
     fontSize: '3vmin',
     lineHeight: '30px',
-    // letterSpacing: 1,
     fontFamily: 'Montserrat'
   },
   cardHeaderText: {
-    // color: 'black',
     fontWeight: 700,
     fontSize: '3vmin',
     fontFamily: 'Montserrat'
-    // fontFamily: 'Montserrat'
   },
   boldText: {
     color: '#fff',
@@ -63,6 +57,7 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: 'Montserrat'
   },
   cardText: {
+    textAlign: 'initial',
     fontSize: '2.5vmin',
     fontFamily: 'Montserrat'
   },
@@ -81,7 +76,7 @@ const IndexPage = () => {
         <Grid container direction="row" justify="center" alignItems="center" spacing={matches ? 0 : 0} className={classes.grid}>
           <Grid style={{ textAlign: matches ? 'start' : 'center' }} item xs={12} lg={4} >
             <Typography variant="h3" gutterBottom className={classes.title}>
-              We provide solution for your business
+              We Solve Business Problems with Modern Technologies
               </Typography>
             <Typography variant="h3" gutterBottom className={classes.subtitle}>
               Ready made solutions. Fully customizable with documentation and
@@ -97,7 +92,7 @@ const IndexPage = () => {
               </Box>
               <Box className={classes.logoContainer}>
                 <MaterialUILink
-                  href="https://twitter.com/gohar_001"
+                  href="https://twitter.com/NinjasCode1"
                   target="_blank">
                   <Twitter />
                 </MaterialUILink>
@@ -118,7 +113,7 @@ const IndexPage = () => {
                   <Grid item xs={12}>
                     <Typography className={classes.boldText} gutterBottom>
                       3 Things make us unique
-                             </Typography>
+                    </Typography>
                   </Grid>
                   <Grid item xs={12}>
                     <Paper className={classes.paper}>
@@ -149,7 +144,6 @@ const IndexPage = () => {
                         <Typography className={classes.cardHeaderText} gutterBottom>
                           Get feedback
                         </Typography>
-
                         <div style={{ width: 40, textAlign: 'center', height: 40, backgroundColor: '#175CFF', borderRadius: '50%' }}>
                           <Typography className={classes.number}>
                             02
@@ -191,7 +185,7 @@ const IndexPage = () => {
       <FeaturedWork />
       <WhyUs />
       <Testimonal />
-      <FAQ />
+      <Faq />
       <ContactUs />
       <Footer />
     </>

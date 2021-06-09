@@ -12,8 +12,6 @@ const useStyles = makeStyles((theme) => ({
         padding: theme.spacing(6),
         height: 'fit-content',
         textAlign: 'center',
-        // paddingLeft:theme.spacing(10),
-        // paddingRight:theme.spacing(10),
         marginTop: theme.spacing(6)
     },
     textInput: {

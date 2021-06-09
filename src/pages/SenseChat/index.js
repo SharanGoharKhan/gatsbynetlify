@@ -11,8 +11,6 @@ import OutComeAndBenefits from "./component/OutCome";
 import { StaticImage } from "gatsby-plugin-image";
 
 const SenseChat = () => {
-
-    // const classes = useStyles();
     useEffect(()=>{
         window.scrollTo(0,0)
     },[])

@@ -1,8 +1,5 @@
 import React from 'react';
 import { Typography, makeStyles, Grid } from '@material-ui/core';
-import Mockup1 from "../../../images/Mockup1.svg";
-import Mockup2 from "../../../images/Mockup2.svg";
-import Mockup3 from "../../../images/Mockup3.svg";
 import { StaticImage } from 'gatsby-plugin-image';
 
 

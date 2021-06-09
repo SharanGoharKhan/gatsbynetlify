@@ -1,6 +1,6 @@
 
 import React from "react";
-import { makeStyles, Grid, Typography, Box, Link, Button, Divider, Link as MaterialLink, } from '@material-ui/core';
+import { makeStyles, Grid, Typography, Box, Button, Divider, Link as MaterialLink } from '@material-ui/core';
 import { Link as ScrollLink } from "react-scroll";
 import FacebookRound from "../../svg/FacebookRound";
 import { Link as GatsbyLink } from "gatsby";
@@ -150,7 +150,7 @@ const Footer = () => {
                             </Grid>
                             <Grid item xs={3}>
                                 <MaterialLink
-                                    href="https://twitter.com/gohar_001"
+                                    href="https://twitter.com/NinjasCode1"
                                     target="_blank"
                                 >
                                     <TwitterRound />
@@ -165,9 +165,12 @@ const Footer = () => {
                                 </MaterialLink>
                             </Grid>
                             <Grid item xs={3}>
-                                <Link href={'#'}>
+                                <MaterialLink
+                                    href="https://www.instagram.com/ninjascode/"
+                                    target="_blank"
+                                >
                                     <InstaRound />
-                                </Link>
+                                </MaterialLink>
                             </Grid>
                         </Grid>
                     </Grid>
@@ -180,13 +183,27 @@ const Footer = () => {
                         <Typography className={classes.footerText} gutterBottom>
                             NinjasCode - © 2021 All Rights Reserved
                         </Typography>
-                        <GatsbyLink to="/TermsAndConditions">
+                        <Box>
+                            <GatsbyLink to="/TermsAndConditions" style={{ textDecoration: 'none' }}>
+                                <Button>
+                                    <Typography className={classes.footerText} gutterBottom>
+                                        Terms and conditions
+                                </Typography>
+                                </Button>
+                            </GatsbyLink>
                             <Button>
                                 <Typography className={classes.footerText} gutterBottom>
-                                    Terms and conditions - Privacy Policy
+                                   -
                                 </Typography>
                             </Button>
-                        </GatsbyLink>
+                            <GatsbyLink to="/PrivacyPolicy" style={{ textDecoration: 'none' }}>
+                                <Button>
+                                    <Typography className={classes.footerText} gutterBottom>
+                                        Privacy Policy
+                                </Typography>
+                                </Button>
+                            </GatsbyLink>
+                        </Box>
                     </Box>
                 </Grid>
             </Grid>

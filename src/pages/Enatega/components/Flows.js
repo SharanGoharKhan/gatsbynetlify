@@ -1,21 +1,5 @@
 import React from 'react';
 import { Typography, makeStyles, Grid } from '@material-ui/core';
-import ios1 from "../../../images/ios1.png";
-import ios2 from "../../../images/ios2.png";
-import ios3 from "../../../images/ios3.png";
-import ios4 from "../../../images/ios4.png";
-import ios5 from "../../../images/ios5.png";
-import ios6 from "../../../images/ios6.png";
-import ios7 from "../../../images/ios7.png";
-import ios8 from "../../../images/ios8.png";
-import ios9 from "../../../images/ios9.png";
-import ios10 from "../../../images/ios10.png";
-import ios11 from "../../../images/ios11.png";
-import ios12 from "../../../images/ios12.png";
-import ios13 from "../../../images/ios13.png";
-import ios14 from "../../../images/ios14.png";
-import ios15 from "../../../images/ios15.png";
-import ios16 from "../../../images/ios16.png";
 import {StaticImage} from 'gatsby-plugin-image'
 
 const useStyles = makeStyles((theme) => ({
@@ -31,7 +15,6 @@ const useStyles = makeStyles((theme) => ({
         backgroundColor: '#FAFBFF',
         height: 'fit-content',
         marginTop: theme.spacing(10),
-        // paddingTop:theme.spacing(3)
     },
     images1: {
         width: '75%',
@@ -69,7 +52,7 @@ const Flow = (props) => {
                     </Grid>
                 </div>
                 <div className={classes.images1}>
-                    <Typography variant="h5" gutterBottom style={{ textAlign: 'center', fontSize: 15, letterSpacing: 1, lineHeight: '90px', marginTop: 10, fontFamily: 'Montserrat', fontWeight: '700' }}>On Boarding & Registration</Typography>
+                    <Typography variant="h5" gutterBottom style={{ textAlign: 'center', fontSize: 15, letterSpacing: 1, lineHeight: '90px', marginTop: 10, fontFamily: 'Montserrat', fontWeight: '700' }}>Browse or Search Restaurant</Typography>
                     <Grid container spacing={10}>
                         <Grid item xs={12} lg={3}>
                             <StaticImage alt="Enatega App" style={{ border: '1px solid #EBE8E8', borderRadius: 20, padding: 10, width:'30vmin' }} src="../../../images/ios5.png" />
@@ -86,7 +69,7 @@ const Flow = (props) => {
                     </Grid>
                 </div>
                 <div className={classes.images1}>
-                    <Typography variant="h5" gutterBottom style={{ textAlign: 'center', fontSize: 15, letterSpacing: 1, lineHeight: '90px', marginTop: 10, fontFamily: 'Montserrat', fontWeight: '700' }}>On Boarding & Registration</Typography>
+                    <Typography variant="h5" gutterBottom style={{ textAlign: 'center', fontSize: 15, letterSpacing: 1, lineHeight: '90px', marginTop: 10, fontFamily: 'Montserrat', fontWeight: '700' }}>Checkout Flow</Typography>
                     <Grid container spacing={10}>
                         <Grid item xs={12} lg={3}>
                             <StaticImage alt="Enatega App" style={{ border: '1px solid #EBE8E8', borderRadius: 20, padding: 10, width:'30vmin' }} src="../../../images/ios9.png" />
@@ -103,7 +86,7 @@ const Flow = (props) => {
                     </Grid>
                 </div>
                 <div className={classes.images1}>
-                    <Typography variant="h5" gutterBottom style={{ textAlign: 'center', fontSize: 15, letterSpacing: 1, lineHeight: '90px', marginTop: 10, fontFamily: 'Montserrat', fontWeight: '700' }}>On Boarding & Registration</Typography>
+                    <Typography variant="h5" gutterBottom style={{ textAlign: 'center', fontSize: 15, letterSpacing: 1, lineHeight: '90px', marginTop: 10, fontFamily: 'Montserrat', fontWeight: '700' }}>Orders</Typography>
                     <Grid container spacing={10}>
                         <Grid item xs={12} lg={3}>
                             <StaticImage alt="Enatega App" style={{ border: '1px solid #EBE8E8', borderRadius: 20, padding: 10, width:'30vmin' }} src="../../../images/ios13.png" />

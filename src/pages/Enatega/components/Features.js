@@ -1,5 +1,5 @@
 import React from 'react';
-import {Typography, makeStyles, Paper,Grid } from '@material-ui/core';
+import { Typography, makeStyles, Paper, Grid } from '@material-ui/core';
 import Artboard1 from "../../../images/artboard1.svg";
 import Artboard2 from "../../../images/artboard2.svg";
 import Artboard3 from "../../../images/artboard3.svg";
@@ -19,17 +19,14 @@ const useStyles = makeStyles((theme) => ({
     root: {
         flexGrow: 1,
         marginTop: 20,
-        // paddingLeft: theme.spacing(26),  
-        textAlign:'center',
+        textAlign: 'center',
         width: '70%',
-        margin:'auto',
+        margin: 'auto',
         alignSelf: 'center',
     },
     paper: {
         padding: theme.spacing(2),
-        elevation:1,
-        // height: 150,
-        // width: 250,
+        elevation: 1,
         alignContent: 'center',
         color: theme.palette.text.secondary,
     },
@@ -68,20 +65,20 @@ const Features = (props) => {
 
     return (
         <>
-            <div style={{ width: '100%', marginTop: 50, textAlign:'center' }}>
+            <div style={{ width: '100%', marginTop: 50, textAlign: 'center' }}>
                 <Typography style={{ fontFamily: 'Montserrat', color: '#333333', letterSpacing: 2, lineHeight: '32px', fontSize: 16, textAlign: 'center' }}>Our Features</Typography>
                 <Typography style={{ fontFamily: 'Montserrat', fontWeight: '700', lineHeight: '32px', fontSize: 25, textAlign: 'center' }}>Great Features Of Our App</Typography>
-          
-            <div className={classes.root}>
-                <Grid container direction="column" spacing={5} justify="center" alignItems="center" >
-                    <Grid container direction="row" justify="center" alignItems="center" item xs={12} spacing={3}>
-                        {FormRow({ title: 'User Friendly', description: 'Enatega Is Easy To Use With User Friendly Interface.', img:Artboard1 }, { title: 'Quick Update', description: 'Copy Writers ambushed her, made her drunk with Longe and Parole.', img:Artboard2 }, { title: 'High Performance', description: 'And if she hasn’t been rewritten, then they are still using her.', img:Artboard3 })}
-                    </Grid> 
-                    <Grid style={{ marginTop: 20 }} container item xs={12} spacing={3}>
-                        {FormRow({ title: '100% Secure', description: 'Nothing the copy said could convince her and so it didn’t take long.', img:Artboard4 }, { title: 'Unlimited Features', description: 'Copy Writers ambushed her, made her drunk with Longe and Parole.', img:Artboard5 }, { title: 'High Performance', description: 'And if she hasn’t been rewritten, then they are still using her.', img:Artboard6 })}
-                    </Grid> 
-                </Grid>
-            </div>
+
+                <div className={classes.root}>
+                    <Grid container direction="column" spacing={5} justify="center" alignItems="center" >
+                        <Grid container direction="row" justify="center" alignItems="center" item xs={12} spacing={3}>
+                            {FormRow({ title: 'User Friendly', description: 'Enatega Is Easy To Use With User Friendly Interface.', img: Artboard1 }, { title: 'Quick Update', description: 'Over the air updates has been integrated for quick updates', img: Artboard2 }, { title: 'High Performance', description: 'Highly performant with GrapQL integration', img: Artboard3 })}
+                        </Grid>
+                        <Grid style={{ marginTop: 20 }} container item xs={12} spacing={3}>
+                            {FormRow({ title: '100% Secure', description: 'User data is encrypted with latest encryption technologies', img: Artboard4 }, { title: 'Unlimited Features', description: 'It is highly customizable with any feature that is required can be added on request', img: Artboard5 }, { title: 'Timely changes', description: 'Our highly skilled team works around the clock to work on your features', img: Artboard6 })}
+                        </Grid>
+                    </Grid>
+                </div>
             </div>
         </>
 

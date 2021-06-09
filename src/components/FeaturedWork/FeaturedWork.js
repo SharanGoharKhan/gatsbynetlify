@@ -1,7 +1,6 @@
 
 import React from 'react'
 import "./FeaturedWork.css";
-// import { useHistory } from "react-router-dom";
 import { Typography, makeStyles, Grid, Button, useTheme, useMediaQuery } from '@material-ui/core';
 import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
 import { Link } from "gatsby";
@@ -32,7 +31,6 @@ const FeaturedWorkComponent = (props) => {
     const theme = useTheme();
     const matches = useMediaQuery(theme.breakpoints.up('sm'));
     const classes = useStyles();
-    // const History = useHistory()
     return (
 
         <div className="lightDiv">
@@ -44,17 +42,16 @@ const FeaturedWorkComponent = (props) => {
                     <Typography style={{ color: '#455880', fontSize: '2.5vmin', fontFamily: 'Poppins', marginTop: 30 }} >
                         {props.details}
                     </Typography>
-                    <Link style={{textDecoration:'none'}} to={`/${props.route}`}>
-                    <Button
-                        variant="contained"
-                        color="primary"
-                        size="large"
-                        className={classes.button}
-                        // onClick={() => History.push(`/${props.route}`)}
-                        endIcon={<ArrowForwardIcon />}
-                    >
-                         <Typography style={{ fontSize: '3vmin', fontFamily: 'Poppins' }} >Case Study  </Typography> 
-                    </Button>
+                    <Link style={{ textDecoration: 'none' }} to={`/${props.route}`}>
+                        <Button
+                            variant="contained"
+                            color="primary"
+                            size="large"
+                            className={classes.button}
+                            endIcon={<ArrowForwardIcon />}
+                        >
+                            <Typography style={{ fontSize: '3vmin', fontFamily: 'Poppins', textTransform: 'initial' }} >Case Study  </Typography>
+                        </Button>
                     </Link>
                 </Grid>
                 <Grid item xs={12} style={{ textAlign: matches ? 'end' : 'center' }} sm={7}>
