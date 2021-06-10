@@ -9,6 +9,7 @@ import Approach from "./component/Approach";
 import Solution from "./component/Solution";
 import OutComeAndBenefits from "./component/OutCome";
 import { StaticImage } from "gatsby-plugin-image";
+import Seo from '../../components/seo';
 
 const SenseChat = () => {
     useEffect(()=>{
@@ -17,6 +18,7 @@ const SenseChat = () => {
 
     return (
         <>
+        <Seo title="Sense.chat" />
         <div className="senseHeader">
         <TopBar barColor="transparent" fontColor="#fff" />
         <Typography style={{fontWeight:'700',lineHeight:'60px',  textAlign:'center', fontFamily:'Montserrat',fontSize:30, color:'#fff'}} >A better messenger</Typography>

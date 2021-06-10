@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'
 import { Typography } from '@material-ui/core';
 import { Footer, TopBar } from "../../components";
 import "./PrivacyPolicy.css";
+import Seo from '../../components/seo';
 
 const terms = [
     {
@@ -103,7 +104,7 @@ const PrivacyPolicy = () => {
     }, [])
     return (
         <>
-
+            <Seo title="Privacy Policy" />
             <TopBar barColor="#3751FF" fontColor="#fff" />
             <div style={{ marginTop: 20, padding: 30 }} className="container">
                 <Typography style={{ fontWeight: '700', lineHeight: '60px', fontFamily: 'Montserrat', fontSize: 20, color: '#3751FF' }} >Privacy Policy</Typography>

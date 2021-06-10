@@ -11,6 +11,7 @@ import Dashboard from "./components/Dashboard";
 import RiderAndRestaurant from './components/RiderAndRestaurant';
 import { ContactUs, Footer } from "../../components";
 import { StaticImage } from "gatsby-plugin-image";
+import Seo from '../../components/seo';
 
 const useStyles = makeStyles((theme) => ({
     divider: {
@@ -57,6 +58,7 @@ const Enatega = () => {
 
     return (
         <>
+            <Seo title="Enatega" />
             <TopBar barColor="#FAFBFF" fontColor="#070707" />
             <div className="enategaDiv" style={{ textAlign: matches ? 'start' : 'center' }}>
                 <Grid container justify="center" style={{ margin: 'auto', width: '90%' }} spacing={2} alignItems="center" >
