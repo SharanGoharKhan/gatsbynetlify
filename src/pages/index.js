@@ -8,6 +8,7 @@ import { Grid, Paper, Typography, makeStyles, Box, useMediaQuery, Link as Materi
 import Facebook from "../svg/facebook";
 import Twitter from "../svg/twitter";
 import LinkedIn from "../svg/linkedin";
+import EasyEats from '../svg/easyEats'
 
 const useStyles = makeStyles((theme) => ({
   container: {
@@ -62,7 +63,7 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: 'Montserrat'
   },
   logoContainer:
-    { borderWidth: 1, borderColor: 'white', borderStyle: 'solid', display: 'flex', width: '40px', height: '40px', justifyContent: 'center', alignItems: 'center', marginRight: '10px', borderRadius: '4px' }
+    {borderWidth:1,marginRight:'10px', borderStyle:'solid',textAlign:'center',width:'40px', justifyContent:'center',height:'40px',  borderColor:'#fff'}
 }));
 
 const IndexPage = () => {
@@ -86,22 +87,24 @@ const IndexPage = () => {
               <Box className={classes.logoContainer}>
                 <MaterialUILink
                   href="https://www.facebook.com/ninjascodeofficial"
-                  target="_blank">
-                  <Facebook />
+                  target="_blank"
+                  
+                  >
+                  <Facebook style={{marginTop:'30%'}} />
                 </MaterialUILink>
               </Box>
               <Box className={classes.logoContainer}>
                 <MaterialUILink
                   href="https://twitter.com/NinjasCode1"
                   target="_blank">
-                  <Twitter />
+                  <Twitter style={{marginTop:'32%'}} />
                 </MaterialUILink>
               </Box>
               <Box className={classes.logoContainer}>
                 <MaterialUILink
                   href="https://www.linkedin.com/company/14512538"
                   target="_blank">
-                  <LinkedIn />
+                  <LinkedIn style={{marginTop:'26%'}} />
                 </MaterialUILink>
               </Box>
             </Box>
