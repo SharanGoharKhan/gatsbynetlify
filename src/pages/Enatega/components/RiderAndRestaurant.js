@@ -1,6 +1,6 @@
 import React from 'react';
 import { Typography, makeStyles, Grid, useMediaQuery, useTheme, Button, Link as MaterialLink } from '@material-ui/core';
-import enategaMobile from '../../../images/iphone.png';
+import enategaMobile from '../../../images/iphoneGroup.png';
 import enategaMobile2 from "../../../images/iPhone2.png";
 import CheckCircleSharpIcon from '@material-ui/icons/CheckCircleSharp';
 
@@ -12,15 +12,11 @@ const useStyles = makeStyles((theme) => ({
         width: '74px',
         height: '2px'
     },
-    top: {
-        paddingTop: theme.spacing(6)
-    },
+    
     root: {
         flexGrow: 1,
         backgroundColor: '#6FCF96',
-        height: 'fit-content',
         marginTop: theme.spacing(10),
-        paddingBottom: theme.spacing(4)
     },
     images1: {
         width: '80%',
@@ -58,7 +54,7 @@ const RiderAndRestaurant = (props) => {
         <>
             <div className={classes.root}>
 
-                <Grid container className={classes.top} direction="row">
+                <Grid container justify="center" alignItems="center" className={classes.top} direction="row">
                     <Grid item xs={12} lg={7}>
                         <Grid container direction="column" justify='center'>
                             <Grid item xs={12}>
@@ -129,11 +125,10 @@ const RiderAndRestaurant = (props) => {
                             </Grid>
                         </Grid>
                     </Grid>
-                    <Grid item xs={12} style={{ textAlign: 'center' }} lg={5}>
-                        <div style={{ marginTop: matches ? 0 : 50, textAlign: 'center' }}>
-                            <img alt="Enatega" style={{ textAlign: 'center', width: '40vmin', position: 'relative', top: '-7.4vmin' }} src={enategaMobile} />
-                            <img alt="Enatega" style={{ textAlign: 'center', width: '40vmin', position: 'relative', bottom: "-9.8vmin", left: -80 }} src={enategaMobile2} />
-                        </div>
+                    <Grid item xs={12} justify="flex-end" style={{}} lg={5}>
+                        <div style={{textAlign: 'flex-end'}}>
+                            <img style={{width:'60vmin',bottom:'-5vmin',position:'relative',alignSelf:'flex-end', height:'65vmin'}} src={enategaMobile} />
+                        </div>  
                     </Grid>
 
                 </Grid>

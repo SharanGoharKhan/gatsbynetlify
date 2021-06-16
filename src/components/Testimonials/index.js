@@ -123,9 +123,9 @@ const Testimonial = () => {
             </Grid>
             <Grid item xs={12} sm={12} md={8}>
                 <div className={classes.root}>
-                    <GridList cellHeight={'auto'} className={classes.gridList} ref={ref} cols={matches ? 2.2 : 1.2}>
+                    <GridList style={{overflowY:'hidden'}} scrollbarWidth="10" cellHeight={'auto'} className={classes.gridList} ref={ref} cols={matches ? 2.2 : 1.2}>
                         {tileData.map((tile, index1) => (
-                            <GridListTile key={index1}>
+                            <GridListTile key={index1} style={{scrollbarWidth:0, msScrollbarBaseColor:'red', overscrollBehaviorY:'none'}} showHorizontalScrollBar={false}>
                                 <Card elevation={5} style={{ width: '90%' }}>
                                     <CardActionArea>
                                         <CardContent>
