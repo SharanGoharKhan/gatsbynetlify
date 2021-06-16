@@ -6,13 +6,6 @@ module.exports = {
   },
   plugins: [
     {
-      resolve: `gatsby-plugin-google-gtag`,
-      options: {
-        // You can add multiple tracking ids and a pageview event will be fired for all of them.
-        trackingIds: [
-          "UA-135271232-1" // Google Analytics / GA
-        ],
-      },
       resolve: `gatsby-plugin-material-ui`,
       options: {
         stylesProvider: {
@@ -21,6 +14,15 @@ module.exports = {
       },
     },
     `gatsby-plugin-styled-components`,
+    {
+      resolve: `gatsby-plugin-google-gtag`,
+      options: {
+        // You can add multiple tracking ids and a pageview event will be fired for all of them.
+        trackingId: "UA-135271232-1",
+        head: true, // note this is TRUE and not FALSE as listed in other examples above
+        anonymize: true,
+      },
+    },
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-image`,
     {
