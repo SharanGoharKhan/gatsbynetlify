@@ -37,6 +37,7 @@ const FeaturedWork = () => {
 
   return (
     <div id="feature">
+      <a id="ourMainProducts" name="ourMainProducts"></a>
       <div style={{ justifyContent: 'center', alignItems: 'center', textAlign: 'center' }}>
         <Typography style={{ fontWeight: 700, fontSize: '6vmin', fontFamily: 'Poppins' }} variant="h3" gutterBottom>
           Featured Works

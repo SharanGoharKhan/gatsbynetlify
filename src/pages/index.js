@@ -1,5 +1,6 @@
 import * as React from "react"
 import "./index.css";
+import { useEffect } from "react";
 import "../components/layout.css"
 import Seo from "../components/seo"
 
@@ -8,7 +9,7 @@ import { Grid, Paper, Typography, makeStyles, Box, useMediaQuery, Link as Materi
 import Facebook from "../svg/facebook";
 import Twitter from "../svg/twitter";
 import LinkedIn from "../svg/linkedin";
-import EasyEats from '../svg/easyEats'
+
 
 const useStyles = makeStyles((theme) => ({
   container: {
@@ -63,12 +64,52 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: 'Montserrat'
   },
   logoContainer:
-    {borderWidth:1,marginRight:'10px', borderStyle:'solid',textAlign:'center',width:'40px', justifyContent:'center',height:'40px',  borderColor:'#fff'}
+    { borderWidth: 1, marginRight: '10px', borderStyle: 'solid', textAlign: 'center', width: '40px', justifyContent: 'center', height: '40px', borderColor: '#fff' }
 }));
 
-const IndexPage = () => {
+const IndexPage = (props) => {
   const classes = useStyles();
   const matches = useMediaQuery('(min-width:600px)');
+  const whyUsRef = React.useRef(null)
+  const featureRef = React.useRef(null)
+  const faqRef = React.useRef(null)
+  const testimonialRef = React.useRef(null)
+  const contactRef = React.useRef(null)
+
+  useEffect(() => {
+    switch (props.location.hash) {
+      case '#whyUs':
+        scrollToRef(whyUsRef)
+        break;
+
+      case '#ourMainProducts':
+        scrollToRef(featureRef)
+        break;
+
+      case '#faqS':
+        console.log('chala')
+        scrollToRef(faqRef)
+        break;
+
+      case '#testimonial':
+        scrollToRef(testimonialRef)
+        break;
+
+      case '#contactUs':
+        scrollToRef(contactRef)
+        break;
+
+      default:
+        break;
+    }
+    
+  }, [])
+
+
+  const scrollToRef = (ref) => {
+    window.scrollTo(0, ref.current.offsetTop)
+  }
+
   return (
     <>
       <Seo title="Ninjas Code" />
@@ -88,23 +129,23 @@ const IndexPage = () => {
                 <MaterialUILink
                   href="https://www.facebook.com/ninjascodeofficial"
                   target="_blank"
-                  
-                  >
-                  <Facebook style={{marginTop:'30%'}} />
+
+                >
+                  <Facebook style={{ marginTop: '30%' }} />
                 </MaterialUILink>
               </Box>
               <Box className={classes.logoContainer}>
                 <MaterialUILink
                   href="https://twitter.com/NinjasCode1"
                   target="_blank">
-                  <Twitter style={{marginTop:'32%'}} />
+                  <Twitter style={{ marginTop: '32%' }} />
                 </MaterialUILink>
               </Box>
               <Box className={classes.logoContainer}>
                 <MaterialUILink
                   href="https://www.linkedin.com/company/14512538"
                   target="_blank">
-                  <LinkedIn style={{marginTop:'26%'}} />
+                  <LinkedIn style={{ marginTop: '26%' }} />
                 </MaterialUILink>
               </Box>
             </Box>
@@ -185,10 +226,15 @@ const IndexPage = () => {
           </Grid>
         </Grid>
       </div>
+      <a ref={featureRef} ></a>
       <FeaturedWork />
+      <a  ref={whyUsRef} ></a>
       <WhyUs />
+      <a  ref={testimonialRef} ></a>
       <Testimonal />
+      <a ref={faqRef} ></a>
       <Faq />
+      <a ref={contactRef} name="contactUs"></a>
       <ContactUs />
       <Footer />
     </>

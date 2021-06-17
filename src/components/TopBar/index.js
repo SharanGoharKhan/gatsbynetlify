@@ -14,7 +14,7 @@ import {
 import ClearIcon from '@material-ui/icons/Clear';
 import { makeStyles } from '@material-ui/core/styles';
 import './TopBar.css'
-import { Link} from 'react-scroll'
+import { Link } from 'react-scroll'
 import { Link as GatsbyLink } from "gatsby";
 import Logo from "../../images/NinjasCode.svg";
 import LogoBlack from "../../images/NinjasCodeBlack.svg";
@@ -35,7 +35,7 @@ const useStyles = makeStyles((theme) => ({
         [theme.breakpoints.up('md')]: {
             display: 'flex',
         },
-        alignItems:'center'
+        alignItems: 'center'
     },
     sectionMobile: {
         display: 'flex',
@@ -82,6 +82,7 @@ const useStyles = makeStyles((theme) => ({
 
 
 const TopBar = (props) => {
+    console.log('props', props)
     const classes = useStyles();
     const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
     const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
@@ -161,7 +162,7 @@ const TopBar = (props) => {
                             </Grid>
                             <Grid item xs={12}>
                                 <Paper elevation={0} className={classes.paper}>
-                                    <Link href={'#'} style={{borderWidth:1,borderRadius:5, borderStyle:'solid', padding:8}} className="cool-link" onClick={handleMobileMenuClose} activeClass="active" to="contact" spy={true} smooth={true} offset={-30} duration={1500}>
+                                    <Link href={'#'} style={{ borderWidth: 1, borderRadius: 5, borderStyle: 'solid', padding: 8 }} className="cool-link" onClick={handleMobileMenuClose} activeClass="active" to="contact" spy={true} smooth={true} offset={-30} duration={1500}>
                                         Contact Us
                                 </Link>
                                 </Paper>
@@ -185,25 +186,42 @@ const TopBar = (props) => {
                 <Toolbar>
                     <Link activeClass="active" to="/" spy={true} smooth={true} offset={-30} duration={500} className={classes.root} >
                         <IconButton className={classes.title}>
-                           <GatsbyLink to="/"> <img alt="ninjas code" style={{width:'30vmin', marginTop:20}} src={props.fontColor === '#fff' ? Logo : LogoBlack} /></GatsbyLink>
+                            <GatsbyLink to="/"> <img alt="ninjas code" style={{ width: '30vmin', marginTop: 20 }} src={props.fontColor === '#fff' ? Logo : LogoBlack} /></GatsbyLink>
                         </IconButton>
                     </Link>
                     <div className={classes.sectionDesktop}>
-                        <Link style={{color:props.fontColor}} className={props.fontColor === '#fff' ? "button-link" : 'button-link-black'}  href="#" activeClass="active" to="feature" spy={true} smooth={true} offset={-30} duration={500}>
-                            Our Main Products
+                        {
+                            props.barColor == "#179AFB" ?
+                                (
+                                    <>
+                                        <Link style={{ color: props.fontColor }} className={props.fontColor === '#fff' ? "button-link" : 'button-link-black'} href="/" activeClass="active" to="feature" spy={true} smooth={true} offset={-30} duration={500}>
+                                            Our Main Products
+                                    </Link>
+                                        <Link style={{ color: props.fontColor }} className={props.fontColor === '#fff' ? "button-link" : 'button-link-black'} href="#" activeClass="active" to="whyus" spy={true} smooth={true} offset={-30} duration={500}>
+                                            Why Us Section
                         </Link>
-                        <Link style={{color:props.fontColor}} className={props.fontColor === '#fff' ? "button-link" : 'button-link-black'} href="#" activeClass="active" to="whyus" spy={true} smooth={true} offset={-30} duration={500}>
-                            Why Us Section
+                                        <Link style={{ color: props.fontColor }} className={props.fontColor === '#fff' ? "button-link" : 'button-link-black'} href="#" activeClass="active" to="faq" spy={true} smooth={true} offset={-30} duration={500}>
+                                            FAQ's
                         </Link>
-                        <Link style={{color:props.fontColor}} className={props.fontColor === '#fff' ? "button-link" : 'button-link-black'} href="#" activeClass="active" to="faq" spy={true} smooth={true} offset={-30} duration={500}>
-                            FAQ's
+                                        <Link style={{ color: props.fontColor }} className={props.fontColor === '#fff' ? "button-link" : 'button-link-black'} href="#" activeClass="active" to="test" spy={true} smooth={true} offset={-30} duration={500}>
+                                            Testimonial
                         </Link>
-                        <Link style={{color:props.fontColor}} className={props.fontColor === '#fff' ? "button-link" : 'button-link-black'} href="#" activeClass="active" to="test" spy={true} smooth={true} offset={-30} duration={500}>
-                            Testimonial
+                                        <Link style={{ color: props.fontColor, borderWidth: 1, borderRadius: 5, borderStyle: 'solid', padding: 8 }} className={props.fontColor === '#fff' ? "button-link" : 'button-link-black'} href="#" activeClass="active" to="contact" spy={true} smooth={true} offset={-30} duration={500}>
+                                            Contact Us
                         </Link>
-                        <Link style={{color:props.fontColor, borderWidth:1,borderRadius:5, borderStyle:'solid', padding:8}} className={props.fontColor === '#fff' ? "button-link" : 'button-link-black'} href="#" activeClass="active" to="contact" spy={true} smooth={true} offset={-30} duration={500}>
-                            Contact Us
-                        </Link>
+                                    </>
+                                ) :
+                                <>
+                                <a style={{ color: props.fontColor }} className={props.fontColor === '#fff' ? "button-link" : 'button-link-black'} href="/#ourMainProducts">Our Main Producs</a>
+                                <a style={{ color: props.fontColor }} className={props.fontColor === '#fff' ? "button-link" : 'button-link-black'} href="/#whyUs">Why Us Section</a>
+                                <a style={{ color: props.fontColor }} className={props.fontColor === '#fff' ? "button-link" : 'button-link-black'} href="/#faqS">FAQ's</a>
+                                <a style={{ color: props.fontColor }} className={props.fontColor === '#fff' ? "button-link" : 'button-link-black'} href="/#testimonial">Testimonial</a>
+                                <a style={{ color: props.fontColor, borderWidth: 1, borderRadius: 5, borderStyle: 'solid', padding: 8 }} className={props.fontColor === '#fff' ? "button-link" : 'button-link-black'} href="/#contactUs">Contact Us</a>
+                                    </>
+                        }
+
+
+
 
                     </div>
                     <div className={classes.sectionMobile}>
@@ -213,7 +231,7 @@ const TopBar = (props) => {
                             aria-haspopup="true"
                             onClick={handleMobileMenuOpen}
                         >
-                            <BarChartIcon  style={{color:props.fontColor, transform:'rotate(-90deg)', fontSize:30}} />
+                            <BarChartIcon style={{ color: props.fontColor, transform: 'rotate(-90deg)', fontSize: 30 }} />
                         </IconButton>
                     </div>
                 </Toolbar>
