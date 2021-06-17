@@ -112,7 +112,7 @@ const Footer = () => {
                         <Grid item xs={12}>
                             <MaterialLink href="https://enatega.com/" target="_blank">
                                 <Typography className={classes.innerText} gutterBottom>
-                                    Entega
+                                    Enatega
                                 </Typography>
                             </MaterialLink>
                         </Grid>
@@ -126,7 +126,7 @@ const Footer = () => {
                         <Grid item xs={12}>
                             <MaterialLink href="https://vinifynd.com/" target="_blank">
                                 <Typography className={classes.innerText} gutterBottom>
-                                    Vinifynid
+                                    Vinifynd
                                 </Typography>
                             </MaterialLink>
                         </Grid>
