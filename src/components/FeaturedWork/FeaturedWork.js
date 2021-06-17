@@ -55,7 +55,7 @@ const FeaturedWorkComponent = (props) => {
                     </Link>
                 </Grid>
                 <Grid item xs={12} style={{ textAlign: matches ? 'right' : 'center' }} sm={7}>
-                    <img alt={props.heading} style={{ width: '80vmin', height: 'auto'}} src={props.src} />
+                    <img alt={props.heading} style={{ borderWidth:1, width: '80vmin', height: 'auto'}} src={props.src} />
                 </Grid>
             </Grid>
         </div>
