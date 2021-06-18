@@ -93,11 +93,7 @@ const questions = [
 ]
 
 const FAQ = () => {
-  
-  console.log('inner width', window.innerWidth)
-
   const classes = useStyles();
-
   const [open, setOpen] = React.useState([false, false, false]);
 
   const handleClick = (index) => {

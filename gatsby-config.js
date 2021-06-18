@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `We Solve Business Problems with Modern Technologies`,
     description: `Top Software development company for mobile and web development`,
-    author: `@ninjascode`,
+    author: `@ninjascode1`,
   },
   plugins: [
     {
