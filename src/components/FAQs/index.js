@@ -30,9 +30,9 @@ const useStyles = makeStyles((theme) => ({
     height: '2px'
   },
   paper: {
-    padding: theme.spacing(4),
+    padding: theme.spacing(2),
     color: theme.palette.text.secondary,
-    width: '60%',
+    width: window.innerWidth > 600 ? '60%' : '85%',
     margin: 'auto',
     marginTop: theme.spacing(3),
   },
@@ -93,6 +93,9 @@ const questions = [
 ]
 
 const FAQ = () => {
+  
+  console.log('inner width', window.innerWidth)
+
   const classes = useStyles();
 
   const [open, setOpen] = React.useState([false, false, false]);
@@ -100,7 +103,6 @@ const FAQ = () => {
   const handleClick = (index) => {
     let tempOpen = [...open];
     tempOpen[index] = !open[index]
-    console.log('temp', tempOpen)
     setOpen(tempOpen);
   };
 

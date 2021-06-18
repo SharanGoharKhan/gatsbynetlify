@@ -23,13 +23,13 @@ const Logos = () => {
     return (
         <div className={classes.container} >
             <Grid container direction="row" justify="center" alignItems="center" spacing={6}>
-            <Grid item xs={4} sm={6} md={3} lg={2}>
+            <Grid item style={{textAlign:'center'}} xs={12} sm={6} md={3} lg={2}>
                 <Vinifynd />
             </Grid>
-            <Grid item xs={4} sm={6} md={3} lg={3}>
+            <Grid item xs={12} sm={6} md={3} lg={3}>
             <StylizeNow />
             </Grid>
-            <Grid item xs={4} sm={6} md={3} lg={3}>
+            <Grid item xs={12} sm={6} md={3} lg={3}>
             <img src={EasyEats} />
             </Grid>
         </Grid>
