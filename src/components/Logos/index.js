@@ -1,9 +1,9 @@
 import React from 'react'
 import {makeStyles,Grid } from '@material-ui/core';
 
-import EasyEats from "../../images/vinifyd.svg";
-import StylizeNow from "../../images/Stylize.svg";
-import Vinifynd from "../../images/easyEats.svg";
+import EasyEats from "../../images/easyEats.png";
+import StylizeNow from "../../svg/Stylize";
+import Vinifynd from "../../svg/easyEats";
 
 
 const useStyles = makeStyles((theme) => ({
@@ -24,13 +24,13 @@ const Logos = () => {
         <div className={classes.container} >
             <Grid container direction="row" justify="center" alignItems="center" spacing={6}>
             <Grid item xs={4} sm={6} md={3} lg={2}>
-                <img src={EasyEats} />
+                <Vinifynd />
             </Grid>
             <Grid item xs={4} sm={6} md={3} lg={3}>
-            <img src={StylizeNow} />
+            <StylizeNow />
             </Grid>
             <Grid item xs={4} sm={6} md={3} lg={3}>
-            <img src={Vinifynd} />
+            <img src={EasyEats} />
             </Grid>
         </Grid>
 
