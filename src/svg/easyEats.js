@@ -2,7 +2,7 @@ import * as React from "react"
 
 function EasyEats(props) {
     return (
-        <svg width="98" height="98" viewBox="0 0 98 98" fill="none" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink">
+        <svg width="150" height="150" viewBox="0 0 98 98" fill="none" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink">
             <rect width="98" height="98" fill="url(#pattern0)" />
             <defs>
                 <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">

@@ -40,6 +40,7 @@ const useStyles = makeStyles((theme) => ({
         padding: theme.spacing(1),
         // width:'3%',
         color: '#6FCF96',
+        textAlign:'left',
         fontFamily: 'Montserrat',
         marginBottom: 10
     }
@@ -56,7 +57,7 @@ const RiderAndRestaurant = (props) => {
 
                 <Grid container justify="center" alignItems="center" className={classes.top} direction="row">
                     <Grid item xs={12} lg={7}>
-                        <Grid container direction="column" justify='center'>
+                        <Grid container direction="column" justify='flex-start'>
                             <Grid item xs={12}>
                                 <Typography variant="h5" gutterBottom style={{ textAlign: 'center', fontSize: '35px', color: '#fff', lineHeight: '60px', marginTop: 10, letterSpacing: -1, fontFamily: 'Montserrat', fontWeight: '700' }}>Rider & Restaurant Features</Typography>
                                 <Grid container direction="row" justify='center'>
@@ -116,7 +117,7 @@ const RiderAndRestaurant = (props) => {
                                     </Grid>
                                 </Grid>
                             </Grid>
-                            <Grid item xs={12}>
+                            <Grid item xs={8}>
                                 <MaterialLink href="mailto:sharan@ninjascode.com" target="_blank" style={{ textDecoration: 'none' }}>
                                     <div className={classes.button}>
                                         <Button color="inherit" variant="contained" className={classes.buttonInner}>Buy Now</Button>
@@ -127,7 +128,7 @@ const RiderAndRestaurant = (props) => {
                     </Grid>
                     <Grid item xs={12} justify="flex-end" style={{}} lg={5}>
                         <div style={{textAlign: 'flex-end'}}>
-                            <img style={{width:'60vmin',bottom:'-5vmin',position:'relative',alignSelf:'flex-end', height:'65vmin'}} src={enategaMobile} />
+                            <img style={{width:'60vmin',bottom:'-4.6vmin',position:'relative',alignSelf:'flex-end', height:'65vmin'}} src={enategaMobile} />
                         </div>  
                     </Grid>
 

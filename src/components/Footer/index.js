@@ -17,19 +17,19 @@ const useStyles = makeStyles((theme) => ({
         textAlign: 'center'
     },
     heading: {
-        fontSize: '32px',
+        fontSize: '3.5vmin',
         fontWeight: 700,
         fontFamily: 'Montserrat',
     },
     subHeading: {
-        fontSize: '18px',
+        fontSize: '2.5vmin',
         fontWeight: 500,
         fontFamily: 'Montserrat',
         textAlign: 'left'
     },
     innerText: {
         fontWeight: 400,
-        fontSize: '16px',
+        fontSize: '2.2vmin',
         color: "#333333",
         opacity: '60%',
         fontFamily: 'Montserrat'
@@ -40,7 +40,7 @@ const useStyles = makeStyles((theme) => ({
     footerText: {
         color: '#755A7D',
         fontWeight: 500,
-        fontSize: '2.6vmin',
+        fontSize: '2vmin',
         fontFamily: 'Montserrat'
     }
 }));
@@ -140,7 +140,7 @@ const Footer = () => {
                             </Typography>
                         </Grid>
                         <Grid container direction="row" spacing={1} justify="center" alignItems="center">
-                            <Grid item xs={3}>
+                            <Grid item xs={3} lg={2}>
                                 <MaterialLink
                                     href="https://www.facebook.com/ninjascodeofficial"
                                     target="_blank"
@@ -148,7 +148,7 @@ const Footer = () => {
                                     <FacebookRound />
                                 </MaterialLink>
                             </Grid>
-                            <Grid item xs={3}>
+                            <Grid item xs={3} lg={2}>
                                 <MaterialLink
                                     href="https://twitter.com/NinjasCode1"
                                     target="_blank"
@@ -156,7 +156,7 @@ const Footer = () => {
                                     <TwitterRound />
                                 </MaterialLink>
                             </Grid>
-                            <Grid item xs={3}>
+                            <Grid item xs={3} lg={2}>
                                 <MaterialLink
                                     href="https://www.linkedin.com/company/14512538"
                                     target="_blank"
@@ -164,7 +164,7 @@ const Footer = () => {
                                     <LinkedInRound />
                                 </MaterialLink>
                             </Grid>
-                            <Grid item xs={3}>
+                            <Grid item xs={3} lg={2}>
                                 <MaterialLink
                                     href="https://www.instagram.com/ninjascode/"
                                     target="_blank"

@@ -41,7 +41,7 @@ const Flow = (props) => {
                 <div className={classes.images1}>
                     <div style={{display:'flex', justifyContent:'center', alignItems:'center'}}>
                    <Number1 />
-                    <Typography variant="h5" gutterBottom style={{ textAlign: 'center',marginLeft:'1vmin', fontSize: '2vmin', letterSpacing: 1, lineHeight: '90px', marginTop: 10, fontFamily: 'Montserrat', fontWeight: '700' }}>On Boarding & Registration</Typography>
+                    <Typography variant="h5"  style={{ textAlign: 'center',marginLeft:'1vmin', fontSize: '3vmin', letterSpacing: 1, lineHeight: '90px', marginTop: 10, fontFamily: 'Montserrat', fontWeight:'bolder' }}>On Boarding & Registration</Typography>
                     </div>
                     <Grid container justify="center" alignItems="center" spacing={10}>
                         <Grid item xs={12} lg={3}>
@@ -61,7 +61,7 @@ const Flow = (props) => {
                 <div className={classes.images1}>
                 <div style={{display:'flex', justifyContent:'center', alignItems:'center'}}>
                     <Number2 />
-                    <Typography variant="h5" gutterBottom style={{ textAlign: 'center',marginLeft:'1vmin', fontSize: 15, letterSpacing: 1, lineHeight: '90px', marginTop: 10, fontFamily: 'Montserrat', fontWeight: '700' }}>Browse or Search Restaurant</Typography>
+                    <Typography variant="h5" gutterBottom style={{ textAlign: 'center',marginLeft:'1vmin', fontSize: '3vmin', letterSpacing: 1, lineHeight: '90px', marginTop: 10, fontFamily: 'Montserrat', fontWeight: 'bolder' }}>Browse or Search Restaurant</Typography>
                     </div>
                     <Grid container spacing={10}>
                         <Grid item xs={12} lg={3}>
@@ -81,7 +81,7 @@ const Flow = (props) => {
                 <div className={classes.images1}>
                 <div style={{display:'flex', justifyContent:'center', alignItems:'center'}}>
                    <Number3 />
-                    <Typography variant="h5" gutterBottom style={{ textAlign: 'center', fontSize: 15,marginLeft:'1vmin', letterSpacing: 1, lineHeight: '90px', marginTop: 10, fontFamily: 'Montserrat', fontWeight: '700' }}>Checkout Flow</Typography>
+                    <Typography variant="h5" gutterBottom style={{ textAlign: 'center', fontSize: '3vmin',marginLeft:'1vmin', letterSpacing: 1, lineHeight: '90px', marginTop: 10, fontFamily: 'Montserrat', fontWeight: 'bolder' }}>Checkout Flow</Typography>
                     </div>
                     <Grid container spacing={10}>
                         <Grid item xs={12} lg={3}>
@@ -101,7 +101,7 @@ const Flow = (props) => {
                 <div className={classes.images1}>
                 <div style={{display:'flex', justifyContent:'center', alignItems:'center'}}>
                     <Number4 />
-                    <Typography variant="h5" gutterBottom style={{ textAlign: 'center', fontSize: 15,marginLeft:'1vmin', letterSpacing: 1, lineHeight: '90px', marginTop: 10, fontFamily: 'Montserrat', fontWeight: '700' }}>Orders</Typography>
+                    <Typography variant="h5" gutterBottom style={{ textAlign: 'center', fontSize: '3vmin',marginLeft:'1vmin', letterSpacing: 1, lineHeight: '90px', marginTop: 10, fontFamily: 'Montserrat', fontWeight: 'bolder' }}>Orders</Typography>
                     </div>
                     <Grid container spacing={10}>
                         <Grid item xs={12} lg={3}>

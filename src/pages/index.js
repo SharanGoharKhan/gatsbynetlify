@@ -4,7 +4,7 @@ import { useEffect } from "react";
 import "../components/layout.css"
 import Seo from "../components/seo"
 
-import { TopBar, FeaturedWork, WhyUs, Testimonal, FAQ as Faq, ContactUs, Footer } from '../components'
+import { TopBar, FeaturedWork, WhyUs, Testimonal, FAQ as Faq, ContactUs, Footer, Logos } from '../components'
 import { Grid, Paper, Typography, makeStyles, Box, useMediaQuery, Link as MaterialUILink } from '@material-ui/core';
 import Facebook from "../svg/facebook";
 import Twitter from "../svg/twitter";
@@ -234,6 +234,7 @@ const IndexPage = (props) => {
       <Testimonal />
       <a ref={faqRef} ></a>
       <Faq />
+      <Logos />
       <a ref={contactRef} name="contactUs"></a>
       <ContactUs />
       <Footer />
