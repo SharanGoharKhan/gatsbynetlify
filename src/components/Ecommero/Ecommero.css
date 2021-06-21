@@ -4,8 +4,10 @@
     margin:auto; 
     background-color:rgba(218, 190, 163, 0.2);
     margin-top: 5vmin;
-    padding: 3%;
-    padding-right: 0%;
+    padding-right: 1.5%;
+    padding-left: 1.5%;
+    padding-top: 2%;
+    padding-bottom: 2%;
     text-align: start;
     border-radius: 13px;
 }
