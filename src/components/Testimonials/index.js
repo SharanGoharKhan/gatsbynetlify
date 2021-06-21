@@ -13,11 +13,16 @@ const useStyles = makeStyles((theme) => ({
         marginTop: 40,
         height: 'fit-content',
         marginBottom: 100,
-        backgroundColor: theme.palette.background.paper
+        backgroundColor: theme.palette.background.paper,
+        WebkitOverflowScrolling:'touch',
+        
     },
     gridList: {
         flexWrap: 'nowrap',
-        transform: 'translateZ(0)'
+        transform: 'translateZ(0)',
+        transform: 'translateY(0)',
+        transform: 'translateX(0)',
+        
     },
     titleText: {
         color: '#1E266D',
@@ -94,9 +99,10 @@ const Testimonial = () => {
     const matches = useMediaQuery('(min-width:800px)');
 
     function scroll(scrollOffset) {
+        
         ref.current.scrollTo({
             left: ref.current.scrollLeft + scrollOffset,
-            behavior: 'smooth'
+            behavior: 'smoeaseInOutQuartoth',
         })
     };
 
