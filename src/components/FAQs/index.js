@@ -95,7 +95,6 @@ const questions = [
 const FAQ = () => {
   
   const classes = useStyles();
-
   const [open, setOpen] = React.useState([false, false, false]);
   const matches = useMediaQuery('(min-width:600px)');
   const handleClick = (index) => {
