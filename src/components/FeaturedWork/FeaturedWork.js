@@ -34,7 +34,7 @@ const FeaturedWorkComponent = (props) => {
     const classes = useStyles();
     return (
 
-        <div className="lightDiv">
+        <div className="featureLightDiv">
             <Grid container justify='center' alignItems="center">
                 <Grid style={{ textAlign: matches ? 'start' : 'center' }} item xs={12} sm={4}>
                     <Typography style={{ fontWeight: 700, fontSize: '4.5vmin', fontFamily: 'Montserrat' }} variant="h3" gutterBottom>

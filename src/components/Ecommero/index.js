@@ -25,7 +25,7 @@ const useStyles = makeStyles((theme) => ({
         borderColor:'#AF8F70',
         borderRadius: 10,
         borderWidth:1,
-        padding: theme.spacing(2),
+        padding: theme.spacing(1),
         marginBottom:theme.spacing(4)
 
     },
@@ -49,7 +49,7 @@ const Ecommero = () => {
                     <Typography style={{ color: '#333333', fontSize: '2.5vmin', fontFamily: 'Poppins', marginTop: 30 }} >
                     At the same time, we are an important part of the React Native community - we organize community meetups and a React Native focused conference called App.js.
                     </Typography>
-                    <Link style={{ textDecoration: 'none' }}>
+                    <Link href="https://github.com/Ninjas-Code-official/shopping-cart" target="_blank" style={{ textDecoration: 'none' }}>
                         <Button
                             variant="outlined"
                             color="#AF8F70"

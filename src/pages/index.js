@@ -64,7 +64,7 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: 'Montserrat'
   },
   logoContainer:
-    { borderWidth: 1, marginRight: '10px', borderStyle: 'solid', textAlign: 'center', width: '40px', justifyContent: 'center', height: '40px', borderColor: '#fff' }
+    { borderWidth: 1,borderStyle: 'solid',width: '40px',  height: '40px', borderColor: '#fff' }
 }));
 
 const IndexPage = (props) => {
@@ -124,24 +124,24 @@ const IndexPage = (props) => {
               Ready made solutions. Fully customizable with documentation and
               source code. Quickly and cheaply launch your MVP.
             </Typography>
-            <Box style={{ display: 'flex', marginTop: '25px' }}>
-              <Box className={classes.logoContainer}>
+            <Box style={{display:'flex', textAlign:'center', marginTop: '25px' }}>
+              <Box className={classes.logoContainer} style={{marginRight: matches ? 10 : 0, margin:matches ? 10 : 'auto'}}>
                 <MaterialUILink
                   href="https://www.facebook.com/ninjascodeofficial"
                   target="_blank"
 
                 >
-                  <Facebook style={{ marginTop: '30%' }} />
+                  <Facebook style={{marginTop: '32%' }} />
                 </MaterialUILink>
               </Box>
-              <Box className={classes.logoContainer}>
+              <Box className={classes.logoContainer} style={{marginRight: matches ? 10 : 0, margin:matches ? 10 : 'auto'}}>
                 <MaterialUILink
                   href="https://twitter.com/NinjasCode1"
                   target="_blank">
                   <Twitter style={{ marginTop: '32%' }} />
                 </MaterialUILink>
               </Box>
-              <Box className={classes.logoContainer}>
+              <Box className={classes.logoContainer} style={{marginRight: matches ? 10 : 0, margin:matches ? 10 : 'auto'}}>
                 <MaterialUILink
                   href="https://www.linkedin.com/company/14512538"
                   target="_blank">
