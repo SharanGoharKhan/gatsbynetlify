@@ -3,6 +3,7 @@ import { Divider, Typography, makeStyles, Paper, Button, List, ListItem, ListIte
 import Collapse from '@material-ui/core/Collapse';
 import ExpandLess from '@material-ui/icons/ExpandLess';
 import ExpandMore from '@material-ui/icons/ExpandMore';
+import useMediaQuery from '@material-ui/core/useMediaQuery';
 import React from 'react';
 
 const useStyles = makeStyles((theme) => ({
@@ -32,7 +33,6 @@ const useStyles = makeStyles((theme) => ({
   paper: {
     padding: theme.spacing(2),
     color: theme.palette.text.secondary,
-    width: window.innerWidth > 600 ? '60%' : '85%',
     margin: 'auto',
     marginTop: theme.spacing(3),
   },
@@ -94,12 +94,10 @@ const questions = [
 
 const FAQ = () => {
   
-  console.log('inner width', window.innerWidth)
-
   const classes = useStyles();
 
   const [open, setOpen] = React.useState([false, false, false]);
-
+  const matches = useMediaQuery('(min-width:600px)');
   const handleClick = (index) => {
     let tempOpen = [...open];
     tempOpen[index] = !open[index]
@@ -119,7 +117,7 @@ const FAQ = () => {
       {
         questions.map((item, index) => {
           return (
-            <Paper className={classes.paper} key={index} >
+            <Paper className={classes.paper} style={{width: matches ? '60%' : '85%',}} key={index} >
               <List
                 component="nav"
                 aria-labelledby="nested-list-subheader"
