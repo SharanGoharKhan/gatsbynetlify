@@ -1,11 +1,11 @@
 import React from 'react'
 import clsx from "clsx";
-import { Card, IconButton, CardContent, Link, CardActions, Button, Collapse, Divider, Typography, makeStyles, useMediaQuery, Grid, Paper, useTheme } from '@material-ui/core';
+import { Card, IconButton, CardContent, CardActions, Button, Collapse, Divider, Typography, makeStyles, useMediaQuery, Grid, Paper, useTheme } from '@material-ui/core';
 import { red } from '@material-ui/core/colors';
 import Blog1 from "../../images/blog1.png";
 import Blog2 from "../../images/blog2.png";
 import Blog3 from "../../images/blog3.png";
-
+import { Link } from "gatsby";
 
 const useStyles = makeStyles((theme) => ({
     title: {
@@ -184,7 +184,9 @@ const Blog = () => {
             <div style={{ textAlign: 'center', marginTop: '10vmin' }}>
                 <Link
                     //   href=""
-                    target="_blank"
+                style={{textDecoration:'none'}}
+                 to="/Blogs"               
+                    
                 >
                     <Button autoCapitalize={false} variant="contained" color="primary" style={{ backgroundColor: '#3751FF' }}>
                         <Typography style={{ fontFamily: 'Poppins' }}> See all blogs </Typography>
