@@ -44,10 +44,7 @@ const Ecommero = () => {
                     Open source Project - <Typography style={{fontStyle:'italic', display:'inline',fontWeight: 'bold', fontSize: '4.5vmin', fontFamily: 'Montserrat'}}>Ecommero</Typography> 
                     </Typography>
                     <Typography style={{ color: '#333333', fontSize: '2.5vmin', fontFamily: 'Poppins', marginTop: 30 }} >
-                    We build our own tools. We actively contribute to open source, working, among others, on Expo, Membrane, React Native Reanimated and Gesture Handler.
-                    </Typography>
-                    <Typography style={{ color: '#333333', fontSize: '2.5vmin', fontFamily: 'Poppins', marginTop: 30 }} >
-                    At the same time, we are an important part of the React Native community - we organize community meetups and a React Native focused conference called App.js.
+                        We try to give back to community that has given us so much. We build an open source shopping cart application project that is a full fledge project. Includes dashboard, works both on Android and iOS live on PlayStore and AppStore.
                     </Typography>
                     <Link href="https://github.com/Ninjas-Code-official/shopping-cart" target="_blank" style={{ textDecoration: 'none' }}>
                         <Button
