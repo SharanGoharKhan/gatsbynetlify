@@ -61,7 +61,7 @@ const useStyles = makeStyles(theme => ({
     paddingBottom: "2rem",
     zIndex: "0",
     position: "relative",
-    minHeight: "fit-content",
+    minHeight: "90vh",
     zIndex: 1,
   },
   bg: {

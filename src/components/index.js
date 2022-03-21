@@ -10,3 +10,5 @@ export { default as Ecommero } from "./Ecommero"
 export { default as Blog } from "./Blog"
 export { default as Banner } from "./Banner"
 export { default as BottomServices } from "./BottomServices"
+export { default as ServicesCard } from "./ServicesCard"
+

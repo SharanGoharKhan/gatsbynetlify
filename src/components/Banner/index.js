@@ -41,7 +41,8 @@ export default function Banner({ titleMain, titleSecondary, subTitle, image }) {
           </Typography>
           <BannerIcons />
         </Grid>
-        <Grid
+        {
+          image && <Grid
           style={{ textAlign: matches ? "end" : "center" }}
           item
           xs={12}
@@ -51,11 +52,13 @@ export default function Banner({ titleMain, titleSecondary, subTitle, image }) {
             src={image}
             alt="services"
             width={"100%"}
-            height={"auto"}
-            style={{ maxHeight: 500 }}
+            height={450}
+            style={{ maxHeight: 500,}}
           />
         </Grid>
-      </Grid>
+     
+        }
+         </Grid>
     </div>
   )
 }

@@ -1,0 +1,9 @@
+.service-card-image {
+  width: 100px;
+  height: 100px;
+}
+.service-card {
+  filter: drop-shadow(10px 10px 1px #179afb);
+  border: 1px solid gray;
+  border-radius: 0;
+}
