@@ -10,6 +10,9 @@ import {
   Paper,
   useMediaQuery,
   Box,
+  Menu,
+  MenuItem,
+  Typography,
 } from "@material-ui/core"
 import ClearIcon from "@material-ui/icons/Clear"
 import { makeStyles } from "@material-ui/core/styles"
@@ -79,10 +82,18 @@ const useStyles = makeStyles(theme => ({
   },
 }))
 
+const services = [
+  { name: "IOS Developement", path: "/Services/ios" },
+  { name: "Android Development", path: "/Services/android" },
+  { name: "Web Development", path: "/Services/web" },
+  { name: "Desktop App Development", path: "/Services/desktop" },
+  { name: "UI/UX Rendering", path: "/Services/ux" },
+  { name: "Software for Startups", path: "/Services/saas" },
+]
 const TopBar = props => {
-  console.log("props", props)
   const classes = useStyles()
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null)
+  const [anchorElServices, setAnchorElServices] = React.useState(null)
   const isMobileMenuOpen = Boolean(mobileMoreAnchorEl)
   const mobileMenuId = "primary-search-account-menu-mobile"
   const matches = useMediaQuery("(min-width:960px)")
@@ -90,13 +101,18 @@ const TopBar = props => {
   const handleMobileMenuClose = () => {
     setMobileMoreAnchorEl(null)
   }
+  const handleOpenServiceMenu = e => {
+    setAnchorElServices(e.currentTarget)
+  }
+  const handleCloseServiceMenu = () => {
+    setAnchorElServices(null)
+  }
 
   useEffect(() => {
     if (matches) {
       handleMobileMenuClose()
     }
   })
-
   const handleMobileMenuOpen = event => {
     setMobileMoreAnchorEl(event.currentTarget)
   }
@@ -261,23 +277,68 @@ const TopBar = props => {
           <div className={classes.sectionDesktop}>
             {props.barColor == "#179AFB" ? (
               <>
-                <Link
-                  style={{ color: props.fontColor }}
-                  className={
-                    props.fontColor === "#fff"
-                      ? "button-link"
-                      : "button-link-black"
-                  }
-                  href="/"
-                  activeClass="active"
-                  to="feature"
-                  spy={true}
-                  smooth={true}
-                  offset={-30}
-                  duration={500}
-                >
-                  Services
-                </Link>
+                <Box sx={{ flexGrow: 0 }}>
+                  <GatsbyLink
+                    style={{ color: props.fontColor, position: "relative" }}
+                    className={
+                      props.fontColor === "#fff"
+                        ? "button-link"
+                        : "button-link-black"
+                    }
+                    // activeStyle={{
+                    //   borderBottom: "2px solid #fff",
+                    // }}
+                    activeClassName="active"
+                    spy={true}
+                    smooth={true}
+                    offset={-30}
+                    duration={500}
+                    to="/Services"
+                    onClick={handleOpenServiceMenu}
+                  >
+                    Services
+                  </GatsbyLink>
+                  <Menu
+                    sx={{ mt: "45px" }}
+                    id="service-menu"
+                    anchorEl={anchorElServices}
+                    anchorOrigin={{
+                      vertical: "bottom",
+                      horizontal: "left",
+                    }}
+                    keepMounted
+                    transformOrigin={{
+                      vertical: "Bottom",
+                      horizontal: "left",
+                    }}
+                    open={Boolean(anchorElServices)}
+                    onClose={handleCloseServiceMenu}
+                    PaperProps={{
+                      style: {
+                        marginTop: "30px",
+                        backgroundColor: "rgba(49, 47, 112, 0.67)",
+                        color: "white",
+                      },
+                    }}
+                  >
+                    {services.map(setting => (
+                      <GatsbyLink
+                        to={setting.path}
+                        key={setting}
+                        style={{
+                          color: props.fontColor,
+                          textDecoration: "none",
+                        }}
+                      >
+                        <MenuItem onClick={handleCloseServiceMenu}>
+                          <Typography variant="body2" textAlign="center">
+                            {setting.name}
+                          </Typography>
+                        </MenuItem>
+                      </GatsbyLink>
+                    ))}
+                  </Menu>
+                </Box>
                 <Link
                   style={{ color: props.fontColor }}
                   className={

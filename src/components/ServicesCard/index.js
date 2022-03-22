@@ -1,31 +1,40 @@
-import React from 'react'
-import { Card, CardHeader, CardContent, CardMedia, CardActions, Typography, IconButton } from '@material-ui/core'
-import Profile from '../../images/profile.jpeg'
-// import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
+import React from "react"
+import {
+  Card,
+  CardHeader,
+  CardContent,
+  CardMedia,
+  CardActions,
+  Typography,
+  IconButton,
+  Box,
+} from "@material-ui/core"
+import ArrowForwardIcon from "@mui/icons-material/ArrowForward"
 import "./styles.css"
 
-export default function ServicesCard() {
+export default function ServicesCard({ data }) {
+  const mainTitle = data.title.substring(0, data.title.indexOf(" "))
+  const secondaryTitle = data.title.substring(data.title.indexOf(" ") + 1)
   return (
-    <Card style={{maxWidth:'375px'}} className="service-card">
-      <CardMedia
-        component="img"
-        className="service-card-image"
-        image={Profile}
-        alt="Tech"
-      />
+    <Card
+      style={{ maxWidth: "375px", minHeight: "420px" }}
+      className="service-card"
+    >
+      <Box className="image-wrapper">{data.image}</Box>
+
       <CardContent>
-      <Typography variant="body1" color="text.secondary">
-         IOS DEVELOPEMENT
+        <Typography variant="body1" style={{ fontWeight: 800 }}>
+          {mainTitle} <br />
+          {secondaryTitle}
         </Typography>
-        <Typography variant="body2" color="text.secondary">
-          This impressive paella is a perfect party dish and a fun meal to cook
-          together with your guests. Add 1 cup of frozen peas along with the mussels,
-          if you like.
-        </Typography>
+        <Typography variant="body2">{data.description}</Typography>
       </CardContent>
-      {/* <CardActions disableSpacing>      
-            <ArrowForwardIcon />
-        </CardActions> */}
+      <CardActions
+        disableSpacing
+        style={{ display: "flex", justifyContent: "flex-end" }}
+      >
+        <ArrowForwardIcon />
+      </CardActions>
     </Card>
-  );
+  )
 }

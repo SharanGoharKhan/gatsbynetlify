@@ -1,0 +1,6 @@
+.team-bg {
+  background: url("../../images/team-bg.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}

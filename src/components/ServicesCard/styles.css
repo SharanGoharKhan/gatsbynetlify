@@ -7,3 +7,16 @@
   border: 1px solid gray;
   border-radius: 0;
 }
+.image-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  margin: 5px;
+  width: 100px;
+  height: 100px;
+}
+.image-wrapper img {
+  width: 40px;
+  margin: 0;
+}

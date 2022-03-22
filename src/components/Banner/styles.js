@@ -55,13 +55,13 @@ const useStyles = makeStyles(theme => ({
   },
   background: {
     background: "linear-gradient(to bottom, #179AFB 0%, #301E5B 100%)",
-    borderBottomLeftRadius: "40% 15%",
-    borderBottomRightRadius: "40% 15%",
+    // borderBottomLeftRadius: "40% 15%",
+    // borderBottomRightRadius: "40% 15%",
     boxShadow: "0px 3px 2px rgb(206, 202, 202)",
     paddingBottom: "2rem",
     zIndex: "0",
     position: "relative",
-    minHeight: "90vh",
+    minHeight: "95vh",
     zIndex: 1,
   },
   bg: {
@@ -70,7 +70,7 @@ const useStyles = makeStyles(theme => ({
     top: 0,
     width: "100%",
     height: "100%",
-    opacity: "0.3",
+    opacity: "0.4",
     zIndex: 2,
   },
 }))

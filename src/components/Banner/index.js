@@ -14,7 +14,6 @@ import backgroundWeb from "../../images/bg.svg"
 export default function Banner({ titleMain, titleSecondary, subTitle, image }) {
   const classes = useStyles()
   const matches = useMediaQuery("(min-width:600px)")
-
   return (
     <div id="Home" className={classes.background}>
       <img src={backgroundWeb} alt="service" className={classes.bg} />
@@ -41,24 +40,26 @@ export default function Banner({ titleMain, titleSecondary, subTitle, image }) {
           </Typography>
           <BannerIcons />
         </Grid>
-        {
-          image && <Grid
-          style={{ textAlign: matches ? "end" : "center" }}
-          item
-          xs={12}
-          md={6}
-        >
-          <img
-            src={image}
-            alt="services"
-            width={"100%"}
-            height={450}
-            style={{ maxHeight: 500,}}
-          />
-        </Grid>
-     
-        }
-         </Grid>
+        {image && (
+          <Grid
+            style={{ textAlign: matches ? "end" : "center" }}
+            item
+            xs={12}
+            md={6}
+          >
+            <img
+              src={image}
+              alt="services"
+              style={{
+                width: "100%",
+                height: "auto",
+                maxHeight: 500,
+                marginTop: matches ? 0 : 10,
+              }}
+            />
+          </Grid>
+        )}
+      </Grid>
     </div>
   )
 }

@@ -1,9 +1,9 @@
 import { Box, Grid, Typography } from "@material-ui/core"
 import React from "react"
-import { Banner, BottomServices } from "../../components"
+import { Banner, BottomServices, ContactUs } from "../../components"
 import Layout from "../../components/layout"
 import AndroidService from "../../images/android.svg"
-import Device from "../../images/Device.svg"
+import AndroidGroup from "../../images/android-group.png"
 import "./styles.css"
 export default function Android() {
   return (
@@ -11,10 +11,12 @@ export default function Android() {
       <Banner
         titleMain={"ANDROID"}
         titleSecondary={"DEVELOPEMENT"}
-        subTitle={"We develop beautiful Android apps with UX as a primary focus"}
+        subTitle={
+          "We develop beautiful Android apps with UX as a primary focus"
+        }
         image={AndroidService}
       />
-      <div style={{ minHeight: "200vh", position: "relative" }}>
+      <div style={{ position: "relative" }}>
         <BottomServices />
         <div
           className="typos"
@@ -78,10 +80,11 @@ export default function Android() {
             {"}"}
           </Typography>
         </div>
-        <div>
-          <img src={Device} className="device-image"/>
-        </div>
+        <Box style={{ textAlign: "center" }} mt={15} mb={15}>
+          <img src={AndroidGroup} className="android-image" />
+        </Box>
       </div>
+      <ContactUs />
     </Layout>
   )
 }
