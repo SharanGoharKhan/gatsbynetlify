@@ -1,13 +1,13 @@
 .typos {
   width: 100%;
   text-align: center;
-  padding: 20px;
-  margin-top: 20px;
+  margin-top: 60px;
 }
 .brackets {
   color: #179afb;
   font-weight: 900;
   position: relative;
+  font-size: "10vmin";
 }
 .left-content {
   display: flex;
@@ -19,7 +19,6 @@
 }
 .small-device-image {
   width: 150px;
-  height: 200px;
 }
 .subheading-ios {
   color: #000;
@@ -40,6 +39,10 @@
   max-width: 600px;
   height: auto;
 }
+.web-image {
+  max-width: 340px;
+  height: auto;
+}
 .desktop-image {
   max-width: 60%;
   height: auto;
@@ -50,11 +53,12 @@
 }
 .paper-service {
   width: 150px;
-  height: 150px;
+  height: 200px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  border-radius: 0;
 }
 .mockup-images {
   width: 50%;
@@ -73,4 +77,11 @@
   border-radius: 0;
   display: flex;
   align-self: center;
+}
+.lower-background {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  margin-bottom: -48px;
+  min-height: 100vh;
 }

@@ -24,6 +24,7 @@ import CurrencyBitcoinIcon from "@mui/icons-material/CurrencyBitcoin"
 import ShareIcon from "@mui/icons-material/Share"
 import CreditCardIcon from "@mui/icons-material/CreditCard"
 import CheckroomIcon from "@mui/icons-material/Checkroom"
+import Building from "../../images/building.png"
 
 import "./styles.css"
 import { LeftCardData, RightCardData } from "../../utils/cardData"
@@ -51,10 +52,11 @@ export default function Services() {
                 color: "#000",
                 fontWeight: "800",
                 position: "absolute",
-                top: 70,
-                left: 40,
+                top: "8vmin",
+                left: "5vmin",
                 WebkitTextStroke: "1px #179AFB",
                 WebkitTextFillColor: "white",
+                fontSize: "5vmin",
               }}
             >
               {" "}
@@ -64,7 +66,7 @@ export default function Services() {
             <Typography
               variant="h4"
               display="inline"
-              style={{ color: "#000", fontWeight: "800" }}
+              style={{ color: "#000", fontWeight: "800", fontSize: "5vmin" }}
             >
               {" "}
               SERVICES
@@ -75,10 +77,11 @@ export default function Services() {
               style={{
                 fontWeight: "800",
                 position: "absolute",
-                top: 0,
-                right: 25,
+                top: "0vmin",
+                right: "4vmin",
                 WebkitTextStroke: "1px black",
                 WebkitTextFillColor: "white",
+                fontSize: "4vmin",
               }}
             >
               {" "}
@@ -87,7 +90,7 @@ export default function Services() {
             {"}"}
           </Typography>
         </div>
-        <Container style={{ marginTop: 100 }}>
+        <Container style={{ marginTop: 100, marginBottom: 100 }}>
           <Grid container spacing={4}>
             {LeftCardData.map((item, index) => {
               return (
@@ -109,85 +112,93 @@ export default function Services() {
             })}
           </Grid>
         </Container>
-        <Box mt={10} />
       </div>
-      <Box mt={10} />
-      <div className="typos">
-        <Typography variant="h2" display="inline" className="brackets">
-          {"{"}
+      <div
+        className="lower-background"
+        style={{ backgroundImage: `url(${Building})` }}
+      >
+        <div className="typos">
           <Typography
-            variant="h4"
+            variant="h2"
             display="inline"
-            style={{
-              color: "#000",
-              fontWeight: "800",
-              position: "absolute",
-              top: 70,
-              left: 40,
-              WebkitTextStroke: "1px #179AFB",
-              WebkitTextFillColor: "white",
-            }}
+            className="brackets"
+            style={{ fontSize: "10vmin" }}
           >
-            {" "}
-            INDUSTR
-          </Typography>
+            {"{"}
+            <Typography
+              variant="h4"
+              display="inline"
+              style={{
+                color: "#000",
+                fontWeight: "800",
+                position: "absolute",
+                top: "10vmin",
+                left: "5.5vmin",
+                WebkitTextStroke: "1px #179AFB",
+                WebkitTextFillColor: "white",
+                fontSize: "4vmin",
+              }}
+            >
+              {" "}
+              INDUSTR
+            </Typography>
 
-          <Typography
-            variant="h4"
-            display="inline"
-            style={{ color: "#000", fontWeight: "800" }}
-          >
-            {" "}
-            INDUSTRIES WE COVER
+            <Typography
+              variant="h4"
+              display="inline"
+              style={{ color: "#000", fontWeight: "800", fontSize: "5vmin" }}
+            >
+              {" "}
+              INDUSTRIES WE COVER
+            </Typography>
+            <Typography
+              variant="h4"
+              display="inline"
+              style={{
+                fontWeight: "800",
+                position: "absolute",
+                top: "0vmin",
+                right: "4vmin",
+                WebkitTextStroke: "1px black",
+                WebkitTextFillColor: "white",
+                fontSize: "4vmin",
+              }}
+            >
+              {" "}
+              VER
+            </Typography>
+            {"}"}
           </Typography>
-          <Typography
-            variant="h4"
-            display="inline"
-            style={{
-              fontWeight: "800",
-              position: "absolute",
-              top: 0,
-              right: 25,
-              WebkitTextStroke: "1px black",
-              WebkitTextFillColor: "white",
-            }}
-          >
-            {" "}
-            VER
-          </Typography>
-          {"}"}
-        </Typography>
+        </div>
+        <Container style={{ marginTop: 100 }}>
+          <Grid container spacing={6}>
+            <Grid item xs={6} md={3} align="center">
+              <SmallCard title={"Food"} icon={<LocalDiningIcon />} />
+            </Grid>
+            <Grid item xs={6} md={3} align="center">
+              <SmallCard title={"Clothes"} icon={<CheckroomIcon />} />
+            </Grid>
+            <Grid item xs={6} md={3} align="center">
+              <SmallCard title={"Health"} icon={<HealthAndSafetyIcon />} />
+            </Grid>
+            <Grid item xs={6} md={3} align="center">
+              <SmallCard title={"E commerce"} icon={<CreditCardIcon />} />
+            </Grid>
+            <Grid item xs={6} md={3} align="center">
+              <SmallCard title={"Social Media"} icon={<ShareIcon />} />
+            </Grid>
+            <Grid item xs={6} md={3} align="center">
+              <SmallCard title={"NFTs"} icon={<CurrencyBitcoinIcon />} />
+            </Grid>
+            <Grid item xs={6} md={3} align="center">
+              <SmallCard title={"POS"} icon={<PointOfSaleIcon />} />
+            </Grid>
+            <Grid item xs={6} md={3} align="center">
+              <SmallCard title={"Real Estate"} icon={<ApartmentIcon />} />
+            </Grid>
+          </Grid>
+        </Container>
       </div>
-      <Box mt={10} />
-
-      <Container>
-        <Grid container spacing={6}>
-          <Grid item xs={6} md={3}>
-            <SmallCard title={"Food"} icon={<LocalDiningIcon />} />
-          </Grid>
-          <Grid item xs={6} md={3}>
-            <SmallCard title={"Clothes"} icon={<CheckroomIcon />} />
-          </Grid>
-          <Grid item xs={6} md={3}>
-            <SmallCard title={"Health"} icon={<HealthAndSafetyIcon />} />
-          </Grid>
-          <Grid item xs={6} md={3}>
-            <SmallCard title={"E commerce"} icon={<CreditCardIcon />} />
-          </Grid>
-          <Grid item xs={6} md={3}>
-            <SmallCard title={"Social Media"} icon={<ShareIcon />} />
-          </Grid>
-          <Grid item xs={6} md={3}>
-            <SmallCard title={"NFTs"} icon={<CurrencyBitcoinIcon />} />
-          </Grid>
-          <Grid item xs={6} md={3}>
-            <SmallCard title={"POS"} icon={<PointOfSaleIcon />} />
-          </Grid>
-          <Grid item xs={6} md={3}>
-            <SmallCard title={"Real Estate"} icon={<ApartmentIcon />} />
-          </Grid>
-        </Grid>
-      </Container>
       <ContactUs />
     </Layout>
   )
@@ -197,6 +208,14 @@ function SmallCard({ title, icon }) {
   return (
     <Paper className="paper-service">
       {icon}
+      <Divider
+        style={{
+          width: "60%",
+          backgroundColor: "#52FFFF",
+          margin: 10,
+          height: 2,
+        }}
+      />
       <Typography variant="body2">{title}</Typography>
     </Paper>
   )

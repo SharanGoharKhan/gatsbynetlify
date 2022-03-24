@@ -285,9 +285,6 @@ const TopBar = props => {
                         ? "button-link"
                         : "button-link-black"
                     }
-                    // activeStyle={{
-                    //   borderBottom: "2px solid #fff",
-                    // }}
                     activeClassName="active"
                     spy={true}
                     smooth={true}

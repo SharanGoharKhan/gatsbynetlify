@@ -5,6 +5,7 @@ import Layout from "../../components/layout"
 import DesktopService from "../../images/desktop-banner.svg"
 import DesktopGroup from "../../images/desktop-group.png"
 import { useTheme } from "@mui/material/styles"
+import "./styles.css"
 
 export default function Web() {
   const theme = useTheme()
@@ -21,15 +22,7 @@ export default function Web() {
       />
       <div style={{ position: "relative" }}>
         <BottomServices />
-        <div
-          className="typos"
-          style={{
-            width: "100%",
-            textAlign: "center",
-            padding: 20,
-            marginTop: 20,
-          }}
-        >
+        <div className="typos">
           <Typography
             variant="h2"
             display="inline"
@@ -37,6 +30,7 @@ export default function Web() {
               color: "#179AFB",
               fontWeight: "900",
               position: "relative",
+              fontSize: "10vmin",
             }}
           >
             {"{"}
@@ -47,10 +41,11 @@ export default function Web() {
                 color: "#000",
                 fontWeight: "800",
                 position: "absolute",
-                top: 70,
-                left: 40,
+                top: "10vmin",
+                left: "5.5vmin",
                 WebkitTextStroke: "1px #179AFB",
                 WebkitTextFillColor: "white",
+                fontSize: "4vmin",
               }}
             >
               {" "}
@@ -60,7 +55,7 @@ export default function Web() {
             <Typography
               variant="h4"
               display="inline"
-              style={{ color: "#000", fontWeight: "800" }}
+              style={{ color: "#000", fontWeight: "800", fontSize: "5vmin" }}
             >
               {" "}
               DEKSTOP APP DEVELOPEMENT
@@ -71,10 +66,11 @@ export default function Web() {
               style={{
                 fontWeight: "800",
                 position: "absolute",
-                top: 0,
-                right: 50,
+                top: "0vmin",
+                right: "9vmin",
                 WebkitTextStroke: "1px black",
                 WebkitTextFillColor: "white",
+                fontSize: "4vmin",
               }}
             >
               {" "}

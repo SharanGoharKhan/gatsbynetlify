@@ -130,6 +130,9 @@ const IndexPage = props => {
   const scrollToRef = ref => {
     window.scrollTo(0, ref.current.offsetTop)
   }
+  useEffect(() => {
+    document.body.style.backgroundColor = "white"
+  })
 
   return (
     <>

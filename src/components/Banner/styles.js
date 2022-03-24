@@ -1,5 +1,4 @@
 import { makeStyles } from "@material-ui/core"
-import backgroundWeb from "../../images/bg.svg"
 
 const useStyles = makeStyles(theme => ({
   grid: {
@@ -63,6 +62,9 @@ const useStyles = makeStyles(theme => ({
     position: "relative",
     minHeight: "95vh",
     zIndex: 1,
+    // display: "flex",
+    // flexDirection: "column",
+    // justifyContent: "center",
   },
   bg: {
     position: "absolute",

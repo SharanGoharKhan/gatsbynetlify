@@ -1,24 +1,63 @@
-import { Box, Grid, Typography } from "@material-ui/core"
+import { Box, Container, Grid, Paper, Typography } from "@material-ui/core"
 import React from "react"
 import { Banner, BottomServices, ContactUs } from "../../components"
 import Layout from "../../components/layout"
-import AndroidService from "../../images/android.svg"
-import AndroidGroup from "../../images/android-group.png"
 import "./styles.css"
-export default function Android() {
+import { CareerCard } from "../../components"
+import Bg from "../../images/career-bg.png"
+
+const positions = [
+  {
+    title: "Full Stack Developer",
+    post: "Senior",
+  },
+  {
+    title: "Full Stack Developer",
+    post: "Senior",
+  },
+  {
+    title: "Full Stack Developer",
+    post: "Senior",
+  },
+  {
+    title: "Full Stack Developer",
+    post: "Junior",
+  },
+  {
+    title: "Full Stack Developer",
+    post: "Internee",
+  },
+  {
+    title: "Full Stack Developer",
+    post: "Internee",
+  },
+]
+
+export default function Career() {
   return (
     <Layout>
       <Banner
-        titleMain={"ANDROID"}
-        titleSecondary={"DEVELOPEMENT"}
-        subTitle={
-          "We develop beautiful Android apps with UX as a primary focus"
-        }
-        image={AndroidService}
+        titleMain={"JOIN OUR"}
+        titleSecondary={"TEAM"}
+        subTitle={"We are a team of engineers based in Islamabad, Pakistan"}
+        image={false}
       />
-      <div style={{ position: "relative" }}>
+      <div
+        style={{
+          position: "relative",
+          backgroundImage: `url(${Bg})`,
+        }}
+        className="background-container"
+      >
         <BottomServices />
-        <div className="typos">
+        <div
+          className="typos"
+          style={{
+            width: "100%",
+            textAlign: "center",
+            marginTop: 60,
+          }}
+        >
           <Typography
             variant="h2"
             display="inline"
@@ -45,7 +84,7 @@ export default function Android() {
               }}
             >
               {" "}
-              AND
+              JOIN
             </Typography>
 
             <Typography
@@ -54,7 +93,7 @@ export default function Android() {
               style={{ color: "#000", fontWeight: "800", fontSize: "5vmin" }}
             >
               {" "}
-              ANDROID DEVELOPEMENT
+              JOIN OUR TEAM
             </Typography>
             <Typography
               variant="h4"
@@ -62,22 +101,30 @@ export default function Android() {
               style={{
                 fontWeight: "800",
                 position: "absolute",
-                top: "0",
-                right: "9vmin",
+                top: "0vmin",
+                right: "6vmin",
                 WebkitTextStroke: "1px black",
                 WebkitTextFillColor: "white",
                 fontSize: "4vmin",
               }}
             >
               {" "}
-              MEN
+              TEAM
             </Typography>
             {"}"}
           </Typography>
         </div>
-        <Box style={{ textAlign: "center" }} mt={15} mb={15}>
-          <img src={AndroidGroup} className="android-image" />
-        </Box>
+        <Container style={{ marginTop: 100, marginBottom: 100 }}>
+          <Grid container spacing={4} style={{ justifyContent: "center" }}>
+            {positions.map((position, index) => {
+              return (
+                <Grid item key={index}>
+                  <CareerCard data={position} />
+                </Grid>
+              )
+            })}
+          </Grid>
+        </Container>
       </div>
       <ContactUs />
     </Layout>

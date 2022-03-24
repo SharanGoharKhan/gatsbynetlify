@@ -28,7 +28,12 @@ export default function Ios() {
       <div style={{ position: "relative" }}>
         <BottomServices />
         <div className="typos">
-          <Typography variant="h2" display="inline" className="brackets">
+          <Typography
+            variant="h2"
+            display="inline"
+            className="brackets"
+            style={{ fontSize: "10vmin" }}
+          >
             {"{"}
             <Typography
               variant="h4"
@@ -37,10 +42,11 @@ export default function Ios() {
                 color: "#000",
                 fontWeight: "800",
                 position: "absolute",
-                top: 70,
-                left: 40,
+                top: "10vmin",
+                left: "5.5vmin",
                 WebkitTextStroke: "1px #179AFB",
                 WebkitTextFillColor: "white",
+                fontSize: "4vmin",
               }}
             >
               {" "}
@@ -50,7 +56,7 @@ export default function Ios() {
             <Typography
               variant="h4"
               display="inline"
-              style={{ color: "#000", fontWeight: "800" }}
+              style={{ color: "#000", fontWeight: "800", fontSize: "5vmin" }}
             >
               {" "}
               IOS DEVELOPEMENT
@@ -61,10 +67,11 @@ export default function Ios() {
               style={{
                 fontWeight: "800",
                 position: "absolute",
-                top: 0,
-                right: 50,
+                top: "0vmin",
+                right: "9vmin",
                 WebkitTextStroke: "1px black",
                 WebkitTextFillColor: "white",
+                fontSize: "4vmin",
               }}
             >
               {" "}

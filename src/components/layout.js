@@ -11,7 +11,7 @@ import { useStaticQuery, graphql } from "gatsby"
 
 import { TopBar, Footer } from "./index"
 
-const Layout = ({ children }) => {
+const Layout = ({ children, bar, font }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -26,8 +26,8 @@ const Layout = ({ children }) => {
     <>
       <TopBar
         siteTitle={data.site.siteMetadata?.title || `Title`}
-        barColor="#179AFB"
-        fontColor="#fff"
+        barColor={bar ? bar : "#179AFB"}
+        fontColor={font ? font : "#fff"}
       />
       {children}
       <Footer />
