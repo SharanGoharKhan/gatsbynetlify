@@ -9,6 +9,7 @@ import Shahzaib from "../../images/shahzaib.png"
 import Usama from "../../images/usama.png"
 import Umar from "../../images/umar.png"
 import "./styles.css"
+import "../../styles/styles.css"
 import LinkedInIcon from "@mui/icons-material/LinkedIn"
 import InstagramIcon from "@mui/icons-material/Instagram"
 import BlueCard from "../../images/strip-card-blue.png"
@@ -33,60 +34,19 @@ export default function Team() {
         className="team-background"
       >
         <BottomServices />
-        <div
-          style={{
-            width: "100%",
-            textAlign: "center",
-            marginTop: 60,
-          }}
-        >
-          <Typography
-            variant="h2"
-            display="inline"
-            style={{
-              color: "#179AFB",
-              fontWeight: "900",
-              position: "relative",
-            }}
-          >
+        <div className="typos">
+          <Typography variant="h2" display="inline" className="brackets">
             {"{"}
-            <Typography
-              variant="h4"
-              display="inline"
-              style={{
-                color: "#000",
-                fontWeight: "800",
-                position: "absolute",
-                top: 70,
-                left: 40,
-                WebkitTextStroke: "1px #179AFB",
-                WebkitTextFillColor: "white",
-              }}
-            >
+            <Typography variant="h4" display="inline" className="typos-before">
               {" "}
               OUR
             </Typography>
 
-            <Typography
-              variant="h4"
-              display="inline"
-              style={{ color: "#000", fontWeight: "800" }}
-            >
+            <Typography variant="h4" display="inline" className="typos-main">
               {" "}
               OUR TEAM
             </Typography>
-            <Typography
-              variant="h4"
-              display="inline"
-              style={{
-                fontWeight: "800",
-                position: "absolute",
-                top: 0,
-                right: 50,
-                WebkitTextStroke: "1px black",
-                WebkitTextFillColor: "white",
-              }}
-            >
+            <Typography variant="h4" display="inline" className="typos-after">
               {" "}
               TEAM
             </Typography>

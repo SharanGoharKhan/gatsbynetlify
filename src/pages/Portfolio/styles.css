@@ -1,0 +1,11 @@
+.typos {
+  width: 100%;
+  text-align: center;
+  margin-top: 60px;
+}
+.brackets {
+  color: #179afb;
+  font-weight: 900;
+  position: relative;
+  font-size: "10vmin";
+}

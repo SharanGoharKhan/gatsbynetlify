@@ -5,6 +5,7 @@ import Layout from "../../components/layout"
 import UXImage from "../../images/ux.svg"
 import UXGroup from "../../images/ux-group.png"
 import "./styles.css"
+import "../../styles/styles.css"
 
 export default function Ux() {
   return (
@@ -20,40 +21,22 @@ export default function Ux() {
       <div style={{ position: "relative" }}>
         <BottomServices />
         <div className="typos">
-          <Typography
-            variant="h2"
-            display="inline"
-            style={{
-              color: "#179AFB",
-              fontWeight: "900",
-              position: "relative",
-              fontSize: "10vmin",
-            }}
-          >
+          <Typography variant="h2" display="inline" className="brackets">
             {"{"}
             <Typography
               variant="h4"
               display="inline"
+              className="typos-before"
               style={{
-                color: "#000",
-                fontWeight: "800",
-                position: "absolute",
                 top: "10vmin",
                 right: "7.5vmin",
-                WebkitTextStroke: "1px #179AFB",
-                WebkitTextFillColor: "white",
-                fontSize: "4vmin",
               }}
             >
               {" "}
               DESIGN
             </Typography>
 
-            <Typography
-              variant="h4"
-              display="inline"
-              style={{ color: "#000", fontWeight: "800", fontSize: "5vmin" }}
-            >
+            <Typography variant="h4" display="inline" className="typos-main">
               {" "}
               UI/UX DESIGN
             </Typography>

@@ -5,6 +5,7 @@ import Layout from "../../components/layout"
 import DesktopService from "../../images/desktop-banner.svg"
 import DesktopGroup from "../../images/desktop-group.png"
 import { useTheme } from "@mui/material/styles"
+import "../../styles/styles.css"
 import "./styles.css"
 
 export default function Web() {
@@ -23,54 +24,24 @@ export default function Web() {
       <div style={{ position: "relative" }}>
         <BottomServices />
         <div className="typos">
-          <Typography
-            variant="h2"
-            display="inline"
-            style={{
-              color: "#179AFB",
-              fontWeight: "900",
-              position: "relative",
-              fontSize: "10vmin",
-            }}
-          >
+          <Typography variant="h2" display="inline" className="brackets">
             {"{"}
-            <Typography
-              variant="h4"
-              display="inline"
-              style={{
-                color: "#000",
-                fontWeight: "800",
-                position: "absolute",
-                top: "10vmin",
-                left: "5.5vmin",
-                WebkitTextStroke: "1px #179AFB",
-                WebkitTextFillColor: "white",
-                fontSize: "4vmin",
-              }}
-            >
+            <Typography variant="h4" display="inline" className="typos-before">
               {" "}
               DESK
             </Typography>
 
-            <Typography
-              variant="h4"
-              display="inline"
-              style={{ color: "#000", fontWeight: "800", fontSize: "5vmin" }}
-            >
+            <Typography variant="h4" display="inline" className="typos-main">
               {" "}
               DEKSTOP APP DEVELOPEMENT
             </Typography>
             <Typography
               variant="h4"
               display="inline"
+              className="typos-after"
               style={{
-                fontWeight: "800",
-                position: "absolute",
                 top: "0vmin",
                 right: "9vmin",
-                WebkitTextStroke: "1px black",
-                WebkitTextFillColor: "white",
-                fontSize: "4vmin",
               }}
             >
               {" "}

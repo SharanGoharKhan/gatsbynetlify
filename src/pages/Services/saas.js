@@ -7,6 +7,7 @@ import Mockup1 from "../../images/mockup1.png"
 import Mockup2 from "../../images/mockup2.png"
 import { useTheme } from "@mui/material/styles"
 import "./styles.css"
+import "../../styles/styles.css"
 
 export default function Saas() {
   const theme = useTheme()
@@ -24,54 +25,24 @@ export default function Saas() {
       <div style={{ position: "relative" }}>
         <BottomServices />
         <div className="typos">
-          <Typography
-            variant="h2"
-            display="inline"
-            style={{
-              color: "#179AFB",
-              fontWeight: "900",
-              position: "relative",
-              fontSize: "10vmin",
-            }}
-          >
+          <Typography variant="h2" display="inline" className="brackets">
             {"{"}
-            <Typography
-              variant="h4"
-              display="inline"
-              style={{
-                color: "#000",
-                fontWeight: "800",
-                position: "absolute",
-                top: "10vmin",
-                left: "5.5vmin",
-                WebkitTextStroke: "1px #179AFB",
-                WebkitTextFillColor: "white",
-                fontSize: "4vmin",
-              }}
-            >
+            <Typography variant="h4" display="inline" className="typos-before">
               {" "}
               START
             </Typography>
 
-            <Typography
-              variant="h4"
-              display="inline"
-              style={{ color: "#000", fontWeight: "800", fontSize: "5vmin" }}
-            >
+            <Typography variant="h4" display="inline" className="typos-main">
               {" "}
               STARTUP SOLUTIONS
             </Typography>
             <Typography
               variant="h4"
               display="inline"
+              className="typos-after"
               style={{
-                fontWeight: "800",
-                position: "absolute",
                 top: "1vmin",
                 right: "22vmin",
-                WebkitTextStroke: "1px black",
-                WebkitTextFillColor: "white",
-                fontSize: "4vmin",
               }}
             >
               {" "}

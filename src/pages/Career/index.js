@@ -3,6 +3,8 @@ import React from "react"
 import { Banner, BottomServices, ContactUs } from "../../components"
 import Layout from "../../components/layout"
 import "./styles.css"
+import "../../styles/styles.css"
+
 import { CareerCard } from "../../components"
 import Bg from "../../images/career-bg.png"
 
@@ -50,62 +52,25 @@ export default function Career() {
         className="background-container"
       >
         <BottomServices />
-        <div
-          className="typos"
-          style={{
-            width: "100%",
-            textAlign: "center",
-            marginTop: 60,
-          }}
-        >
-          <Typography
-            variant="h2"
-            display="inline"
-            style={{
-              color: "#179AFB",
-              fontWeight: "900",
-              position: "relative",
-              fontSize: "10vmin",
-            }}
-          >
+        <div className="typos">
+          <Typography variant="h2" display="inline" className="brackets">
             {"{"}
-            <Typography
-              variant="h4"
-              display="inline"
-              style={{
-                color: "#000",
-                fontWeight: "800",
-                position: "absolute",
-                top: "10vmin",
-                left: "5.5vmin",
-                WebkitTextStroke: "1px #179AFB",
-                WebkitTextFillColor: "white",
-                fontSize: "4vmin",
-              }}
-            >
+            <Typography variant="h4" display="inline" className="typos-before">
               {" "}
               JOIN
             </Typography>
 
-            <Typography
-              variant="h4"
-              display="inline"
-              style={{ color: "#000", fontWeight: "800", fontSize: "5vmin" }}
-            >
+            <Typography variant="h4" display="inline" className="typos-main">
               {" "}
               JOIN OUR TEAM
             </Typography>
             <Typography
               variant="h4"
               display="inline"
+              className="typos-after"
               style={{
-                fontWeight: "800",
-                position: "absolute",
                 top: "0vmin",
                 right: "6vmin",
-                WebkitTextStroke: "1px black",
-                WebkitTextFillColor: "white",
-                fontSize: "4vmin",
               }}
             >
               {" "}

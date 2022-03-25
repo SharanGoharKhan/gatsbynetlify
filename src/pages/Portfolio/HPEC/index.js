@@ -1,23 +1,43 @@
-import { Box, Container, Grid, Typography } from "@material-ui/core"
+import {
+  Box,
+  Container,
+  Grid,
+  Typography,
+  useMediaQuery,
+  useTheme,
+} from "@material-ui/core"
 import React from "react"
 import { ContactUs } from "../../../components"
 import Layout from "../../../components/layout"
 import "./styles.css"
 import Circle from "../../../images/circle.svg"
-import Main from "../../../images/hpec-main.svg"
+import Main from "../../../images/hpec-main.png"
 import Fade from "../../../images/fade.svg"
 import WhiteBlock from "../../../images/white-block.svg"
 import Ladder from "../../../images/ladder.png"
 import CircleGroup from "../../../images/circle-group.png"
 import PurpleBlock from "../../../images/purple-block.svg"
+import Flow from "../../../images/flow.png"
+import Mobile1 from "../../../images/mobile1.svg"
+import Mobile2 from "../../../images/mobile2.svg"
+import Mobile3 from "../../../images/mobile3.svg"
+import Mobile4 from "../../../images/mobile4.svg"
+import Mobile5 from "../../../images/mobile5.svg"
+import Mobile6 from "../../../images/mobile6.svg"
+import Mobile7 from "../../../images/mobile7.svg"
+import Mobile8 from "../../../images/mobile8.svg"
+import Mobile9 from "../../../images/mobile9.svg"
 
 export default function Hpec() {
+  const theme = useTheme()
+  const matches = useMediaQuery(theme.breakpoints.down("sm"))
+
   return (
     <Layout bar={"#200E34"} font={"#fff"}>
       <div className="hpec-background">
         <Container>
           <Grid container>
-            <Grid item xs={6}>
+            <Grid item xs={12} md={6}>
               <Box style={{ marginTop: 20 }}>
                 <Typography variant="h3" className="main-text">
                   HPEC
@@ -31,24 +51,41 @@ export default function Hpec() {
                 </Typography>
               </Box>
             </Grid>
-            <Grid item xs={6}>
-              <img src={Circle} alt="cirlce" className="outer-image" />
-              <img src={Main} alt="main" className="inner-image" />
+            <Grid item xs={12} md={6}>
+              <Box style={{ position: "relative", left: 0, top: 0 }}>
+                <img
+                  src={Circle}
+                  alt="cirlce"
+                  className={matches ? "outer-image-small" : "outer-image"}
+                />
+                <img
+                  src={Main}
+                  alt="main"
+                  className={matches ? "inner-image-small" : "inner-image"}
+                />
+              </Box>
             </Grid>
           </Grid>
         </Container>
       </div>
-      <div className="hpec-background-low">
+      <div
+        className={
+          matches ? "hpec-background-low-small" : "hpec-background-low"
+        }
+      >
         <Grid container alignItems="center">
-          <Grid item md={6}>
+          <Grid item xs={6}>
             <Box style={{ position: "relative" }}>
               <img src={WhiteBlock} alt="white-block" />
-              <Typography variant="h1" className="question-mark">
+              <Typography
+                variant="h1"
+                className={matches ? "question-mark-small" : "question-mark"}
+              >
                 ?
               </Typography>
             </Box>
           </Grid>
-          <Grid item md={6}>
+          <Grid item xs={6}>
             <Grid
               container
               item
@@ -76,15 +113,31 @@ export default function Hpec() {
           </Grid>
         </Grid>
       </div>
-      <div className="hpec-background-lower">
-        <img src={Ladder} alt="ladder" style={{ width: "65%" }} />
-        <img src={CircleGroup} alt="circle" className="circle-group" />
+      <div
+        className="hpec-background-lower"
+        style={{ padding: matches && "1rem" }}
+      >
+        <img
+          src={Ladder}
+          alt="ladder"
+          style={{ width: matches ? "100%" : "65%" }}
+        />
+        <img
+          src={CircleGroup}
+          alt="circle"
+          className={matches ? "circle-group-small" : "circle-group"}
+        />
         <Typography variant="h1" className="p">
           P
         </Typography>
       </div>
       <div className="font-container">
-        <img src={PurpleBlock} alt="circle" className="purple-block" />
+        <img
+          src={PurpleBlock}
+          alt="circle"
+          className="purple-block"
+          style={{ display: matches ? "none" : "inline-block" }}
+        />
         <Typography variant="h1" className="c">
           C
         </Typography>
@@ -105,7 +158,10 @@ export default function Hpec() {
             </Typography>
           </>
         </Box>
-        <Box className="poppins-container">
+        <Box
+          className="poppins-container"
+          style={{ marginLeft: matches ? 0 : "10rem" }}
+        >
           <Box style={{ display: "flex", alignItems: "center" }}>
             <>
               <Typography
@@ -143,14 +199,113 @@ export default function Hpec() {
           </Box>
         </Box>
         <Box className="color-container">
-          <Box>
+          <Box ml={2} mr={4}>
             <Typography variant="h4" style={{ fontWeight: 100 }}>
               Color Pallete
             </Typography>
           </Box>
-          <Box className="color"></Box>
-          <Box className="color"></Box>
-          <Box className="color"></Box>
+          <Box style={{ textAlign: "center" }} mr={5}>
+            <Box
+              className={matches ? "color-small" : "color"}
+              style={{ backgroundColor: "#fff" }}
+            ></Box>
+            <Typography variant="body1">#FFFFFF</Typography>
+          </Box>
+          <Box style={{ textAlign: "center" }} mr={5}>
+            <Box
+              className={matches ? "color-small" : "color"}
+              style={{ backgroundColor: "#E1e1e1" }}
+            ></Box>
+            <Typography variant="body1" style={{ color: "#e1e1e1" }}>
+              #E1E1E1
+            </Typography>
+          </Box>
+          <Box style={{ textAlign: "center" }} mr={5}>
+            <Box
+              className={matches ? "color-small" : "color"}
+              style={{ backgroundColor: "#7e7dff" }}
+            ></Box>
+            <Typography variant="body1" style={{ color: "#737dff" }}>
+              #7E7DFF
+            </Typography>
+          </Box>
+        </Box>
+      </div>
+
+      <div className={matches ? "device-container-small" : "device-container"}>
+        <img
+          src={Mobile1}
+          alt="mobile"
+          style={{ top: "2em", left: matches ? "2em" : "4em" }}
+        />
+        <img
+          src={Mobile2}
+          alt="mobile"
+          style={{ top: "4em", left: matches ? "15em" : "20em" }}
+        />
+        <img
+          src={Mobile3}
+          alt="mobile"
+          style={{
+            top: matches ? "22em" : "0em",
+            left: matches ? "15em" : "40em",
+          }}
+        />
+        <img
+          src={Mobile4}
+          alt="mobile"
+          style={{
+            top: matches ? "30em" : "25em",
+            left: matches ? "2em" : "40em",
+          }}
+        />
+        <img
+          src={Mobile5}
+          alt="mobile"
+          style={{
+            top: "30em",
+            left: "60em",
+            display: matches ? "none" : "inline-block",
+          }}
+        />
+        <img
+          src={Mobile6}
+          alt="mobile"
+          style={{
+            top: "20em",
+            left: "75em",
+            display: matches ? "none" : "inline-block",
+          }}
+        />
+        <img
+          src={Mobile7}
+          alt="mobile"
+          style={{
+            top: "50em",
+            left: "40em",
+            display: matches ? "none" : "inline-block",
+          }}
+        />
+        <img
+          src={Mobile8}
+          alt="mobile"
+          style={{
+            top: matches ? "50em" : "55em",
+            left: matches ? "2em" : "4em",
+          }}
+        />
+        <img
+          src={Mobile9}
+          alt="mobile"
+          style={{
+            top: matches ? "50em" : "60em",
+            left: matches ? "15em" : "20em",
+          }}
+        />
+
+        <Box className="white-bg"></Box>
+        <Box className={matches ? "blue-bg-small" : "blue-bg"}>
+          <img src={Flow} alt="flow" style={{ marginBottom: "4em" }} />
         </Box>
       </div>
 

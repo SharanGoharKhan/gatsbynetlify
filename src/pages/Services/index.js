@@ -25,8 +25,8 @@ import ShareIcon from "@mui/icons-material/Share"
 import CreditCardIcon from "@mui/icons-material/CreditCard"
 import CheckroomIcon from "@mui/icons-material/Checkroom"
 import Building from "../../images/building.png"
-
 import "./styles.css"
+import "../../styles/styles.css"
 import { LeftCardData, RightCardData } from "../../utils/cardData"
 
 export default function Services() {
@@ -45,45 +45,16 @@ export default function Services() {
         <div className="typos">
           <Typography variant="h2" display="inline" className="brackets">
             {"{"}
-            <Typography
-              variant="h4"
-              display="inline"
-              style={{
-                color: "#000",
-                fontWeight: "800",
-                position: "absolute",
-                top: "8vmin",
-                left: "5vmin",
-                WebkitTextStroke: "1px #179AFB",
-                WebkitTextFillColor: "white",
-                fontSize: "5vmin",
-              }}
-            >
+            <Typography variant="h4" display="inline" className="typos-before">
               {" "}
               SER
             </Typography>
 
-            <Typography
-              variant="h4"
-              display="inline"
-              style={{ color: "#000", fontWeight: "800", fontSize: "5vmin" }}
-            >
+            <Typography variant="h4" display="inline" className="typos-main">
               {" "}
               SERVICES
             </Typography>
-            <Typography
-              variant="h4"
-              display="inline"
-              style={{
-                fontWeight: "800",
-                position: "absolute",
-                top: "0vmin",
-                right: "4vmin",
-                WebkitTextStroke: "1px black",
-                WebkitTextFillColor: "white",
-                fontSize: "4vmin",
-              }}
-            >
+            <Typography variant="h4" display="inline" className="typos-after">
               {" "}
               CES
             </Typography>
@@ -118,50 +89,32 @@ export default function Services() {
         style={{ backgroundImage: `url(${Building})` }}
       >
         <div className="typos">
-          <Typography
-            variant="h2"
-            display="inline"
-            className="brackets"
-            style={{ fontSize: "10vmin" }}
-          >
+          <Typography variant="h2" display="inline" className="brackets">
             {"{"}
             <Typography
               variant="h4"
               display="inline"
+              className="typos-before"
               style={{
-                color: "#000",
-                fontWeight: "800",
-                position: "absolute",
                 top: "10vmin",
                 left: "5.5vmin",
-                WebkitTextStroke: "1px #179AFB",
-                WebkitTextFillColor: "white",
-                fontSize: "4vmin",
               }}
             >
               {" "}
               INDUSTR
             </Typography>
 
-            <Typography
-              variant="h4"
-              display="inline"
-              style={{ color: "#000", fontWeight: "800", fontSize: "5vmin" }}
-            >
+            <Typography variant="h4" display="inline" className="typos-main">
               {" "}
               INDUSTRIES WE COVER
             </Typography>
             <Typography
               variant="h4"
               display="inline"
+              className="typos-after"
               style={{
-                fontWeight: "800",
-                position: "absolute",
                 top: "0vmin",
                 right: "4vmin",
-                WebkitTextStroke: "1px black",
-                WebkitTextFillColor: "white",
-                fontSize: "4vmin",
               }}
             >
               {" "}

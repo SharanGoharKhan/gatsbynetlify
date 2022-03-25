@@ -12,6 +12,8 @@ import IOSService from "../../images/ios.svg"
 import D1 from "../../images/Device1.png"
 import D2 from "../../images/Device2.png"
 import "./styles.css"
+import "../../styles/styles.css"
+
 import { useTheme } from "@mui/material/styles"
 
 export default function Ios() {
@@ -28,50 +30,24 @@ export default function Ios() {
       <div style={{ position: "relative" }}>
         <BottomServices />
         <div className="typos">
-          <Typography
-            variant="h2"
-            display="inline"
-            className="brackets"
-            style={{ fontSize: "10vmin" }}
-          >
+          <Typography variant="h2" display="inline" className="brackets">
             {"{"}
-            <Typography
-              variant="h4"
-              display="inline"
-              style={{
-                color: "#000",
-                fontWeight: "800",
-                position: "absolute",
-                top: "10vmin",
-                left: "5.5vmin",
-                WebkitTextStroke: "1px #179AFB",
-                WebkitTextFillColor: "white",
-                fontSize: "4vmin",
-              }}
-            >
+            <Typography variant="h4" display="inline" className="typos-before">
               {" "}
               IOS
             </Typography>
 
-            <Typography
-              variant="h4"
-              display="inline"
-              style={{ color: "#000", fontWeight: "800", fontSize: "5vmin" }}
-            >
+            <Typography variant="h4" display="inline" className="typos-main">
               {" "}
               IOS DEVELOPEMENT
             </Typography>
             <Typography
               variant="h4"
               display="inline"
+              className="typos-after"
               style={{
-                fontWeight: "800",
-                position: "absolute",
                 top: "0vmin",
                 right: "9vmin",
-                WebkitTextStroke: "1px black",
-                WebkitTextFillColor: "white",
-                fontSize: "4vmin",
               }}
             >
               {" "}
