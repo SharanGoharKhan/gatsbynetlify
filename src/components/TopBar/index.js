@@ -278,188 +278,110 @@ const TopBar = props => {
             </IconButton>
           </Link>
           <div className={classes.sectionDesktop}>
-            {props.barColor === "#179AFB" ? (
-              <>
+            <GatsbyLink
+              style={{ color: props.fontColor, position: "relative" }}
+              className={
+                props.fontColor === "#fff" ? "button-link" : "button-link-black"
+              }
+              activeClassName="active"
+              to="/Services"
+              onMouseOver={handleOpenServiceMenu}
+            >
+              Services
+            </GatsbyLink>
+            <Menu
+              sx={{ mt: "45px" }}
+              id="service-menu"
+              anchorEl={anchorElServices}
+              anchorOrigin={{
+                vertical: "bottom",
+                horizontal: "left",
+              }}
+              keepMounted
+              transformOrigin={{
+                vertical: "Bottom",
+                horizontal: "left",
+              }}
+              open={Boolean(anchorElServices)}
+              onClose={handleCloseServiceMenu}
+              MenuListProps={{ onMouseLeave: handleCloseServiceMenu }}
+              PaperProps={{
+                style: {
+                  marginTop: "30px",
+                  backgroundColor: "rgba(49, 47, 112, 0.67)",
+                  color: "white",
+                },
+              }}
+            >
+              {services.map(setting => (
                 <GatsbyLink
-                  style={{ color: props.fontColor, position: "relative" }}
-                  className={
-                    props.fontColor === "#fff"
-                      ? "button-link"
-                      : "button-link-black"
-                  }
-                  activeClassName="active"
-                  to="/Services"
-                  onMouseOver={handleOpenServiceMenu}
+                  to={setting.path}
+                  key={setting}
+                  style={{
+                    color: props.fontColor,
+                    textDecoration: "none",
+                  }}
                 >
-                  Services
+                  <MenuItem onClick={handleCloseServiceMenu}>
+                    <Typography variant="body2" textAlign="center">
+                      {setting.name}
+                    </Typography>
+                  </MenuItem>
                 </GatsbyLink>
-                <Menu
-                  sx={{ mt: "45px" }}
-                  id="service-menu"
-                  anchorEl={anchorElServices}
-                  anchorOrigin={{
-                    vertical: "bottom",
-                    horizontal: "left",
-                  }}
-                  keepMounted
-                  transformOrigin={{
-                    vertical: "Bottom",
-                    horizontal: "left",
-                  }}
-                  open={Boolean(anchorElServices)}
-                  onClose={handleCloseServiceMenu}
-                  MenuListProps={{ onMouseLeave: handleCloseServiceMenu }}
-                  PaperProps={{
-                    style: {
-                      marginTop: "30px",
-                      backgroundColor: "rgba(49, 47, 112, 0.67)",
-                      color: "white",
-                    },
-                  }}
-                >
-                  {services.map(setting => (
-                    <GatsbyLink
-                      to={setting.path}
-                      key={setting}
-                      style={{
-                        color: props.fontColor,
-                        textDecoration: "none",
-                      }}
-                    >
-                      <MenuItem onClick={handleCloseServiceMenu}>
-                        <Typography variant="body2" textAlign="center">
-                          {setting.name}
-                        </Typography>
-                      </MenuItem>
-                    </GatsbyLink>
-                  ))}
-                </Menu>
-                <GatsbyLink
-                  style={{ color: props.fontColor }}
-                  className={
-                    props.fontColor === "#fff"
-                      ? "button-link"
-                      : "button-link-black"
-                  }
-                  activeClassName="active"
-                  to="/Portfolio"
-                >
-                  Portfolio
-                </GatsbyLink>
+              ))}
+            </Menu>
+            <GatsbyLink
+              style={{ color: props.fontColor }}
+              className={
+                props.fontColor === "#fff" ? "button-link" : "button-link-black"
+              }
+              activeClassName="active"
+              to="/Portfolio"
+            >
+              Portfolio
+            </GatsbyLink>
 
-                <GatsbyLink
-                  style={{ color: props.fontColor }}
-                  className={
-                    props.fontColor === "#fff"
-                      ? "button-link"
-                      : "button-link-black"
-                  }
-                  activeClassName="active"
-                  to="/Career"
-                >
-                  Career
-                </GatsbyLink>
-                <GatsbyLink
-                  style={{ color: props.fontColor }}
-                  className={
-                    props.fontColor === "#fff"
-                      ? "button-link"
-                      : "button-link-black"
-                  }
-                  activeClassName="active"
-                  to="/Team"
-                >
-                  Team
-                </GatsbyLink>
-                <Link
-                  style={{
-                    color: props.fontColor,
-                    borderWidth: 1,
-                    borderRadius: 5,
-                    borderStyle: "solid",
-                    padding: 8,
-                  }}
-                  className={
-                    props.fontColor === "#fff"
-                      ? "button-link"
-                      : "button-link-black"
-                  }
-                  href="#"
-                  activeClass="active"
-                  to="contact"
-                  spy={true}
-                  smooth={true}
-                  offset={-30}
-                  duration={500}
-                >
-                  Contact Us
-                </Link>
-              </>
-            ) : (
-              <>
-                <a
-                  style={{ color: props.fontColor }}
-                  className={
-                    props.fontColor === "#fff"
-                      ? "button-link"
-                      : "button-link-black"
-                  }
-                  href="/#ourMainProducts"
-                >
-                  Our Main Producs
-                </a>
-                <a
-                  style={{ color: props.fontColor }}
-                  className={
-                    props.fontColor === "#fff"
-                      ? "button-link"
-                      : "button-link-black"
-                  }
-                  href="/#whyUs"
-                >
-                  Why Us Section
-                </a>
-                <a
-                  style={{ color: props.fontColor }}
-                  className={
-                    props.fontColor === "#fff"
-                      ? "button-link"
-                      : "button-link-black"
-                  }
-                  href="/#faqS"
-                >
-                  FAQ's
-                </a>
-                <a
-                  style={{ color: props.fontColor }}
-                  className={
-                    props.fontColor === "#fff"
-                      ? "button-link"
-                      : "button-link-black"
-                  }
-                  href="/#testimonial"
-                >
-                  Testimonial
-                </a>
-                <a
-                  style={{
-                    color: props.fontColor,
-                    borderWidth: 1,
-                    borderRadius: 5,
-                    borderStyle: "solid",
-                    padding: 8,
-                  }}
-                  className={
-                    props.fontColor === "#fff"
-                      ? "button-link"
-                      : "button-link-black"
-                  }
-                  href="/#contactUs"
-                >
-                  Contact Us
-                </a>
-              </>
-            )}
+            <GatsbyLink
+              style={{ color: props.fontColor }}
+              className={
+                props.fontColor === "#fff" ? "button-link" : "button-link-black"
+              }
+              activeClassName="active"
+              to="/Career"
+            >
+              Career
+            </GatsbyLink>
+            <GatsbyLink
+              style={{ color: props.fontColor }}
+              className={
+                props.fontColor === "#fff" ? "button-link" : "button-link-black"
+              }
+              activeClassName="active"
+              to="/Team"
+            >
+              Team
+            </GatsbyLink>
+            <Link
+              style={{
+                color: props.fontColor,
+                borderWidth: 1,
+                borderRadius: 5,
+                borderStyle: "solid",
+                padding: 8,
+              }}
+              className={
+                props.fontColor === "#fff" ? "button-link" : "button-link-black"
+              }
+              href="#"
+              activeClass="active"
+              to="contact"
+              spy={true}
+              smooth={true}
+              offset={-30}
+              duration={500}
+            >
+              Contact Us
+            </Link>
           </div>
           <div className={classes.sectionMobile}>
             <IconButton

@@ -259,11 +259,16 @@ export default function Hpec() {
           src={Mobile1}
           alt="mobile"
           style={{ top: "2em", left: matches ? "2em" : "4em" }}
+          data-aos="fade"
+          data-aos-easing="ease-in-sine"
         />
         <img
           src={Mobile2}
           alt="mobile"
           style={{ top: "4em", left: matches ? "15em" : "20em" }}
+          data-aos="fade"
+          data-aos-easing="ease-in-sine"
+          data-aos-delay="300"
         />
         <img
           src={Mobile3}
@@ -272,6 +277,9 @@ export default function Hpec() {
             top: matches ? "22em" : "0em",
             left: matches ? "15em" : "40em",
           }}
+          data-aos="fade"
+          data-aos-easing="ease-in-sine"
+          data-aos-delay="350"
         />
         <img
           src={Mobile4}
@@ -280,6 +288,9 @@ export default function Hpec() {
             top: matches ? "30em" : "25em",
             left: matches ? "2em" : "40em",
           }}
+          data-aos="fade"
+          data-aos-easing="ease-in-sine"
+          data-aos-delay="400"
         />
         <img
           src={Mobile5}
@@ -289,6 +300,9 @@ export default function Hpec() {
             left: "60em",
             display: matches ? "none" : "inline-block",
           }}
+          data-aos="fade"
+          data-aos-easing="ease-in-sine"
+          data-aos-delay="450"
         />
         <img
           src={Mobile6}
@@ -298,6 +312,9 @@ export default function Hpec() {
             left: "75em",
             display: matches ? "none" : "inline-block",
           }}
+          data-aos="fade"
+          data-aos-easing="ease-in-sine"
+          data-aos-delay="500"
         />
         <img
           src={Mobile7}
@@ -307,6 +324,9 @@ export default function Hpec() {
             left: "40em",
             display: matches ? "none" : "inline-block",
           }}
+          data-aos="fade"
+          data-aos-easing="ease-in-sine"
+          data-aos-delay="550"
         />
         <img
           src={Mobile8}
@@ -315,6 +335,9 @@ export default function Hpec() {
             top: matches ? "50em" : "55em",
             left: matches ? "2em" : "4em",
           }}
+          data-aos="fade"
+          data-aos-easing="ease-in-sine"
+          data-aos-delay="600"
         />
         <img
           src={Mobile9}
@@ -323,6 +346,8 @@ export default function Hpec() {
             top: matches ? "50em" : "60em",
             left: matches ? "15em" : "20em",
           }}
+          data-aos="fade"
+          data-aos-easing="ease-in-sine"
         />
 
         <Box className="white-bg"></Box>

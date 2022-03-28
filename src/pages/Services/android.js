@@ -6,8 +6,14 @@ import AndroidService from "../../images/android.svg"
 import AndroidGroup from "../../images/android-group.png"
 import "./styles.css"
 import "../../styles/styles.css"
+import Aos from "aos"
+import "aos/dist/aos.css"
 
 export default function Android() {
+  useEffect(() => {
+    Aos.init({ duration: 1000, once: true })
+  }, [])
+
   return (
     <Layout>
       <Banner
