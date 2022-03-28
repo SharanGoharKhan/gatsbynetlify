@@ -1,12 +1,5 @@
 import React from "react"
-import {
-  Grid,
-  Paper,
-  Typography,
-  Box,
-  Link as MaterialUILink,
-  useMediaQuery,
-} from "@material-ui/core"
+import { Box, Link as MaterialUILink } from "@material-ui/core"
 import Facebook from "../../svg/facebook"
 import Twitter from "../../svg/twitter"
 import LinkedIn from "../../svg/linkedin"

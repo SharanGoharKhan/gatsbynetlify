@@ -6,13 +6,12 @@ import {
   useMediaQuery,
   useTheme,
 } from "@material-ui/core"
-import React from "react"
+import React, { useEffect } from "react"
 import { ContactUs } from "../../../components"
 import Layout from "../../../components/layout"
 import "./styles.css"
 import Circle from "../../../images/circle.svg"
 import Main from "../../../images/hpec-main.png"
-import Fade from "../../../images/fade.svg"
 import WhiteBlock from "../../../images/white-block.svg"
 import Ladder from "../../../images/ladder.png"
 import CircleGroup from "../../../images/circle-group.png"
@@ -27,10 +26,15 @@ import Mobile6 from "../../../images/mobile6.svg"
 import Mobile7 from "../../../images/mobile7.svg"
 import Mobile8 from "../../../images/mobile8.svg"
 import Mobile9 from "../../../images/mobile9.svg"
+import Aos from "aos"
+import "aos/dist/aos.css"
 
 export default function Hpec() {
   const theme = useTheme()
   const matches = useMediaQuery(theme.breakpoints.down("sm"))
+  useEffect(() => {
+    Aos.init({ duration: 1000, once: true })
+  }, [])
 
   return (
     <Layout bar={"#200E34"} font={"#fff"}>
@@ -57,11 +61,16 @@ export default function Hpec() {
                   src={Circle}
                   alt="cirlce"
                   className={matches ? "outer-image-small" : "outer-image"}
+                  data-aos="flip-left"
+                  data-aos-easing="ease-in-sine"
+                  data-aos-delay="800"
                 />
                 <img
                   src={Main}
                   alt="main"
                   className={matches ? "inner-image-small" : "inner-image"}
+                  data-aos="flip-right"
+                  data-aos-easing="ease-in-sine"
                 />
               </Box>
             </Grid>
@@ -75,7 +84,11 @@ export default function Hpec() {
       >
         <Grid container alignItems="center">
           <Grid item xs={6}>
-            <Box style={{ position: "relative" }}>
+            <Box
+              style={{ position: "relative" }}
+              data-aos="slide-right"
+              data-aos-easing="ease-in-sine"
+            >
               <img src={WhiteBlock} alt="white-block" />
               <Typography
                 variant="h1"
@@ -126,6 +139,8 @@ export default function Hpec() {
           src={CircleGroup}
           alt="circle"
           className={matches ? "circle-group-small" : "circle-group"}
+          data-aos="slide-left"
+          data-aos-easing="ease-in-sine"
         />
         <Typography variant="h1" className="p">
           P
@@ -136,9 +151,16 @@ export default function Hpec() {
           src={PurpleBlock}
           alt="circle"
           className="purple-block"
+          data-aos="slide-right"
+          data-aos-easing="ease-in-sine"
           style={{ display: matches ? "none" : "inline-block" }}
         />
-        <Typography variant="h1" className="c">
+        <Typography
+          variant="h1"
+          className="c"
+          data-aos="slide-left"
+          data-aos-easing="ease-in-sine"
+        >
           C
         </Typography>
         <Box className="text-container">

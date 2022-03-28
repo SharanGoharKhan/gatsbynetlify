@@ -1,5 +1,5 @@
 import { Box, Container, Grid, Paper, Typography } from "@material-ui/core"
-import React from "react"
+import React, { useEffect } from "react"
 import { Banner, BottomServices, ContactUs } from "../../components"
 import Layout from "../../components/layout"
 import TeamBg from "../../images/team-bg.png"
@@ -14,8 +14,13 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn"
 import InstagramIcon from "@mui/icons-material/Instagram"
 import BlueCard from "../../images/strip-card-blue.png"
 import PurpleCard from "../../images/strip-card.png"
-
+import Aos from "aos"
+import "aos/dist/aos.css"
 export default function Team() {
+  useEffect(() => {
+    Aos.init({ duration: 1000, once: true })
+  }, [])
+
   return (
     <Layout>
       <Banner
@@ -56,7 +61,11 @@ export default function Team() {
         <Container style={{ marginTop: 100, marginBottom: 100 }}>
           <Grid container spacing={2}>
             <Grid item xs={6} md={4} align="center">
-              <Paper className="image-container">
+              <Paper
+                className="image-container"
+                data-aos="slide-up"
+                data-aos-easing="ease-in-sine"
+              >
                 <img src={Sharan} alt={"team"} />
                 <Typography variant="h5" className="name">
                   SHARAN GOHAR
@@ -83,7 +92,11 @@ export default function Team() {
               </Paper>
             </Box>
             <Grid item xs={6} md={4} align="center">
-              <Paper className="image-container">
+              <Paper
+                className="image-container"
+                data-aos="slide-down"
+                data-aos-easing="ease-in-sine"
+              >
                 <img src={Adnan} alt={"team"} />
                 <Typography variant="h5" className="name">
                   ADNAN
@@ -118,7 +131,11 @@ export default function Team() {
               </Paper>
             </Box>
             <Grid item xs={12} md={4} align="center">
-              <Paper className="image-container">
+              <Paper
+                className="image-container"
+                data-aos="zoom-out"
+                data-aos-easing="ease-in-sine"
+              >
                 <img src={Shahzaib} alt={"team"} />
                 <Typography variant="h5" className="name">
                   SHAHZAIB
@@ -148,7 +165,11 @@ export default function Team() {
 
           <Grid container spacing={2} align="center">
             <Grid item xs={6} md={4}>
-              <Paper className="image-container">
+              <Paper
+                className="image-container"
+                data-aos="slide-down"
+                data-aos-easing="ease-in-sine"
+              >
                 <img src={Usama} alt={"team"} />
                 <Typography variant="h5" className="name">
                   Usama Sattar
@@ -174,7 +195,11 @@ export default function Team() {
               </Paper>
             </Box>
             <Grid item xs={6} md={4} align="center">
-              <Paper className="image-container">
+              <Paper
+                className="image-container"
+                data-aos="slide-up"
+                data-aos-easing="ease-in-sine"
+              >
                 <img src={Umar} alt={"team"} />
                 <Typography variant="h5" className="name">
                   Umar Khalid

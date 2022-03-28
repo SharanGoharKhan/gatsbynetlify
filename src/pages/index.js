@@ -19,13 +19,8 @@ import {
   Paper,
   Typography,
   makeStyles,
-  Box,
   useMediaQuery,
-  Link as MaterialUILink,
 } from "@material-ui/core"
-import Facebook from "../svg/facebook"
-import Twitter from "../svg/twitter"
-import LinkedIn from "../svg/linkedin"
 import Layout from "../components/layout"
 import BannerIcons from "../components/BannerIcons"
 
@@ -125,7 +120,7 @@ const IndexPage = props => {
       default:
         break
     }
-  }, [])
+  }, [props.location])
 
   const scrollToRef = ref => {
     window.scrollTo(0, ref.current.offsetTop)
@@ -314,7 +309,7 @@ const IndexPage = props => {
         <Faq />
         <Logos />
         <Blog />
-        <a ref={contactRef} name="contactUs"></a>
+        <a ref={contactRef}></a>
         <ContactUs />
       </Layout>
     </>

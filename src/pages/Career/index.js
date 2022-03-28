@@ -1,4 +1,4 @@
-import { Box, Container, Grid, Paper, Typography } from "@material-ui/core"
+import { Container, Grid, Typography } from "@material-ui/core"
 import React from "react"
 import { Banner, BottomServices, ContactUs } from "../../components"
 import Layout from "../../components/layout"

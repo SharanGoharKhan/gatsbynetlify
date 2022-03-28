@@ -1,4 +1,4 @@
-import { Box, Container, Grid, Paper, Typography } from "@material-ui/core"
+import { Box, Typography } from "@material-ui/core"
 import React from "react"
 import { Banner, BottomServices, ContactUs } from "../../components"
 import Layout from "../../components/layout"
@@ -72,7 +72,7 @@ export default function Portfolio() {
     <Layout>
       <Banner
         titleMain={"Some Of Our Work"}
-        titleSecondary={"Nice Workm"}
+        titleSecondary={"Nice Work"}
         subTitle={"We are a team of engineers based in Islamabad, Pakistan"}
         image={false}
       />

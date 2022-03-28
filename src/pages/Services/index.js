@@ -8,11 +8,9 @@ import {
 import Layout from "../../components/layout"
 import {
   Box,
-  Card,
   Container,
   Divider,
   Grid,
-  Icon,
   Paper,
   Typography,
 } from "@material-ui/core"
@@ -28,6 +26,7 @@ import Building from "../../images/building.png"
 import "./styles.css"
 import "../../styles/styles.css"
 import { LeftCardData, RightCardData } from "../../utils/cardData"
+import { Link as GatsbyLink } from "gatsby"
 
 export default function Services() {
   return (
@@ -66,7 +65,12 @@ export default function Services() {
             {LeftCardData.map((item, index) => {
               return (
                 <Grid item md={3} key={index}>
-                  <ServicesCard data={item} />
+                  <GatsbyLink
+                    to={`/Services${item.to}/`}
+                    style={{ textDecoration: "none", color: "inherit" }}
+                  >
+                    <ServicesCard data={item} />
+                  </GatsbyLink>
                 </Grid>
               )
             })}
@@ -77,7 +81,12 @@ export default function Services() {
             {RightCardData.map((item, index) => {
               return (
                 <Grid item md={3} key={index}>
-                  <ServicesCard data={item} />
+                  <GatsbyLink
+                    to={`/Services${item.to}/`}
+                    style={{ textDecoration: "none", color: "inherit" }}
+                  >
+                    <ServicesCard data={item} />
+                  </GatsbyLink>
                 </Grid>
               )
             })}
@@ -123,7 +132,7 @@ export default function Services() {
             {"}"}
           </Typography>
         </div>
-        <Container style={{ marginTop: 100 }}>
+        <Container style={{ marginTop: 100, marginBottom: 100 }}>
           <Grid container spacing={6}>
             <Grid item xs={6} md={3} align="center">
               <SmallCard title={"Food"} icon={<LocalDiningIcon />} />

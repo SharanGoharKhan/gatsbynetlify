@@ -1,5 +1,5 @@
-import { Box, Grid, Typography } from "@material-ui/core"
-import React from "react"
+import { Box, Typography } from "@material-ui/core"
+import React, { useEffect } from "react"
 import { Banner, BottomServices, ContactUs } from "../../components"
 import Layout from "../../components/layout"
 import AndroidService from "../../images/android.svg"
@@ -48,7 +48,7 @@ export default function Android() {
           </Typography>
         </div>
         <Box style={{ textAlign: "center" }} mt={15} mb={15}>
-          <img src={AndroidGroup} className="android-image" />
+          <img src={AndroidGroup} className="android-image" alt="android" />
         </Box>
       </div>
       <ContactUs />

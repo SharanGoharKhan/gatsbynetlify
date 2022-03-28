@@ -131,7 +131,7 @@ const ContactUs = () => {
                   variant="contained"
                   size="large"
                   style={{
-                    width: "15%",
+                    width: "160px",
                     color: "#3751FF",
                     marginTop: 20,
                     fontFamily: "Montserrat",

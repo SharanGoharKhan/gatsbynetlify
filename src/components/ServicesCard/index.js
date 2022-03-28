@@ -1,14 +1,5 @@
 import React from "react"
-import {
-  Card,
-  CardHeader,
-  CardContent,
-  CardMedia,
-  CardActions,
-  Typography,
-  IconButton,
-  Box,
-} from "@material-ui/core"
+import { Typography, Box } from "@material-ui/core"
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward"
 import "./styles.css"
 
@@ -22,17 +13,23 @@ export default function ServicesCard({ data }) {
     >
       <Box className="image-wrapper">{data.image}</Box>
       <Box style={{ padding: 12 }}>
-        <Typography variant="body1" style={{ fontWeight: 800 }}>
+        <Typography
+          variant="body1"
+          className="text"
+          style={{ fontWeight: 800 }}
+        >
           {mainTitle} <br />
           {secondaryTitle}
         </Typography>
-        <Typography variant="body2">{data.description}</Typography>
+        <Typography variant="body2" className="text">
+          {data.description}
+        </Typography>
       </Box>
       <Box
         disableSpacing
         style={{ display: "flex", justifyContent: "flex-end" }}
       >
-        <ArrowForwardIcon />
+        <ArrowForwardIcon className="arrow" />
       </Box>
     </Box>
   )

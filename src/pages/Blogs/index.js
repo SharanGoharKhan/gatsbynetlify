@@ -4,16 +4,13 @@ import {
   Card,
   IconButton,
   CardContent,
-  Link,
   CardActions,
-  Button,
   Collapse,
   Divider,
   Typography,
   makeStyles,
   useMediaQuery,
   Grid,
-  Paper,
   useTheme,
 } from "@material-ui/core"
 import { red } from "@material-ui/core/colors"
@@ -120,7 +117,7 @@ const Blogs = () => {
         <Grid container spacing={1} justify="space-evenly" alignItems="center">
           <Grid item sm={12} lg={3}>
             <Card>
-              <img src={Blog1} />
+              <img src={Blog1} alt="blog" />
               <div style={{ paddingLeft: 10 }}>
                 <Typography
                   style={{
@@ -186,7 +183,7 @@ const Blogs = () => {
           </Grid>
           <Grid item lg={3} sm={12}>
             <Card>
-              <img src={Blog2} />
+              <img src={Blog2} alt="blog" />
               <div style={{ paddingLeft: 10 }}>
                 <Typography
                   style={{
@@ -253,7 +250,7 @@ const Blogs = () => {
           </Grid>
           <Grid item lg={3} sm={12}>
             <Card>
-              <img src={Blog3} />
+              <img src={Blog3} alt="blog" />
               <div style={{ paddingLeft: 10 }}>
                 <Typography
                   style={{
@@ -323,7 +320,7 @@ const Blogs = () => {
         <Grid container spacing={1} justify="space-evenly" alignItems="center">
           <Grid item sm={12} lg={3}>
             <Card>
-              <img src={Blog4} />
+              <img src={Blog4} alt="blog" />
               <div style={{ paddingLeft: 10 }}>
                 <Typography
                   style={{
@@ -389,7 +386,7 @@ const Blogs = () => {
           </Grid>
           <Grid item lg={3} sm={12}>
             <Card>
-              <img src={Blog5} />
+              <img src={Blog5} alt="blog" />
               <div style={{ paddingLeft: 10 }}>
                 <Typography
                   style={{
@@ -456,7 +453,7 @@ const Blogs = () => {
           </Grid>
           <Grid item lg={3} sm={12}>
             <Card>
-              <img src={Blog6} />
+              <img src={Blog6} alt="blog" />
               <div style={{ paddingLeft: 10 }}>
                 <Typography
                   style={{

@@ -14,6 +14,7 @@ export default function BottomServices() {
     <>
       <img
         src={BlackRightWeb}
+        alt="web"
         style={{
           position: "absolute",
           top: 0,
@@ -26,6 +27,7 @@ export default function BottomServices() {
       />
       <img
         src={BlueWeb}
+        alt="web"
         style={{
           position: "absolute",
           top: "20%",
@@ -38,6 +40,7 @@ export default function BottomServices() {
       />
       <img
         src={PurpleWeb}
+        alt="web"
         style={{
           position: "absolute",
           top: "40%",
@@ -50,6 +53,7 @@ export default function BottomServices() {
       />
       <img
         src={BlackWeb}
+        alt="web"
         style={{
           position: "absolute",
           top: "60%",
@@ -63,6 +67,7 @@ export default function BottomServices() {
 
       <img
         src={BlueLeftweb}
+        alt="web"
         style={{
           position: "absolute",
           top: "80%",

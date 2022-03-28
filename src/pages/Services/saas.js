@@ -62,7 +62,7 @@ export default function Saas() {
                 justifyContent: matches ? "center" : "flex-end",
               }}
             >
-              <img src={Mockup1} className="mockup-images" />
+              <img src={Mockup1} className="mockup-images" alt="mockup" />
             </Grid>
             <Grid item md={4}>
               <Box style={{ textAlign: matches ? "center" : "start" }}>
@@ -116,7 +116,7 @@ export default function Saas() {
               md={6}
               style={{ textAlign: matches ? "center" : "start" }}
             >
-              <img src={Mockup2} className="mockup-images" />
+              <img src={Mockup2} className="mockup-images" alt="mockup" />
             </Grid>
           </Grid>
           <Box

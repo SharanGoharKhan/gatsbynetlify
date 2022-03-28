@@ -3,13 +3,12 @@ import {
   Container,
   Divider,
   Grid,
-  Paper,
   Typography,
   useTheme,
   useMediaQuery,
 } from "@material-ui/core"
-import React from "react"
-import { Banner, BottomServices, ContactUs } from "../../../components"
+import React, { useEffect } from "react"
+import { ContactUs } from "../../../components"
 import Layout from "../../../components/layout"
 import "./styles.css"
 import BundlMain from "../../../images/bundl-main.png"
@@ -22,10 +21,15 @@ import Colin from "../../../images/colin.png"
 import Lance from "../../../images/lance.png"
 import Chinese from "../../../images/chinese.png"
 import BundlLogo from "../../../images/bundl-logo.png"
+import Aos from "aos"
+import "aos/dist/aos.css"
 
 export default function Bundl() {
   const theme = useTheme()
   const matches = useMediaQuery(theme.breakpoints.down("sm"))
+  useEffect(() => {
+    Aos.init({ duration: 1000, once: true })
+  }, [])
   return (
     <Layout bar="#62d7a5">
       <div className="bundl-background">
@@ -40,9 +44,9 @@ export default function Bundl() {
         </Typography>
       </div>
       <div className="bundl-lower-container">
-        <img src={BundlMain} alt="main" style={{ width: "60%" }} />
-        <img src={LightCircle} alt="circle" className="circle1" />
-        <img src={DarkCircle} alt="circle" className="circle2" />
+        <img src={BundlMain} alt="bundl" style={{ width: "60%" }} />
+        <img src={LightCircle} alt="circle1" className="circle1" />
+        <img src={DarkCircle} alt="circle2" className="circle2" />
       </div>
       <Container>
         <div style={{ position: "relative" }}>
@@ -117,8 +121,8 @@ export default function Bundl() {
           </Typography>
           <div style={{ overflow: "visible" }}>
             <div className="video-container">
-              <img src={LightCircle} alr="circle" className="circle4" />
-              <img src={DarkCircle} alr="circle" className="circle5" />
+              <img src={LightCircle} alt="circle" className="circle4" />
+              <img src={DarkCircle} alt="circle" className="circle5" />
             </div>
           </div>
         </div>
@@ -137,6 +141,9 @@ function ImageCard({ image, name, role }) {
       justifyContent="center"
       alignItems="center"
       flexDirection="column"
+      data-aos="zoom-in"
+      data-aos-easing="ease-in-sine"
+      data-aos-duration="2000"
     >
       <img src={image} alt="team" style={{ marginBottom: "0.75rem" }} />
       <Typography align="center" style={{ fontWeight: 800 }}>

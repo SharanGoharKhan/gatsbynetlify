@@ -45,7 +45,7 @@ export default function Ux() {
           </Typography>
         </div>
         <Box style={{ textAlign: "center" }} mt={15} mb={15}>
-          <img src={UXGroup} className="ux-image" />
+          <img src={UXGroup} className="ux-image" alt="ux" />
         </Box>
       </div>
       <ContactUs />

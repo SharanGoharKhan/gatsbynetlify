@@ -54,17 +54,14 @@ const useStyles = makeStyles(theme => ({
   },
   background: {
     background: "linear-gradient(to bottom, #179AFB 0%, #301E5B 100%)",
-    // borderBottomLeftRadius: "40% 15%",
-    // borderBottomRightRadius: "40% 15%",
     boxShadow: "0px 3px 2px rgb(206, 202, 202)",
     paddingBottom: "2rem",
-    zIndex: "0",
     position: "relative",
     minHeight: "95vh",
     zIndex: 1,
-    // display: "flex",
-    // flexDirection: "column",
-    // justifyContent: "center",
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
   },
   bg: {
     position: "absolute",
@@ -74,6 +71,10 @@ const useStyles = makeStyles(theme => ({
     height: "100%",
     opacity: "0.4",
     zIndex: 2,
+  },
+  canvas: {
+    position: "absolute !important",
+    background: "red",
   },
 }))
 export default useStyles

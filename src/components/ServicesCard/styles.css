@@ -10,7 +10,14 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  transition: all 0.2s ease-in;
 }
+.service-card:hover {
+  filter: drop-shadow(10px 10px 1px #f0f9ff);
+  background-color: #179afb;
+  transform: scale(0.8);
+}
+
 .image-wrapper {
   display: flex;
   justify-content: center;
@@ -20,6 +27,16 @@
   width: 100px;
   height: 100px;
 }
+.service-card:hover .image-wrapper {
+  background-color: white;
+}
+.service-card:hover .text {
+  color: white;
+}
+.service-card:hover .arrow {
+  color: white;
+}
+
 .image-wrapper img {
   width: 60px;
   margin: 0;

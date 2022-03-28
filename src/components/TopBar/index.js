@@ -90,13 +90,14 @@ const services = [
   { name: "UI/UX Rendering", path: "/Services/ux" },
   { name: "Software for Startups", path: "/Services/saas" },
 ]
+const timeoutLength = 300
 const TopBar = props => {
   const classes = useStyles()
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null)
-  const [anchorElServices, setAnchorElServices] = React.useState(null)
   const isMobileMenuOpen = Boolean(mobileMoreAnchorEl)
   const mobileMenuId = "primary-search-account-menu-mobile"
   const matches = useMediaQuery("(min-width:960px)")
+  const [anchorElServices, setAnchorElServices] = React.useState(null)
 
   const handleMobileMenuClose = () => {
     setMobileMoreAnchorEl(null)
@@ -105,7 +106,9 @@ const TopBar = props => {
     setAnchorElServices(e.currentTarget)
   }
   const handleCloseServiceMenu = () => {
-    setAnchorElServices(null)
+    setTimeout(() => {
+      setAnchorElServices(null)
+    }, timeoutLength)
   }
 
   useEffect(() => {
@@ -275,118 +278,99 @@ const TopBar = props => {
             </IconButton>
           </Link>
           <div className={classes.sectionDesktop}>
-            {props.barColor == "#179AFB" ? (
+            {props.barColor === "#179AFB" ? (
               <>
-                <Box sx={{ flexGrow: 0 }}>
-                  <GatsbyLink
-                    style={{ color: props.fontColor, position: "relative" }}
-                    className={
-                      props.fontColor === "#fff"
-                        ? "button-link"
-                        : "button-link-black"
-                    }
-                    activeClassName="active"
-                    spy={true}
-                    smooth={true}
-                    offset={-30}
-                    duration={500}
-                    to="/Services"
-                    onClick={handleOpenServiceMenu}
-                  >
-                    Services
-                  </GatsbyLink>
-                  <Menu
-                    sx={{ mt: "45px" }}
-                    id="service-menu"
-                    anchorEl={anchorElServices}
-                    anchorOrigin={{
-                      vertical: "bottom",
-                      horizontal: "left",
-                    }}
-                    keepMounted
-                    transformOrigin={{
-                      vertical: "Bottom",
-                      horizontal: "left",
-                    }}
-                    open={Boolean(anchorElServices)}
-                    onClose={handleCloseServiceMenu}
-                    PaperProps={{
-                      style: {
-                        marginTop: "30px",
-                        backgroundColor: "rgba(49, 47, 112, 0.67)",
-                        color: "white",
-                      },
-                    }}
-                  >
-                    {services.map(setting => (
-                      <GatsbyLink
-                        to={setting.path}
-                        key={setting}
-                        style={{
-                          color: props.fontColor,
-                          textDecoration: "none",
-                        }}
-                      >
-                        <MenuItem onClick={handleCloseServiceMenu}>
-                          <Typography variant="body2" textAlign="center">
-                            {setting.name}
-                          </Typography>
-                        </MenuItem>
-                      </GatsbyLink>
-                    ))}
-                  </Menu>
-                </Box>
-                <Link
+                <GatsbyLink
+                  style={{ color: props.fontColor, position: "relative" }}
+                  className={
+                    props.fontColor === "#fff"
+                      ? "button-link"
+                      : "button-link-black"
+                  }
+                  activeClassName="active"
+                  to="/Services"
+                  onMouseOver={handleOpenServiceMenu}
+                >
+                  Services
+                </GatsbyLink>
+                <Menu
+                  sx={{ mt: "45px" }}
+                  id="service-menu"
+                  anchorEl={anchorElServices}
+                  anchorOrigin={{
+                    vertical: "bottom",
+                    horizontal: "left",
+                  }}
+                  keepMounted
+                  transformOrigin={{
+                    vertical: "Bottom",
+                    horizontal: "left",
+                  }}
+                  open={Boolean(anchorElServices)}
+                  onClose={handleCloseServiceMenu}
+                  MenuListProps={{ onMouseLeave: handleCloseServiceMenu }}
+                  PaperProps={{
+                    style: {
+                      marginTop: "30px",
+                      backgroundColor: "rgba(49, 47, 112, 0.67)",
+                      color: "white",
+                    },
+                  }}
+                >
+                  {services.map(setting => (
+                    <GatsbyLink
+                      to={setting.path}
+                      key={setting}
+                      style={{
+                        color: props.fontColor,
+                        textDecoration: "none",
+                      }}
+                    >
+                      <MenuItem onClick={handleCloseServiceMenu}>
+                        <Typography variant="body2" textAlign="center">
+                          {setting.name}
+                        </Typography>
+                      </MenuItem>
+                    </GatsbyLink>
+                  ))}
+                </Menu>
+                <GatsbyLink
                   style={{ color: props.fontColor }}
                   className={
                     props.fontColor === "#fff"
                       ? "button-link"
                       : "button-link-black"
                   }
-                  href="#"
-                  activeClass="active"
-                  to="whyus"
-                  spy={true}
-                  smooth={true}
-                  offset={-30}
-                  duration={500}
+                  activeClassName="active"
+                  to="/Portfolio"
                 >
                   Portfolio
-                </Link>
-                <Link
+                </GatsbyLink>
+
+                <GatsbyLink
                   style={{ color: props.fontColor }}
                   className={
                     props.fontColor === "#fff"
                       ? "button-link"
                       : "button-link-black"
                   }
-                  href="#"
-                  activeClass="active"
-                  to="faq"
-                  spy={true}
-                  smooth={true}
-                  offset={-30}
-                  duration={500}
+                  activeClassName="active"
+                  to="/Career"
                 >
                   Career
-                </Link>
-                <Link
+                </GatsbyLink>
+                <GatsbyLink
                   style={{ color: props.fontColor }}
                   className={
                     props.fontColor === "#fff"
                       ? "button-link"
                       : "button-link-black"
                   }
-                  href="#"
-                  activeClass="active"
-                  to="test"
-                  spy={true}
-                  smooth={true}
-                  offset={-30}
-                  duration={500}
+                  activeClassName="active"
+                  to="/Team"
                 >
                   Team
-                </Link>
+                </GatsbyLink>
                 <Link
                   style={{
                     color: props.fontColor,

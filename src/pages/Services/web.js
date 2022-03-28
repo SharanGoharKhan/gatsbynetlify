@@ -54,6 +54,7 @@ export default function Web() {
           <img
             src={WebGroup}
             className={matches ? "web-image-small" : "web-image"}
+            alt="web"
           />
         </Box>
       </div>

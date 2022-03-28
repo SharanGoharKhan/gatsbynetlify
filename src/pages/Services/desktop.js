@@ -1,4 +1,4 @@
-import { Box, Typography, Icon, useMediaQuery } from "@material-ui/core"
+import { Box, Typography, useMediaQuery } from "@material-ui/core"
 import React from "react"
 import { Banner, BottomServices, ContactUs } from "../../components"
 import Layout from "../../components/layout"
@@ -53,6 +53,7 @@ export default function Web() {
         <Box style={{ textAlign: "center" }} mt={15} mb={15}>
           <img
             src={DesktopGroup}
+            alt="desktop"
             className={matches ? "small-desktop-image" : "desktop-image"}
           />
         </Box>
