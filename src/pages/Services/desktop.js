@@ -1,6 +1,6 @@
 import { Box, Typography, useMediaQuery } from "@material-ui/core"
 import React from "react"
-import { Banner, BottomServices, ContactUs } from "../../components"
+import { Banner, BottomServices, ContactUs, Typos } from "../../components"
 import Layout from "../../components/layout"
 import DesktopService from "../../images/desktop-banner.svg"
 import DesktopGroup from "../../images/desktop-group.png"
@@ -23,33 +23,7 @@ export default function Web() {
       />
       <div style={{ position: "relative" }}>
         <BottomServices />
-        <div className="typos">
-          <Typography variant="h2" display="inline" className="brackets">
-            {"{"}
-            <Typography variant="h4" display="inline" className="typos-before">
-              {" "}
-              DESK
-            </Typography>
-
-            <Typography variant="h4" display="inline" className="typos-main">
-              {" "}
-              DEKSTOP APP DEVELOPEMENT
-            </Typography>
-            <Typography
-              variant="h4"
-              display="inline"
-              className="typos-after"
-              style={{
-                top: "0vmin",
-                right: "9vmin",
-              }}
-            >
-              {" "}
-              MEN
-            </Typography>
-            {"}"}
-          </Typography>
-        </div>
+        <Typos first="DESK" second="DESKTOP APP DEVELOPMENT" third="MEN" />
         <Box style={{ textAlign: "center" }} mt={15} mb={15}>
           <img
             src={DesktopGroup}

@@ -1,6 +1,6 @@
 import { Box, Typography } from "@material-ui/core"
 import React, { useEffect } from "react"
-import { Banner, BottomServices, ContactUs } from "../../components"
+import { Banner, BottomServices, ContactUs, Typos } from "../../components"
 import Layout from "../../components/layout"
 import AndroidService from "../../images/android.svg"
 import AndroidGroup from "../../images/android-group.png"
@@ -26,33 +26,7 @@ export default function Android() {
       />
       <div style={{ position: "relative" }}>
         <BottomServices />
-        <div className="typos">
-          <Typography variant="h2" display="inline" className="brackets">
-            {"{"}
-            <Typography variant="h4" display="inline" className="typos-before">
-              {" "}
-              AND
-            </Typography>
-
-            <Typography variant="h4" display="inline" className="typos-main">
-              {" "}
-              ANDROID DEVELOPEMENT
-            </Typography>
-            <Typography
-              variant="h4"
-              display="inline"
-              className="typos-after"
-              style={{
-                top: "0",
-                right: "9vmin",
-              }}
-            >
-              {" "}
-              MEN
-            </Typography>
-            {"}"}
-          </Typography>
-        </div>
+        <Typos first="AND" second="ANDROID DEVELOPEMENT" third="MEN" />
         <Box style={{ textAlign: "center" }} mt={15} mb={15}>
           <img src={AndroidGroup} className="android-image" alt="android" />
         </Box>

@@ -1,6 +1,6 @@
 import { Box, Typography, useMediaQuery } from "@material-ui/core"
 import React from "react"
-import { Banner, BottomServices, ContactUs } from "../../components"
+import { Banner, BottomServices, ContactUs, Typos } from "../../components"
 import Layout from "../../components/layout"
 import WebService from "../../images/web-banner.svg"
 import WebGroup from "../../images/group-web.png"
@@ -23,33 +23,14 @@ export default function Web() {
       />
       <div style={{ position: "relative" }}>
         <BottomServices />
-        <div className="typos">
-          <Typography variant="h2" display="inline" className="brackets">
-            {"{"}
-            <Typography variant="h4" display="inline" className="typos-before">
-              {" "}
-              DEV
-            </Typography>
+        <Typos
+          first="DEV"
+          second="DEVELOPEMENT PROCESS"
+          third="PRO"
+          top="0vmin"
+          right="19.5vmin"
+        />
 
-            <Typography variant="h4" display="inline" className="typos-main">
-              {" "}
-              DEVELOPEMENT PROCESS
-            </Typography>
-            <Typography
-              variant="h4"
-              display="inline"
-              className="typos-after"
-              style={{
-                top: "0vmin",
-                right: "19.5vmin",
-              }}
-            >
-              {" "}
-              PRO
-            </Typography>
-            {"}"}
-          </Typography>
-        </div>
         <Box style={{ textAlign: "center" }} mt={15} mb={15}>
           <img
             src={WebGroup}

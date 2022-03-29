@@ -1,6 +1,6 @@
 import { Box, Container, Grid, Paper, Typography } from "@material-ui/core"
 import React, { useEffect } from "react"
-import { Banner, BottomServices, ContactUs } from "../../components"
+import { Banner, BottomServices, ContactUs, Typos } from "../../components"
 import Layout from "../../components/layout"
 import TeamBg from "../../images/team-bg.png"
 import Sharan from "../../images/sharan.png"
@@ -39,25 +39,8 @@ export default function Team() {
         className="team-background"
       >
         <BottomServices />
-        <div className="typos">
-          <Typography variant="h2" display="inline" className="brackets">
-            {"{"}
-            <Typography variant="h4" display="inline" className="typos-before">
-              {" "}
-              OUR
-            </Typography>
+        <Typos first="OUR" second="OUR TEAM" third="TEAM" />
 
-            <Typography variant="h4" display="inline" className="typos-main">
-              {" "}
-              OUR TEAM
-            </Typography>
-            <Typography variant="h4" display="inline" className="typos-after">
-              {" "}
-              TEAM
-            </Typography>
-            {"}"}
-          </Typography>
-        </div>
         <Container style={{ marginTop: 100, marginBottom: 100 }}>
           <Grid container spacing={2}>
             <Grid item xs={6} md={4} align="center">

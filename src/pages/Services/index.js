@@ -4,6 +4,7 @@ import {
   BottomServices,
   ContactUs,
   ServicesCard,
+  Typos,
 } from "../../components"
 import Layout from "../../components/layout"
 import {
@@ -41,25 +42,8 @@ export default function Services() {
       />
       <div style={{ position: "relative" }}>
         <BottomServices />
-        <div className="typos">
-          <Typography variant="h2" display="inline" className="brackets">
-            {"{"}
-            <Typography variant="h4" display="inline" className="typos-before">
-              {" "}
-              SER
-            </Typography>
+        <Typos first="SER" second="SERVICES" third="CES" />
 
-            <Typography variant="h4" display="inline" className="typos-main">
-              {" "}
-              SERVICES
-            </Typography>
-            <Typography variant="h4" display="inline" className="typos-after">
-              {" "}
-              CES
-            </Typography>
-            {"}"}
-          </Typography>
-        </div>
         <Container style={{ marginTop: 100, marginBottom: 100 }}>
           <Grid container spacing={4}>
             {LeftCardData.map((item, index) => {
@@ -97,41 +81,16 @@ export default function Services() {
         className="lower-background"
         style={{ backgroundImage: `url(${Building})` }}
       >
-        <div className="typos">
-          <Typography variant="h2" display="inline" className="brackets">
-            {"{"}
-            <Typography
-              variant="h4"
-              display="inline"
-              className="typos-before"
-              style={{
-                top: "10vmin",
-                left: "5.5vmin",
-              }}
-            >
-              {" "}
-              INDUSTR
-            </Typography>
+        <Typos
+          first="INDUSTR"
+          second="INDUSTRIES WE COVER"
+          third="VER"
+          upperLeft="5.5vmin"
+          upperTop="10vmin"
+          top={"0vmin"}
+          right="4min"
+        />
 
-            <Typography variant="h4" display="inline" className="typos-main">
-              {" "}
-              INDUSTRIES WE COVER
-            </Typography>
-            <Typography
-              variant="h4"
-              display="inline"
-              className="typos-after"
-              style={{
-                top: "0vmin",
-                right: "4vmin",
-              }}
-            >
-              {" "}
-              VER
-            </Typography>
-            {"}"}
-          </Typography>
-        </div>
         <Container style={{ marginTop: 100, marginBottom: 100 }}>
           <Grid container spacing={6}>
             <Grid item xs={6} md={3} align="center">

@@ -1,6 +1,5 @@
 import React from "react"
 import { makeStyles, Grid } from "@material-ui/core"
-
 import EasyEats from "../../images/easyEats.png"
 import StylizeNow from "../../svg/Stylize"
 import Vinifynd from "../../svg/easyEats"

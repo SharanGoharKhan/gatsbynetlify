@@ -1,6 +1,6 @@
 import { Box, Button, Grid, Typography, useMediaQuery } from "@material-ui/core"
 import React from "react"
-import { Banner, BottomServices, ContactUs } from "../../components"
+import { Banner, BottomServices, ContactUs, Typos } from "../../components"
 import Layout from "../../components/layout"
 import StartUpImage from "../../images/starups.svg"
 import Mockup1 from "../../images/mockup1.png"
@@ -24,34 +24,14 @@ export default function Saas() {
       />
       <div style={{ position: "relative" }}>
         <BottomServices />
-        <div className="typos">
-          <Typography variant="h2" display="inline" className="brackets">
-            {"{"}
-            <Typography variant="h4" display="inline" className="typos-before">
-              {" "}
-              START
-            </Typography>
+        <Typos
+          first="START"
+          second="STARTUP SOLUTIONS"
+          third="SOLU"
+          top="1vmin"
+          right="22vmin"
+        />
 
-            <Typography variant="h4" display="inline" className="typos-main">
-              {" "}
-              STARTUP SOLUTIONS
-            </Typography>
-            <Typography
-              variant="h4"
-              display="inline"
-              className="typos-after"
-              style={{
-                top: "1vmin",
-                right: "22vmin",
-              }}
-            >
-              {" "}
-              SOLU
-            </Typography>
-
-            {"}"}
-          </Typography>
-        </div>
         <Box mt={15} mb={15}>
           <Grid container alignItems="center" spacing={3}>
             <Grid

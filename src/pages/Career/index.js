@@ -1,39 +1,12 @@
 import { Container, Grid, Typography } from "@material-ui/core"
-import React from "react"
-import { Banner, BottomServices, ContactUs } from "../../components"
+import React, { useEffect } from "react"
+import { Banner, BottomServices, ContactUs, Typos } from "../../components"
 import Layout from "../../components/layout"
 import "./styles.css"
 import "../../styles/styles.css"
-
 import { CareerCard } from "../../components"
 import Bg from "../../images/career-bg.png"
-
-const positions = [
-  {
-    title: "Full Stack Developer",
-    post: "Senior",
-  },
-  {
-    title: "Full Stack Developer",
-    post: "Senior",
-  },
-  {
-    title: "Full Stack Developer",
-    post: "Senior",
-  },
-  {
-    title: "Full Stack Developer",
-    post: "Junior",
-  },
-  {
-    title: "Full Stack Developer",
-    post: "Internee",
-  },
-  {
-    title: "Full Stack Developer",
-    post: "Internee",
-  },
-]
+import { careerData } from "../../utils/careerData"
 
 export default function Career() {
   return (
@@ -52,36 +25,17 @@ export default function Career() {
         className="background-container"
       >
         <BottomServices />
-        <div className="typos">
-          <Typography variant="h2" display="inline" className="brackets">
-            {"{"}
-            <Typography variant="h4" display="inline" className="typos-before">
-              {" "}
-              JOIN
-            </Typography>
+        <Typos
+          first="JOIN"
+          second="JOIN OUR TEAM"
+          third="TEAM"
+          top="0vmin"
+          right="6vmin"
+        />
 
-            <Typography variant="h4" display="inline" className="typos-main">
-              {" "}
-              JOIN OUR TEAM
-            </Typography>
-            <Typography
-              variant="h4"
-              display="inline"
-              className="typos-after"
-              style={{
-                top: "0vmin",
-                right: "6vmin",
-              }}
-            >
-              {" "}
-              TEAM
-            </Typography>
-            {"}"}
-          </Typography>
-        </div>
         <Container style={{ marginTop: 100, marginBottom: 100 }}>
           <Grid container spacing={4} style={{ justifyContent: "center" }}>
-            {positions.map((position, index) => {
+            {careerData.map((position, index) => {
               return (
                 <Grid item key={index}>
                   <CareerCard data={position} />

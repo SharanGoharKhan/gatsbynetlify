@@ -2,7 +2,6 @@ import React, { useEffect } from "react"
 import { Grid, Typography, useMediaQuery } from "@material-ui/core"
 import useStyles from "./styles"
 import BannerIcons from "../BannerIcons"
-import backgroundWeb from "../../images/bg.svg"
 import Particles from "react-tsparticles"
 import Aos from "aos"
 import "aos/dist/aos.css"
@@ -16,7 +15,6 @@ export default function Banner({ titleMain, titleSecondary, subTitle, image }) {
   const matches = useMediaQuery("(min-width:600px)")
   return (
     <div id="Home" className={classes.background}>
-      {/* <img src={backgroundWeb} alt="service" className={classes.bg} /> */}
       <Particles
         id="particles"
         options={{

@@ -90,7 +90,7 @@ const services = [
   { name: "UI/UX Rendering", path: "/Services/ux" },
   { name: "Software for Startups", path: "/Services/saas" },
 ]
-const timeoutLength = 300
+const timeoutLength = 200
 const TopBar = props => {
   const classes = useStyles()
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null)
@@ -307,7 +307,7 @@ const TopBar = props => {
               MenuListProps={{ onMouseLeave: handleCloseServiceMenu }}
               PaperProps={{
                 style: {
-                  marginTop: "30px",
+                  marginTop: "2rem",
                   backgroundColor: "rgba(49, 47, 112, 0.67)",
                   color: "white",
                 },

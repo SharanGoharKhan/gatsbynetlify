@@ -6,7 +6,7 @@ import {
   useMediaQuery,
 } from "@material-ui/core"
 import React from "react"
-import { Banner, BottomServices, ContactUs } from "../../components"
+import { Banner, BottomServices, ContactUs, Typos } from "../../components"
 import Layout from "../../components/layout"
 import IOSService from "../../images/ios.svg"
 import D1 from "../../images/Device1.png"
@@ -29,33 +29,8 @@ export default function Ios() {
       />
       <div style={{ position: "relative" }}>
         <BottomServices />
-        <div className="typos">
-          <Typography variant="h2" display="inline" className="brackets">
-            {"{"}
-            <Typography variant="h4" display="inline" className="typos-before">
-              {" "}
-              IOS
-            </Typography>
+        <Typos first="IOS" second="IOS DEVELOPEMENT" third="MEN" />
 
-            <Typography variant="h4" display="inline" className="typos-main">
-              {" "}
-              IOS DEVELOPEMENT
-            </Typography>
-            <Typography
-              variant="h4"
-              display="inline"
-              className="typos-after"
-              style={{
-                top: "0vmin",
-                right: "9vmin",
-              }}
-            >
-              {" "}
-              MEN
-            </Typography>
-            {"}"}
-          </Typography>
-        </div>
         <Box mt={15} mb={15}>
           <Container>
             <Grid container>

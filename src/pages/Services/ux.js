@@ -1,6 +1,6 @@
 import { Box, Typography } from "@material-ui/core"
 import React from "react"
-import { Banner, BottomServices, ContactUs } from "../../components"
+import { Banner, BottomServices, ContactUs, Typos } from "../../components"
 import Layout from "../../components/layout"
 import UXImage from "../../images/ux.svg"
 import UXGroup from "../../images/ux-group.png"
@@ -20,30 +20,14 @@ export default function Ux() {
       />
       <div style={{ position: "relative" }}>
         <BottomServices />
-        <div className="typos">
-          <Typography variant="h2" display="inline" className="brackets">
-            {"{"}
-            <Typography
-              variant="h4"
-              display="inline"
-              className="typos-before"
-              style={{
-                top: "10vmin",
-                right: "7.5vmin",
-              }}
-            >
-              {" "}
-              DESIGN
-            </Typography>
 
-            <Typography variant="h4" display="inline" className="typos-main">
-              {" "}
-              UI/UX DESIGN
-            </Typography>
+        <Typos
+          first="DESIGN"
+          second="UI/UX DESIGN"
+          upperLeft="7.5vmin"
+          upperTop="10vmin"
+        />
 
-            {"}"}
-          </Typography>
-        </div>
         <Box style={{ textAlign: "center" }} mt={15} mb={15}>
           <img src={UXGroup} className="ux-image" alt="ux" />
         </Box>
