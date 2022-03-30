@@ -13,7 +13,7 @@ import { Box, Container, Divider, Grid, Typography } from "@material-ui/core"
 
 export default function EasyEats() {
   return (
-    <Layout bar={"#fff"} font="#000">
+    <Layout bar={"#fff"} font="#000" mobileGradient={"Gray"}>
       <Box>
         <img src={EasyEatsImage} alt="banner" />
       </Box>

@@ -1,0 +1,91 @@
+.zonder-bg {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+}
+.zonder-container {
+  min-height: 80vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+}
+.white-color {
+  color: white;
+}
+.font-bold {
+  font-weight: 900;
+}
+.title {
+  font-size: 4.75rem;
+  margin-bottom: 10px;
+}
+.blue-container {
+  transform: rotate(5deg);
+  background: linear-gradient(to bottom, #52f3ff 0%, #5beccc 100%);
+  position: relative;
+  left: -20%;
+  width: 140%;
+}
+.inner-blue {
+  transform: rotate(-5deg);
+}
+.zonder-image1-container {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.zonder-image1-container img {
+  width: 260px;
+  margin: 2rem;
+}
+.zonder-image2-container {
+  position: absolute;
+  right: 18rem;
+  top: 1rem;
+}
+.zonder-image2-container img {
+  width: 260px;
+  margin: 2rem;
+}
+.board-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 400px;
+  width: 100%;
+}
+.board-container img {
+  position: absolute;
+  width: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 350px;
+}
+.colors-box {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.color-box {
+  width: 80px;
+  height: 80px;
+  border-radius: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+}
+.zonder-btn {
+  background-color: #066b6b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  margin: auto;
+  cursor: pointer;
+}

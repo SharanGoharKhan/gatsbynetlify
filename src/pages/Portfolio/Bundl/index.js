@@ -31,7 +31,7 @@ export default function Bundl() {
     Aos.init({ duration: 1000, once: true })
   }, [])
   return (
-    <Layout bar="#62d7a5">
+    <Layout bar="#62d7a5" font={"#fff"} mobileGradient={"#62d7a5"}>
       <div className="bundl-background">
         <img src={BundlLogo} alt="title" />
         <Typography

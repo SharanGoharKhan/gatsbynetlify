@@ -57,7 +57,6 @@ const useStyles = makeStyles(theme => ({
     backgroundColor: "inherit",
   },
   boxContainer: {
-    background: "linear-gradient(to bottom, #179AFB 0%, #301E5B 100%)",
     height: "100%",
     width: "100%",
   },
@@ -135,7 +134,16 @@ const TopBar = props => {
       }}
     >
       <Fade in={isMobileMenuOpen}>
-        <Box component="span" m={1} className={classes.boxContainer}>
+        <Box
+          component="span"
+          m={1}
+          className={classes.boxContainer}
+          style={{
+            background: props?.mobileGradient
+              ? props.mobileGradient
+              : "linear-gradient(to bottom, #179AFB 0%, #301E5B 100%)",
+          }}
+        >
           <Box style={{ textAlign: "end", paddingTop: "2%" }}>
             <IconButton aria-label="close" onClick={handleMobileMenuClose}>
               <ClearIcon className={classes.icon} fontSize="large" />
@@ -253,7 +261,7 @@ const TopBar = props => {
           background: props.barColor,
           width: "100%",
         }}
-        position="static"
+        position={props?.position ? props.position : "static"}
         elevation={0}
       >
         <Toolbar>

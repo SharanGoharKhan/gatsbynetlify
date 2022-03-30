@@ -23,8 +23,8 @@ export default function Groovepack() {
   const matches = useMediaQuery("(min-width:600px)")
 
   return (
-    <Layout bar={"#000"} font="#fff">
-      <div id="Home" className="background">
+    <Layout bar={"#000"} font="#fff" mobileGradient={"#000"}>
+      <div id="Home" className="background-groove">
         <Container>
           <Grid
             container
@@ -69,11 +69,7 @@ export default function Groovepack() {
           <Typography variant="body1" className="color-groove">
             HOW WE WORK
           </Typography>
-          <img
-            src={Bar}
-            alt="bar"
-            style={{ marginTop: "5rem", width: "80%" }}
-          />
+          <img src={Bar} alt="bar" style={{ width: "80%" }} />
           {/* <div className="round-1"></div> */}
         </div>
         <Divider style={{ backgroundColor: "#7e7d7d" }} />
@@ -220,7 +216,11 @@ export default function Groovepack() {
           <Container>
             <Grid container spacing={5} alignItems="center">
               <Grid item md={6}>
-                <Typography align="center" variant="body1">
+                <Typography
+                  align="center"
+                  variant="body1"
+                  className="color-groove"
+                >
                   PUT THE SMACK DOWN ON PACKING ERRORS AND ENJOY THE BENEFITS OF
                   REAL TIME PHYSICAL INVENTORY VISIBILITY.
                 </Typography>
@@ -241,14 +241,16 @@ export default function Groovepack() {
           >
             <img src={Hand} alt="hand" />
             <Box ml={5}>
-              <Typography variant="h5">
+              <Typography variant="h5" className="color-groove">
                 Time is money. Get set up and scanning faster than any other
                 packing software.
               </Typography>
             </Box>
           </Box>
           <div style={{ textAlign: "center" }}>
-            <button className="btn">Visit Website</button>
+            <button className="btn">
+              <Typography variant="caption">Visit Website</Typography>
+            </button>
           </div>
         </Container>
       </div>
