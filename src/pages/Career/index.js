@@ -30,7 +30,7 @@ export default function Career() {
           second="JOIN OUR TEAM"
           third="TEAM"
           top="0vmin"
-          right="6vmin"
+          right="4vmin"
         />
 
         <Container style={{ marginTop: 100, marginBottom: 100 }}>

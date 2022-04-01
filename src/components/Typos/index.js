@@ -11,6 +11,7 @@ export default function Typos({
   upperRight,
   upperTop,
   upperLeft,
+  color,
 }) {
   return (
     <div className="typos">
@@ -30,7 +31,12 @@ export default function Typos({
           {first}
         </Typography>
 
-        <Typography variant="h4" display="inline" className="typos-main">
+        <Typography
+          variant="h4"
+          display="inline"
+          className="typos-main"
+          style={{ color: color && color }}
+        >
           {" "}
           {second}
         </Typography>
@@ -40,7 +46,7 @@ export default function Typos({
           className="typos-after"
           style={{
             top: top ? top : "0vmin",
-            right: right ? right : "9vmin",
+            right: right ? right : "7vmin",
           }}
         >
           {" "}

@@ -17,7 +17,7 @@
   top: 10vmin;
   left: 5vmin;
   -webkit-text-stroke: 1px #179afb;
-  -webkit-text-fill-color: #fff;
+  -webkit-text-fill-color: transparent;
   font-size: 5vmin;
 }
 .typos-main {
@@ -28,9 +28,7 @@
 .typos-after {
   font-weight: 800;
   position: absolute;
-  top: 0vmin;
-  right: 4vmin;
   -webkit-text-stroke: 1px #000;
-  -webkit-text-fill-color: #fff;
-  font-size: 4vmin;
+  -webkit-text-fill-color: transparent;
+  font-size: 5vmin;
 }

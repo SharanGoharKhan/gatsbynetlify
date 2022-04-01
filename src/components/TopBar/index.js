@@ -298,7 +298,6 @@ const TopBar = props => {
               Services
             </GatsbyLink>
             <Menu
-              sx={{ mt: "45px" }}
               id="service-menu"
               anchorEl={anchorElServices}
               anchorOrigin={{
@@ -315,7 +314,6 @@ const TopBar = props => {
               MenuListProps={{ onMouseLeave: handleCloseServiceMenu }}
               PaperProps={{
                 style: {
-                  marginTop: "2rem",
                   backgroundColor: "rgba(49, 47, 112, 0.67)",
                   color: "white",
                 },

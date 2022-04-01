@@ -42,7 +42,7 @@ export default function Services() {
       />
       <div style={{ position: "relative" }}>
         <BottomServices />
-        <Typos first="SER" second="SERVICES" third="CES" />
+        <Typos first="SER" second="SERVICES" third="CES" right={"4vmin"} />
 
         <Container style={{ marginTop: 100, marginBottom: 100 }}>
           <Grid container spacing={4}>
@@ -88,7 +88,7 @@ export default function Services() {
           upperLeft="5.5vmin"
           upperTop="10vmin"
           top={"0vmin"}
-          right="4min"
+          right="4vmin"
         />
 
         <Container style={{ marginTop: 100, marginBottom: 100 }}>

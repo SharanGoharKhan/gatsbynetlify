@@ -39,7 +39,7 @@ export default function Team() {
         className="team-background"
       >
         <BottomServices />
-        <Typos first="OUR" second="OUR TEAM" third="TEAM" />
+        <Typos first="OUR" second="OUR TEAM" third="TEAM" right={"4vmin"} />
 
         <Container style={{ marginTop: 100, marginBottom: 100 }}>
           <Grid container spacing={2}>

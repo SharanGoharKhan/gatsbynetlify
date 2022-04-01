@@ -28,7 +28,7 @@ export default function Web() {
           second="DEVELOPEMENT PROCESS"
           third="PRO"
           top="0vmin"
-          right="19.5vmin"
+          right="17.5vmin"
         />
 
         <Box style={{ textAlign: "center" }} mt={15} mb={15}>

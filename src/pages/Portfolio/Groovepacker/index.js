@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect } from "react"
 import Layout from "../../../components/layout"
 import "./styles.css"
 import {
@@ -19,9 +19,11 @@ import EqualizerIcon from "@mui/icons-material/Equalizer"
 import LightbulbIcon from "@mui/icons-material/Lightbulb"
 import DataUsageIcon from "@mui/icons-material/DataUsage"
 import Hand from "../../../images/hand.png"
+import { useAnimation } from "../../../utils/useAnimation"
+
 export default function Groovepack() {
   const matches = useMediaQuery("(min-width:600px)")
-
+  useAnimation()
   return (
     <Layout bar={"#000"} font="#fff" mobileGradient={"#000"}>
       <div id="Home" className="background-groove">
@@ -33,7 +35,14 @@ export default function Groovepack() {
             className={"grid"}
             spacing={0}
           >
-            <Grid item xs={12} md={6} className={"grid"}>
+            <Grid
+              item
+              xs={12}
+              md={6}
+              className={"grid"}
+              data-aos="zoom-out-left"
+              data-aos-easing="ease-in-sine"
+            >
               <Typography variant="h3" gutterBottom className={"title"}>
                 {"GROOVE"}
                 <br />
@@ -48,6 +57,8 @@ export default function Groovepack() {
               item
               xs={12}
               md={6}
+              data-aos="zoom-out-right"
+              data-aos-easing="ease-in-cubic"
             >
               <img
                 src={Headphone}
@@ -64,7 +75,13 @@ export default function Groovepack() {
         </Container>
         <div style={{ textAlign: "center", position: "relative" }}>
           {/* <div className="round-1"></div> */}
-          <img src={Circle} alt="circle" style={{ width: "40%" }} />
+          <img
+            src={Circle}
+            alt="circle"
+            style={{ width: "40%" }}
+            data-aos="zoom-in"
+            data-aos-delay="1300"
+          />
           <Box mt={5} />
           <Typography variant="body1" className="color-groove">
             HOW WE WORK
@@ -93,6 +110,8 @@ export default function Groovepack() {
                   md={6}
                   align="center"
                   style={{ marginBottom: "4rem" }}
+                  data-aos="fade-left"
+                  data-aos-delay="1200"
                 >
                   <div className="icon-container">
                     <DoubleArrowIcon />
@@ -110,7 +129,13 @@ export default function Groovepack() {
                     looking for.
                   </Typography>
                 </Grid>
-                <Grid item md={6} align="center">
+                <Grid
+                  item
+                  md={6}
+                  align="center"
+                  data-aos="fade-left"
+                  data-aos-delay="1400"
+                >
                   <div className="icon-container">
                     <EqualizerIcon />
                   </div>
@@ -132,6 +157,8 @@ export default function Groovepack() {
                   md={6}
                   align="center"
                   style={{ marginBottom: "4rem" }}
+                  data-aos="fade-left"
+                  data-aos-delay="1600"
                 >
                   <div className="icon-container">
                     <LightbulbIcon />
@@ -149,7 +176,13 @@ export default function Groovepack() {
                     integrate into your existing shipping system.
                   </Typography>
                 </Grid>
-                <Grid item md={6} align="center">
+                <Grid
+                  item
+                  md={6}
+                  align="center"
+                  data-aos="fade-left"
+                  data-aos-delay="1800"
+                >
                   <div className="icon-container">
                     <DataUsageIcon />
                   </div>

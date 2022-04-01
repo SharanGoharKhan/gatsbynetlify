@@ -28,8 +28,8 @@ export default function Saas() {
           first="START"
           second="STARTUP SOLUTIONS"
           third="SOLU"
-          top="1vmin"
-          right="22vmin"
+          top="0vmin"
+          right="19.5vmin"
         />
 
         <Box mt={15} mb={15}>

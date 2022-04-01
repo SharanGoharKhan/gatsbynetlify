@@ -15,7 +15,7 @@ export default function Career({ data }) {
           filter: "drop-shadow(10px 10px 1px #179afb)",
           border: "1px solid gray",
           borderRadius: 0,
-          width: "420px",
+          width: "370px",
           minHeight: "200px",
           backgroundColor: "#301e5b",
           display: "flex",

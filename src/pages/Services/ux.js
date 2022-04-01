@@ -24,7 +24,7 @@ export default function Ux() {
         <Typos
           first="DESIGN"
           second="UI/UX DESIGN"
-          upperLeft="7.5vmin"
+          upperLeft="20vmin"
           upperTop="10vmin"
         />
 
