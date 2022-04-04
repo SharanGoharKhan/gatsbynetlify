@@ -21,15 +21,15 @@ import Colin from "../../../images/colin.png"
 import Lance from "../../../images/lance.png"
 import Chinese from "../../../images/chinese.png"
 import BundlLogo from "../../../images/bundl-logo.png"
-import Aos from "aos"
-import "aos/dist/aos.css"
+import Video from "../../../images/bundl-video.mp4"
+
+import { useAnimation } from "../../../utils/useAnimation"
+import ReactPlayer from "react-player"
 
 export default function Bundl() {
   const theme = useTheme()
   const matches = useMediaQuery(theme.breakpoints.down("sm"))
-  useEffect(() => {
-    Aos.init({ duration: 1000, once: true })
-  }, [])
+  useAnimation()
   return (
     <Layout bar="#62d7a5" font={"#fff"} mobileGradient={"#62d7a5"}>
       <div className="bundl-background">
@@ -116,9 +116,13 @@ export default function Bundl() {
         </div>
         <Box mt={10} />
         <div style={{ overflow: "visible" }}>
-          <Typography align="center">
-            This Video will explain everything
-          </Typography>
+          <ReactPlayer
+            url={Video}
+            width="80%"
+            height="80%"
+            controls={true}
+            className="video-player"
+          />
           <div style={{ overflow: "visible" }}>
             <div className="video-container">
               <img src={LightCircle} alt="circle" className="circle4" />

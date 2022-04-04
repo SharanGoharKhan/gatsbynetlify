@@ -1,6 +1,7 @@
 import { Typography } from "@material-ui/core"
 import React from "react"
 import "../../styles/styles.css"
+import { useAnimation } from "../../utils/useAnimation"
 
 export default function Typos({
   first,
@@ -13,6 +14,8 @@ export default function Typos({
   upperLeft,
   color,
 }) {
+  useAnimation()
+
   return (
     <div className="typos">
       <Typography variant="h2" display="inline" className="brackets">

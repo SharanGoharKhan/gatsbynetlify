@@ -80,7 +80,7 @@ export default function Groovepack() {
             alt="circle"
             style={{ width: "40%" }}
             data-aos="zoom-in"
-            data-aos-delay="1300"
+            data-aos-delay="800"
           />
           <Box mt={5} />
           <Typography variant="body1" className="color-groove">
@@ -208,21 +208,28 @@ export default function Groovepack() {
         <Box mt={5} mb={5}>
           <Typography
             variant="h5"
-            style={{ fontWeight: 100, marginBottom: 20 }}
+            style={{ fontWeight: 100, marginBottom: 20, color: "white" }}
             align="center"
           >
             TYPOGRAPHY AND COLORS
           </Typography>
           <Container>
             <Grid container alignItems="center">
-              <Grid xs={12} md={6} lg={4} align="center">
+              <Grid
+                xs={12}
+                md={6}
+                lg={4}
+                align="center"
+                data-aos="flip-right"
+                data-aos-delay="2000"
+              >
                 <div className="helvetica">
                   <Typography variant="h6" className="text-hel">
                     HELVETICA
                   </Typography>
                 </div>
               </Grid>
-              <Grid xs={12} md={6} lg={4} align="center">
+              <Grid xs={12} md={6} lg={4} align="center" data-aos="fade">
                 <div className="center">
                   <div>
                     <Typography style={{ color: "#537E09" }}>
@@ -235,7 +242,14 @@ export default function Groovepack() {
                   </div>
                 </div>
               </Grid>
-              <Grid xs={12} md={6} lg={4} align="center">
+              <Grid
+                xs={12}
+                md={6}
+                lg={4}
+                align="center"
+                data-aos="slide-left"
+                data-aos-delay="2000"
+              >
                 <Box className="helvetica-right">
                   <Typography variant="h6">HELVETICA</Typography>
                 </Box>
@@ -253,13 +267,20 @@ export default function Groovepack() {
                   align="center"
                   variant="body1"
                   className="color-groove"
+                  data-aos="fade-down-right"
+                  data-aos-delay="1500"
                 >
                   PUT THE SMACK DOWN ON PACKING ERRORS AND ENJOY THE BENEFITS OF
                   REAL TIME PHYSICAL INVENTORY VISIBILITY.
                 </Typography>
               </Grid>
               <Grid item md={6}>
-                <img src={Desktop} alt="desktop" />
+                <img
+                  src={Desktop}
+                  alt="desktop"
+                  data-aos="fade-down-left"
+                  data-aos-delay="1500"
+                />
               </Grid>
             </Grid>
           </Container>
@@ -272,8 +293,13 @@ export default function Groovepack() {
             justifyContent={"space-between"}
             alignItems="center"
           >
-            <img src={Hand} alt="hand" />
-            <Box ml={5}>
+            <img
+              src={Hand}
+              alt="hand"
+              data-aos="fade-down-left"
+              data-aos-delay="1500"
+            />
+            <Box ml={5} data-aos="fade-down-right" data-aos-delay="1500">
               <Typography variant="h5" className="color-groove">
                 Time is money. Get set up and scanning faster than any other
                 packing software.

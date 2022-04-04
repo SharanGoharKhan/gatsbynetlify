@@ -35,6 +35,7 @@ const useStyles = makeStyles(theme => ({
   },
   sectionDesktop: {
     display: "none",
+    overflow: "visible",
     [theme.breakpoints.up("md")]: {
       display: "flex",
     },
@@ -296,8 +297,31 @@ const TopBar = props => {
               onMouseOver={handleOpenServiceMenu}
             >
               Services
+              {anchorElServices && (
+                <Box
+                  className="menu-services"
+                  onMouseLeave={handleCloseServiceMenu}
+                >
+                  {services.map(setting => (
+                    <GatsbyLink
+                      to={setting.path}
+                      key={setting}
+                      style={{
+                        color: props.fontColor,
+                        textDecoration: "none",
+                      }}
+                    >
+                      <Box onClick={handleCloseServiceMenu} pl={3}>
+                        <Typography variant="body2" textAlign="center">
+                          {setting.name}
+                        </Typography>
+                      </Box>
+                    </GatsbyLink>
+                  ))}
+                </Box>
+              )}
             </GatsbyLink>
-            <Menu
+            {/* <Menu
               id="service-menu"
               anchorEl={anchorElServices}
               anchorOrigin={{
@@ -318,8 +342,8 @@ const TopBar = props => {
                   color: "white",
                 },
               }}
-            >
-              {services.map(setting => (
+            > */}
+            {/* {services.map(setting => (
                 <GatsbyLink
                   to={setting.path}
                   key={setting}
@@ -334,8 +358,9 @@ const TopBar = props => {
                     </Typography>
                   </MenuItem>
                 </GatsbyLink>
-              ))}
-            </Menu>
+              ))} */}
+            {/* </Menu> */}
+
             <GatsbyLink
               style={{ color: props.fontColor }}
               className={

@@ -17,8 +17,8 @@ import AddBoxOutlinedIcon from "@mui/icons-material/AddBoxOutlined"
 import FeedbackIcon from "@mui/icons-material/Feedback"
 import MonetizationOnIcon from "@mui/icons-material/MonetizationOn"
 import AddIcon from "@mui/icons-material/Add"
-import Carousel from "react-elastic-carousel"
 import { carouselData } from "../utils/carouselData"
+
 import {
   ContactUs,
   Banner,
@@ -36,14 +36,11 @@ import {
   Box,
   Button,
   Divider,
+  useTheme,
 } from "@material-ui/core"
 import Layout from "../components/layout"
+import { useAnimation } from "../utils/useAnimation"
 
-const breakPoints = [
-  { width: 1, itemsToShow: 1 },
-  { width: 550, itemsToShow: 2 },
-  { width: 768, itemsToShow: 1 },
-]
 const useStyles = makeStyles(theme => ({
   container: {
     display: "grid",
@@ -71,6 +68,7 @@ const useStyles = makeStyles(theme => ({
     border: "2px solid #179afb",
     maxWidth: "400px",
     minHeight: "480px",
+    transform: "scale(0.85)",
   },
   title: {
     color: "#fff",
@@ -152,21 +150,37 @@ const useStyles = makeStyles(theme => ({
   },
   sliderBtn: {
     backgroundColor: "white",
-    width: 30,
-    height: 30,
-    borderRadius: 15,
+    width: 20,
+    height: 20,
+    borderRadius: 10,
+    cursor: "pointer",
+  },
+  activeCard: {
+    transform: "scale(1.0)",
   },
 }))
 
 const IndexPage = props => {
   const classes = useStyles()
   const matches = useMediaQuery("(min-width:600px)")
-  const [index, setIndex] = React.useState(0)
+  const [index, setIndex] = React.useState(1)
+  const theme = useTheme()
+  const small = useMediaQuery(theme.breakpoints.down("sm"))
+  useAnimation()
+
   const increment = () => {
-    if (index < carouselData.length - 1) setIndex(prev => prev + 1)
+    if (index < carouselData.length - 1) {
+      setTimeout(() => {
+        setIndex(prev => prev + 1)
+      }, 500)
+    }
   }
   const decrement = () => {
-    if (index > 0) setIndex(prev => prev - 1)
+    if (index > 0) {
+      setTimeout(() => {
+        setIndex(prev => prev - 1)
+      }, 500)
+    }
   }
 
   return (
@@ -187,9 +201,11 @@ const IndexPage = props => {
             style={{
               position: "absolute",
               left: "15%",
-              top: "25%",
+              top: "12%",
               border: "1px solid",
+              display: small && "none",
             }}
+            data-aos="flip-right"
           />
           <Box
             className={classes.blueBox}
@@ -199,7 +215,10 @@ const IndexPage = props => {
               top: "15%",
               border: "1px solid #179Afb",
               backgroundColor: "black",
+              display: small && "none",
             }}
+            data-aos="flip-left"
+            data-aos-delay="200"
           />
           <Box
             className={classes.blueBox}
@@ -210,7 +229,9 @@ const IndexPage = props => {
               border: "1px solid",
               backgroundColor: "white",
               width: "200px",
+              display: small && "none",
             }}
+            data-aos="flip-up"
           />
           <BottomServices />
           <Typos
@@ -219,9 +240,9 @@ const IndexPage = props => {
             third="QUE"
             right="5.5vmin"
           />
-          <Box mt={20} mb={20}>
+          <Box mt={small ? 5 : 20} mb={20}>
             <Container maxWidth="sm">
-              <Grid container alignItems="center" spacing={3}>
+              <Grid container alignItems="center" spacing={3} data-aos="fade">
                 <Grid item md={6}>
                   <Paper className={classes.paper} square={true}>
                     <div
@@ -332,7 +353,7 @@ const IndexPage = props => {
             top="10vmin"
             right={"20vmin"}
           />
-          <Box mt={15} mb={5}>
+          <Box mt={15} mb={5} data-aos="flip-down">
             <PortfolioProjects />
           </Box>
           <Box textAlign={"center"}>
@@ -355,6 +376,7 @@ const IndexPage = props => {
               alt="open-source"
               width={"332px"}
               style={{ maxWidth: "100%" }}
+              data-aos="zoom-out"
             />
           </Box>
           <Box textAlign={"center"}>
@@ -369,12 +391,14 @@ const IndexPage = props => {
           <Box mt={5} />
           <Container maxWidth="sm">
             <Grid container spacing={3}>
-              <Grid item xs={6}>
+              <Grid item xs={6} data-aos="slide-right">
                 <Paper
                   elevation={0}
                   square={true}
                   className={classes.whyUsCard}
                   style={{ backgroundColor: "#179afb" }}
+                  data-aos="fade-up-right"
+                  data-aos-delay="1000"
                 >
                   <div
                     style={{
@@ -393,7 +417,7 @@ const IndexPage = props => {
                       <WatchLaterIcon />
                     </Box>
                   </div>
-                  <Typography className={classes.bold}>
+                  <Typography className={classes.bold} align="center">
                     1 month time to market
                   </Typography>
                 </Paper>
@@ -403,6 +427,8 @@ const IndexPage = props => {
                   elevation={0}
                   square={true}
                   className={classes.whyUsCard}
+                  data-aos="fade-up-left"
+                  data-aos-delay="1000"
                 >
                   <div
                     style={{
@@ -431,6 +457,8 @@ const IndexPage = props => {
                   elevation={0}
                   square={true}
                   className={classes.whyUsCard}
+                  data-aos="fade-down-right"
+                  data-aos-delay="1000"
                 >
                   <div
                     style={{
@@ -460,7 +488,8 @@ const IndexPage = props => {
                   elevation={0}
                   square={true}
                   className={classes.whyUsCard}
-                  style={{ backgroundColor: "#179afb" }}
+                  data-aos="fade-down-left"
+                  data-aos-delay="1000"
                 >
                   <div
                     style={{
@@ -497,29 +526,24 @@ const IndexPage = props => {
         >
           <Box>
             <Typos
-              first="WHAT"
-              second="WHAT OUR CLIENTS TELL ABOUT US"
+              first="OUR"
+              second={"OUR CLIENTS ABOUT US"}
               third={"US"}
               right={"4vmin"}
               color="white"
             />
           </Box>
-          <Box mt={10} mb={10} display="flex" justifyContent={"space-around"}>
-            {/* <Carousel breakPoints={breakPoints} >
-              <CarouselCard
-                name={"Kevin Sun"}
-                designation={"CTO, Bundl Technologies"}
-              />
-              <CarouselCard
-                name={"Crystal Rose"}
-                designation={"Founder at Sense.Chat"}
-              />
-              <CarouselCard
-                name={"Raleigh Melancon"}
-                designation={"CTO, Founder at StylizeNow"}
-              />
-            </Carousel> */}
-            <Grid container>
+          <Box
+            mt={small ? 5 : 10}
+            display="flex"
+            justifyContent={"space-around"}
+          >
+            <Grid
+              container
+              spacing={3}
+              style={{ margin: "2rem" }}
+              alignItems="center"
+            >
               <Grid item md={4} alignItems="center">
                 <Box
                   style={{
@@ -529,11 +553,12 @@ const IndexPage = props => {
                     flexDirection: "column",
                   }}
                 >
-                  {index > 0 && (
+                  {index > 0 && !small && (
                     <CarouselCard
                       name={carouselData[index - 1].name}
                       designation={carouselData[index - 1].name}
                       review={carouselData[index - 1].review}
+                      active={false}
                     />
                   )}
                 </Box>
@@ -551,12 +576,8 @@ const IndexPage = props => {
                     name={carouselData[index].name}
                     designation={carouselData[index].name}
                     review={carouselData[index].review}
+                    active={true}
                   ></CarouselCard>
-                  <Box display={"flex"} justifyContent="center">
-                    <Box className={classes.sliderBtn} />
-                    <Box className={classes.sliderBtn} />
-                    <Box className={classes.sliderBtn} />
-                  </Box>
                 </Box>
               </Grid>
               <Grid item md={4}>
@@ -568,17 +589,38 @@ const IndexPage = props => {
                     flexDirection: "column",
                   }}
                 >
-                  {index < carouselData.length - 1 && (
+                  {index < carouselData.length - 1 && !small && (
                     <CarouselCard
                       name={carouselData[index + 1].name}
                       designation={carouselData[index + 1].name}
                       review={carouselData[index + 1].review}
+                      active={false}
                     />
                   )}
                 </Box>
               </Grid>
             </Grid>
           </Box>
+          <Grid container>
+            <Grid xs={0} md={4}></Grid>
+            <Grid xs={12} md={4}>
+              <Box
+                display={"flex"}
+                justifyContent="center"
+                mt={2}
+                alignItems="center"
+              >
+                <Box className={classes.sliderBtn} m={2} onClick={decrement} />
+                <Box
+                  className={classes.sliderBtn}
+                  m={2}
+                  style={{ width: 30, height: 30, borderRadius: 15 }}
+                />
+                <Box className={classes.sliderBtn} m={2} onClick={increment} />
+              </Box>
+            </Grid>
+          </Grid>
+          <Box mb={5} />
         </div>
         <Box mt={10} style={{ backgroundColor: "#fff" }}>
           <div style={{ postion: "relative" }}>
@@ -681,11 +723,19 @@ const IndexPage = props => {
     </>
   )
 }
-function CarouselCard({ name, designation, review, children }) {
+
+function CarouselCard({ name, designation, review, active }) {
   const classes = useStyles()
 
   return (
-    <Paper className={classes.sliderPaper} square={true}>
+    <Paper
+      className={
+        active
+          ? `${classes.sliderPaper} ${classes.activeCard}`
+          : `${classes.sliderPaper}`
+      }
+      square={true}
+    >
       <div
         style={{
           display: "flex",

@@ -15,8 +15,12 @@ import Device2 from "../../../images/zonder-d2.png"
 import ZigZag from "../../../images/zig-zag.png"
 import Cycle from "../../../images/zonder-cycle.png"
 import Board from "../../../images/board.png"
-
+import Mobiles from "../../../images/mobiles-zonder.png"
+import AddIcon from "@mui/icons-material/Add"
+import PersonIcon from "@mui/icons-material/Person"
 import "./styles.css"
+import BookmarkIcon from "@mui/icons-material/Bookmark"
+import ScreenShareIcon from "@mui/icons-material/ScreenShare"
 
 export default function Zonder() {
   const theme = useTheme()
@@ -90,10 +94,9 @@ export default function Zonder() {
               alignItems={"center"}
               flexDirection="column"
             >
-              <img src={ZigZag} alt={"zigzag"} style={{ width: "60%" }} />
+              <img src={ZigZag} alt={"zigzag"} style={{ width: "65%" }} />
             </Box>
-
-            <Box mt={20} className="board-container">
+            <Box mt={small ? 5 : 20} className="board-container">
               <Divider
                 style={{
                   backgroundColor: "#fff",
@@ -101,9 +104,68 @@ export default function Zonder() {
                   width: "100%",
                 }}
               />
-              <img src={Board} alt={"board"} />
+              <img
+                src={Board}
+                alt={"board"}
+                style={{ width: small && "80%", height: small && "260px" }}
+              />
             </Box>
-            <Box mt={20} mb={20}>
+            <Box mt={10} className="icons">
+              <Box
+                style={{ margin: "auto", width: "40%" }}
+                display="flex"
+                alignItems={"center"}
+                justifyContent="space-around"
+              >
+                <AddIcon />
+                <Box
+                  display="flex"
+                  justifyContent={"center"}
+                  alignItems="center"
+                  flexDirection={"column"}
+                >
+                  <PersonIcon />
+                  <Typography className="white-color font-bold" align="center">
+                    Build your travel <br />
+                    profile
+                  </Typography>
+                </Box>
+                <AddIcon />
+              </Box>
+              <Box
+                display={"flex"}
+                justifyContent="space-between"
+                style={{ width: "80%", margin: "auto" }}
+              >
+                <Box
+                  display="flex"
+                  justifyContent={"center"}
+                  alignItems="center"
+                  flexDirection={"column"}
+                >
+                  <BookmarkIcon />
+                  <Typography className="white-color font-bold" align="center">
+                    Never forget places <br />
+                    again
+                  </Typography>
+                </Box>
+                <Box
+                  display="flex"
+                  justifyContent={"center"}
+                  alignItems="center"
+                  flexDirection={"column"}
+                >
+                  <ScreenShareIcon />
+                  <Typography className="white-color font-bold" align="center">
+                    Share your <br />
+                    journey
+                  </Typography>
+                </Box>
+              </Box>
+              <Box mt={5} />
+              <img src={Mobiles} alt="mobiles" />
+            </Box>
+            <Box mt={10} mb={20}>
               <Typography variant="body2" align="center">
                 COLORS WE USED
               </Typography>
@@ -146,6 +208,7 @@ export default function Zonder() {
                 <Grid
                   container
                   item
+                  xs={6}
                   md={6}
                   style={{ display: "flex", justifyContent: "flex-end" }}
                 >
@@ -154,6 +217,7 @@ export default function Zonder() {
                 <Grid
                   container
                   item
+                  xs={9}
                   md={9}
                   style={{ display: "flex", justifyContent: "flex-end" }}
                 >

@@ -16,10 +16,11 @@ import Chat from "../../../images/chat-device.png"
 import Sharan from "../../../images/sharan-s.png"
 import Adnan from "../../../images/adnan-s.png"
 import { Footer, TopBar } from "../../../components"
-
+import { useAnimation } from "../../../utils/useAnimation"
 export default function TextMyGuest() {
   const theme = useTheme()
   const matches = useMediaQuery(theme.breakpoints.down("md"))
+  useAnimation()
   return (
     <>
       <Grid container style={{ postion: "relative" }}>
@@ -43,6 +44,7 @@ export default function TextMyGuest() {
                 textAlign: matches ? "center" : "end",
                 marginRight: !matches && "-8rem",
               }}
+              data-aos="fade-down-right"
             >
               {matches && <img src={Logo} alt="logo" width={220} />}
               <Typography className="white-color" variant="h4">
@@ -58,12 +60,23 @@ export default function TextMyGuest() {
             </Box>
             {!matches && (
               <Box className="group-screen">
-                <img src={Group} alt="group" width={"80%"} />
+                <img
+                  src={Group}
+                  alt="group"
+                  width={"80%"}
+                  data-aos="slide-up"
+                />
               </Box>
             )}
           </Box>
         </Grid>
-        <Box component={Grid} item md={5} display={{ xs: "none", md: "block" }}>
+        <Box
+          component={Grid}
+          item
+          md={5}
+          display={{ xs: "none", md: "block" }}
+          style={{ backgroundColor: "white" }}
+        >
           <Box
             display={"flex"}
             justifyContent="center"
@@ -73,7 +86,13 @@ export default function TextMyGuest() {
             <img src={Logo} alt="logo" width={220} />
           </Box>
         </Box>
-        <Grid item xs={12} md={7} className="lower-pink-guest-background">
+        <Grid
+          item
+          xs={12}
+          md={7}
+          className="lower-pink-guest-background"
+          data-aos="slide-right"
+        >
           <Box
             display={"flex"}
             alignItems="center"
@@ -87,24 +106,31 @@ export default function TextMyGuest() {
             </Box>
           </Box>
         </Grid>
-        <Grid item xs={12} md={5}>
+        <Grid item xs={12} md={5} data-aos="slide-left">
           <Box
             display={"flex"}
             justifyContent="center"
             alignItems={"center"}
             className="height100"
-            style={{ minHeight: matches && "400px" }}
+            style={{ minHeight: matches && "400px", backgroundColor: "white" }}
           >
             <img src={Wolf} alt="logo" width={220} />
           </Box>
         </Grid>
 
-        <Grid item xs={12} md={7} className="lower-white-guest-background">
+        <Grid
+          item
+          xs={12}
+          md={7}
+          className="lower-white-guest-background"
+          data-aos="slide-left"
+        >
           <Box
             display={"flex"}
             alignItems="center"
             justifyContent={"flex-start"}
             className="height100"
+            style={{ backgroundColor: "white" }}
           >
             <Box display={"flex"} justifyContent="space-around">
               <Typography
@@ -119,7 +145,13 @@ export default function TextMyGuest() {
             </Box>
           </Box>
         </Grid>
-        <Box item md={5} component={Grid} display={{ xs: "none", md: "block" }}>
+        <Box
+          item
+          md={5}
+          component={Grid}
+          display={{ xs: "none", md: "block" }}
+          data-aos="slide-right"
+        >
           <Box
             display={"flex"}
             justifyContent="flex-end"
@@ -137,7 +169,7 @@ export default function TextMyGuest() {
           </Box>
         </Box>
 
-        <Grid item md={7}>
+        <Grid item md={7} data-aos="fade-down">
           <Box
             display={"flex"}
             alignItems="center"
@@ -148,13 +180,13 @@ export default function TextMyGuest() {
             <img src={Cycle} alt="cycle" width={"60%"} />
           </Box>
         </Grid>
-        <Grid item xs={12} md={5}>
+        <Grid item xs={12} md={5} data-aos="fade-down">
           <Box
             display={"flex"}
             justifyContent="center"
             alignItems={"center"}
             className="height100"
-            style={{ position: "relative" }}
+            style={{ position: "relative", backgroundColor: "white" }}
           >
             <Typography
               className="font-bold process pink-color"
@@ -189,6 +221,7 @@ export default function TextMyGuest() {
             position: "relative",
             overflow: "visible",
           }}
+          data-aos="flip-up"
         >
           {!matches && (
             <img src={Chat} alt="device" className="chat-device-image" />
@@ -198,6 +231,7 @@ export default function TextMyGuest() {
             alignItems="center"
             justifyContent={"center"}
             className="height100"
+            style={{ backgroundColor: "white" }}
           >
             <Box
               style={{
@@ -226,7 +260,13 @@ export default function TextMyGuest() {
             </Box>
           </Box>
         </Grid>
-        <Box item component={Grid} display={{ xs: "none", md: "block" }} md={5}>
+        <Box
+          item
+          component={Grid}
+          display={{ xs: "none", md: "block" }}
+          md={5}
+          data-aos="flip-down"
+        >
           <Box
             display={"flex"}
             justifyContent="center"
@@ -234,7 +274,7 @@ export default function TextMyGuest() {
           ></Box>
         </Box>
 
-        <Grid item xs={12} md={7}>
+        <Grid item xs={12} md={7} data-aos="slide-right">
           <Box
             display={"flex"}
             alignItems="center"
@@ -249,37 +289,48 @@ export default function TextMyGuest() {
             </Box>
           </Box>
         </Grid>
-        <Box component={Grid} item display={{ xs: "none", md: "block" }} md={5}>
+        <Box
+          component={Grid}
+          item
+          display={{ xs: "none", md: "block" }}
+          md={5}
+          style={{ backgroundColor: "white" }}
+        >
           <Box
             display={"flex"}
             justifyContent="center"
             className="height100"
             alignItems={"center"}
           >
-            <Typography className="font-bold process" variant="h1">
+            <Typography
+              className="font-bold process"
+              variant="h1"
+              data-aos="slide-down"
+            >
               TEAM
             </Typography>
             <Typography
               className="font-bold process scaled pink-color"
               variant="h1"
+              data-aos="slide-up"
             >
               TEAM
             </Typography>
           </Box>
         </Box>
 
-        <Grid item xs={12} md={7}>
+        <Grid item xs={12} md={7} data-aos="slide-left">
           <Box
             display={"flex"}
             alignItems="center"
             justifyContent={"center"}
             className="height100"
-            style={{ minHeight: "200px" }}
+            style={{ minHeight: "200px", backgroundColor: "white" }}
           >
             <Typography variant="h4">ROBOTO</Typography>
           </Box>
         </Grid>
-        <Grid item xs={12} md={5}>
+        <Grid item xs={12} md={5} data-aos="slide-right">
           <Box display={"flex"} flexDirection={"column"}>
             <Box className="black-color box">
               <Typography variant="h4" className="pink-color">
@@ -291,7 +342,14 @@ export default function TextMyGuest() {
             </Box>
           </Box>
         </Grid>
-        <Box mt={10} style={{ textAlign: "center", width: "100%" }}>
+        <Box
+          style={{
+            textAlign: "center",
+            width: "100%",
+            backgroundColor: "white",
+            padding: "4rem",
+          }}
+        >
           <button className="guest-btn">
             <Typography variant="caption">Visit Website</Typography>
           </button>

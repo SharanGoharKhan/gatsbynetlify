@@ -26,15 +26,12 @@ import Mobile6 from "../../../images/mobile6.svg"
 import Mobile7 from "../../../images/mobile7.svg"
 import Mobile8 from "../../../images/mobile8.svg"
 import Mobile9 from "../../../images/mobile9.svg"
-import Aos from "aos"
-import "aos/dist/aos.css"
+import { useAnimation } from "../../../utils/useAnimation"
 
 export default function Hpec() {
   const theme = useTheme()
   const matches = useMediaQuery(theme.breakpoints.down("sm"))
-  useEffect(() => {
-    Aos.init({ duration: 1000, once: true })
-  }, [])
+  useAnimation()
 
   return (
     <Layout bar={"#200E34"} font={"#fff"}>
@@ -355,8 +352,6 @@ export default function Hpec() {
           <img src={Flow} alt="flow" style={{ marginBottom: "4em" }} />
         </Box>
       </div>
-
-      <ContactUs />
     </Layout>
   )
 }

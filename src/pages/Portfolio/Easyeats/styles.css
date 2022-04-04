@@ -1,3 +1,6 @@
+body {
+  background: white;
+}
 .eats-lower-banner {
   display: flex;
   position: relative;
@@ -5,11 +8,11 @@
   align-items: center;
   min-height: 100vh;
   flex-direction: column;
+  background-color: white;
 }
 .berries {
   position: absolute;
-  top: 0;
-  left: 0;
+
   width: 300px;
 }
 .light-green-cube {
@@ -30,6 +33,9 @@
   top: 25rem;
   right: 20rem;
 }
+.bold {
+  font-weight: 900;
+}
 .tilted-container {
   background-color: #000;
   display: flex;
@@ -49,4 +55,21 @@
   justify-content: center;
   align-items: center;
   margin: 20px;
+}
+.stroke {
+  -webkit-text-stroke: 1px white;
+  -webkit-text-fill-color: transparent;
+  font-size: 4vmin;
+}
+.eats-btn {
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  margin: auto;
+  cursor: pointer;
 }

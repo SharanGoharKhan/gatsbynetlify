@@ -83,3 +83,9 @@
 .image-view:nth-child(even) {
   margin-top: 2rem;
 }
+.video-player {
+  margin: auto;
+}
+.video-player video {
+  border-radius: 10px;
+}
