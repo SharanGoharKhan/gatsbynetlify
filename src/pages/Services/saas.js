@@ -1,11 +1,12 @@
 import { Box, Button, Grid, Typography, useMediaQuery } from "@material-ui/core"
 import React from "react"
-import { Banner, BottomServices, ContactUs, Typos } from "../../components"
+import { Banner, BottomServices, Typos } from "../../components"
 import Layout from "../../components/layout"
 import StartUpImage from "../../images/starups.svg"
 import Mockup1 from "../../images/mockup1.png"
 import Mockup2 from "../../images/mockup2.png"
 import { useTheme } from "@mui/material/styles"
+import { Link } from "gatsby"
 import "./styles.css"
 import "../../styles/styles.css"
 
@@ -58,9 +59,6 @@ export default function Saas() {
                   DoorDash.
                 </Typography>
                 <br />
-                <Button variant="contained" className="case-btn">
-                  Case Study
-                </Button>
               </Box>
             </Grid>
           </Grid>
@@ -86,9 +84,11 @@ export default function Saas() {
                   UberEats, Swiggy, GrubHub, Deliveroo, JustEat, DoorDash,Zomato
                 </Typography>
                 <br />
-                <Button variant="contained" className="case-btn">
-                  Case Study
-                </Button>
+                <Link to="/Enatega" style={{ textDecoration: "none" }}>
+                  <Button variant="contained" className="case-btn">
+                    Case Study
+                  </Button>
+                </Link>
               </Box>
             </Grid>
             <Grid
@@ -119,12 +119,11 @@ export default function Saas() {
               want a ready-made solution
             </Typography>
             <Button variant="contained" className="quote-btn">
-              Case Study
+              Get Quote
             </Button>
           </Box>
         </Box>
       </div>
-      <ContactUs />
     </Layout>
   )
 }

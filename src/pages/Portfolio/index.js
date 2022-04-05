@@ -1,9 +1,8 @@
-import { Box, Typography } from "@material-ui/core"
+import { Box } from "@material-ui/core"
 import React from "react"
 import {
   Banner,
   BottomServices,
-  ContactUs,
   PortfolioProjects,
   Typos,
 } from "../../components"
@@ -27,7 +26,6 @@ export default function Portfolio() {
           <PortfolioProjects />
         </Box>
       </div>
-      <ContactUs />
     </Layout>
   )
 }

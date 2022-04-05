@@ -32,7 +32,6 @@ export default function Web() {
           />
         </Box>
       </div>
-      <ContactUs />
     </Layout>
   )
 }

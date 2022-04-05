@@ -1,6 +1,6 @@
-import { Box, Typography, useMediaQuery } from "@material-ui/core"
+import { Box, useMediaQuery } from "@material-ui/core"
 import React from "react"
-import { Banner, BottomServices, ContactUs, Typos } from "../../components"
+import { Banner, BottomServices, Typos } from "../../components"
 import Layout from "../../components/layout"
 import WebService from "../../images/web-banner.svg"
 import WebGroup from "../../images/group-web.png"
@@ -39,7 +39,6 @@ export default function Web() {
           />
         </Box>
       </div>
-      <ContactUs />
     </Layout>
   )
 }

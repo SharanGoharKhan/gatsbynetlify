@@ -8,7 +8,6 @@
 import * as React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
-
 import { TopBar, Footer } from "./index"
 
 const Layout = ({ children, bar, font, mobileGradient }) => {

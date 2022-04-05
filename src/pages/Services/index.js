@@ -1,11 +1,5 @@
 import React from "react"
-import {
-  Banner,
-  BottomServices,
-  ContactUs,
-  ServicesCard,
-  Typos,
-} from "../../components"
+import { Banner, BottomServices, ServicesCard, Typos } from "../../components"
 import Layout from "../../components/layout"
 import {
   Box,
@@ -120,7 +114,6 @@ export default function Services() {
           </Grid>
         </Container>
       </div>
-      <ContactUs />
     </Layout>
   )
 }

@@ -1,6 +1,6 @@
 import { Box, Container, Grid, Paper, Typography } from "@material-ui/core"
 import React, { useEffect } from "react"
-import { Banner, BottomServices, ContactUs, Typos } from "../../components"
+import { Banner, BottomServices, Typos } from "../../components"
 import Layout from "../../components/layout"
 import TeamBg from "../../images/team-bg.png"
 import Sharan from "../../images/sharan.png"
@@ -199,7 +199,6 @@ export default function Team() {
           </Grid>
         </Container>
       </div>
-      <ContactUs />
     </Layout>
   )
 }

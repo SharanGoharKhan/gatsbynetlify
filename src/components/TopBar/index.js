@@ -10,8 +10,6 @@ import {
   Paper,
   useMediaQuery,
   Box,
-  Menu,
-  MenuItem,
   Typography,
 } from "@material-ui/core"
 import ClearIcon from "@material-ui/icons/Clear"
@@ -312,7 +310,11 @@ const TopBar = props => {
                       }}
                     >
                       <Box onClick={handleCloseServiceMenu} pl={3}>
-                        <Typography variant="body2" textAlign="center">
+                        <Typography
+                          variant="body2"
+                          textAlign="center"
+                          style={{ color: props.subMenuText }}
+                        >
                           {setting.name}
                         </Typography>
                       </Box>
@@ -321,45 +323,6 @@ const TopBar = props => {
                 </Box>
               )}
             </GatsbyLink>
-            {/* <Menu
-              id="service-menu"
-              anchorEl={anchorElServices}
-              anchorOrigin={{
-                vertical: "bottom",
-                horizontal: "left",
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: "Bottom",
-                horizontal: "left",
-              }}
-              open={Boolean(anchorElServices)}
-              onClose={handleCloseServiceMenu}
-              MenuListProps={{ onMouseLeave: handleCloseServiceMenu }}
-              PaperProps={{
-                style: {
-                  backgroundColor: "rgba(49, 47, 112, 0.67)",
-                  color: "white",
-                },
-              }}
-            > */}
-            {/* {services.map(setting => (
-                <GatsbyLink
-                  to={setting.path}
-                  key={setting}
-                  style={{
-                    color: props.fontColor,
-                    textDecoration: "none",
-                  }}
-                >
-                  <MenuItem onClick={handleCloseServiceMenu}>
-                    <Typography variant="body2" textAlign="center">
-                      {setting.name}
-                    </Typography>
-                  </MenuItem>
-                </GatsbyLink>
-              ))} */}
-            {/* </Menu> */}
 
             <GatsbyLink
               style={{ color: props.fontColor }}

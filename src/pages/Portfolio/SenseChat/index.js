@@ -1,6 +1,6 @@
 import React, { useEffect } from "react"
 import { Typography } from "@material-ui/core"
-import { ContactUs, Footer, TopBar } from "../../components"
+import { Footer, TopBar } from "../../../components"
 import "./SenseChat.css"
 import FormatQuoteIcon from "@material-ui/icons/FormatQuote"
 import Introduction from "./component/Introduction"
@@ -8,9 +8,9 @@ import Problem from "./component/Problem"
 import Approach from "./component/Approach"
 import Solution from "./component/Solution"
 import OutComeAndBenefits from "./component/OutCome"
-import { StaticImage } from "gatsby-plugin-image"
-import Seo from "../../components/seo"
-import Chat from "../../images/enategaSenseChat.png"
+import Seo from "../../../components/seo"
+import Chat from "../../../images/enategaSenseChat.png"
+
 const SenseChat = () => {
   useEffect(() => {
     window.scrollTo(0, 0)
@@ -97,7 +97,6 @@ const SenseChat = () => {
       <Approach />
       <Solution />
       <OutComeAndBenefits />
-      <ContactUs />
       <Footer />
     </>
   )

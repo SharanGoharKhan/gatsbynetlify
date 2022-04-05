@@ -5,6 +5,7 @@ module.exports = {
     author: `@ninjascode1`,
   },
   plugins: [
+    "gatsby-plugin-sass",
     {
       resolve: `gatsby-plugin-google-gtag`,
       options: {

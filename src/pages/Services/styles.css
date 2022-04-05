@@ -59,13 +59,19 @@
   margin-top: 20px;
   border-radius: 0;
 }
+.case-btn:hover {
+  background-color: #1798fbb7;
+}
 .quote-btn {
-  background-color: #707070;
+  background-color: #283644;
   color: white;
   margin-top: 20px;
   border-radius: 0;
   display: flex;
   align-self: center;
+}
+.quote-btn:hover {
+  background-color: #283644b4;
 }
 .lower-background {
   background-size: cover;

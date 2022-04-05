@@ -6,7 +6,6 @@ import {
   useTheme,
 } from "@material-ui/core"
 import React from "react"
-import Layout from "../../../components/layout"
 import "./styles.css"
 import Group from "../../../images/group-pink.png"
 import Logo from "../../../images/logo-textmyguest.png"
@@ -30,6 +29,7 @@ export default function TextMyGuest() {
           mobileGradient={
             "linear-gradient(to bottom, #ee3776 0%, #ff075d 100%)"
           }
+          subMenuText={"#000"}
         />
         <Grid item xs={12} md={7} className="pink-guest-background">
           <Box
@@ -260,13 +260,7 @@ export default function TextMyGuest() {
             </Box>
           </Box>
         </Grid>
-        <Box
-          item
-          component={Grid}
-          display={{ xs: "none", md: "block" }}
-          md={5}
-          data-aos="flip-down"
-        >
+        <Box item component={Grid} display={{ xs: "none", md: "block" }} md={5}>
           <Box
             display={"flex"}
             justifyContent="center"

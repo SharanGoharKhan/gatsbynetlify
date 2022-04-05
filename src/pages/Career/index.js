@@ -38,14 +38,13 @@ export default function Career() {
             {careerData.map((position, index) => {
               return (
                 <Grid item key={index}>
-                  <CareerCard data={position} />
+                  <CareerCard data={position} index={index} />
                 </Grid>
               )
             })}
           </Grid>
         </Container>
       </div>
-      <ContactUs />
     </Layout>
   )
 }

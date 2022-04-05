@@ -32,7 +32,6 @@ export default function Ux() {
           <img src={UXGroup} className="ux-image" alt="ux" />
         </Box>
       </div>
-      <ContactUs />
     </Layout>
   )
 }

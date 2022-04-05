@@ -59,10 +59,7 @@
 }
 .video-container {
   margin: auto;
-  border: 3px solid #62d7a5;
   position: relative;
-  min-height: 80vh;
-  width: 80%;
   overflow: visible;
   margin-top: 3rem;
   margin-bottom: 3rem;
@@ -79,6 +76,7 @@
   bottom: -70px;
   left: -70px;
   width: 15%;
+  z-index: -9;
 }
 .image-view:nth-child(even) {
   margin-top: 2rem;

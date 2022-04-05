@@ -8,12 +8,12 @@ import {
   Divider,
   Link as MaterialLink,
 } from "@material-ui/core"
-import { Link as ScrollLink } from "react-scroll"
-import FacebookRound from "../../svg/FacebookRound"
+
+import FacebookRound from "../../images/facebook-icon.svg"
 import { Link as GatsbyLink } from "gatsby"
-import InstaRound from "../../svg/InstaRound"
-import TwitterRound from "../../svg/TwitterRound"
-import LinkedInRound from "../../svg/LinkedInRound"
+import InstaRound from "../../images/instagram-icon.svg"
+import TwitterRound from "../../images/twitter-icon.svg"
+import LinkedInRound from "../../images/linkedin-icon.svg"
 
 const useStyles = makeStyles(theme => ({
   container: {
@@ -49,6 +49,16 @@ const useStyles = makeStyles(theme => ({
     fontSize: "2vmin",
     fontFamily: "Montserrat",
   },
+  links: {
+    textDecoration: "none",
+    color: "gray",
+  },
+  icons: {
+    "& img": {
+      width: 30,
+      height: 30,
+    },
+  },
 }))
 
 const Footer = () => {
@@ -57,7 +67,7 @@ const Footer = () => {
   return (
     <div className={classes.container}>
       <Grid container justify="center" spacing={6}>
-        <Grid item xs={12} sm={6} md={6} lg={3}>
+        <Grid item xs={12} sm={6} md={4}>
           <Grid
             container
             direction="column"
@@ -78,50 +88,7 @@ const Footer = () => {
             </Grid>
           </Grid>
         </Grid>
-        <Grid item xs={12} sm={6} md={6} lg={2}>
-          <Grid
-            container
-            direction="column"
-            spacing={3}
-            justify="center"
-            alignItems="center"
-          >
-            <Grid item xs={12}>
-              <Typography className={classes.subHeading} gutterBottom>
-                Quick Links
-              </Typography>
-            </Grid>
-            <Grid item xs={12}>
-              <ScrollLink
-                href={"#"}
-                className={classes.innerText}
-                style={{ textDecoration: "none" }}
-                to="test"
-                spy={true}
-                smooth={true}
-                offset={-30}
-                duration={500}
-              >
-                Testimonials
-              </ScrollLink>
-            </Grid>
-            <Grid item xs={12}>
-              <ScrollLink
-                href={"#"}
-                style={{ textDecoration: "none" }}
-                className={classes.innerText}
-                to="contactus"
-                spy={true}
-                smooth={true}
-                offset={-30}
-                duration={500}
-              >
-                Contact Us
-              </ScrollLink>
-            </Grid>
-          </Grid>
-        </Grid>
-        <Grid item xs={12} sm={6} md={6} lg={2}>
+        <Grid item xs={12} sm={6} md={4}>
           <Grid
             container
             direction="column"
@@ -131,33 +98,33 @@ const Footer = () => {
           >
             <Grid item xs={12}>
               <Typography className={classes.subHeading} gutterBottom>
-                Our Work
+                Quick Links
               </Typography>
             </Grid>
             <Grid item xs={12}>
-              <MaterialLink href="https://enatega.com/" target="_blank">
-                <Typography className={classes.innerText} gutterBottom>
-                  Enatega
-                </Typography>
-              </MaterialLink>
+              <GatsbyLink to={"/Portfolio"} className={classes.links}>
+                Portfolio
+              </GatsbyLink>
             </Grid>
             <Grid item xs={12}>
-              <MaterialLink href="https://www.stylizenow.com" target="_blank">
-                <Typography className={classes.innerText} gutterBottom>
-                  Stylize Now
-                </Typography>
-              </MaterialLink>
+              <GatsbyLink to={"/Services"} className={classes.links}>
+                Services
+              </GatsbyLink>
             </Grid>
             <Grid item xs={12}>
-              <MaterialLink href="https://vinifynd.com/" target="_blank">
-                <Typography className={classes.innerText} gutterBottom>
-                  Vinifynd
-                </Typography>
-              </MaterialLink>
+              <GatsbyLink to={"/Career"} className={classes.links}>
+                Career
+              </GatsbyLink>
+            </Grid>
+            <Grid item xs={12}>
+              <GatsbyLink to={"/Team"} className={classes.links}>
+                Team
+              </GatsbyLink>
             </Grid>
           </Grid>
         </Grid>
-        <Grid item xs={12} sm={6} md={6} lg={5}>
+
+        <Grid item xs={12} sm={6} md={4}>
           <Grid
             container
             direction="column"
@@ -176,29 +143,14 @@ const Footer = () => {
               spacing={1}
               justify="center"
               alignItems="center"
+              className={classes.icons}
             >
               <Grid item xs={3} lg={2}>
                 <MaterialLink
                   href="https://www.facebook.com/ninjascodeofficial"
                   target="_blank"
                 >
-                  <FacebookRound />
-                </MaterialLink>
-              </Grid>
-              <Grid item xs={3} lg={2}>
-                <MaterialLink
-                  href="https://twitter.com/NinjasCode1"
-                  target="_blank"
-                >
-                  <TwitterRound />
-                </MaterialLink>
-              </Grid>
-              <Grid item xs={3} lg={2}>
-                <MaterialLink
-                  href="https://www.linkedin.com/company/14512538"
-                  target="_blank"
-                >
-                  <LinkedInRound />
+                  <img src={FacebookRound} alt="facebook" />
                 </MaterialLink>
               </Grid>
               <Grid item xs={3} lg={2}>
@@ -206,7 +158,23 @@ const Footer = () => {
                   href="https://www.instagram.com/ninjascode/"
                   target="_blank"
                 >
-                  <InstaRound />
+                  <img src={InstaRound} alt="instagram" />
+                </MaterialLink>
+              </Grid>
+              <Grid item xs={3} lg={2}>
+                <MaterialLink
+                  href="https://www.linkedin.com/company/14512538"
+                  target="_blank"
+                >
+                  <img src={LinkedInRound} alt="linkedin" />
+                </MaterialLink>
+              </Grid>
+              <Grid item xs={3} lg={2}>
+                <MaterialLink
+                  href="https://twitter.com/NinjasCode1"
+                  target="_blank"
+                >
+                  <img src={TwitterRound} alt="twitter" />
                 </MaterialLink>
               </Grid>
             </Grid>

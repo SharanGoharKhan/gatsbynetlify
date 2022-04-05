@@ -13,7 +13,7 @@ import EmailIcon from "../../svg/emailIcon"
 
 const useStyles = makeStyles(theme => ({
   container: {
-    backgroundColor: "#283646",
+    background: "linear-gradient(to bottom, #179AFB 0%, #301E5B 100%)",
     padding: theme.spacing(6),
     height: "fit-content",
     textAlign: "center",

@@ -7,8 +7,7 @@ import {
   useTheme,
   useMediaQuery,
 } from "@material-ui/core"
-import React, { useEffect } from "react"
-import { ContactUs } from "../../../components"
+import React from "react"
 import Layout from "../../../components/layout"
 import "./styles.css"
 import BundlMain from "../../../images/bundl-main.png"
@@ -101,7 +100,12 @@ export default function Bundl() {
             </Grid>
           </Grid>
           <Box mt={5} />
-          <img src={Green} alt="circle" className="circle3" />
+          <img
+            src={Green}
+            alt="circle"
+            className="circle3"
+            style={{ display: matches && "none" }}
+          />
         </div>
 
         <div className={matches ? "team-container-small" : "team-container"}>
@@ -111,28 +115,26 @@ export default function Bundl() {
             <ImageCard name="Adnan" role="Project Manager" image={Adnan} />
             <ImageCard name="Collin" role="Co-Founder" image={Colin} />
             <ImageCard name="Lance" role="Co-Founder" image={Lance} />
-            <ImageCard name="Name" role="CTO" image={Chinese} />
+            <ImageCard name="Kevin" role="CTO" image={Chinese} />
           </Box>
         </div>
         <Box mt={10} />
         <div style={{ overflow: "visible" }}>
-          <ReactPlayer
-            url={Video}
-            width="80%"
-            height="80%"
-            controls={true}
-            className="video-player"
-          />
           <div style={{ overflow: "visible" }}>
             <div className="video-container">
+              <ReactPlayer
+                url={Video}
+                width="100%"
+                height="100%"
+                controls={true}
+                className="video-player"
+              />
               <img src={LightCircle} alt="circle" className="circle4" />
               <img src={DarkCircle} alt="circle" className="circle5" />
             </div>
           </div>
         </div>
       </Container>
-      <Box mt={10} />
-      <ContactUs />
     </Layout>
   )
 }

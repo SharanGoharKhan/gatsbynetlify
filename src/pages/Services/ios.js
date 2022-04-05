@@ -6,7 +6,7 @@ import {
   useMediaQuery,
 } from "@material-ui/core"
 import React from "react"
-import { Banner, BottomServices, ContactUs, Typos } from "../../components"
+import { Banner, BottomServices, Typos } from "../../components"
 import Layout from "../../components/layout"
 import IOSService from "../../images/ios.svg"
 import D1 from "../../images/Device1.png"
@@ -198,7 +198,6 @@ export default function Ios() {
           </Container>
         </Box>
       </div>
-      <ContactUs />
     </Layout>
   )
 }

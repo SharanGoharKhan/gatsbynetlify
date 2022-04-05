@@ -1,6 +1,5 @@
 import * as React from "react"
 import "./index.css"
-import { useEffect } from "react"
 import "../components/layout.css"
 import Seo from "../components/seo"
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward"
@@ -16,8 +15,9 @@ import LightbulbCircleIcon from "@mui/icons-material/LightbulbCircle"
 import AddBoxOutlinedIcon from "@mui/icons-material/AddBoxOutlined"
 import FeedbackIcon from "@mui/icons-material/Feedback"
 import MonetizationOnIcon from "@mui/icons-material/MonetizationOn"
-import AddIcon from "@mui/icons-material/Add"
 import { carouselData } from "../utils/carouselData"
+import { Link as GatsbyLink } from "gatsby"
+import { externalLinks } from "../utils/links"
 
 import {
   ContactUs,
@@ -25,6 +25,8 @@ import {
   BottomServices,
   Typos,
   PortfolioProjects,
+  FAQ,
+  Carousel,
 } from "../components"
 import {
   Grid,
@@ -135,10 +137,11 @@ const useStyles = makeStyles(theme => ({
   blogBox: {
     maxWidth: "400px",
     padding: "1rem",
-    position: "relative",
+    position: "absolute",
     border: "2px solid #179afb",
     backgroundColor: "white",
     zIndex: "10000",
+    top: "100px",
   },
   blogBackBox: {
     border: "2px solid black",
@@ -167,7 +170,22 @@ const IndexPage = props => {
   const theme = useTheme()
   const small = useMediaQuery(theme.breakpoints.down("sm"))
   useAnimation()
+  const contactRef = React.useRef(null)
+  // console.log(props.location)
 
+  // useEffect(() => {
+  //   switch (props.location.hash) {
+  //     case "#contactUs":
+  //       scrollToRef(contactRef)
+  //       break
+
+  //     default:
+  //       break
+  //   }
+  // }, [props.location])
+  // const scrollToRef = ref => {
+  //   window.scrollTo(0, ref.current.offsetTop)
+  // }
   const increment = () => {
     if (index < carouselData.length - 1) {
       setTimeout(() => {
@@ -224,11 +242,12 @@ const IndexPage = props => {
             className={classes.blueBox}
             style={{
               position: "absolute",
-              right: "20%",
-              bottom: "2%",
+              left: "30%",
+              bottom: "0%",
               border: "1px solid",
               backgroundColor: "white",
-              width: "200px",
+              width: "150px",
+              height: "60px",
               display: small && "none",
             }}
             data-aos="flip-up"
@@ -357,9 +376,15 @@ const IndexPage = props => {
             <PortfolioProjects />
           </Box>
           <Box textAlign={"center"}>
-            <Button endIcon={<ArrowForwardIcon />} className={classes.bold}>
-              SEE MORE
-            </Button>
+            <GatsbyLink to="/Portfolio/" style={{ textDecoration: "none" }}>
+              <Button
+                endIcon={<ArrowForwardIcon />}
+                className={classes.bold}
+                disableRipple
+              >
+                SEE MORE
+              </Button>
+            </GatsbyLink>
           </Box>
           <Typos
             first="OPEN"
@@ -379,8 +404,14 @@ const IndexPage = props => {
               data-aos="zoom-out"
             />
           </Box>
-          <Box textAlign={"center"}>
-            <Button endIcon={<ArrowForwardIcon />} className={classes.bold}>
+          <Box textAlign={"center"} mb={2}>
+            <Button
+              endIcon={<ArrowForwardIcon />}
+              className={classes.bold}
+              disableRipple
+              target="_blank"
+              href="https://github.com/Ninjas-Code-official/shopping-cart.git/"
+            >
               GITHUB
             </Button>
           </Box>
@@ -398,7 +429,7 @@ const IndexPage = props => {
                   className={classes.whyUsCard}
                   style={{ backgroundColor: "#179afb" }}
                   data-aos="fade-up-right"
-                  data-aos-delay="1000"
+                  data-aos-delay="800"
                 >
                   <div
                     style={{
@@ -428,7 +459,7 @@ const IndexPage = props => {
                   square={true}
                   className={classes.whyUsCard}
                   data-aos="fade-up-left"
-                  data-aos-delay="1000"
+                  data-aos-delay="800"
                 >
                   <div
                     style={{
@@ -458,7 +489,7 @@ const IndexPage = props => {
                   square={true}
                   className={classes.whyUsCard}
                   data-aos="fade-down-right"
-                  data-aos-delay="1000"
+                  data-aos-delay="800"
                 >
                   <div
                     style={{
@@ -489,7 +520,7 @@ const IndexPage = props => {
                   square={true}
                   className={classes.whyUsCard}
                   data-aos="fade-down-left"
-                  data-aos-delay="1000"
+                  data-aos-delay="800"
                 >
                   <div
                     style={{
@@ -533,7 +564,7 @@ const IndexPage = props => {
               color="white"
             />
           </Box>
-          <Box
+          {/* <Box
             mt={small ? 5 : 10}
             display="flex"
             justifyContent={"space-around"}
@@ -600,7 +631,8 @@ const IndexPage = props => {
                 </Box>
               </Grid>
             </Grid>
-          </Box>
+          </Box> */}
+          <Carousel />
           <Grid container>
             <Grid xs={0} md={4}></Grid>
             <Grid xs={12} md={4}>
@@ -628,12 +660,7 @@ const IndexPage = props => {
             <Typos first="FA" second="FAQ'S" third={"S"} right={"4vmin"} />
             <Container>
               <Grid container spacing={2}>
-                <FAQS text={"Estimated budget of your idea"} />
-                <FAQS text={"Estimated budget of your idea"} />
-                <FAQS text={"Estimated budget of your idea"} />
-                <FAQS text={"Estimated budget of your idea"} />
-                <FAQS text={"Estimated budget of your idea"} />
-                <FAQS text={"Estimated budget of your idea"} />
+                <FAQ />
               </Grid>
             </Container>
             <Typos
@@ -645,10 +672,22 @@ const IndexPage = props => {
               top="10vmin"
               right={"4vmin"}
             />
-            <Box mt={5} style={{ position: "relative" }}>
-              <Grid container style={{ marginTop: "6rem" }}>
-                <Grid item md={6}>
-                  <Box className={classes.blogBox}>
+            <Box mt={5} />
+            <Container mt={5}>
+              <Grid container spacing={2}>
+                <Grid
+                  md={5}
+                  style={{
+                    height: "20rem",
+                    border: "3px solid",
+                    position: "relative",
+                  }}
+                  data-aos="slide-left"
+                >
+                  <Box>
+                    <img src={Blog1} />
+                  </Box>
+                  <Box className={classes.blogBox} style={{ left: "-10px" }}>
                     <Typography className={classes.bold} align="center">
                       How javascript works behind the scenes
                     </Typography>
@@ -664,13 +703,28 @@ const IndexPage = props => {
                       <Button
                         endIcon={<ArrowForwardIcon />}
                         className={classes.bold}
+                        href={externalLinks.blog1}
+                        target="_blank"
                       >
                         CONTINUE
                       </Button>
                     </Box>
                   </Box>
                 </Grid>
-                <Grid item md={6} style={{ position: "relative" }}>
+                <Grid md={2}></Grid>
+                <Grid
+                  md={5}
+                  style={{
+                    height: "20rem",
+                    border: "3px solid",
+                    position: "relative",
+                    marginTop: "5rem",
+                  }}
+                  data-aos="slide-right"
+                >
+                  <Box>
+                    <img src={Blog2} />
+                  </Box>
                   <Box
                     style={{
                       marginTop: "6rem",
@@ -679,7 +733,7 @@ const IndexPage = props => {
                       justifyContent: "flex-end",
                     }}
                   >
-                    <Box className={classes.blogBox}>
+                    <Box className={classes.blogBox} style={{ right: "-10px" }}>
                       <Typography className={classes.bold} align="center">
                         How to Calculate the Cost of App Development?
                       </Typography>
@@ -696,117 +750,103 @@ const IndexPage = props => {
                         <Button
                           endIcon={<ArrowForwardIcon />}
                           className={classes.bold}
+                          href={externalLinks.blog2}
+                          target="_blank"
                         >
                           CONTINUE
                         </Button>
                       </Box>
                     </Box>
                   </Box>
-                  {/* <Box
-                    className={classes.blogBackBox}
-                    style={{ top: "6rem", left: "65%" }}
-                  >
-                    <img src={Blog2} />
-                  </Box> */}
                 </Grid>
               </Grid>
-
-              {/* <Box className={classes.blogBackBox}>
-                <img src={Blog1} />
-              </Box>*/}
-            </Box>
+              <Box mt={20} />
+              <Box textAlign={"center"}>
+                <Button
+                  variant="outlined"
+                  style={{ border: "2px solid black", borderRadius: "0" }}
+                  href={externalLinks.allBlogs}
+                  target="_blank"
+                >
+                  SEE ALL
+                </Button>
+              </Box>
+            </Container>
+            <Box mt={5} />
           </div>
         </Box>
-
+        <a ref={contactRef}></a>
         <ContactUs />
       </Layout>
     </>
   )
 }
 
-function CarouselCard({ name, designation, review, active }) {
-  const classes = useStyles()
+// function CarouselCard({ name, designation, review, active }) {
+//   const classes = useStyles()
 
-  return (
-    <Paper
-      className={
-        active
-          ? `${classes.sliderPaper} ${classes.activeCard}`
-          : `${classes.sliderPaper}`
-      }
-      square={true}
-    >
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "flex-start",
-        }}
-      >
-        <Box
-          style={{
-            backgroundColor: "black",
-            width: "80px",
-            height: "140px",
-            position: "relative",
-            overflow: "visible",
-          }}
-        >
-          <Typography
-            style={{
-              color: "#179afb",
-              position: "absolute",
-              top: "40px",
-              right: "-12px",
-              fontSize: "2.4rem",
-            }}
-          >
-            {name[0]}
-          </Typography>
-        </Box>
-        <Box
-          display={"flex"}
-          justifyContent="center"
-          flexDirection={"column"}
-          ml={5}
-        >
-          <Typography>{name}</Typography>
-          <Divider
-            variant="horizontal"
-            style={{ height: "4px", backgroundColor: "black" }}
-          />
-          <Typography
-            className={classes.bold}
-            variant="caption"
-            style={{ color: "#179afb" }}
-          >
-            {designation}
-          </Typography>
-        </Box>
-      </div>
-      <Box mt={5} />
-      <Typography gutterBottom style={{ padding: "5px" }}>
-        {review}
-      </Typography>
-    </Paper>
-  )
-}
-function FAQS({ text }) {
-  return (
-    <Grid item sm={6}>
-      <Box
-        display={"flex"}
-        justifyContent="space-between"
-        style={{
-          backgroundColor: " #190E34",
-          margin: "2rem",
-          border: "2px solid #179afb",
-          padding: "1.8rem",
-        }}
-      >
-        <Typography style={{ color: "white" }}>{text}</Typography>
-        <AddIcon style={{ color: "white", width: "20px" }} />
-      </Box>
-    </Grid>
-  )
-}
+//   return (
+//     <Paper
+//       className={
+//         active
+//           ? `${classes.sliderPaper} ${classes.activeCard}`
+//           : `${classes.sliderPaper}`
+//       }
+//       square={true}
+//     >
+//       <div
+//         style={{
+//           display: "flex",
+//           justifyContent: "flex-start",
+//         }}
+//       >
+//         <Box
+//           style={{
+//             backgroundColor: "black",
+//             width: "80px",
+//             height: "140px",
+//             position: "relative",
+//             overflow: "visible",
+//           }}
+//         >
+//           <Typography
+//             style={{
+//               color: "#179afb",
+//               position: "absolute",
+//               top: "40px",
+//               right: "-12px",
+//               fontSize: "2.4rem",
+//             }}
+//           >
+//             {name[0]}
+//           </Typography>
+//         </Box>
+//         <Box
+//           display={"flex"}
+//           justifyContent="center"
+//           flexDirection={"column"}
+//           ml={5}
+//         >
+//           <Typography>{name}</Typography>
+//           <Divider
+//             variant="horizontal"
+//             style={{ height: "4px", backgroundColor: "black" }}
+//           />
+//           <Typography
+//             className={classes.bold}
+//             variant="caption"
+//             style={{ color: "#179afb" }}
+//           >
+//             {designation}
+//           </Typography>
+//         </Box>
+//       </div>
+//       <Box mt={5} />
+//       <Typography gutterBottom style={{ padding: "5px" }}>
+//         {review}
+//       </Typography>
+//     </Paper>
+//   )
+// }
+
 export default IndexPage

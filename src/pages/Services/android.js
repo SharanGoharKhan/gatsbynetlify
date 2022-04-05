@@ -31,7 +31,6 @@ export default function Android() {
           <img src={AndroidGroup} className="android-image" alt="android" />
         </Box>
       </div>
-      <ContactUs />
     </Layout>
   )
 }

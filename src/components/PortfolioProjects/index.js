@@ -3,6 +3,7 @@ import { ImageList, ImageListItem } from "@mui/material"
 import { Link } from "gatsby"
 import React from "react"
 import { lowerData, portfolioData } from "../../utils/portfolioData"
+import "./styles.css"
 
 export default function PortfolioProjects() {
   return (
@@ -17,6 +18,7 @@ export default function PortfolioProjects() {
             key={item.img}
             cols={item.cols || 1}
             rows={item.rows || 1}
+            className={"image-card"}
           >
             <Link to={`/Portfolio${item.to}`}>
               <img
@@ -41,6 +43,7 @@ export default function PortfolioProjects() {
             key={item.img}
             cols={item.cols || 1}
             rows={item.rows || 1}
+            className={"image-card"}
           >
             <Link to={`/Portfolio${item.to}`}>
               <img

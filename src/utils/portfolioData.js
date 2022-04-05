@@ -1,4 +1,4 @@
-import SenseChat from "../images/SenseChat.png"
+import SenseChat from "../images/sense-chat.png"
 import Hpec from "../images/Hpec.png"
 import Bundl from "../images/Bundl.png"
 import Guest from "../images/Guest.png"
