@@ -28,7 +28,13 @@ export default function Ux() {
           upperTop="10vmin"
         />
 
-        <Box style={{ textAlign: "center" }} mt={15} mb={15}>
+        <Box
+          style={{
+            textAlign: "center",
+            marginTop: "2rem",
+            marginBottom: "2rem",
+          }}
+        >
           <img src={UXGroup} className="ux-image" alt="ux" />
         </Box>
       </div>

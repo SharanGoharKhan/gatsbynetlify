@@ -1,13 +1,21 @@
-import { Box } from "@material-ui/core"
+import { Box, makeStyles } from "@material-ui/core"
 import { ImageList, ImageListItem } from "@mui/material"
 import { Link } from "gatsby"
 import React from "react"
 import { lowerData, portfolioData } from "../../utils/portfolioData"
 import "./styles.css"
-
+const useStyles = makeStyles({
+  box: {
+    overflow: "visible",
+    "& > *": {
+      overflow: "visible !important",
+    },
+  },
+})
 export default function PortfolioProjects() {
+  const classes = useStyles()
   return (
-    <Box>
+    <Box className={classes.box}>
       <ImageList
         sx={{ width: "90%", minHeight: "fit-content", margin: "auto" }}
         variant="quilted"
@@ -18,7 +26,7 @@ export default function PortfolioProjects() {
             key={item.img}
             cols={item.cols || 1}
             rows={item.rows || 1}
-            className={"image-card"}
+            className={"imageCard"}
           >
             <Link to={`/Portfolio${item.to}`}>
               <img
@@ -43,7 +51,7 @@ export default function PortfolioProjects() {
             key={item.img}
             cols={item.cols || 1}
             rows={item.rows || 1}
-            className={"image-card"}
+            className={"imageCard"}
           >
             <Link to={`/Portfolio${item.to}`}>
               <img

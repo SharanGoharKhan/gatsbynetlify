@@ -18,6 +18,12 @@
 
 .android-image {
   width: 80%;
+  max-width: 100%;
+  height: auto;
+}
+.android-image-small {
+  width: 90%;
+  max-width: 100%;
   height: auto;
 }
 .ux-image {

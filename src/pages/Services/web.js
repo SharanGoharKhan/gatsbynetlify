@@ -31,7 +31,13 @@ export default function Web() {
           right="17.5vmin"
         />
 
-        <Box style={{ textAlign: "center" }} mt={15} mb={15}>
+        <Box
+          style={{
+            textAlign: "center",
+            marginTop: "2rem",
+            marginBottom: "2rem",
+          }}
+        >
           <img
             src={WebGroup}
             className={matches ? "web-image-small" : "web-image"}

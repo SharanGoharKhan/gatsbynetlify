@@ -10,7 +10,7 @@ import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import { TopBar, Footer } from "./index"
 
-const Layout = ({ children, bar, font, mobileGradient }) => {
+const Layout = ({ children, bar, font, mobileGradient, home }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -28,6 +28,7 @@ const Layout = ({ children, bar, font, mobileGradient }) => {
         barColor={bar ? bar : "#179AFB"}
         fontColor={font ? font : "#fff"}
         mobileGradient={mobileGradient}
+        home={home}
       />
       {children}
       <Footer />

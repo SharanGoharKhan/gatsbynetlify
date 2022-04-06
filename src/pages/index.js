@@ -4,8 +4,6 @@ import "../components/layout.css"
 import Seo from "../components/seo"
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward"
 import OpenSource from "../images/open-source.png"
-import Blog1 from "../images/blog-image.png"
-import Blog2 from "../images/blog-image2.png"
 import Bg from "../images/home-background.png"
 import ReviewsBg from "../images/reviews-background.png"
 import WatchLaterIcon from "@mui/icons-material/WatchLater"
@@ -15,9 +13,7 @@ import LightbulbCircleIcon from "@mui/icons-material/LightbulbCircle"
 import AddBoxOutlinedIcon from "@mui/icons-material/AddBoxOutlined"
 import FeedbackIcon from "@mui/icons-material/Feedback"
 import MonetizationOnIcon from "@mui/icons-material/MonetizationOn"
-import { carouselData } from "../utils/carouselData"
 import { Link as GatsbyLink } from "gatsby"
-import { externalLinks } from "../utils/links"
 
 import {
   ContactUs,
@@ -27,6 +23,8 @@ import {
   PortfolioProjects,
   FAQ,
   Carousel,
+  Blogs,
+  SmallCarousel,
 } from "../components"
 import {
   Grid,
@@ -37,7 +35,6 @@ import {
   Container,
   Box,
   Button,
-  Divider,
   useTheme,
 } from "@material-ui/core"
 import Layout from "../components/layout"
@@ -134,77 +131,19 @@ const useStyles = makeStyles(theme => ({
     justifyContent: "center",
     alignItems: "center",
   },
-  blogBox: {
-    maxWidth: "400px",
-    padding: "1rem",
-    position: "absolute",
-    border: "2px solid #179afb",
-    backgroundColor: "white",
-    zIndex: "10000",
-    top: "100px",
-  },
-  blogBackBox: {
-    border: "2px solid black",
-    position: "absolute",
-    top: 0,
-    height: " 400px",
-    maxWidth: "400px",
-    left: "5rem",
-  },
-  sliderBtn: {
-    backgroundColor: "white",
-    width: 20,
-    height: 20,
-    borderRadius: 10,
-    cursor: "pointer",
-  },
-  activeCard: {
-    transform: "scale(1.0)",
-  },
 }))
 
 const IndexPage = props => {
   const classes = useStyles()
   const matches = useMediaQuery("(min-width:600px)")
-  const [index, setIndex] = React.useState(1)
   const theme = useTheme()
   const small = useMediaQuery(theme.breakpoints.down("sm"))
   useAnimation()
-  const contactRef = React.useRef(null)
-  // console.log(props.location)
-
-  // useEffect(() => {
-  //   switch (props.location.hash) {
-  //     case "#contactUs":
-  //       scrollToRef(contactRef)
-  //       break
-
-  //     default:
-  //       break
-  //   }
-  // }, [props.location])
-  // const scrollToRef = ref => {
-  //   window.scrollTo(0, ref.current.offsetTop)
-  // }
-  const increment = () => {
-    if (index < carouselData.length - 1) {
-      setTimeout(() => {
-        setIndex(prev => prev + 1)
-      }, 500)
-    }
-  }
-  const decrement = () => {
-    if (index > 0) {
-      setTimeout(() => {
-        setIndex(prev => prev - 1)
-      }, 500)
-    }
-  }
 
   return (
     <>
       <Seo title="Ninjas Code" />
-      <Layout>
+      <Layout home={true}>
         <Banner
           titleMain={"We Solve Business Problems with"}
           titleSecondary={"Modern Technologies"}
@@ -278,7 +217,7 @@ const IndexPage = props => {
                       <Typography
                         className={classes.cardHeaderText}
                         gutterBottom
-                        align="start"
+                        align="left"
                       >
                         Raise Funds
                       </Typography>
@@ -361,6 +300,7 @@ const IndexPage = props => {
             backgroundPosition: "top",
             backgroundSize: "cover",
             backgroundRepeat: "no-repeat",
+            marginTop: small && "-5rem",
           }}
         >
           <Typos
@@ -372,7 +312,12 @@ const IndexPage = props => {
             top="10vmin"
             right={"20vmin"}
           />
-          <Box mt={15} mb={5} data-aos="flip-down">
+          <Box
+            mt={15}
+            mb={5}
+            data-aos="flip-down"
+            style={{ overflow: "visible" }}
+          >
             <PortfolioProjects />
           </Box>
           <Box textAlign={"center"}>
@@ -521,6 +466,7 @@ const IndexPage = props => {
                   className={classes.whyUsCard}
                   data-aos="fade-down-left"
                   data-aos-delay="800"
+                  style={{ backgroundColor: "#179afb" }}
                 >
                   <div
                     style={{
@@ -564,96 +510,12 @@ const IndexPage = props => {
               color="white"
             />
           </Box>
-          {/* <Box
-            mt={small ? 5 : 10}
-            display="flex"
-            justifyContent={"space-around"}
-          >
-            <Grid
-              container
-              spacing={3}
-              style={{ margin: "2rem" }}
-              alignItems="center"
-            >
-              <Grid item md={4} alignItems="center">
-                <Box
-                  style={{
-                    width: "100%",
-                    display: "flex",
-                    alignItems: "center",
-                    flexDirection: "column",
-                  }}
-                >
-                  {index > 0 && !small && (
-                    <CarouselCard
-                      name={carouselData[index - 1].name}
-                      designation={carouselData[index - 1].name}
-                      review={carouselData[index - 1].review}
-                      active={false}
-                    />
-                  )}
-                </Box>
-              </Grid>
-              <Grid item md={4}>
-                <Box
-                  style={{
-                    width: "100%",
-                    display: "flex",
-                    alignItems: "center",
-                    flexDirection: "column",
-                  }}
-                >
-                  <CarouselCard
-                    name={carouselData[index].name}
-                    designation={carouselData[index].name}
-                    review={carouselData[index].review}
-                    active={true}
-                  ></CarouselCard>
-                </Box>
-              </Grid>
-              <Grid item md={4}>
-                <Box
-                  style={{
-                    width: "100%",
-                    display: "flex",
-                    alignItems: "center",
-                    flexDirection: "column",
-                  }}
-                >
-                  {index < carouselData.length - 1 && !small && (
-                    <CarouselCard
-                      name={carouselData[index + 1].name}
-                      designation={carouselData[index + 1].name}
-                      review={carouselData[index + 1].review}
-                      active={false}
-                    />
-                  )}
-                </Box>
-              </Grid>
-            </Grid>
-          </Box> */}
           <Carousel />
-          <Grid container>
-            <Grid xs={0} md={4}></Grid>
-            <Grid xs={12} md={4}>
-              <Box
-                display={"flex"}
-                justifyContent="center"
-                mt={2}
-                alignItems="center"
-              >
-                <Box className={classes.sliderBtn} m={2} onClick={decrement} />
-                <Box
-                  className={classes.sliderBtn}
-                  m={2}
-                  style={{ width: 30, height: 30, borderRadius: 15 }}
-                />
-                <Box className={classes.sliderBtn} m={2} onClick={increment} />
-              </Box>
-            </Grid>
-          </Grid>
-          <Box mb={5} />
+          <Box mt={5} />
         </div>
+        <Box mt={10} />
+        <SmallCarousel />
+
         <Box mt={10} style={{ backgroundColor: "#fff" }}>
           <div style={{ postion: "relative" }}>
             <BottomServices />
@@ -663,190 +525,14 @@ const IndexPage = props => {
                 <FAQ />
               </Grid>
             </Container>
-            <Typos
-              first="BLO"
-              second="BLOG & NEWS"
-              third={"WS"}
-              upperTop="0vmin"
-              upperLeft="5.2vmin"
-              top="10vmin"
-              right={"4vmin"}
-            />
-            <Box mt={5} />
-            <Container mt={5}>
-              <Grid container spacing={2}>
-                <Grid
-                  md={5}
-                  style={{
-                    height: "20rem",
-                    border: "3px solid",
-                    position: "relative",
-                  }}
-                  data-aos="slide-left"
-                >
-                  <Box>
-                    <img src={Blog1} />
-                  </Box>
-                  <Box className={classes.blogBox} style={{ left: "-10px" }}>
-                    <Typography className={classes.bold} align="center">
-                      How javascript works behind the scenes
-                    </Typography>
-                    <Typography style={{ color: "#179afb" }} align="center">
-                      Javascript is always hosted in some environment, typically
-                      it’s hosted in a browser that is Google Chrome, Firefox,
-                      Safari etc. Javascript will run in this environment but
-                      not restricted to only this it can also run in other hosts
-                      such Nodejs web server or some application that accepts JS
-                      code input.
-                    </Typography>
-                    <Box textAlign={"center"}>
-                      <Button
-                        endIcon={<ArrowForwardIcon />}
-                        className={classes.bold}
-                        href={externalLinks.blog1}
-                        target="_blank"
-                      >
-                        CONTINUE
-                      </Button>
-                    </Box>
-                  </Box>
-                </Grid>
-                <Grid md={2}></Grid>
-                <Grid
-                  md={5}
-                  style={{
-                    height: "20rem",
-                    border: "3px solid",
-                    position: "relative",
-                    marginTop: "5rem",
-                  }}
-                  data-aos="slide-right"
-                >
-                  <Box>
-                    <img src={Blog2} />
-                  </Box>
-                  <Box
-                    style={{
-                      marginTop: "6rem",
-                      width: "100%",
-                      display: "flex",
-                      justifyContent: "flex-end",
-                    }}
-                  >
-                    <Box className={classes.blogBox} style={{ right: "-10px" }}>
-                      <Typography className={classes.bold} align="center">
-                        How to Calculate the Cost of App Development?
-                      </Typography>
-                      <Typography style={{ color: "#179afb" }} align="center">
-                        The complexity of the app, including some features and a
-                        number of features, can have a direct impact on the cost
-                        of the app. Every feature to make it functional takes
-                        time to develop which again increases the cost of the
-                        app to be developed. Most agencies charge on an hourly
-                        basis so the more time it takes to complete a feature
-                        more they will charge.
-                      </Typography>
-                      <Box textAlign={"center"}>
-                        <Button
-                          endIcon={<ArrowForwardIcon />}
-                          className={classes.bold}
-                          href={externalLinks.blog2}
-                          target="_blank"
-                        >
-                          CONTINUE
-                        </Button>
-                      </Box>
-                    </Box>
-                  </Box>
-                </Grid>
-              </Grid>
-              <Box mt={20} />
-              <Box textAlign={"center"}>
-                <Button
-                  variant="outlined"
-                  style={{ border: "2px solid black", borderRadius: "0" }}
-                  href={externalLinks.allBlogs}
-                  target="_blank"
-                >
-                  SEE ALL
-                </Button>
-              </Box>
-            </Container>
+            <Blogs />
             <Box mt={5} />
           </div>
         </Box>
-        <a ref={contactRef}></a>
         <ContactUs />
       </Layout>
     </>
   )
 }
-
-// function CarouselCard({ name, designation, review, active }) {
-//   const classes = useStyles()
-
-//   return (
-//     <Paper
-//       className={
-//         active
-//           ? `${classes.sliderPaper} ${classes.activeCard}`
-//           : `${classes.sliderPaper}`
-//       }
-//       square={true}
-//     >
-//       <div
-//         style={{
-//           display: "flex",
-//           justifyContent: "flex-start",
-//         }}
-//       >
-//         <Box
-//           style={{
-//             backgroundColor: "black",
-//             width: "80px",
-//             height: "140px",
-//             position: "relative",
-//             overflow: "visible",
-//           }}
-//         >
-//           <Typography
-//             style={{
-//               color: "#179afb",
-//               position: "absolute",
-//               top: "40px",
-//               right: "-12px",
-//               fontSize: "2.4rem",
-//             }}
-//           >
-//             {name[0]}
-//           </Typography>
-//         </Box>
-//         <Box
-//           display={"flex"}
-//           justifyContent="center"
-//           flexDirection={"column"}
-//           ml={5}
-//         >
-//           <Typography>{name}</Typography>
-//           <Divider
-//             variant="horizontal"
-//             style={{ height: "4px", backgroundColor: "black" }}
-//           />
-//           <Typography
-//             className={classes.bold}
-//             variant="caption"
-//             style={{ color: "#179afb" }}
-//           >
-//             {designation}
-//           </Typography>
-//         </Box>
-//       </div>
-//       <Box mt={5} />
-//       <Typography gutterBottom style={{ padding: "5px" }}>
-//         {review}
-//       </Typography>
-//     </Paper>
-//   )
-// }
 
 export default IndexPage

@@ -121,6 +121,11 @@ const Footer = () => {
                 Team
               </GatsbyLink>
             </Grid>
+            <Grid item xs={12}>
+              <GatsbyLink to={"/#contact"} className={classes.links}>
+                ContactUs
+              </GatsbyLink>
+            </Grid>
           </Grid>
         </Grid>
 

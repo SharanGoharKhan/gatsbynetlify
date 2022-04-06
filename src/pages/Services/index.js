@@ -38,7 +38,7 @@ export default function Services() {
         <BottomServices />
         <Typos first="SER" second="SERVICES" third="CES" right={"4vmin"} />
 
-        <Container style={{ marginTop: 100, marginBottom: 100 }}>
+        <Container style={{ marginTop: "2rem", marginBottom: "2rem" }}>
           <Grid container spacing={4}>
             {LeftCardData.map((item, index) => {
               return (

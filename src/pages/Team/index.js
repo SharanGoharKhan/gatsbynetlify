@@ -41,7 +41,7 @@ export default function Team() {
         <BottomServices />
         <Typos first="OUR" second="OUR TEAM" third="TEAM" right={"4vmin"} />
 
-        <Container style={{ marginTop: 100, marginBottom: 100 }}>
+        <Container style={{ marginTop: "2rem", marginBottom: "2rem" }}>
           <Grid container spacing={2}>
             <Grid item xs={6} md={4} align="center">
               <Paper

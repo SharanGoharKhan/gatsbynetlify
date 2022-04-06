@@ -47,7 +47,7 @@ export default function Bundl() {
         <img src={LightCircle} alt="circle1" className="circle1" />
         <img src={DarkCircle} alt="circle2" className="circle2" />
       </div>
-      <Container>
+      <Container style={{ overflow: "visible" }}>
         <div style={{ position: "relative" }}>
           <Grid container>
             <Grid item xs={12} sm={6} md={4}>

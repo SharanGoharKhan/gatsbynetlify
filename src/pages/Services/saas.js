@@ -33,7 +33,7 @@ export default function Saas() {
           right="19.5vmin"
         />
 
-        <Box mt={15} mb={15}>
+        <Box style={{ marginTop: "2rem", marginBottom: "2rem" }}>
           <Grid container alignItems="center" spacing={3}>
             <Grid
               item
@@ -118,7 +118,7 @@ export default function Saas() {
               <br />
               want a ready-made solution
             </Typography>
-            <Button variant="contained" className="quote-btn">
+            <Button variant="contained" className="quote-btn" href="/#contact">
               Get Quote
             </Button>
           </Box>

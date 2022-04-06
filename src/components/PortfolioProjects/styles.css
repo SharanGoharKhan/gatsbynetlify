@@ -1,10 +1,11 @@
-.image-card:hover {
+.imageCard:hover {
   z-index: 1;
   transform: scale(1.2);
   animation-name: zoom;
   animation-duration: 1s;
   animation-fill-mode: forwards;
 }
+
 @keyframes zoom {
   0% {
     transform: rotate(5deg);

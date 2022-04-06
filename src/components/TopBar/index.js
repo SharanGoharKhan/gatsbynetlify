@@ -24,6 +24,7 @@ import BarChartIcon from "@material-ui/icons/BarChart"
 const useStyles = makeStyles(theme => ({
   root: {
     flexGrow: 1,
+    overflow: "visible",
   },
   title: {
     fontSize: 24,
@@ -158,93 +159,89 @@ const TopBar = props => {
             >
               <Grid item xs={12}>
                 <Paper elevation={0} className={classes.paper}>
-                  <Link
-                    href={"#"}
-                    className="cool-link"
-                    onClick={handleMobileMenuClose}
-                    activeClass="active"
-                    to="feature"
-                    spy={true}
-                    smooth={true}
-                    offset={-30}
-                    duration={1500}
+                  <GatsbyLink
+                    style={{ color: props.fontColor }}
+                    className={
+                      props.fontColor === "#fff"
+                        ? "cool-link"
+                        : "cool-link-black"
+                    }
+                    activeClassName="active"
+                    to="/Services"
                   >
                     Services
-                  </Link>
+                  </GatsbyLink>
                 </Paper>
               </Grid>
               <Grid item xs={12}>
                 <Paper elevation={0} className={classes.paper}>
-                  <Link
-                    href={"#"}
-                    className="cool-link"
-                    onClick={handleMobileMenuClose}
-                    activeClass="active"
-                    to="whyus"
-                    spy={true}
-                    smooth={true}
-                    offset={-30}
-                    duration={1500}
+                  <GatsbyLink
+                    style={{ color: props.fontColor }}
+                    className={
+                      props.fontColor === "#fff"
+                        ? "cool-link"
+                        : "cool-link-black"
+                    }
+                    activeClassName="active"
+                    to="/Portfolio"
                   >
                     Portfolio
-                  </Link>
+                  </GatsbyLink>
                 </Paper>
               </Grid>
               <Grid item xs={12}>
                 <Paper elevation={0} className={classes.paper}>
-                  <Link
-                    href={"#"}
-                    className="cool-link"
-                    onClick={handleMobileMenuClose}
-                    activeClass="active"
-                    to="faq"
-                    spy={true}
-                    smooth={true}
-                    offset={-30}
-                    duration={1500}
+                  <GatsbyLink
+                    style={{ color: props.fontColor }}
+                    className={
+                      props.fontColor === "#fff"
+                        ? "cool-link"
+                        : "cool-link-black"
+                    }
+                    activeClassName="active"
+                    to="/Career"
                   >
                     Career
-                  </Link>
+                  </GatsbyLink>
                 </Paper>
               </Grid>
               <Grid item xs={12}>
                 <Paper elevation={0} className={classes.paper}>
-                  <Link
-                    href={"#"}
-                    className="cool-link"
-                    onClick={handleMobileMenuClose}
-                    activeClass="active"
-                    to="test"
-                    spy={true}
-                    smooth={true}
-                    offset={-30}
-                    duration={1500}
+                  <GatsbyLink
+                    style={{ color: props.fontColor }}
+                    className={
+                      props.fontColor === "#fff"
+                        ? "cool-link"
+                        : "cool-link-black"
+                    }
+                    activeClassName="active"
+                    to="/Team"
                   >
                     Team
-                  </Link>
+                  </GatsbyLink>
                 </Paper>
               </Grid>
               <Grid item xs={12}>
                 <Paper elevation={0} className={classes.paper}>
-                  <Link
-                    href={"#"}
+                  <GatsbyLink
                     style={{
+                      color: props.fontColor,
                       borderWidth: 1,
                       borderRadius: 5,
                       borderStyle: "solid",
                       padding: 8,
                     }}
-                    className="cool-link"
-                    onClick={handleMobileMenuClose}
+                    className={
+                      props.fontColor === "#fff"
+                        ? "cool-link"
+                        : "cool-link-black"
+                    }
                     activeClass="active"
-                    to="contact"
-                    spy={true}
-                    smooth={true}
-                    offset={-30}
-                    duration={1500}
+                    to="/#contact"
+                    onClick={handleMobileMenuClose}
                   >
                     Contact Us
-                  </Link>
+                  </GatsbyLink>
                 </Paper>
               </Grid>
             </Grid>
@@ -259,11 +256,12 @@ const TopBar = props => {
         style={{
           background: props.barColor,
           width: "100%",
+          overflow: "visible",
         }}
         position={props?.position ? props.position : "static"}
         elevation={0}
       >
-        <Toolbar>
+        <Toolbar style={{ overflow: "visible" }}>
           <Link
             activeClass="active"
             to="/"
@@ -286,7 +284,11 @@ const TopBar = props => {
           </Link>
           <div className={classes.sectionDesktop}>
             <GatsbyLink
-              style={{ color: props.fontColor, position: "relative" }}
+              style={{
+                color: props.fontColor,
+                position: "relative",
+                overflow: "visible",
+              }}
               className={
                 props.fontColor === "#fff" ? "button-link" : "button-link-black"
               }
@@ -355,27 +357,50 @@ const TopBar = props => {
             >
               Team
             </GatsbyLink>
-            <Link
-              style={{
-                color: props.fontColor,
-                borderWidth: 1,
-                borderRadius: 5,
-                borderStyle: "solid",
-                padding: 8,
-              }}
-              className={
-                props.fontColor === "#fff" ? "button-link" : "button-link-black"
-              }
-              href="#"
-              activeClass="active"
-              to="contact"
-              spy={true}
-              smooth={true}
-              offset={-30}
-              duration={500}
-            >
-              Contact Us
-            </Link>
+            {props?.home ? (
+              <Link
+                style={{
+                  color: props.fontColor,
+                  borderWidth: 1,
+                  borderRadius: 5,
+                  borderStyle: "solid",
+                  padding: 8,
+                }}
+                className={
+                  props.fontColor === "#fff"
+                    ? "button-link"
+                    : "button-link-black"
+                }
+                href="#"
+                activeClass="active"
+                to="contact"
+                spy={true}
+                smooth={true}
+                offset={-30}
+                duration={500}
+              >
+                Contact Us
+              </Link>
+            ) : (
+              <GatsbyLink
+                style={{
+                  color: props.fontColor,
+                  borderWidth: 1,
+                  borderRadius: 5,
+                  borderStyle: "solid",
+                  padding: 8,
+                }}
+                className={
+                  props.fontColor === "#fff"
+                    ? "button-link"
+                    : "button-link-black"
+                }
+                activeClass="active"
+                to="/#contact"
+              >
+                Contact Us
+              </GatsbyLink>
+            )}
           </div>
           <div className={classes.sectionMobile}>
             <IconButton

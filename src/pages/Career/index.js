@@ -33,7 +33,7 @@ export default function Career() {
           right="4vmin"
         />
 
-        <Container style={{ marginTop: 100, marginBottom: 100 }}>
+        <Container style={{ marginTop: "2rem", marginBottom: "2rem" }}>
           <Grid container spacing={4} style={{ justifyContent: "center" }}>
             {careerData.map((position, index) => {
               return (

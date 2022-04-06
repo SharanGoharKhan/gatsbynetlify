@@ -1,4 +1,4 @@
-import { Box, Typography } from "@material-ui/core"
+import { Box, Typography, useMediaQuery, useTheme } from "@material-ui/core"
 import React, { useEffect } from "react"
 import { Banner, BottomServices, ContactUs, Typos } from "../../components"
 import Layout from "../../components/layout"
@@ -13,7 +13,8 @@ export default function Android() {
   useEffect(() => {
     Aos.init({ duration: 1000, once: true })
   }, [])
-
+  const theme = useTheme()
+  const small = useMediaQuery(theme.breakpoints.down("md"))
   return (
     <Layout>
       <Banner
@@ -27,8 +28,18 @@ export default function Android() {
       <div style={{ position: "relative" }}>
         <BottomServices />
         <Typos first="AND" second="ANDROID DEVELOPEMENT" third="MEN" />
-        <Box style={{ textAlign: "center" }} mt={15} mb={15}>
-          <img src={AndroidGroup} className="android-image" alt="android" />
+        <Box
+          style={{
+            textAlign: "center",
+            marginTop: "2rem",
+            marginBottom: "2rem",
+          }}
+        >
+          <img
+            src={AndroidGroup}
+            className={small ? "android-image-small" : "android-image"}
+            alt="android"
+          />
         </Box>
       </div>
     </Layout>

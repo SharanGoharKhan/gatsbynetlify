@@ -300,7 +300,7 @@ export default function Groovepack() {
               data-aos-delay="1500"
             />
             <Box ml={5} data-aos="fade-down-right" data-aos-delay="1500">
-              <Typography variant="h5" className="color-groove">
+              <Typography variant="h6" className="color-groove">
                 Time is money. Get set up and scanning faster than any other
                 packing software.
               </Typography>

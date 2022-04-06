@@ -24,12 +24,40 @@ export default function Web() {
       <div style={{ position: "relative" }}>
         <BottomServices />
         <Typos first="DESK" second="DESKTOP APP DEVELOPMENT" third="MEN" />
-        <Box style={{ textAlign: "center" }} mt={15} mb={15}>
+        <Box
+          style={{
+            textAlign: "center",
+            marginTop: "2rem",
+            marginBottom: "2rem",
+          }}
+        >
           <img
             src={DesktopGroup}
             alt="desktop"
             className={matches ? "small-desktop-image" : "desktop-image"}
           />
+          <Box mt={5}>
+            <Typography
+              variant="h5"
+              style={{ fontSize: "1.75rem", fontWeight: 900 }}
+            >
+              Cross Platform Softwares
+            </Typography>
+            <Typography
+              style={{
+                color: "gray",
+                fontSize: "0.8rem",
+                width: "400px",
+                margin: "auto",
+              }}
+              align="center"
+            >
+              The tedious part of building desktop apps is to make sure that
+              they will run on all major operating systems. With React, there’s
+              no need to overpay for different app versions. You can build one
+              that runs everywhere!
+            </Typography>
+          </Box>
         </Box>
       </div>
     </Layout>
