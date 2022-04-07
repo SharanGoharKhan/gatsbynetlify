@@ -17,13 +17,14 @@ import {
   useTheme,
 } from "@material-ui/core"
 import { Typos } from ".."
+import { colors } from "../../utils/colors"
 
 const useStyles = makeStyles(theme => ({
   blogBox: {
     maxWidth: "400px",
     padding: "1rem",
     position: "absolute",
-    border: "2px solid #179afb",
+    border: `2px solid ${colors.primary}`,
     backgroundColor: "white",
     zIndex: "10000",
     top: "100px",
@@ -74,7 +75,7 @@ export default function Blogs() {
               <Typography className={classes.bold} align="center">
                 How javascript works behind the scenes
               </Typography>
-              <Typography style={{ color: "#179afb" }} align="center">
+              <Typography style={{ color: colors.primary }} align="center">
                 Javascript is always hosted in some environment, typically it’s
                 hosted in a browser that is Google Chrome, Firefox, Safari etc.
                 Javascript will run in this environment but not restricted to
@@ -121,7 +122,7 @@ export default function Blogs() {
                 <Typography className={classes.bold} align="center">
                   How to Calculate the Cost of App Development?
                 </Typography>
-                <Typography style={{ color: "#179afb" }} align="center">
+                <Typography style={{ color: colors.primary }} align="center">
                   The complexity of the app, including some features and a
                   number of features, can have a direct impact on the cost of
                   the app. Every feature to make it functional takes time to

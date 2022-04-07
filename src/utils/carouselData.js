@@ -19,16 +19,16 @@ export const carouselData = [
   },
   {
     name: "Raleigh Melancon",
-    designation: "ssdasd",
+    designation: "Founder at StylizeNow",
     review:
       "Thanks to Ninjas Code, the app was published in both the App Store and Google Play. The team communicated via Slack during the engagement. They delivered the project on time, meeting the client's expectations.",
   },
-  {
-    name: "Kevin Sun",
-    designation: "CTO Bundl Technologies",
-    review:
-      "The team was excellent at meeting the needs of a growing startup. They efficiently delivered a functional MVP that has gained over 100 users after a month in the app store. Their investment in the project and driven attitude were highlights.",
-  },
 ]
 
-export const smallCarouselData = [TMLogo, Zonder, Bundle, HPEC, EasyEats]
+export const smallCarouselData = [
+  { logo: TMLogo, width: 120 },
+  { logo: Zonder, width: 80 },
+  { logo: Bundle, width: 120 },
+  { logo: HPEC, width: 120 },
+  { logo: EasyEats, width: 120 },
+]

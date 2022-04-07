@@ -514,9 +514,9 @@ const IndexPage = props => {
           <Box mt={5} />
         </div>
         <Box mt={10} />
-        <SmallCarousel />
 
-        <Box mt={10} style={{ backgroundColor: "#fff" }}>
+        <SmallCarousel />
+        <Box mt={5} style={{ backgroundColor: "#fff" }}>
           <div style={{ postion: "relative" }}>
             <BottomServices />
             <Typos first="FA" second="FAQ'S" third={"S"} right={"4vmin"} />

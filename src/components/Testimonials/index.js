@@ -18,6 +18,7 @@ import {
 } from "@material-ui/core"
 import ArrowLeftIcon from "../../svg/arrowLeftIcon"
 import ArrowRightIcon from "../../svg/arrowRightIcon"
+import { colors } from "../../utils/colors"
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -37,7 +38,7 @@ const useStyles = makeStyles(theme => ({
     transform: "translateX(0)",
   },
   titleText: {
-    color: "#1E266D",
+    color: colors.darkBlue,
     fontWeight: 600,
     padding: 20,
     fontSize: "6vmin",
@@ -57,12 +58,12 @@ const useStyles = makeStyles(theme => ({
     padding: "3.8vmin",
   },
   cardTitle: {
-    color: "#1E266D",
+    color: colors.darkBlue,
     fontFamily: "Montserrat",
     fontSize: "3.8vmin",
   },
   cardSubTitle: {
-    color: "#455880",
+    color: colors.dullBlue,
     letterSpacing: 1,
     lineHeight: "4vmin",
     fontFamily: "Montserrat",
@@ -72,7 +73,7 @@ const useStyles = makeStyles(theme => ({
     margin: theme.spacing(3),
   },
   star: {
-    color: "#FBC917",
+    color: colors.yellow,
   },
   paper: {
     padding: theme.spacing(2),
@@ -131,10 +132,10 @@ const Testimonial = () => {
           variant="contained"
           size="large"
           style={{
-            color: "#3751FF",
+            color: colors.blue2,
             fontSize: "3vmin",
             fontFamily: "Montserrat",
-            backgroundColor: "#F3F5FE",
+            backgroundColor: colors.paleWhite,
           }}
         >
           <Typography
@@ -153,7 +154,7 @@ const Testimonial = () => {
         <IconButton onClick={() => scroll(-400)}>
           <div
             style={{
-              backgroundColor: "#fff",
+              backgroundColor: colors.white,
               display: "flex",
               textAlign: "center",
               justifyContent: "center",
@@ -170,7 +171,7 @@ const Testimonial = () => {
         <IconButton onClick={() => scroll(400)}>
           <div
             style={{
-              backgroundColor: "#fff",
+              backgroundColor: colors.white,
               display: "flex",
               textAlign: "center",
               justifyContent: "center",

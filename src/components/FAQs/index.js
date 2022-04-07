@@ -10,12 +10,13 @@ import Collapse from "@material-ui/core/Collapse"
 import ExpandLess from "@material-ui/icons/ExpandLess"
 import ExpandMore from "@material-ui/icons/ExpandMore"
 import React from "react"
+import { colors } from "../../utils/colors"
 
 const useStyles = makeStyles(theme => ({
   container: {
-    backgroundColor: " #190E34",
+    backgroundColor: colors.darkPurple,
     margin: "2rem",
-    border: "2px solid #179afb",
+    border: `2px solid ${colors.primary}`,
     padding: "1.8rem",
     display: "flex",
     justifyContent: "space-between",
@@ -23,7 +24,7 @@ const useStyles = makeStyles(theme => ({
   },
   button: {
     marginTop: theme.spacing(6),
-    backgroundColor: "#3751FF",
+    backgroundColor: colors.blue2,
     borderRadius: 10,
     height: 60,
   },
@@ -32,13 +33,13 @@ const useStyles = makeStyles(theme => ({
   },
   ListText: {
     fontWeight: 500,
-    color: "#222222",
+    color: colors.mediumGray,
     fontSize: "3.5vmin",
     fontFamily: "Montserrat",
     lineHeight: "5vmin",
   },
   listSubText: {
-    color: "#838383",
+    color: colors.gray,
     fontSize: "2vmin",
     fontWeight: 400,
     letterSpacing: 0.5,

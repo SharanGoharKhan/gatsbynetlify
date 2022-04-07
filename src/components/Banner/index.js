@@ -5,6 +5,7 @@ import BannerIcons from "../BannerIcons"
 import Particles from "react-tsparticles"
 import Aos from "aos"
 import "aos/dist/aos.css"
+import { colors } from "../../utils/colors"
 
 export default function Banner({ titleMain, titleSecondary, subTitle, image }) {
   useEffect(() => {
@@ -54,10 +55,10 @@ export default function Banner({ titleMain, titleSecondary, subTitle, image }) {
           },
           particles: {
             color: {
-              value: "#00BFFF",
+              value: colors.particleDots,
             },
             links: {
-              color: "#ffffff",
+              color: colors.white,
               distance: 150,
               enable: true,
               opacity: 0.5,

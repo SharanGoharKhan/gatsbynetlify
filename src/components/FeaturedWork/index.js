@@ -10,13 +10,14 @@ import {
   useTheme,
 } from "@material-ui/core"
 import "./FeaturedWork.css"
+import { colors } from "../../utils/colors"
 
 const useStyles = makeStyles(theme => ({
   title: {
     fontFamily: theme.typography,
   },
   divider: {
-    backgroundColor: "#175CFF",
+    backgroundColor: colors.blue,
     margin: "auto",
     marginTop: "40px",
     width: "74px",
@@ -28,7 +29,7 @@ const useStyles = makeStyles(theme => ({
   },
   button: {
     marginTop: theme.spacing(6),
-    backgroundColor: "#3751FF",
+    backgroundColor: colors.blue2,
     borderRadius: 10,
     height: 60,
   },
@@ -58,7 +59,7 @@ const FeaturedWork = () => {
         <Typography
           style={{
             fontWeight: 400,
-            color: "#333333",
+            color: colors.lightGray,
             fontFamily: "Poppins",
             fontSize: "3vmin",
             width: matches ? "50%" : "90%",

@@ -2,6 +2,7 @@ import React from "react"
 import "react-responsive-carousel/lib/styles/carousel.min.css" // requires a loader
 import { Carousel } from "react-responsive-carousel"
 import { carouselData } from "../../utils/carouselData"
+import StarIcon from "@mui/icons-material/Star"
 import {
   Paper,
   Typography,
@@ -11,14 +12,15 @@ import {
   useMediaQuery,
   useTheme,
 } from "@material-ui/core"
+import { colors } from "../../utils/colors"
 const useStyles = makeStyles(theme => ({
   sliderPaper: {
     padding: theme.spacing(1),
-    // outline: "5px solid #179afb",
     maxWidth: "400px",
     minHeight: "480px",
     transform: "scale(0.85)",
   },
+
   carousel: {
     minHeight: "600px",
     overflow: "visible !important",
@@ -27,6 +29,7 @@ const useStyles = makeStyles(theme => ({
     "& *": {
       overflow: "visible",
     },
+
     "& li": {
       display: "flex",
       justifyContent: "center",
@@ -53,8 +56,11 @@ export default function CarouselComponent() {
         dynamicHeight={true}
         showIndicators={false}
         showThumbs={false}
+        showArrows={false}
         showStatus={false}
         className={classes.carousel}
+        autoPlay={true}
+        interval={3000}
         width="90%"
       >
         {carouselData.map((item, index) => {
@@ -81,7 +87,7 @@ export default function CarouselComponent() {
                 >
                   <Typography
                     style={{
-                      color: "#179afb",
+                      color: colors.primary,
                       position: "absolute",
                       top: "40px",
                       right: "-12px",
@@ -110,10 +116,17 @@ export default function CarouselComponent() {
                   <Typography
                     className={classes.bold}
                     variant="caption"
-                    style={{ color: "#179afb" }}
+                    style={{ color: colors.primary }}
                   >
                     {item.designation}
                   </Typography>
+                  <Box>
+                    <StarIcon style={{ width: 15 }} />
+                    <StarIcon style={{ width: 15 }} />
+                    <StarIcon style={{ width: 15 }} />
+                    <StarIcon style={{ width: 15 }} />
+                    <StarIcon style={{ width: 15 }} />
+                  </Box>
                 </Box>
               </div>
               <Box mt={5} />

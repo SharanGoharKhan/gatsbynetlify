@@ -17,7 +17,7 @@ const SenseChat = () => {
   }, [])
 
   return (
-    <>
+    <div className="sense-container">
       <Seo title="Sense.chat" />
       <div className="senseHeader">
         <TopBar barColor="transparent" fontColor="#fff" />
@@ -98,7 +98,7 @@ const SenseChat = () => {
       <Solution />
       <OutComeAndBenefits />
       <Footer />
-    </>
+    </div>
   )
 }
 

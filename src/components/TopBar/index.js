@@ -20,6 +20,7 @@ import { Link as GatsbyLink } from "gatsby"
 import Logo from "../../images/NinjasCode.svg"
 import LogoBlack from "../../images/NinjasCodeBlack.svg"
 import BarChartIcon from "@material-ui/icons/BarChart"
+import { colors } from "../../utils/colors"
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -29,7 +30,7 @@ const useStyles = makeStyles(theme => ({
   title: {
     fontSize: 24,
     fontWeight: 700,
-    color: "#070707",
+    color: colors.glassBlack,
     fontFamily: "Montserrat",
   },
   sectionDesktop: {
@@ -62,17 +63,17 @@ const useStyles = makeStyles(theme => ({
   },
   coolLink: {
     display: "inline-block",
-    color: "#000",
+    color: colors.black,
     textDecoration: "none",
   },
   textHeading: {
-    color: "#fff",
+    color: colors.white,
     fontWeight: "700",
     textAlign: "center",
     margin: "auto",
   },
   icon: {
-    color: "#fff",
+    color: colors.white,
   },
   paper1: {
     padding: theme.spacing(2),
@@ -141,7 +142,7 @@ const TopBar = props => {
           style={{
             background: props?.mobileGradient
               ? props.mobileGradient
-              : "linear-gradient(to bottom, #179AFB 0%, #301E5B 100%)",
+              : `linear-gradient(to bottom, ${colors.primary} 0%, ${colors.purple} 100%)`,
           }}
         >
           <Box style={{ textAlign: "end", paddingTop: "2%" }}>
@@ -162,7 +163,7 @@ const TopBar = props => {
                   <GatsbyLink
                     style={{ color: props.fontColor }}
                     className={
-                      props.fontColor === "#fff"
+                      props.fontColor === colors.white
                         ? "cool-link"
                         : "cool-link-black"
                     }
@@ -178,7 +179,7 @@ const TopBar = props => {
                   <GatsbyLink
                     style={{ color: props.fontColor }}
                     className={
-                      props.fontColor === "#fff"
+                      props.fontColor === colors.white
                         ? "cool-link"
                         : "cool-link-black"
                     }
@@ -194,7 +195,7 @@ const TopBar = props => {
                   <GatsbyLink
                     style={{ color: props.fontColor }}
                     className={
-                      props.fontColor === "#fff"
+                      props.fontColor === colors.white
                         ? "cool-link"
                         : "cool-link-black"
                     }
@@ -210,7 +211,7 @@ const TopBar = props => {
                   <GatsbyLink
                     style={{ color: props.fontColor }}
                     className={
-                      props.fontColor === "#fff"
+                      props.fontColor === colors.white
                         ? "cool-link"
                         : "cool-link-black"
                     }
@@ -232,7 +233,7 @@ const TopBar = props => {
                       padding: 8,
                     }}
                     className={
-                      props.fontColor === "#fff"
+                      props.fontColor === colors.white
                         ? "cool-link"
                         : "cool-link-black"
                     }
@@ -277,7 +278,7 @@ const TopBar = props => {
                 <img
                   alt="ninjas code"
                   style={{ width: "30vmin", marginTop: 20 }}
-                  src={props.fontColor === "#fff" ? Logo : LogoBlack}
+                  src={props.fontColor === colors.white ? Logo : LogoBlack}
                 />
               </GatsbyLink>
             </IconButton>
@@ -290,7 +291,9 @@ const TopBar = props => {
                 overflow: "visible",
               }}
               className={
-                props.fontColor === "#fff" ? "button-link" : "button-link-black"
+                props.fontColor === colors.white
+                  ? "button-link"
+                  : "button-link-black"
               }
               activeClassName="active"
               to="/Services"
@@ -329,7 +332,9 @@ const TopBar = props => {
             <GatsbyLink
               style={{ color: props.fontColor }}
               className={
-                props.fontColor === "#fff" ? "button-link" : "button-link-black"
+                props.fontColor === colors.white
+                  ? "button-link"
+                  : "button-link-black"
               }
               activeClassName="active"
               to="/Portfolio"
@@ -340,7 +345,9 @@ const TopBar = props => {
             <GatsbyLink
               style={{ color: props.fontColor }}
               className={
-                props.fontColor === "#fff" ? "button-link" : "button-link-black"
+                props.fontColor === colors.white
+                  ? "button-link"
+                  : "button-link-black"
               }
               activeClassName="active"
               to="/Career"
@@ -350,7 +357,9 @@ const TopBar = props => {
             <GatsbyLink
               style={{ color: props.fontColor }}
               className={
-                props.fontColor === "#fff" ? "button-link" : "button-link-black"
+                props.fontColor === colors.white
+                  ? "button-link"
+                  : "button-link-black"
               }
               activeClassName="active"
               to="/Team"
@@ -367,7 +376,7 @@ const TopBar = props => {
                   padding: 8,
                 }}
                 className={
-                  props.fontColor === "#fff"
+                  props.fontColor === colors.white
                     ? "button-link"
                     : "button-link-black"
                 }
@@ -391,7 +400,7 @@ const TopBar = props => {
                   padding: 8,
                 }}
                 className={
-                  props.fontColor === "#fff"
+                  props.fontColor === colors.white
                     ? "button-link"
                     : "button-link-black"
                 }

@@ -59,6 +59,7 @@ export default function Ios() {
               </Box>
             </Grid>
           </Grid>
+          <Box mt={2} />
           <Grid container>
             <Grid item md={6}></Grid>
             <Grid item md={6}>
@@ -86,6 +87,8 @@ export default function Ios() {
               </Box>
             </Grid>
           </Grid>
+          <Box mt={2} />
+
           <Grid container>
             <Grid item md={6}>
               <Box className="left-content">
@@ -113,6 +116,8 @@ export default function Ios() {
               </Box>
             </Grid>
           </Grid>
+          <Box mt={2} />
+
           <Grid container>
             <Grid item md={6}></Grid>
             <Grid item md={6}>
@@ -140,6 +145,8 @@ export default function Ios() {
               </Box>
             </Grid>
           </Grid>
+          <Box mt={2} />
+
           <Grid container>
             <Grid item md={6}>
               <Box className="left-content">
@@ -166,6 +173,8 @@ export default function Ios() {
               </Box>
             </Grid>
           </Grid>
+          <Box mt={2} />
+
           <Grid container>
             <Grid item md={6}></Grid>
             <Grid item md={6}>

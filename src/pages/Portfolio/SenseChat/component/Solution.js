@@ -68,7 +68,7 @@ const Solution = props => {
           Combining all software solution services
         </Typography>
         <div>
-          <Grid container spacing={10} justify="center">
+          <Grid container justify="center">
             <Grid item xs={12} md={8}>
               <Typography
                 variant="h5"

@@ -19,13 +19,14 @@ import { red } from "@material-ui/core/colors"
 import Blog1 from "../../images/blog1.png"
 import Blog2 from "../../images/blog2.png"
 import Blog3 from "../../images/blog3.png"
+import { colors } from "../../utils/colors"
 
 const useStyles = makeStyles(theme => ({
   title: {
     fontFamily: theme.typography,
   },
   divider: {
-    backgroundColor: "#175CFF",
+    backgroundColor: colors.blue,
     margin: "auto",
     marginTop: "40px",
     width: "74px",
@@ -43,7 +44,7 @@ const useStyles = makeStyles(theme => ({
   },
   button: {
     marginTop: theme.spacing(6),
-    backgroundColor: "#3751FF",
+    backgroundColor: colors.blue2,
     borderRadius: 10,
     height: 60,
   },
@@ -91,7 +92,7 @@ const Blog = () => {
         <Typography
           style={{
             fontWeight: 400,
-            color: "#333333",
+            color: colors.lightGray,
             fontFamily: "Poppins",
             fontSize: "3vmin",
             width: matches ? "50%" : "90%",
@@ -147,7 +148,9 @@ const Blog = () => {
                   aria-expanded={expanded}
                   aria-label="show more"
                 >
-                  <Typography style={{ fontSize: "2vmin", color: "#3751FF" }}>
+                  <Typography
+                    style={{ fontSize: "2vmin", color: colors.blue2 }}
+                  >
                     Continue reading...
                   </Typography>
                 </IconButton>
@@ -219,7 +222,9 @@ const Blog = () => {
                   aria-expanded={expanded}
                   aria-label="show more"
                 >
-                  <Typography style={{ fontSize: "2vmin", color: "#3751FF" }}>
+                  <Typography
+                    style={{ fontSize: "2vmin", color: colors.blue2 }}
+                  >
                     Continue reading...
                   </Typography>
                 </IconButton>
@@ -290,7 +295,9 @@ const Blog = () => {
                   aria-expanded={expanded}
                   aria-label="show more"
                 >
-                  <Typography style={{ fontSize: "2vmin", color: "#3751FF" }}>
+                  <Typography
+                    style={{ fontSize: "2vmin", color: colors.blue2 }}
+                  >
                     Continue reading...
                   </Typography>
                 </IconButton>
@@ -324,7 +331,7 @@ const Blog = () => {
             autoCapitalize={false}
             variant="contained"
             color="primary"
-            style={{ backgroundColor: "#3751FF" }}
+            style={{ backgroundColor: colors.blue2 }}
           >
             <Typography
               style={{ fontFamily: "Poppins", textTransform: "initial" }}

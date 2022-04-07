@@ -1,4 +1,5 @@
 import { makeStyles } from "@material-ui/core"
+import { colors } from "../../utils/colors"
 
 const useStyles = makeStyles(theme => ({
   grid: {
@@ -10,14 +11,14 @@ const useStyles = makeStyles(theme => ({
     padding: 10,
   },
   title: {
-    color: "#fff",
+    color: colors.white,
     fontWeight: 700,
     fontSize: "8.5vmin",
     fontFamily: "Montserrat",
     marginTop: 40,
   },
   subtitle: {
-    color: "#fff",
+    color: colors.white,
     fontWeight: 500,
     fontSize: "3vmin",
     lineHeight: "30px",
@@ -30,13 +31,13 @@ const useStyles = makeStyles(theme => ({
     fontFamily: "Montserrat",
   },
   boldText: {
-    color: "#fff",
+    color: colors.white,
     fontWeight: 700,
     fontSize: "4vmin",
     fontFamily: "Montserrat",
   },
   number: {
-    color: "#fff",
+    color: colors.white,
     padding: 8,
     fontFamily: "Montserrat",
   },
@@ -50,10 +51,10 @@ const useStyles = makeStyles(theme => ({
     borderStyle: "solid",
     width: "40px",
     height: "40px",
-    borderColor: "#fff",
+    borderColor: colors.white,
   },
   background: {
-    background: "linear-gradient(to bottom, #179AFB 0%, #301E5B 100%)",
+    background: `linear-gradient(to bottom, ${colors.primary} 0%, ${colors.purple} 100%)`,
     boxShadow: "0px 3px 2px rgb(206, 202, 202)",
     paddingBottom: "2rem",
     position: "relative",

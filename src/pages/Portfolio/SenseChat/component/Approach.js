@@ -1,9 +1,10 @@
 import React from "react"
 import { Typography, makeStyles, Grid } from "@material-ui/core"
+import { colors } from "../../../../utils/colors"
 
 const useStyles = makeStyles(theme => ({
   divider: {
-    backgroundColor: "#175CFF",
+    backgroundColor: colors.blue,
     margin: "auto",
     marginTop: "20px",
     width: "74px",
@@ -57,7 +58,7 @@ const Approach = props => {
             borderRadius: 3,
           }}
         >
-          <Typography style={{ color: "#fff" }}>3. Approach</Typography>
+          <Typography style={{ color: colors.white }}>3. Approach</Typography>
         </div>
         <Typography
           variant="h5"
@@ -129,7 +130,7 @@ const Approach = props => {
           </Grid>
           <Grid
             className={classes.tableContainer}
-            style={{ backgroundColor: "#fff" }}
+            style={{ backgroundColor: colors.white }}
             item
             direction="row"
             justify="center"
@@ -142,7 +143,7 @@ const Approach = props => {
           </Grid>
           <Grid
             className={classes.tableContainer}
-            style={{ backgroundColor: "#fff" }}
+            style={{ backgroundColor: colors.white }}
             item
             xs={4}
           >
@@ -150,7 +151,7 @@ const Approach = props => {
           </Grid>
           <Grid
             className={[classes.tableContainer]}
-            style={{ borderRightWidth: 0, backgroundColor: "#fff" }}
+            style={{ borderRightWidth: 0, backgroundColor: colors.white }}
             item
             xs={4}
           >
@@ -181,7 +182,7 @@ const Approach = props => {
           </Grid>
           <Grid
             className={classes.tableContainer}
-            style={{ backgroundColor: "#fff" }}
+            style={{ backgroundColor: colors.white }}
             item
             direction="row"
             justify="center"
@@ -194,7 +195,7 @@ const Approach = props => {
           </Grid>
           <Grid
             className={classes.tableContainer}
-            style={{ backgroundColor: "#fff" }}
+            style={{ backgroundColor: colors.white }}
             item
             xs={4}
           >
@@ -202,7 +203,7 @@ const Approach = props => {
           </Grid>
           <Grid
             className={[classes.tableContainer]}
-            style={{ borderRightWidth: 0, backgroundColor: "#fff" }}
+            style={{ borderRightWidth: 0, backgroundColor: colors.white }}
             item
             xs={4}
           >

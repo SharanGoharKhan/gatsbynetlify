@@ -2,6 +2,7 @@ import React from "react"
 import { Typography, Box } from "@material-ui/core"
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward"
 import { Link as GatsbyLink } from "gatsby"
+import { colors } from "../../utils/colors"
 
 export default function Career({ data }) {
   return (
@@ -12,12 +13,12 @@ export default function Career({ data }) {
     >
       <div
         style={{
-          filter: "drop-shadow(10px 10px 1px #179afb)",
+          filter: `drop-shadow(10px 10px 1px ${colors.primary})`,
           border: "1px solid gray",
           borderRadius: 0,
           width: "370px",
           minHeight: "200px",
-          backgroundColor: "#301e5b",
+          backgroundColor: colors.purple,
           display: "flex",
           flexDirection: "column",
           justifyContent: "space-between",
@@ -26,7 +27,7 @@ export default function Career({ data }) {
         <Box style={{ padding: 12 }}>
           <Typography
             variant="body1"
-            style={{ fontWeight: 800, color: "#fff", fontSize: "1.2rem" }}
+            style={{ fontWeight: 800, color: colors.white, fontSize: "1.2rem" }}
           >
             {data.title}
           </Typography>
@@ -36,13 +37,13 @@ export default function Career({ data }) {
           style={{
             display: "flex",
             justifyContent: "space-between",
-            color: "#fff",
+            color: colors.white,
             padding: 12,
           }}
         >
           <Typography
             variant="body2"
-            style={{ color: "#fff", fontSize: "0.8rem" }}
+            style={{ color: colors.white, fontSize: "0.8rem" }}
           >
             {data.post}
           </Typography>

@@ -3,10 +3,11 @@ import { makeStyles, Grid } from "@material-ui/core"
 import EasyEats from "../../images/easyEats.png"
 import StylizeNow from "../../svg/Stylize"
 import Vinifynd from "../../svg/easyEats"
+import { colors } from "../../utils/colors"
 
 const useStyles = makeStyles(theme => ({
   container: {
-    backgroundColor: "#FAFBFF",
+    backgroundColor: colors.whiteGray,
     padding: theme.spacing(6),
     marginTop: theme.spacing(10),
     height: "fit-content",

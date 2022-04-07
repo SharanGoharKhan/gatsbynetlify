@@ -1,6 +1,6 @@
 import React from "react"
 import { Typography, makeStyles } from "@material-ui/core"
-import { StaticImage } from "gatsby-plugin-image"
+import TiltDevice from "../../../../images/Mockup11.png"
 
 const useStyles = makeStyles(theme => ({
   divider: {
@@ -83,7 +83,7 @@ const Introduction = props => {
           concern for our system.
         </Typography>
         <div style={{ textAlign: "center", marginTop: 20 }}>
-          <StaticImage alt="sense chat" src="../../../images/Mockup11.png" />
+          <img alt="sense chat" src={TiltDevice} />
         </div>
       </div>
     </>

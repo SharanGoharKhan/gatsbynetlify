@@ -8,5 +8,5 @@
   overflow: visible;
 }
 .senseHeader > * {
-  overflow: visible;
+  overflow: visible !important;
 }

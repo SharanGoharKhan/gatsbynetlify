@@ -1,4 +1,5 @@
 import { makeStyles } from "@material-ui/core"
+import { colors } from "../../utils/colors"
 const useStyles = makeStyles(theme => ({
   container: {
     display: "grid",
@@ -10,7 +11,7 @@ const useStyles = makeStyles(theme => ({
     borderStyle: "solid",
     width: "40px",
     height: "40px",
-    borderColor: "#fff",
+    borderColor: colors.white,
     margin: "auto",
     [theme.breakpoints.up("sm")]: {
       marginRight: 10,

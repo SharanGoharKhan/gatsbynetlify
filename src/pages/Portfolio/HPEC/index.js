@@ -27,6 +27,7 @@ import Mobile7 from "../../../images/mobile7.svg"
 import Mobile8 from "../../../images/mobile8.svg"
 import Mobile9 from "../../../images/mobile9.svg"
 import { useAnimation } from "../../../utils/useAnimation"
+import { colors } from "../../../utils/colors"
 
 export default function Hpec() {
   const theme = useTheme()
@@ -34,7 +35,7 @@ export default function Hpec() {
   useAnimation()
 
   return (
-    <Layout bar={"#200E34"} font={"#fff"}>
+    <Layout bar={"#200E34"} font={colors.white}>
       <div className="hpec-background">
         <Container>
           <Grid container>
@@ -226,7 +227,7 @@ export default function Hpec() {
           <Box style={{ textAlign: "center" }} mr={5}>
             <Box
               className={matches ? "color-small" : "color"}
-              style={{ backgroundColor: "#fff" }}
+              style={{ backgroundColor: colors.white }}
             ></Box>
             <Typography variant="body1">#FFFFFF</Typography>
           </Box>

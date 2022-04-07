@@ -14,10 +14,11 @@ import { Link as GatsbyLink } from "gatsby"
 import InstaRound from "../../images/instagram-icon.svg"
 import TwitterRound from "../../images/twitter-icon.svg"
 import LinkedInRound from "../../images/linkedin-icon.svg"
+import { colors } from "../../utils/colors"
 
 const useStyles = makeStyles(theme => ({
   container: {
-    backgroundColor: "#fff",
+    backgroundColor: colors.white,
     padding: theme.spacing(10),
     height: "fit-content",
     textAlign: "center",
@@ -36,7 +37,7 @@ const useStyles = makeStyles(theme => ({
   innerText: {
     fontWeight: 400,
     fontSize: "2.2vmin",
-    color: "#333333",
+    color: colors.lightGray,
     opacity: "60%",
     fontFamily: "Montserrat",
   },
@@ -44,7 +45,7 @@ const useStyles = makeStyles(theme => ({
     textAlign: "left",
   },
   footerText: {
-    color: "#755A7D",
+    color: colors.lightPurple,
     fontWeight: 500,
     fontSize: "2vmin",
     fontFamily: "Montserrat",

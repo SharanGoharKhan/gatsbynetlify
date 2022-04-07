@@ -10,10 +10,11 @@ import {
 import CallIcon from "../../svg/callIcon"
 import AddressIcon from "../../svg/addressIcon"
 import EmailIcon from "../../svg/emailIcon"
+import { colors } from "../../utils/colors"
 
 const useStyles = makeStyles(theme => ({
   container: {
-    background: "linear-gradient(to bottom, #179AFB 0%, #301E5B 100%)",
+    background: `linear-gradient(to bottom, ${colors.primary} 0%, ${colors.purple} 100%)`,
     padding: theme.spacing(6),
     height: "fit-content",
     textAlign: "center",
@@ -22,7 +23,7 @@ const useStyles = makeStyles(theme => ({
     width: "100%",
     height: "7vmin",
     borderRadius: 2,
-    color: "#A2A9B0",
+    color: colors.gray,
     borderWidth: 1,
     padding: 10,
     fontFamily: "Montserrat",
@@ -32,13 +33,13 @@ const useStyles = makeStyles(theme => ({
   label: {
     textAlign: "left",
     fontFamily: "Poppins",
-    color: "#fff",
+    color: colors.white,
     fontWeight: "600",
     fontSize: "2vmin",
   },
   heading: {
     fontWeight: 700,
-    color: "#fff",
+    color: colors.white,
     fontSize: "5vmin",
     textAlign: "center",
     fontFamily: "Montserrat",
@@ -46,13 +47,13 @@ const useStyles = makeStyles(theme => ({
   iconText: {
     fontSize: "2vmin",
     fontWeight: 600,
-    color: "#CFD3D7",
+    color: colors.mediumGray,
     fontFamily: "Montserrat",
   },
   iconText2: {
     fontSize: "3vmin",
     fontWeight: 700,
-    color: "#fff",
+    color: colors.white,
     fontFamily: "Montserrat",
   },
 }))
@@ -117,7 +118,7 @@ const ContactUs = () => {
                   height: "20vh",
                   fontFamily: "Montserrat",
                   fontSize: "2vmin",
-                  color: "#A2A9B0",
+                  color: colors.gray,
                   fontWeight: "600",
                   borderRadius: "8px",
                   padding: 10,
@@ -132,16 +133,16 @@ const ContactUs = () => {
                   size="large"
                   style={{
                     width: "160px",
-                    color: "#3751FF",
+                    color: colors.blue2,
                     marginTop: 20,
                     fontFamily: "Montserrat",
-                    backgroundColor: "#3A86FF",
+                    backgroundColor: colors.paleBlue,
                   }}
                 >
                   <Typography
                     style={{
                       fontFamily: "Montserrat",
-                      color: "#fff",
+                      color: colors.white,
                       fontSize: "3vmin",
                       fontWeight: "600",
                     }}
