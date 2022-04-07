@@ -6,7 +6,7 @@ import WebService from "../../images/web-banner.svg"
 import WebGroup from "../../images/group-web.png"
 import { useTheme } from "@mui/material/styles"
 import "./styles.css"
-import "../../styles/styles.css"
+import "../../utils/styles/styles.css"
 
 export default function Web() {
   const theme = useTheme()

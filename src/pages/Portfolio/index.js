@@ -8,7 +8,7 @@ import {
 } from "../../components"
 import Layout from "../../components/layout"
 import "./styles.css"
-import "../../styles/styles.css"
+import "../../utils/styles/styles.css"
 
 export default function Portfolio() {
   return (

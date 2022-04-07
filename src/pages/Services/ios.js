@@ -12,7 +12,7 @@ import IOSService from "../../images/ios.svg"
 import D1 from "../../images/Device1.png"
 import D2 from "../../images/Device2.png"
 import "./styles.css"
-import "../../styles/styles.css"
+import "../../utils/styles/styles.css"
 
 import { useTheme } from "@mui/material/styles"
 

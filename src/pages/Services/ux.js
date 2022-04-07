@@ -5,7 +5,7 @@ import Layout from "../../components/layout"
 import UXImage from "../../images/ux.svg"
 import UXGroup from "../../images/ux-group.png"
 import "./styles.css"
-import "../../styles/styles.css"
+import "../../utils/styles/styles.css"
 
 export default function Ux() {
   return (

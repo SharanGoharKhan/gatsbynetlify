@@ -1,6 +1,6 @@
 import { Typography } from "@material-ui/core"
 import React from "react"
-import "../../styles/styles.css"
+import "../../utils/styles/styles.css"
 import { useAnimation } from "../../utils/useAnimation"
 
 export default function Typos({

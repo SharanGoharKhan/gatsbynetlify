@@ -5,7 +5,7 @@ import Layout from "../../components/layout"
 import AndroidService from "../../images/android.svg"
 import AndroidGroup from "../../images/android-group.png"
 import "./styles.css"
-import "../../styles/styles.css"
+import "../../utils/styles/styles.css"
 import Aos from "aos"
 import "aos/dist/aos.css"
 

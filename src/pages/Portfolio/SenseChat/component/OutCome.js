@@ -90,19 +90,19 @@ const OutComeAndBenefits = props => {
             <Grid item xs={12} sm={6} md={3}>
               <StaticImage
                 style={{ width: "36vmin" }}
-                src="../../../images/Mockup7.svg"
+                src="../../../../images/Mockup7.svg"
               />
             </Grid>
             <Grid item xs={12} sm={6} md={3}>
               <StaticImage
                 style={{ width: "36vmin" }}
-                src={"../../../images/Mockup8.svg"}
+                src={"../../../../images/Mockup8.svg"}
               />
             </Grid>
             <Grid item xs={12} sm={6} md={3}>
               <StaticImage
                 style={{ width: "36vmin" }}
-                src="../../../images/Mockup9.svg"
+                src="../../../../images/Mockup9.svg"
               />
             </Grid>
           </Grid>

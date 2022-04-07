@@ -8,7 +8,7 @@ import Mockup2 from "../../images/mockup2.png"
 import { useTheme } from "@mui/material/styles"
 import { Link } from "gatsby"
 import "./styles.css"
-import "../../styles/styles.css"
+import "../../utils/styles/styles.css"
 
 export default function Saas() {
   const theme = useTheme()

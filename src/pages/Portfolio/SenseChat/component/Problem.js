@@ -197,19 +197,19 @@ const Problem = props => {
             <Grid item xs={12} sm={6} md={3}>
               <StaticImage
                 style={{ width: "36vmin" }}
-                src={"../../../images/Mockup1.svg"}
+                src={"../../../../images/Mockup1.svg"}
               />
             </Grid>
             <Grid item xs={12} sm={6} md={3}>
               <StaticImage
                 style={{ width: "36vmin" }}
-                src={"../../../images/Mockup2.svg"}
+                src={"../../../../images/Mockup2.svg"}
               />
             </Grid>
             <Grid item xs={12} sm={6} md={3}>
               <StaticImage
                 style={{ width: "36vmin" }}
-                src={"../../../images/Mockup1.svg"}
+                src={"../../../../images/Mockup1.svg"}
               />
             </Grid>
           </Grid>

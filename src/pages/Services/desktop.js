@@ -5,7 +5,7 @@ import Layout from "../../components/layout"
 import DesktopService from "../../images/desktop-banner.svg"
 import DesktopGroup from "../../images/desktop-group.png"
 import { useTheme } from "@mui/material/styles"
-import "../../styles/styles.css"
+import "../../utils/styles/styles.css"
 import "./styles.css"
 
 export default function Web() {

@@ -19,7 +19,7 @@ import CreditCardIcon from "@mui/icons-material/CreditCard"
 import CheckroomIcon from "@mui/icons-material/Checkroom"
 import Building from "../../images/building.png"
 import "./styles.css"
-import "../../styles/styles.css"
+import "../../utils/styles/styles.css"
 import { LeftCardData, RightCardData } from "../../utils/cardData"
 import { Link as GatsbyLink } from "gatsby"
 
