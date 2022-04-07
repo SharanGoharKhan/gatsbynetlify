@@ -34,8 +34,7 @@ const useStyles = makeStyles(theme => ({
   },
   gridList: {
     flexWrap: "nowrap",
-    transform: "translateZ(0)",
-    transform: "translateX(0)",
+    transform: "translateX(0) translateZ(0)",
   },
   titleText: {
     color: colors.darkBlue,

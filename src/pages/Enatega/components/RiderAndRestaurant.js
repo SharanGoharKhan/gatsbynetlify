@@ -3,8 +3,6 @@ import {
   Typography,
   makeStyles,
   Grid,
-  useMediaQuery,
-  useTheme,
   Button,
   Link as MaterialLink,
 } from "@material-ui/core"
@@ -54,7 +52,6 @@ const useStyles = makeStyles(theme => ({
 }))
 
 const RiderAndRestaurant = props => {
-  const theme = useTheme()
   const classes = useStyles()
 
   return (

@@ -71,11 +71,7 @@ const Blogs = () => {
   const matches = useMediaQuery(theme.breakpoints.up("sm"))
   const classes = useStyles()
 
-  const [expanded, setExpanded] = React.useState(false)
-
-  const handleExpandClick = () => {
-    setExpanded(!expanded)
-  }
+  const [expanded] = React.useState(false)
 
   return (
     <>

@@ -47,7 +47,11 @@ const SenseChat = () => {
           communities and friends.
         </Typography>
         <div style={{ textAlign: "center", height: 200 }}>
-          <img style={{ width: "53vmin", height: "70vmin" }} src={Chat} />
+          <img
+            style={{ width: "53vmin", height: "70vmin" }}
+            src={Chat}
+            alt="chat"
+          />
         </div>
       </div>
       <div style={{ textAlign: "center", marginTop: 250 }}>

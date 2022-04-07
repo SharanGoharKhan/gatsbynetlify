@@ -71,7 +71,7 @@ const Blog = () => {
   const matches = useMediaQuery(theme.breakpoints.up("sm"))
   const classes = useStyles()
 
-  const [expanded, setExpanded] = React.useState(false)
+  const [expanded] = React.useState(false)
 
   return (
     <div id="feature" className={classes.root}>

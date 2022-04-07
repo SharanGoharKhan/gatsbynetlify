@@ -187,6 +187,7 @@ export default function EasyEats() {
           <img
             src={Devices}
             width="75%"
+            alt="devices"
             data-aos="fade-down-right"
             data-aos-delay="1000"
           />

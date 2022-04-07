@@ -1,6 +1,6 @@
 import { Box, Typography, useMediaQuery } from "@material-ui/core"
 import React from "react"
-import { Banner, BottomServices, ContactUs, Typos } from "../../components"
+import { Banner, BottomServices, Typos } from "../../components"
 import Layout from "../../components/layout"
 import DesktopService from "../../images/desktop-banner.svg"
 import DesktopGroup from "../../images/desktop-group.png"

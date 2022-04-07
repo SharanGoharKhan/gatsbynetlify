@@ -1,6 +1,6 @@
-import { Box, Typography } from "@material-ui/core"
+import { Box } from "@material-ui/core"
 import React from "react"
-import { Banner, BottomServices, ContactUs, Typos } from "../../components"
+import { Banner, BottomServices, Typos } from "../../components"
 import Layout from "../../components/layout"
 import UXImage from "../../images/ux.svg"
 import UXGroup from "../../images/ux-group.png"

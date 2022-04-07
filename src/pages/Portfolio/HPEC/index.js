@@ -6,8 +6,7 @@ import {
   useMediaQuery,
   useTheme,
 } from "@material-ui/core"
-import React, { useEffect } from "react"
-import { ContactUs } from "../../../components"
+import React from "react"
 import Layout from "../../../components/layout"
 import "./styles.css"
 import Circle from "../../../images/circle.svg"

@@ -1,6 +1,5 @@
 import React from "react"
 import AppleIcon from "@mui/icons-material/Apple"
-import WordpressIcon from "../images/wordpress.svg"
 import AndroidIcon from "@mui/icons-material/Android"
 import ScreenshotMonitorIcon from "@mui/icons-material/ScreenshotMonitor"
 import EmojiObjectsIcon from "@mui/icons-material/EmojiObjects"

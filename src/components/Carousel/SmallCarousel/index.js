@@ -53,7 +53,7 @@ export default function SmallCarousel() {
         }}
         modules={[FreeMode, Pagination]}
         className={classes.mySwiper}
-        autoplay={{ delay: 500 }}
+        autoplay={{ delay: 1000 }}
         loop={true}
       >
         {smallCarouselData.map((item, index) => {

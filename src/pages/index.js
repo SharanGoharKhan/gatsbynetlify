@@ -21,7 +21,7 @@ import {
   BottomServices,
   Typos,
   PortfolioProjects,
-  FAQ,
+  Faq,
   Carousel,
   Blogs,
   SmallCarousel,
@@ -135,7 +135,6 @@ const useStyles = makeStyles(theme => ({
 
 const IndexPage = props => {
   const classes = useStyles()
-  const matches = useMediaQuery("(min-width:600px)")
   const theme = useTheme()
   const small = useMediaQuery(theme.breakpoints.down("sm"))
   useAnimation()
@@ -522,7 +521,7 @@ const IndexPage = props => {
             <Typos first="FA" second="FAQ'S" third={"S"} right={"4vmin"} />
             <Container>
               <Grid container spacing={2}>
-                <FAQ />
+                <Faq />
               </Grid>
             </Container>
             <Blogs />

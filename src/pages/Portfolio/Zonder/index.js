@@ -25,7 +25,6 @@ import ScreenShareIcon from "@mui/icons-material/ScreenShare"
 export default function Zonder() {
   const theme = useTheme()
   const small = useMediaQuery(theme.breakpoints.down("sm"))
-  const medium = useMediaQuery(theme.breakpoints.down("medium"))
 
   return (
     <div

@@ -3,18 +3,13 @@ import Blog1 from "../../images/blog-image.png"
 import Blog2 from "../../images/blog-image2.png"
 import { externalLinks } from "../../utils/links"
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward"
-
 import {
   Grid,
-  Paper,
   Typography,
   makeStyles,
-  useMediaQuery,
   Container,
   Box,
   Button,
-  Divider,
-  useTheme,
 } from "@material-ui/core"
 import { Typos } from ".."
 import { colors } from "../../utils/colors"
@@ -69,7 +64,7 @@ export default function Blogs() {
             data-aos="slide-left"
           >
             <Box>
-              <img src={Blog1} />
+              <img src={Blog1} alt="blog" />
             </Box>
             <Box className={classes.blogBox} style={{ left: "-10px" }}>
               <Typography className={classes.bold} align="center">
@@ -107,7 +102,7 @@ export default function Blogs() {
             data-aos="slide-right"
           >
             <Box>
-              <img src={Blog2} />
+              <img src={Blog2} alt="blog" />
             </Box>
             <Box
               style={{
