@@ -39,7 +39,7 @@ export default function BannerIcons() {
       </Box>
       <Box className={classes.logoContainer}>
         <MaterialUILink
-          href="https://www.linkedin.com/company/14512538"
+          href="https://www.instagram.com/ninjas.code/"
           target="_blank"
         >
           <Instagram style={{ marginTop: 6 }} />

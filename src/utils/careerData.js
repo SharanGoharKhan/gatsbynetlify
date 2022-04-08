@@ -1,50 +1,32 @@
 export const careerData = [
   {
-    title: "Full Stack Developer",
-    post: "Senior",
-    description:
-      "You will be responsible for creating a server side logic of front end designs and integration of user-facing elements. You will also be required to build reusable code and libraries for future usage. We will demand optimization of the product for highest possible speed and maximum scalability along with the inclusion of data protection and data storage solutions.",
-    Requirements:
-      "Work experience of at least 1 year as a Back-end developer. Hands on experience with Node.js and Go languages. Experience in Java, Ruby, PHP and Python and CMS framework. BSc degree in Computer Science or relevant field.",
+    title: "Full Stack Engineer",
+    post: "Mid Level",
+    link: "https://ninjas-code.breezy.hr/p/13b68f620687-full-stack-engineer"
   },
   {
-    title: "Full Stack Developer",
-    post: "Senior",
-    description:
-      "You will be responsible for creating a server side logic of front end designs and integration of user-facing elements. You will also be required to build reusable code and libraries for future usage. We will demand optimization of the product for highest possible speed and maximum scalability along with the inclusion of data protection and data storage solutions.",
-    Requirements:
-      "Work experience of at least 1 year as a Back-end developer. Hands on experience with Node.js and Go languages. Experience in Java, Ruby, PHP and Python and CMS framework. BSc degree in Computer Science or relevant field.",
+    title: "React Native Engineer",
+    post: "Mid Level",
+    link: "https://ninjas-code.breezy.hr/p/53f291e5ac45-frontend-react-native-engineer"
   },
   {
-    title: "Full Stack Developer",
-    post: "Senior",
-    description:
-      "You will be responsible for creating a server side logic of front end designs and integration of user-facing elements. You will also be required to build reusable code and libraries for future usage. We will demand optimization of the product for highest possible speed and maximum scalability along with the inclusion of data protection and data storage solutions.",
-    Requirements:
-      "Work experience of at least 1 year as a Back-end developer. Hands on experience with Node.js and Go languages. Experience in Java, Ruby, PHP and Python and CMS framework. BSc degree in Computer Science or relevant field.",
-  },
-  {
-    title: "Full Stack Developer",
+    title: "UI/UX Designer",
     post: "Junior",
-    description:
-      "You will be responsible for creating a server side logic of front end designs and integration of user-facing elements. You will also be required to build reusable code and libraries for future usage. We will demand optimization of the product for highest possible speed and maximum scalability along with the inclusion of data protection and data storage solutions.",
-    Requirements:
-      "Work experience of at least 1 year as a Back-end developer. Hands on experience with Node.js and Go languages. Experience in Java, Ruby, PHP and Python and CMS framework. BSc degree in Computer Science or relevant field.",
+    link: "https://ninjas-code.breezy.hr/p/9661b26f4400-ui-ux-designer"
   },
   {
-    title: "Full Stack Developer",
-    post: "Internee",
-    description:
-      "You will be responsible for creating a server side logic of front end designs and integration of user-facing elements. You will also be required to build reusable code and libraries for future usage. We will demand optimization of the product for highest possible speed and maximum scalability along with the inclusion of data protection and data storage solutions.",
-    Requirements:
-      "Work experience of at least 1 year as a Back-end developer. Hands on experience with Node.js and Go languages. Experience in Java, Ruby, PHP and Python and CMS framework. BSc degree in Computer Science or relevant field.",
+    title: "Content Writer",
+    post: "Mid Level",
+    link: "https://ninjas-code.breezy.hr/p/18fda93cc3b8-technical-content-writer"
   },
   {
-    title: "Full Stack Developer",
-    post: "Internee",
-    description:
-      "You will be responsible for creating a server side logic of front end designs and integration of user-facing elements. You will also be required to build reusable code and libraries for future usage. We will demand optimization of the product for highest possible speed and maximum scalability along with the inclusion of data protection and data storage solutions.",
-    Requirements:
-      "Work experience of at least 1 year as a Back-end developer. Hands on experience with Node.js and Go languages. Experience in Java, Ruby, PHP and Python and CMS framework. BSc degree in Computer Science or relevant field.",
+    title: "Senior Backend Engineer",
+    post: "Senior",
+    link: "https://ninjas-code.breezy.hr/p/03006ffc34cf-senior-back-end-engineer"
+  },
+  {
+    title: "Frontend Engineer",
+    post: "Senior",
+    link: "https://ninjas-code.breezy.hr/p/059beaac8b70-front-end-engineer"
   },
 ]

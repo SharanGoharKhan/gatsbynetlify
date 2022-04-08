@@ -161,7 +161,7 @@ const Footer = () => {
               </Grid>
               <Grid item xs={3} lg={2}>
                 <MaterialLink
-                  href="https://www.instagram.com/ninjascode/"
+                  href="https://www.instagram.com/ninjas.code/"
                   target="_blank"
                 >
                   <img src={InstaRound} alt="instagram" />
