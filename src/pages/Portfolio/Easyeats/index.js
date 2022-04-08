@@ -35,7 +35,10 @@ export default function EasyEats() {
         <Box>
           <img src={EasyEatsImage} alt="banner" data-aos="zoom-out" />
         </Box>
-        <div className="eats-lower-banner">
+        <div
+          className="eats-lower-banner"
+          style={{ minHeight: small && "80vh" }}
+        >
           <img
             src={Berries}
             alt="berries"
@@ -85,7 +88,6 @@ export default function EasyEats() {
               alt="ladder"
               style={{ width: "70%" }}
               data-aos="zoom-in-right"
-              data-aos-delay="1200"
             />
 
             <img
@@ -98,7 +100,6 @@ export default function EasyEats() {
                 right: medium ? "-10rem " : "-15vmin",
               }}
               data-aos="zoom-in-left"
-              data-aos-delay="1200"
             />
           </Box>
         </div>
@@ -109,7 +110,13 @@ export default function EasyEats() {
                 <Grid container spacing={8}>
                   {easyEatsData.map((item, index) => {
                     return (
-                      <Grid item md={6} key={index} data-aos="fade-right">
+                      <Grid
+                        item
+                        md={6}
+                        key={index}
+                        data-aos="fade-right"
+                        data-aos-delay={1200}
+                      >
                         <div style={{ display: "flex" }}>
                           {item.icon}
                           <Box ml={2}>

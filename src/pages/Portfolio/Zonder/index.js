@@ -34,7 +34,7 @@ export default function Zonder() {
       }}
       className="zonder-bg"
     >
-      <Layout bar="transparent" font={"#fff"}>
+      <Layout bar="transparent" font={"#fff"} mobileGradient={"#5beccc"}>
         <Container className={"zonder-container"}>
           <Typography variant="h2" className="white-color font-bold title">
             zonder

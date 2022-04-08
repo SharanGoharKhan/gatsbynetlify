@@ -11,9 +11,10 @@ import Umar from "../../images/umar.png"
 import "./styles.css"
 import "../../utils/styles/styles.css"
 import LinkedInIcon from "@mui/icons-material/LinkedIn"
-import InstagramIcon from "@mui/icons-material/Instagram"
+import GitHubIcon from "@mui/icons-material/GitHub"
 import BlueCard from "../../images/strip-card-blue.png"
 import PurpleCard from "../../images/strip-card.png"
+import Behance from "../../images/behance.png"
 import Aos from "aos"
 import "aos/dist/aos.css"
 export default function Team() {
@@ -41,7 +42,10 @@ export default function Team() {
         <BottomServices />
         <Typos first="OUR" second="OUR TEAM" third="TEAM" right={"4vmin"} />
 
-        <Container style={{ marginTop: "2rem", marginBottom: "2rem" }}>
+        <Container
+          style={{ marginTop: "2rem", marginBottom: "2rem" }}
+          className="team"
+        >
           <Grid container spacing={2}>
             <Grid item xs={6} md={4} align="center">
               <Paper
@@ -57,8 +61,20 @@ export default function Team() {
                   CEO
                 </Typography>
                 <Box>
-                  <LinkedInIcon className="icon-margin" />
-                  <InstagramIcon />
+                  <a
+                    href="https://www.linkedin.com/in/sharan-gohar-khan/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <LinkedInIcon className="icon-margin" />
+                  </a>
+                  <a
+                    href="  https://github.com/SharanGoharKhan/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <GitHubIcon />
+                  </a>
                 </Box>
               </Paper>
             </Grid>
@@ -88,8 +104,20 @@ export default function Team() {
                   CTO
                 </Typography>
                 <Box>
-                  <LinkedInIcon className="icon-margin" />
-                  <InstagramIcon />
+                  <a
+                    href="https://www.linkedin.com/in/muhammad-adnan-8aa213113/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <LinkedInIcon className="icon-margin" />
+                  </a>
+                  <a
+                    href="https://github.com/adnan909"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <GitHubIcon />
+                  </a>
                 </Box>
               </Paper>
             </Grid>
@@ -126,9 +154,29 @@ export default function Team() {
                 <Typography variant="h6" className="designation">
                   UI/UX
                 </Typography>
-                <Box>
-                  <LinkedInIcon className="icon-margin" />
-                  <InstagramIcon />
+                <Box
+                  display={"flex"}
+                  justifyContent="center"
+                  alignItems={"center"}
+                >
+                  <a
+                    href="https://www.linkedin.com/in/shahzaib-alic/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <LinkedInIcon className="icon-margin" />
+                  </a>
+                  <a
+                    href="https://www.behance.net/shahzaibalic"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <img
+                      src={Behance}
+                      alt="behance"
+                      style={{ width: "20px" }}
+                    />
+                  </a>
                 </Box>
               </Paper>
             </Grid>
@@ -161,8 +209,20 @@ export default function Team() {
                   Full Stack Developer
                 </Typography>
                 <Box>
-                  <LinkedInIcon className="icon-margin" />
-                  <InstagramIcon />
+                  <a
+                    href="https://www.linkedin.com/in/usama-sattar-1587a2214/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <LinkedInIcon className="icon-margin" />
+                  </a>
+                  <a
+                    href="https://github.com/usama-sattar"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <GitHubIcon />
+                  </a>
                 </Box>
               </Paper>
             </Grid>
@@ -191,8 +251,20 @@ export default function Team() {
                   Full Stack Developer
                 </Typography>
                 <Box>
-                  <LinkedInIcon className="icon-margin" />
-                  <InstagramIcon />
+                  <a
+                    href="https://www.linkedin.com/in/umarkhalid15/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <LinkedInIcon className="icon-margin" />
+                  </a>
+                  <a
+                    href="https://github.com/umar15"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <GitHubIcon />
+                  </a>
                 </Box>
               </Paper>
             </Grid>
