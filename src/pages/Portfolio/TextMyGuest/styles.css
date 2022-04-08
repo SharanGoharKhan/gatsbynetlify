@@ -1,0 +1,85 @@
+.pink-guest-background {
+  background: linear-gradient(to bottom, #ff075d 0%, #ee3776 100%);
+  min-height: 100vh;
+  overflow: visible;
+}
+.lower-pink-guest-background {
+  background: linear-gradient(to bottom, #ee3776 0%, #ff075d 100%);
+  min-height: 100vh;
+  overflow: visible;
+}
+.inside-pink {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  overflow: visible;
+}
+.font-bold {
+  font-weight: 900;
+}
+.white-color {
+  color: "white";
+}
+.pink-color {
+  color: #ff075d;
+}
+.pink-bg-color {
+  background-color: #ff075d;
+}
+
+.black-color {
+  background-color: #000;
+}
+.scaled {
+  transform: scaleY(-1);
+  transform: none;
+}
+.group-screen {
+  position: relative;
+  left: 10.5rem;
+  overflow: visible;
+}
+.lower-process {
+  height: 100%;
+  background: linear-gradient(to bottom, #ee3776 0%, #ff075d 100%);
+}
+.process {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  margin: 10px;
+}
+.process-outline {
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: black;
+  color: white;
+}
+.height100 {
+  height: 100%;
+}
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 250px;
+}
+.chat-device-image {
+  width: 260px;
+  position: absolute;
+  top: -3rem;
+  right: -3rem;
+  overflow: visible;
+}
+.guest-btn {
+  background-color: #ff075d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  padding: 10px;
+  margin: auto;
+  cursor: pointer;
+  width: 200px;
+}
+.guest-btn:hover {
+  background-color: #be0948;
+}

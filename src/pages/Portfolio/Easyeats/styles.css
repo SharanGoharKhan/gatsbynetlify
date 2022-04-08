@@ -1,0 +1,84 @@
+.eats-lower-banner {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  flex-direction: column;
+  background-color: white;
+}
+.berries {
+  position: absolute;
+
+  width: 300px;
+}
+.light-green-cube {
+  background-color: #baef63;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  border-radius: 10px;
+  top: 15rem;
+  right: 15rem;
+}
+.dark-green-cube {
+  background-color: #90c33d;
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  border-radius: 10px;
+  top: 25rem;
+  right: 20rem;
+}
+.bold {
+  font-weight: 900;
+}
+.tilted-container {
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.easy-eats-video-container {
+  margin: auto;
+  position: relative;
+  overflow: visible;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  border-radius: 4rem;
+  height: 450px;
+  width: 65%;
+}
+.white-typo {
+  color: white;
+}
+.color-cube {
+  width: 80px;
+  height: 80px;
+  border-radius: 20px;
+  background-color: #90c33d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+}
+.stroke {
+  -webkit-text-stroke: 1px white;
+  -webkit-text-fill-color: transparent;
+  font-size: 4vmin;
+}
+.easy-eats-btn {
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  padding: 10px;
+  margin: auto;
+  cursor: pointer;
+  width: 200px;
+}
+.easy-eats-btn:hover {
+  background-color: rgb(199, 199, 199);
+}

@@ -1,0 +1,34 @@
+.typos {
+  width: 100%;
+  text-align: center;
+  margin-top: 60px;
+  height: 120px;
+}
+.brackets {
+  color: #179afb;
+  font-weight: 900;
+  position: relative;
+  font-size: 10vmin;
+}
+.typos-before {
+  color: #000;
+  font-weight: 800;
+  position: absolute;
+  top: 10vmin;
+  left: 5vmin;
+  -webkit-text-stroke: 1px #179afb;
+  -webkit-text-fill-color: transparent;
+  font-size: 5vmin;
+}
+.typos-main {
+  color: #000;
+  font-weight: 800;
+  font-size: 5vmin;
+}
+.typos-after {
+  font-weight: 800;
+  position: absolute;
+  -webkit-text-stroke: 1px #000;
+  -webkit-text-fill-color: transparent;
+  font-size: 5vmin;
+}
