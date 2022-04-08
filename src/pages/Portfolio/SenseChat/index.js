@@ -1,5 +1,5 @@
 import React, { useEffect } from "react"
-import { Typography } from "@material-ui/core"
+import { Typography, Button } from "@material-ui/core"
 import { Footer, TopBar } from "../../../components"
 import "./SenseChat.css"
 import FormatQuoteIcon from "@material-ui/icons/FormatQuote"
@@ -101,6 +101,14 @@ const SenseChat = () => {
       <Approach />
       <Solution />
       <OutComeAndBenefits />
+      <Button
+        disableRipple
+        target="_blank"
+        className="sense-btn"
+        href="https://sense.chat/"
+      >
+        Visit Webiste
+      </Button>
       <Footer />
     </div>
   )

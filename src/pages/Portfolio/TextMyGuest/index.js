@@ -1,5 +1,6 @@
 import {
   Box,
+  Button,
   Grid,
   Typography,
   useMediaQuery,
@@ -336,19 +337,17 @@ export default function TextMyGuest() {
             </Box>
           </Box>
         </Grid>
-        <Box
-          style={{
-            textAlign: "center",
-            width: "100%",
-            backgroundColor: "white",
-            padding: "4rem",
-          }}
-        >
-          <button className="guest-btn">
-            <Typography variant="caption">Visit Website</Typography>
-          </button>
-        </Box>
       </Grid>
+      <Box style={{ textAlign: "center" }} mb={3} mt={3}>
+        <Button
+          disableRipple
+          target="_blank"
+          className="guest-btn"
+          href="https://textmyguests.com/"
+        >
+          Visit Webiste
+        </Button>
+      </Box>
       <Footer />
     </>
   )

@@ -1,27 +1,10 @@
 import React from "react"
-// Import Swiper React components
-import { Swiper, SwiperSlide } from "swiper/react"
-// Import Swiper styles
-import "swiper/css"
-import "swiper/css/free-mode"
-import "swiper/css/pagination"
-import "swiper/css/bundle"
-import "./styles.css"
-import { Paper, makeStyles, useMediaQuery, useTheme } from "@material-ui/core"
+import { Paper, makeStyles } from "@material-ui/core"
 import { smallCarouselData } from "../../../utils/carouselData"
-import SwiperCore, { FreeMode, Pagination, Autoplay } from "swiper"
 import { colors } from "../../../utils/colors"
+import Marquee from "react-fast-marquee"
 
-SwiperCore.use([Autoplay])
 const useStyles = makeStyles(theme => ({
-  mySwiper: {
-    "& > *": {
-      overflow: "visible !important",
-    },
-    "& .swiper-pagination": {
-      display: "none",
-    },
-  },
   sliderPaper: {
     padding: 25,
     textAlign: "center",
@@ -34,38 +17,23 @@ const useStyles = makeStyles(theme => ({
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
+    marginLeft: 30,
   },
 }))
 export default function SmallCarousel() {
   const classes = useStyles()
-  const theme = useTheme()
-  const small = useMediaQuery(theme.breakpoints.down("md"))
-  const extraSmall = useMediaQuery(theme.breakpoints.down("sm"))
 
   return (
     <>
-      <Swiper
-        slidesPerView={extraSmall ? 1 : small ? 3 : 4}
-        spaceBetween={30}
-        freeMode={true}
-        pagination={{
-          clickable: true,
-        }}
-        modules={[FreeMode, Pagination]}
-        className={classes.mySwiper}
-        autoplay={{ delay: 1000 }}
-        loop={true}
-      >
+      <Marquee gradient={false} speed={50}>
         {smallCarouselData.map((item, index) => {
           return (
-            <SwiperSlide>
-              <Paper className={classes.sliderPaper} square={true} key={index}>
-                <img src={item.logo} alt="slider" style={{ margin: 0 }} />
-              </Paper>
-            </SwiperSlide>
+            <Paper className={classes.sliderPaper} square={true} key={index}>
+              <img src={item.logo} alt="slider" style={{ margin: 0 }} />
+            </Paper>
           )
         })}
-      </Swiper>
+      </Marquee>
     </>
   )
 }

@@ -1,5 +1,6 @@
 import {
   Box,
+  Button,
   Container,
   Grid,
   Typography,
@@ -18,15 +19,13 @@ import PurpleBlock from "../../../images/purple-block.svg"
 import Flow from "../../../images/flow.png"
 import Mobile1 from "../../../images/mobile1.svg"
 import Mobile2 from "../../../images/mobile2.svg"
-import Mobile3 from "../../../images/mobile3.svg"
 import Mobile4 from "../../../images/mobile4.svg"
-import Mobile5 from "../../../images/mobile5.svg"
 import Mobile6 from "../../../images/mobile6.svg"
 import Mobile7 from "../../../images/mobile7.svg"
 import Mobile8 from "../../../images/mobile8.svg"
-import Mobile9 from "../../../images/mobile9.svg"
 import { useAnimation } from "../../../utils/useAnimation"
 import { colors } from "../../../utils/colors"
+import Blur from "../../../images/blur.png"
 
 export default function Hpec() {
   const theme = useTheme()
@@ -61,6 +60,14 @@ export default function Hpec() {
                   data-aos="flip-left"
                   data-aos-easing="ease-in-sine"
                   data-aos-delay="800"
+                />
+                <img
+                  src={Blur}
+                  alt="blur"
+                  style={{ width: "100%", height: "100%" }}
+                  className={matches ? "inner-image-small" : "inner-image"}
+                  data-aos="flip-left"
+                  data-aos-easing="ease-in-sine"
                 />
                 <img
                   src={Main}
@@ -223,28 +230,53 @@ export default function Hpec() {
               Color Pallete
             </Typography>
           </Box>
-          <Box style={{ textAlign: "center" }} mr={5}>
+          <Box
+            display={"flex"}
+            flexDirection="column"
+            justifyContent={"center"}
+            mr={5}
+          >
             <Box
               className={matches ? "color-small" : "color"}
               style={{ backgroundColor: colors.white }}
             ></Box>
-            <Typography variant="body1">#FFFFFF</Typography>
+            <Typography variant="body1" align="center">
+              #FFFFFF
+            </Typography>
           </Box>
-          <Box style={{ textAlign: "center" }} mr={5}>
+          <Box
+            display={"flex"}
+            flexDirection="column"
+            justifyContent={"center"}
+            mr={5}
+          >
             <Box
               className={matches ? "color-small" : "color"}
               style={{ backgroundColor: "#E1e1e1" }}
             ></Box>
-            <Typography variant="body1" style={{ color: "#e1e1e1" }}>
+            <Typography
+              variant="body1"
+              style={{ color: "#e1e1e1" }}
+              align="center"
+            >
               #E1E1E1
             </Typography>
           </Box>
-          <Box style={{ textAlign: "center" }} mr={5}>
+          <Box
+            display={"flex"}
+            flexDirection="column"
+            justifyContent={"center"}
+            mr={5}
+          >
             <Box
               className={matches ? "color-small" : "color"}
               style={{ backgroundColor: "#7e7dff" }}
             ></Box>
-            <Typography variant="body1" style={{ color: "#737dff" }}>
+            <Typography
+              variant="body1"
+              style={{ color: "#737dff" }}
+              align="center"
+            >
               #7E7DFF
             </Typography>
           </Box>
@@ -268,7 +300,7 @@ export default function Hpec() {
           data-aos-delay="300"
         />
         <img
-          src={Mobile3}
+          src={Mobile4}
           alt="mobile"
           style={{
             top: matches ? "22em" : "0em",
@@ -279,7 +311,7 @@ export default function Hpec() {
           data-aos-delay="350"
         />
         <img
-          src={Mobile4}
+          src={Mobile8}
           alt="mobile"
           style={{
             top: matches ? "30em" : "25em",
@@ -290,7 +322,7 @@ export default function Hpec() {
           data-aos-delay="400"
         />
         <img
-          src={Mobile5}
+          src={Mobile2}
           alt="mobile"
           style={{
             top: "30em",
@@ -302,7 +334,7 @@ export default function Hpec() {
           data-aos-delay="450"
         />
         <img
-          src={Mobile6}
+          src={Mobile4}
           alt="mobile"
           style={{
             top: "20em",
@@ -326,7 +358,7 @@ export default function Hpec() {
           data-aos-delay="550"
         />
         <img
-          src={Mobile8}
+          src={Mobile6}
           alt="mobile"
           style={{
             top: matches ? "50em" : "55em",
@@ -337,7 +369,7 @@ export default function Hpec() {
           data-aos-delay="600"
         />
         <img
-          src={Mobile9}
+          src={Mobile8}
           alt="mobile"
           style={{
             top: matches ? "50em" : "60em",
@@ -349,7 +381,40 @@ export default function Hpec() {
 
         <Box className="white-bg"></Box>
         <Box className={matches ? "blue-bg-small" : "blue-bg"}>
-          <img src={Flow} alt="flow" style={{ marginBottom: "4em" }} />
+          <Grid
+            container
+            className={matches ? "grid-container-small" : "grid-container"}
+          >
+            <Grid item xs={1}></Grid>
+            <Grid item xs={1}></Grid>
+            <Grid item xs={1}></Grid>
+            <Grid item xs={1}></Grid>
+            <Grid item xs={1}></Grid>
+            <Grid item xs={1}></Grid>
+            <Grid item xs={1}></Grid>
+            <Grid item xs={1}></Grid>
+            <Grid item xs={1}></Grid>
+            <Grid item xs={1}></Grid>
+            <Grid item xs={1}></Grid>
+            <Box className="button-container">
+              <img src={Flow} alt="flow" />
+
+              <Box
+                style={{ textAlign: "center", border: "none" }}
+                mb={3}
+                mt={3}
+              >
+                <Button
+                  disableRipple
+                  target="_blank"
+                  className="hpec-btn"
+                  href="https://www.hpec.io/"
+                >
+                  Visit Webiste
+                </Button>
+              </Box>
+            </Box>
+          </Grid>
         </Box>
       </div>
     </Layout>

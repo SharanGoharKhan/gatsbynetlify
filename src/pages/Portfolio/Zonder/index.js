@@ -6,6 +6,7 @@ import {
   Typography,
   useTheme,
   useMediaQuery,
+  Button,
 } from "@material-ui/core"
 import React from "react"
 import Layout from "../../../components/layout"
@@ -67,7 +68,7 @@ export default function Zonder() {
             <img
               src={Cycle}
               alt={"cycle"}
-              style={{ width: "500px", maxWidth: "100%" }}
+              style={{ width: "600px", maxWidth: "100%" }}
             />
             <Box mt={2} style={{ width: "50%" }}>
               <Typography style={{ display: "inline" }} className="white-color">
@@ -116,7 +117,7 @@ export default function Zonder() {
                 alignItems={"center"}
                 justifyContent="space-around"
               >
-                <AddIcon />
+                <AddIcon style={{ fontSize: 60 }} />
                 <Box
                   display="flex"
                   justifyContent={"center"}
@@ -129,7 +130,7 @@ export default function Zonder() {
                     profile
                   </Typography>
                 </Box>
-                <AddIcon />
+                <AddIcon style={{ fontSize: 60 }} />
               </Box>
               <Box
                 display={"flex"}
@@ -224,10 +225,15 @@ export default function Zonder() {
                     Segoe UI
                   </Typography>
                 </Grid>
-                <Box mt={10} style={{ textAlign: "center" }}>
-                  <button className="zonder-btn">
-                    <Typography variant="caption">Visit Website</Typography>
-                  </button>
+                <Box style={{ textAlign: "center" }} mb={3} mt={10}>
+                  <Button
+                    disableRipple
+                    target="_blank"
+                    className="zonder-btn"
+                    href="https://zonderapp.com/"
+                  >
+                    Visit Webiste
+                  </Button>
                 </Box>
               </Box>
             </Box>

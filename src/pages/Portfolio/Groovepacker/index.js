@@ -8,6 +8,7 @@ import {
   Grid,
   Typography,
   useMediaQuery,
+  Button,
 } from "@material-ui/core"
 import Headphone from "../../../images/headphone.svg"
 import Circle from "../../../images/circle-groove.png"
@@ -68,6 +69,7 @@ export default function Groovepack() {
                   height: "auto",
                   maxHeight: 500,
                   marginTop: matches ? 0 : 10,
+                  opacity: 0.5,
                 }}
               />
             </Grid>
@@ -306,11 +308,16 @@ export default function Groovepack() {
               </Typography>
             </Box>
           </Box>
-          <div style={{ textAlign: "center" }}>
-            <button className="btn">
-              <Typography variant="caption">Visit Website</Typography>
-            </button>
-          </div>
+          <Box style={{ textAlign: "center" }} mb={3} mt={3}>
+            <Button
+              disableRipple
+              target="_blank"
+              className="groove-btn"
+              href="https://groovepacker.com/"
+            >
+              Visit Webiste
+            </Button>
+          </Box>
         </Container>
       </div>
     </Layout>

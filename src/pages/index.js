@@ -39,6 +39,7 @@ import {
 } from "@material-ui/core"
 import Layout from "../components/layout"
 import { useAnimation } from "../utils/useAnimation"
+import TawkMessengerReact from "@tawk.to/tawk-messenger-react"
 
 const useStyles = makeStyles(theme => ({
   container: {
@@ -151,7 +152,7 @@ const IndexPage = props => {
           }
           image={false}
         />
-        <div style={{ position: "relative" }}>
+        <div style={{ position: "relative", margin: "10px 0px 10px 0px" }}>
           <Box
             className={classes.blueBox}
             style={{
@@ -293,6 +294,7 @@ const IndexPage = props => {
             </Container>
           </Box>
         </div>
+
         <div
           style={{
             backgroundImage: `url(${Bg})`,
@@ -515,7 +517,7 @@ const IndexPage = props => {
         <Box mt={10} />
 
         <SmallCarousel />
-        <Box mt={5} style={{ backgroundColor: "#fff" }}>
+        <Box mt={5}>
           <div style={{ postion: "relative" }}>
             <BottomServices />
             <Typos first="FA" second="FAQ'S" third={"S"} right={"4vmin"} />
@@ -529,6 +531,13 @@ const IndexPage = props => {
           </div>
         </Box>
         <ContactUs />
+        <TawkMessengerReact
+          propertyId="5d0f4f6b36eab9721118c84e"
+          widgetId="1g01mqhlk"
+          customStyle={{
+            color: "red",
+          }}
+        />
       </Layout>
     </>
   )

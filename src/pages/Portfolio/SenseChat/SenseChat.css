@@ -10,3 +10,17 @@
 .senseHeader > * {
   overflow: visible !important;
 }
+.sense-btn {
+  background-color: #7f7fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  padding: 10px;
+  margin: auto;
+  cursor: pointer;
+  width: 200px;
+}
+.sense-btn:hover {
+  background-color: #7171df;
+}

@@ -1,4 +1,4 @@
-// import TMLogo from "../images/TMG-logo-small.png"
+import TextMyGuest from "../images/text-my-guest-logo.png"
 import Zonder from "../images/Zonder-logo.png"
 import Bundle from "../images/bundl-small-logo.png"
 import HPEC from "../images/HPEC-logo.png"
@@ -26,7 +26,7 @@ export const carouselData = [
 ]
 
 export const smallCarouselData = [
-  // { logo: TMLogo, width: 120 },
+  { logo: TextMyGuest, width: 120 },
   { logo: Zonder, width: 80 },
   { logo: Bundle, width: 120 },
   { logo: HPEC, width: 120 },

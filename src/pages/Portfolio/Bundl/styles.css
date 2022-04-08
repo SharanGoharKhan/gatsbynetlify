@@ -36,7 +36,7 @@
   padding: 2em;
   display: flex;
   align-items: center;
-  box-shadow: 0 0 10px #e5dada;
+  box-shadow: 0 0 8px #b8c9c0;
   margin: 2px;
 }
 .team-container {
@@ -64,6 +64,7 @@
   margin-top: 3rem;
   margin-bottom: 3rem;
   border-radius: 4rem;
+  height: 600px;
 }
 .circle4 {
   position: absolute;
@@ -86,4 +87,18 @@
 }
 .video-player video {
   border-radius: 10px;
+}
+.bundl-btn {
+  background-color: #62d7a5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  padding: 10px;
+  margin: auto;
+  cursor: pointer;
+  width: 200px;
+}
+.bundl-btn:hover {
+  background-color: #3bbb84;
 }

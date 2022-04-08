@@ -75,9 +75,11 @@
   justify-content: center;
   align-items: center;
   color: white;
-  border: none;
-  border-radius: 10px;
   padding: 10px;
   margin: auto;
   cursor: pointer;
+  width: 200px;
+}
+.guest-btn:hover {
+  background-color: #be0948;
 }

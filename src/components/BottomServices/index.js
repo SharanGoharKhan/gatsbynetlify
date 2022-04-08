@@ -44,8 +44,8 @@ export default function BottomServices() {
         style={{
           position: "absolute",
           top: "40%",
-          left: 0,
-          width: 200,
+          left: -65,
+          width: 230,
           height: 200,
           zIndex: -99,
           display: matches ? "none" : "inline-block",
@@ -70,7 +70,7 @@ export default function BottomServices() {
         alt="web"
         style={{
           position: "absolute",
-          top: "80%",
+          bottom: -50,
           left: 0,
           width: 200,
           height: 200,
