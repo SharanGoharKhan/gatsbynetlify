@@ -40,6 +40,7 @@ import {
 import Layout from "../components/layout"
 import { useAnimation } from "../utils/useAnimation"
 import TawkMessengerReact from "@tawk.to/tawk-messenger-react"
+import { CircularProgress } from "@mui/material"
 
 const useStyles = makeStyles(theme => ({
   container: {
@@ -138,8 +139,35 @@ const IndexPage = props => {
   const classes = useStyles()
   const theme = useTheme()
   const small = useMediaQuery(theme.breakpoints.down("sm"))
+  const [loading, setLoading] = React.useState(true)
   useAnimation()
 
+  React.useEffect(() => {
+    setTimeout(() => {
+      setLoading(false)
+    }, 3000)
+  })
+
+  if (loading) {
+    return (
+      <div
+        key={`loader`}
+        style={{
+          alignItems: "center",
+          display: "flex",
+          justifyContent: "center",
+          position: "absolute",
+          left: 0,
+          top: 0,
+          right: 0,
+          bottom: 0,
+          zIndex: 99999,
+        }}
+      >
+        <CircularProgress />
+      </div>
+    )
+  }
   return (
     <>
       <Seo title="Ninjas Code" />

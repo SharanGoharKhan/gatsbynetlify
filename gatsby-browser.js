@@ -11,8 +11,3 @@ export const onInitialClientRender = () => {
     document.getElementById("___loader").style.display = "none"
   }, 1000)
 }
-// export const onPreRouteUpdate = () => {
-//   setTimeout(() => {
-//     document.getElementById("___loader").style.display = "none"
-//   }, 1000)
-// }
