@@ -73,8 +73,8 @@ export default function Bundl() {
                 </div>
               </Grid>
             </Grid>
-            <Grid container>
-              <Grid item xs={0} sm={6} md={8} />
+            <Box mt={2} />
+            <Grid container justify="flex-end">
               <Grid item xs={12} sm={6} md={4}>
                 <div className="oval">
                   <Typography
@@ -108,15 +108,28 @@ export default function Bundl() {
             />
           </div>
 
-          <div className={matches ? "team-container-small" : "team-container"}>
+          <div
+            className={matches ? "team-container-small" : "team-container"}
+            data-aos="fade"
+          >
             <Typography align="center">PROJECT TEAM</Typography>
-            <Box display="flex" justifyContent={"space-around"}>
-              <ImageCard name="Sharan" role="Team lead" image={Sharan} />
-              <ImageCard name="Adnan" role="Project Manager" image={Adnan} />
-              <ImageCard name="Collin" role="Co-Founder" image={Colin} />
-              <ImageCard name="Lance" role="Co-Founder" image={Lance} />
-              <ImageCard name="Kevin" role="CTO" image={Chinese} />
-            </Box>
+            <Grid container justify="center" className="image-view" spacing={2}>
+              <Grid item xs={12} sm={2}>
+                <ImageCard name="Sharan" role="Team lead" image={Sharan} />
+              </Grid>
+              <Grid item xs={6} sm={2}>
+                <ImageCard name="Adnan" role="Project Manager" image={Adnan} />
+              </Grid>
+              <Grid item xs={6} sm={2}>
+                <ImageCard name="Collin" role="Co-Founder" image={Colin} />
+              </Grid>
+              <Grid item xs={6} sm={2}>
+                <ImageCard name="Lance" role="Co-Founder" image={Lance} />
+              </Grid>
+              <Grid item xs={6} sm={2}>
+                <ImageCard name="Kevin" role="CTO" image={Chinese} />
+              </Grid>
+            </Grid>
           </div>
           <Box mt={10} />
           <div style={{ overflow: "visible" }}>

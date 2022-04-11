@@ -7,6 +7,14 @@ module.exports = {
   plugins: [
     "gatsby-plugin-sass",
     {
+      resolve: "gatsby-plugin-google-tagmanager",
+      options: {
+        id: "GTM-WTTGJ2P",
+        includeInDevelopment: false,
+        defaultDataLayer: { platform: "gatsby" },
+      },
+    },
+    {
       resolve: `gatsby-plugin-google-gtag`,
       options: {
         // You can add multiple tracking ids and a pageview event will be fired for all of them.

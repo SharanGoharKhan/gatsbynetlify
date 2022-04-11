@@ -40,6 +40,7 @@ import {
 import Layout from "../components/layout"
 import { useAnimation } from "../utils/useAnimation"
 import TawkMessengerReact from "@tawk.to/tawk-messenger-react"
+import Splash from "../components/Splash"
 
 const useStyles = makeStyles(theme => ({
   container: {
@@ -60,7 +61,7 @@ const useStyles = makeStyles(theme => ({
     padding: theme.spacing(2),
     textAlign: "center",
     color: theme.palette.text.secondary,
-    boxShadow: "10px 10px 2px 0px #000",
+    boxShadow: "10px 10px 0px 0px #000",
     border: "2px solid #179afb",
   },
   sliderPaper: {
@@ -138,8 +139,18 @@ const IndexPage = props => {
   const classes = useStyles()
   const theme = useTheme()
   const small = useMediaQuery(theme.breakpoints.down("sm"))
+  const [loading, setLoading] = React.useState(true)
   useAnimation()
 
+  React.useEffect(() => {
+    setTimeout(() => {
+      setLoading(false)
+    }, 2500)
+  })
+
+  if (loading) {
+    return <Splash />
+  }
   return (
     <>
       <Seo title="Ninjas Code" />
@@ -201,7 +212,7 @@ const IndexPage = props => {
           <Box mt={small ? 5 : 20} mb={20}>
             <Container maxWidth="sm">
               <Grid container alignItems="center" spacing={3} data-aos="fade">
-                <Grid item md={6}>
+                <Grid item xs={6} md={6}>
                   <Paper className={classes.paper} square={true}>
                     <div
                       style={{
@@ -229,7 +240,7 @@ const IndexPage = props => {
                     </div>
                   </Paper>
                 </Grid>
-                <Grid item md={6}>
+                <Grid item xs={6} md={6}>
                   <Grid container flexDirection="column" spacing={3}>
                     <Grid item xs={12}>
                       <Paper className={classes.paper} square={true}>

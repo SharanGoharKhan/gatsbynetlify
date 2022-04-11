@@ -70,6 +70,7 @@ export default function Saas() {
               style={{
                 display: "flex",
                 justifyContent: matches ? "center" : "flex-end",
+                order: matches && 2,
               }}
             >
               <Box style={{ textAlign: matches ? "center" : "start" }}>
@@ -94,7 +95,10 @@ export default function Saas() {
             <Grid
               item
               md={6}
-              style={{ textAlign: matches ? "center" : "start" }}
+              style={{
+                textAlign: matches ? "center" : "start",
+                order: matches && 1,
+              }}
             >
               <img src={Mockup2} className="mockup-images" alt="mockup" />
             </Grid>

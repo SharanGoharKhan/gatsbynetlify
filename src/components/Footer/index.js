@@ -53,6 +53,7 @@ const useStyles = makeStyles(theme => ({
   links: {
     textDecoration: "none",
     color: "gray",
+    fontSize: "2.5vmin",
   },
   icons: {
     "& img": {

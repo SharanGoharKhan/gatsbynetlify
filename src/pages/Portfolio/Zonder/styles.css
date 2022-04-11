@@ -34,8 +34,12 @@
   right: 0;
   top: 0;
 }
+.zonder-image1-container,
+.zonder-image2-container {
+  text-align: end;
+}
 .zonder-image1-container img {
-  width: 260px;
+  width: 48%;
   margin: 2rem;
 }
 .zonder-image2-container {
@@ -44,7 +48,7 @@
   top: 1rem;
 }
 .zonder-image2-container img {
-  width: 260px;
+  width: 48%;
   margin: 2rem;
 }
 .board-container {

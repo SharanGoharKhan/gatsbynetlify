@@ -1,0 +1,46 @@
+.ninja-arrow {
+  width: 100px;
+  height: 100px;
+  animation-name: circle;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-delay: 0s;
+  animation-timing-function: linear;
+}
+@keyframes circle {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.progress-bar {
+  width: 200px;
+  height: 8px;
+  background-color: #179afb;
+  margin-top: 2rem;
+}
+.progress-bar::after {
+  content: "";
+  display: block;
+  width: 0px;
+  background-color: #034170;
+  height: 8px;
+  animation: progress 2s 1 0s linear;
+  animation-fill-mode: forwards;
+}
+@keyframes progress {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+.splash-brackets {
+  font-size: 5rem !important;
+  font-weight: 900 !important;
+  -webkit-text-stroke: 2px #179afb;
+  -webkit-text-fill-color: transparent;
+}

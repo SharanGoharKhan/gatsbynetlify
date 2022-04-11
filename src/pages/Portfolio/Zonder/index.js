@@ -107,7 +107,7 @@ export default function Zonder() {
               <img
                 src={Board}
                 alt={"board"}
-                style={{ width: small && "80%", height: small && "260px" }}
+                style={{ width: small && "80%", height: small && "200px" }}
               />
             </Box>
             <Box mt={10} className="icons">
