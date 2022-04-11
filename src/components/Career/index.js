@@ -7,7 +7,7 @@ import { colors } from "../../utils/colors"
 export default function Career({ data }) {
   return (
     <GatsbyLink
-      // to="https://forms.gle/L3GUwkLvRQPBRSN76"
+      to={data.link}
       style={{ textDecoration: "none" }}
       target="_blank"
     >
