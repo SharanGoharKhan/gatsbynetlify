@@ -6,5 +6,13 @@
 
 import "@fontsource/montserrat"
 import "@fontsource/poppins"
-
-// You can delete this file if you're not using it
+export const onInitialClientRender = () => {
+  setTimeout(function () {
+    document.getElementById("___loader").style.display = "none"
+  }, 1000)
+}
+// export const onPreRouteUpdate = () => {
+//   setTimeout(() => {
+//     document.getElementById("___loader").style.display = "none"
+//   }, 1000)
+// }
