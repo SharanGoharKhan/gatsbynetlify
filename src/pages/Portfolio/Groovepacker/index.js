@@ -54,13 +54,17 @@ export default function Groovepack() {
               </Typography>
             </Grid>
             <Grid
-              style={{ textAlign: matches ? "end" : "center" }}
+              style={{
+                textAlign: matches ? "end" : "center",
+                position: "relative",
+              }}
               item
               xs={12}
               md={6}
               data-aos="zoom-out-right"
               data-aos-easing="ease-in-cubic"
             >
+              <div className="opacity-div"></div>
               <img
                 src={Headphone}
                 alt="services"
@@ -69,7 +73,6 @@ export default function Groovepack() {
                   height: "auto",
                   maxHeight: 500,
                   marginTop: matches ? 0 : 10,
-                  opacity: 0.5,
                 }}
               />
             </Grid>
@@ -88,10 +91,12 @@ export default function Groovepack() {
           <Typography variant="body1" className="color-groove">
             HOW WE WORK
           </Typography>
+          <Box mt={5} />
+
           <img src={Bar} alt="bar" style={{ width: "80%" }} />
           {/* <div className="round-1"></div> */}
         </div>
-        <Divider style={{ backgroundColor: "#7e7d7d" }} />
+        <Divider style={{ backgroundColor: "#7e7d7d", marginTop: 5 }} />
         <Box mt={20} />
         <Container>
           <Grid container alignItems="center">
@@ -113,7 +118,7 @@ export default function Groovepack() {
                   align="center"
                   style={{ marginBottom: "4rem" }}
                   data-aos="fade-left"
-                  data-aos-delay="1200"
+                  data-aos-delay="1000"
                 >
                   <div className="icon-container">
                     <DoubleArrowIcon />
@@ -136,7 +141,7 @@ export default function Groovepack() {
                   md={6}
                   align="center"
                   data-aos="fade-left"
-                  data-aos-delay="1400"
+                  data-aos-delay="1000"
                 >
                   <div className="icon-container">
                     <EqualizerIcon />
@@ -160,7 +165,7 @@ export default function Groovepack() {
                   align="center"
                   style={{ marginBottom: "4rem" }}
                   data-aos="fade-left"
-                  data-aos-delay="1600"
+                  data-aos-delay="1000"
                 >
                   <div className="icon-container">
                     <LightbulbIcon />
@@ -183,7 +188,7 @@ export default function Groovepack() {
                   md={6}
                   align="center"
                   data-aos="fade-left"
-                  data-aos-delay="1800"
+                  data-aos-delay="1000"
                 >
                   <div className="icon-container">
                     <DataUsageIcon />
@@ -223,7 +228,7 @@ export default function Groovepack() {
                 lg={4}
                 align="center"
                 data-aos="flip-right"
-                data-aos-delay="2000"
+                data-aos-delay="1000"
               >
                 <div className="helvetica">
                   <Typography variant="h6" className="text-hel">
@@ -250,7 +255,7 @@ export default function Groovepack() {
                 lg={4}
                 align="center"
                 data-aos="slide-left"
-                data-aos-delay="2000"
+                data-aos-delay="1000"
               >
                 <Box className="helvetica-right">
                   <Typography variant="h6">HELVETICA</Typography>
@@ -270,7 +275,7 @@ export default function Groovepack() {
                   variant="body1"
                   className="color-groove"
                   data-aos="fade-down-right"
-                  data-aos-delay="1500"
+                  data-aos-delay="1000"
                 >
                   PUT THE SMACK DOWN ON PACKING ERRORS AND ENJOY THE BENEFITS OF
                   REAL TIME PHYSICAL INVENTORY VISIBILITY.
@@ -281,7 +286,7 @@ export default function Groovepack() {
                   src={Desktop}
                   alt="desktop"
                   data-aos="fade-down-left"
-                  data-aos-delay="1500"
+                  data-aos-delay="1000"
                 />
               </Grid>
             </Grid>
@@ -299,7 +304,7 @@ export default function Groovepack() {
               src={Hand}
               alt="hand"
               data-aos="fade-down-left"
-              data-aos-delay="1500"
+              data-aos-delay="1000"
             />
             <Box ml={5} data-aos="fade-down-right" data-aos-delay="1500">
               <Typography variant="h6" className="color-groove">

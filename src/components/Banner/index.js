@@ -1,5 +1,5 @@
 import React, { useEffect } from "react"
-import { Grid, Typography, useMediaQuery } from "@material-ui/core"
+import { Grid, Typography, useMediaQuery, useTheme } from "@material-ui/core"
 import useStyles from "./styles"
 import BannerIcons from "../BannerIcons"
 import Particles from "react-tsparticles"
@@ -14,6 +14,9 @@ export default function Banner({ titleMain, titleSecondary, subTitle, image }) {
 
   const classes = useStyles()
   const matches = useMediaQuery("(min-width:600px)")
+  const theme = useTheme()
+  const small = useMediaQuery(theme.breakpoints.down("sm"))
+
   return (
     <div id="Home" className={classes.background}>
       <Particles
@@ -108,7 +111,10 @@ export default function Banner({ titleMain, titleSecondary, subTitle, image }) {
         spacing={0}
       >
         <Grid
-          style={{ textAlign: matches ? "start" : "center" }}
+          style={{
+            textAlign: matches ? "start" : "center",
+            order: small && 2,
+          }}
           item
           xs={12}
           md={6}
@@ -127,7 +133,7 @@ export default function Banner({ titleMain, titleSecondary, subTitle, image }) {
         </Grid>
         {image && (
           <Grid
-            style={{ textAlign: matches ? "end" : "center" }}
+            style={{ textAlign: "center", order: small && 1 }}
             item
             xs={12}
             md={6}
@@ -138,7 +144,7 @@ export default function Banner({ titleMain, titleSecondary, subTitle, image }) {
               data-aos-easing="ease-in-sine"
               alt="services"
               style={{
-                width: "100%",
+                width: "60%",
                 height: "auto",
                 maxHeight: 500,
                 marginTop: matches ? 0 : 10,

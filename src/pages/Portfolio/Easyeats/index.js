@@ -44,8 +44,8 @@ export default function EasyEats() {
             alt="berries"
             className="berries"
             style={{
-              top: medium ? 0 : "-2rem",
-              left: medium ? 0 : "-2rem",
+              top: medium ? 0 : "-7rem",
+              left: medium ? 0 : "-7rem",
             }}
           />
           <img

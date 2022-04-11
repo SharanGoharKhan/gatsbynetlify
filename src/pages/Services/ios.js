@@ -38,11 +38,21 @@ export default function Ios() {
                 <Box>
                   <Typography
                     variant="h6"
-                    style={{ fontWeight: 700, textAlign: "center" }}
+                    style={{
+                      fontWeight: 700,
+                      textAlign: matches ? "start" : "center",
+                    }}
                   >
                     Project Examination
                   </Typography>
-                  <Typography variant="caption" className="subheading-ios">
+                  <Typography
+                    variant="caption"
+                    className="subheading-ios"
+                    style={{
+                      textAlign: matches ? "justify" : "center",
+                      marginRight: 10,
+                    }}
+                  >
                     True experts will never get to code right from the beginning
                     — any app needs a coherent outline on how to move forward.
                     In order to set objectives for the project management
@@ -72,11 +82,22 @@ export default function Ios() {
                 <Box>
                   <Typography
                     variant="h6"
-                    style={{ fontWeight: 700, textAlign: "center" }}
+                    style={{
+                      fontWeight: 700,
+                      textAlign: matches ? "start" : "center",
+                      marginLeft: 10,
+                    }}
                   >
                     Feature Prioritization
                   </Typography>
-                  <Typography variant="caption" className="subheading-ios">
+                  <Typography
+                    variant="caption"
+                    className="subheading-ios"
+                    style={{
+                      textAlign: matches ? "justify" : "center",
+                      marginLeft: 10,
+                    }}
+                  >
                     By putting aside all non-functional extras, we help a client
                     get a better vision of a future product. Our managers use
                     the MoSCoW method and plan a vital set of features. Thus,
@@ -95,11 +116,21 @@ export default function Ios() {
                 <Box>
                   <Typography
                     variant="h6"
-                    style={{ fontWeight: 700, textAlign: "center" }}
+                    style={{
+                      fontWeight: 700,
+                      textAlign: matches ? "start" : "center",
+                    }}
                   >
                     Focused UI/UX design
                   </Typography>
-                  <Typography variant="caption" className="subheading-ios">
+                  <Typography
+                    variant="caption"
+                    className="subheading-ios"
+                    style={{
+                      textAlign: matches ? "justify" : "center",
+                      marginRight: 10,
+                    }}
+                  >
                     We create wireframes and build low and high-fidelity
                     prototypes screen by screen. If the client wants to get a
                     universal interface — we’ll deal with it, if the client
@@ -130,11 +161,23 @@ export default function Ios() {
                 <Box>
                   <Typography
                     variant="h6"
-                    style={{ fontWeight: 700, textAlign: "center" }}
+                    style={{
+                      fontWeight: 700,
+                      textAlign: "center",
+                      textAlign: matches ? "start" : "center",
+                      marginLeft: 10,
+                    }}
                   >
                     Qualified Development
                   </Typography>
-                  <Typography variant="caption" className="subheading-ios">
+                  <Typography
+                    variant="caption"
+                    className="subheading-ios"
+                    style={{
+                      textAlign: matches ? "justify" : "center",
+                      marginLeft: 10,
+                    }}
+                  >
                     According to Scrum, we split the development process into
                     sprints — it allows us to present intermediate builds to a
                     client, therefore keep them in the loop. We use TestFlight
@@ -153,11 +196,23 @@ export default function Ios() {
                 <Box>
                   <Typography
                     variant="h6"
-                    style={{ fontWeight: 700, textAlign: "center" }}
+                    style={{
+                      fontWeight: 700,
+                      textAlign: "center",
+                      textAlign: matches ? "start" : "center",
+                      marginRight: 10,
+                    }}
                   >
                     QA testing
                   </Typography>
-                  <Typography variant="caption" className="subheading-ios">
+                  <Typography
+                    variant="caption"
+                    className="subheading-ios"
+                    style={{
+                      textAlign: matches ? "justify" : "center",
+                      marginRight: 10,
+                    }}
+                  >
                     We use quality control and management system to deliver
                     high-quality products. Combining manual testing and
                     automated testing technologies (RSpec, Capybara), we cover a
@@ -187,11 +242,23 @@ export default function Ios() {
                 <Box>
                   <Typography
                     variant="h6"
-                    style={{ fontWeight: 700, textAlign: "center" }}
+                    style={{
+                      fontWeight: 700,
+                      textAlign: "center",
+                      textAlign: matches ? "start" : "center",
+                      marginLeft: 10,
+                    }}
                   >
                     Release and Maintenance
                   </Typography>
-                  <Typography variant="caption" className="subheading-ios">
+                  <Typography
+                    variant="caption"
+                    className="subheading-ios"
+                    style={{
+                      textAlign: matches ? "justify" : "center",
+                      marginLeft: 10,
+                    }}
+                  >
                     We ensure mobile apps that we work on are accepted and
                     published in the App Store and Google Play. To make sure all
                     bugs are fixed and the product steadily works, we provide

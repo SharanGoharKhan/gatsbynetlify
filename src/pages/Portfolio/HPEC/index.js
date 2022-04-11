@@ -226,7 +226,10 @@ export default function Hpec() {
         </Box>
         <Box className="color-container">
           <Box ml={2} mr={4}>
-            <Typography variant="h4" style={{ fontWeight: 100 }}>
+            <Typography
+              variant="h3"
+              style={{ fontWeight: 100, fontSize: "3vmin" }}
+            >
               Color Pallete
             </Typography>
           </Box>

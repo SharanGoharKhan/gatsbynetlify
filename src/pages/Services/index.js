@@ -42,7 +42,7 @@ export default function Services() {
           <Grid container spacing={4}>
             {LeftCardData.map((item, index) => {
               return (
-                <Grid item md={3} key={index}>
+                <Grid item xs={9} md={3} key={index}>
                   <GatsbyLink
                     to={`/Services${item.to}/`}
                     style={{ textDecoration: "none", color: "inherit" }}
@@ -54,11 +54,10 @@ export default function Services() {
             })}
           </Grid>
           <Box mt={10} />
-          <Grid container spacing={4}>
-            <Grid item md={3}></Grid>
+          <Grid container spacing={4} justify="flex-end">
             {RightCardData.map((item, index) => {
               return (
-                <Grid item md={3} key={index}>
+                <Grid item xs={9} md={3} key={index}>
                   <GatsbyLink
                     to={`/Services${item.to}/`}
                     style={{ textDecoration: "none", color: "inherit" }}

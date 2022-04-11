@@ -11,6 +11,7 @@
   flex-direction: column;
   justify-content: space-between;
   transition: all 0.2s ease-in;
+  margin-bottom: 10px;
 }
 .service-card:hover {
   filter: drop-shadow(10px 10px 0px #f0f9ff);

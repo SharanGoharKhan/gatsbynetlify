@@ -62,7 +62,7 @@ export default function CarouselComponent() {
         className={classes.carousel}
         autoPlay={true}
         interval={3000}
-        width="90%"
+        width={small ? "30%" : "90%"}
       >
         {carouselData.map((item, index) => {
           return (

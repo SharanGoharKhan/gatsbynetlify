@@ -82,6 +82,7 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
+  max-width: 100%;
 }
 .center div {
   width: 180px;
@@ -99,7 +100,6 @@
   position: relative;
   border-radius: 50%;
   overflow: visible;
-  margin-top: 10rem;
 }
 .helvetica-right h6 {
   font-weight: 100;
@@ -122,4 +122,14 @@
 }
 .groove-btn:hover {
   background-color: #537e09;
+}
+.opacity-div {
+  background: #000000b3;
+  height: 50%;
+  width: 100%;
+  position: absolute;
+  bottom: 8%;
+  left: 0;
+  opacity: 0.5;
+  box-shadow: 0 0 10px 25px #000000b3;
 }

@@ -1,14 +1,16 @@
 import React from "react"
-import { Typography, Box } from "@material-ui/core"
+import { Typography, Box, useTheme, useMediaQuery } from "@material-ui/core"
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward"
 import "./styles.css"
 
 export default function ServicesCard({ data }) {
   const mainTitle = data.title.substring(0, data.title.indexOf(" "))
   const secondaryTitle = data.title.substring(data.title.indexOf(" ") + 1)
+  const theme = useTheme()
+  const small = useMediaQuery(theme.breakpoints.down("sm"))
   return (
     <Box
-      style={{ maxWidth: "375px", minHeight: "420px" }}
+      style={{ maxWidth: "375px", minHeight: small ? "320px" : "420px" }}
       className="service-card"
     >
       <Box className="image-wrapper">{data.image}</Box>
