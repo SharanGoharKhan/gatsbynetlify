@@ -20,15 +20,14 @@ export default function HTML(props) {
           key={`loader`}
           id="___loader"
           style={{
-            alignItems: "center",
             display: "flex",
+            alignItems: "center",
             justifyContent: "center",
+            minHeight: "100vh",
             position: "absolute",
-            left: 0,
-            top: 0,
-            right: 0,
-            bottom: 0,
-            zIndex: 99999,
+            top: "50%",
+            left: "50%",
+            transform: "translate(-50%, -50%)",
           }}
         >
           <CircularProgress />

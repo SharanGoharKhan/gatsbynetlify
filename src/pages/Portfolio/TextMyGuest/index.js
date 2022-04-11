@@ -279,8 +279,6 @@ export default function TextMyGuest() {
             <Box style={{ textAlign: "center" }} mt={10} mb={10}>
               <Avatar image={Sharan} name="Sharan" designation={"Team Lead"} />
               <Avatar image={Adnan} name="Adnan" designation={"CTO"} />
-              <Avatar image={Sharan} name="Name" designation={"Team Lead"} />
-              <Avatar image={Sharan} name="Name" designation={"Team Lead"} />
             </Box>
           </Box>
         </Grid>
