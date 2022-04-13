@@ -3,7 +3,7 @@
  *
  * See: https://www.gatsbyjs.com/docs/browser-apis/
  */
-
+import ReactDOM from "react-dom"
 import "@fontsource/montserrat"
 import "@fontsource/poppins"
 
@@ -21,4 +21,9 @@ export const onRouteUpdate = () => {
     document.getElementById("___loader").style.display = "none"
     document.getElementById("___loader").style.minHeight = "0vh"
   }, 1000)
+}
+export function replaceHydrateFunction() {
+  return (element, container, callback) => {
+    ReactDOM.render(element, container, callback)
+  }
 }
