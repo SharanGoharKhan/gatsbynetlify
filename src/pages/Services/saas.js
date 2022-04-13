@@ -1,3 +1,4 @@
+import { hot } from "react-hot-loader"
 import { Box, Button, Grid, Typography, useMediaQuery } from "@material-ui/core"
 import React from "react"
 import { Banner, BottomServices, Typos } from "../../components"
@@ -9,7 +10,7 @@ import { useTheme } from "@mui/material/styles"
 import { Link } from "gatsby"
 import "./styles.css"
 
-export default function Saas() {
+function Saas() {
   const theme = useTheme()
   const matches = useMediaQuery(theme.breakpoints.down("sm"))
   return (
@@ -130,3 +131,5 @@ export default function Saas() {
     </Layout>
   )
 }
+
+export default hot(module)(Saas)

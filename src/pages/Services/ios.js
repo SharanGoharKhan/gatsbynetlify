@@ -1,3 +1,4 @@
+import { hot } from "react-hot-loader"
 import {
   Box,
   Container,
@@ -15,7 +16,7 @@ import "./styles.css"
 
 import { useTheme } from "@mui/material/styles"
 
-export default function Ios() {
+function Ios() {
   const theme = useTheme()
   const matches = useMediaQuery(theme.breakpoints.down("sm"))
   return (
@@ -269,3 +270,5 @@ export default function Ios() {
     </Layout>
   )
 }
+
+export default hot(module)(Ios)

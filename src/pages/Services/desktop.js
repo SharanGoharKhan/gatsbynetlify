@@ -1,3 +1,4 @@
+import { hot } from "react-hot-loader"
 import { Box, Typography, useMediaQuery } from "@material-ui/core"
 import React from "react"
 import { Banner, BottomServices, Typos } from "../../components"
@@ -7,7 +8,7 @@ import DesktopGroup from "../../images/desktop-group.png"
 import { useTheme } from "@mui/material/styles"
 import "./styles.css"
 
-export default function Web() {
+function Web() {
   const theme = useTheme()
   const matches = useMediaQuery(theme.breakpoints.down("sm"))
   return (
@@ -62,3 +63,5 @@ export default function Web() {
     </Layout>
   )
 }
+
+export default hot(module)(Web)

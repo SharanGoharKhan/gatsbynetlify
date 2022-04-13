@@ -1,3 +1,4 @@
+import { hot } from "react-hot-loader"
 import * as React from "react"
 import "./index.css"
 import "../components/layout.css"
@@ -554,4 +555,4 @@ const IndexPage = props => {
   )
 }
 
-export default IndexPage
+export default hot(module)(IndexPage)

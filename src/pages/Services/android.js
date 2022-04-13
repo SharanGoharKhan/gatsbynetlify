@@ -1,3 +1,4 @@
+import { hot } from "react-hot-loader"
 import { Box, useMediaQuery, useTheme } from "@material-ui/core"
 import React, { useEffect } from "react"
 import { Banner, BottomServices, Typos } from "../../components"
@@ -8,7 +9,7 @@ import "./styles.css"
 import Aos from "aos"
 import "aos/dist/aos.css"
 
-export default function Android() {
+function Android() {
   useEffect(() => {
     Aos.init({ duration: 1000, once: true })
   }, [])
@@ -44,3 +45,5 @@ export default function Android() {
     </Layout>
   )
 }
+
+export default hot(module)(Android)

@@ -1,3 +1,4 @@
+import { hot } from "react-hot-loader"
 import { Box } from "@material-ui/core"
 import React from "react"
 import { Banner, BottomServices, Typos } from "../../components"
@@ -6,7 +7,7 @@ import UXImage from "../../images/ux.svg"
 import UXGroup from "../../images/ux-group.png"
 import "./styles.css"
 
-export default function Ux() {
+function Ux() {
   return (
     <Layout>
       <Banner
@@ -40,3 +41,5 @@ export default function Ux() {
     </Layout>
   )
 }
+
+export default hot(module)(Ux)
