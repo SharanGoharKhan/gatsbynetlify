@@ -1,0 +1,10 @@
+.background-container {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-bottom: -48px;
+}

@@ -1,0 +1,104 @@
+.bundl-background {
+  background-image: linear-gradient(to bottom, #62d7a5 40%, #fff 100%);
+  min-height: 80vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.bundl-lower-container {
+  width: 100%;
+  text-align: center;
+  position: relative;
+}
+.circle1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 15%;
+}
+.circle2 {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 15%;
+}
+.circle3 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 12%;
+}
+.oval {
+  background-color: #fff;
+  border-radius: 40px;
+  padding: 2em;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 0 4px #b8c9c0;
+  margin: 2px;
+}
+.team-container {
+  background: #d7f9eb;
+  padding: 2rem;
+  border-radius: 5rem;
+  border: 2px solid;
+}
+.team-container-small {
+  background: #d7f9eb;
+  padding: 2rem;
+  border-radius: 5rem;
+  border: 2px solid;
+}
+.team-container img {
+  width: 100px;
+}
+.team-container-small img {
+  width: 50px;
+}
+.video-container {
+  margin: auto;
+  position: relative;
+  overflow: visible;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  border-radius: 4rem;
+  height: 600px;
+}
+.circle4 {
+  position: absolute;
+  top: -70px;
+  right: -70px;
+  width: 15%;
+}
+.circle5 {
+  position: absolute;
+  bottom: -70px;
+  left: -70px;
+  width: 15%;
+  z-index: -9;
+}
+.image-view:nth-child(even) {
+  margin-top: 2rem;
+}
+.video-player {
+  margin: auto;
+}
+.video-player video {
+  border-radius: 10px;
+}
+.bundl-btn {
+  background-color: #62d7a5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  padding: 10px;
+  margin: auto;
+  cursor: pointer;
+  width: 200px;
+}
+.bundl-btn:hover {
+  background-color: #3bbb84;
+}

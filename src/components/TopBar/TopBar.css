@@ -1,0 +1,92 @@
+.cool-link {
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 300px;
+  display: inline-block;
+  text-decoration: none;
+  font-family: Montserrat;
+}
+.cool-link-black {
+  color: #000;
+  font-size: 1.5rem;
+  font-weight: 300px;
+  display: inline-block;
+  text-decoration: none;
+  font-family: Montserrat;
+}
+.cool-link::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #fff;
+  transition: width 0.5s;
+}
+
+.cool-link:hover::after {
+  width: 100%;
+}
+
+.button-link-black {
+  color: #000;
+  font-size: 20px;
+  font-weight: 300px;
+  font-family: "Montserrat", "sans-serif";
+  display: inline-block;
+  text-decoration: none;
+  margin-right: 20px;
+}
+
+.button-link-black::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #000;
+  transition: width 0.5s;
+}
+
+.button-link-black:hover::after {
+  width: 100%;
+  background: #000;
+  /* transition: width .3s; */
+}
+
+.button-link {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 300px;
+  font-family: "Montserrat", "sans-serif";
+  display: inline-block;
+  text-decoration: none;
+  margin-right: 20px;
+}
+
+.button-link::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #f0eceb;
+  transition: width 0.5s;
+}
+
+.button-link:hover::after {
+  width: 100%;
+  background: #f0eceb;
+}
+.menu-services {
+  position: absolute;
+  top: 30px;
+  z-index: 10000;
+  border-radius: 2px;
+  width: 250px;
+  background-color: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(3px);
+}
+.menu-services a div {
+  padding: 10px;
+}
+.menu-services a:hover div {
+  border: 2px solid white;
+}

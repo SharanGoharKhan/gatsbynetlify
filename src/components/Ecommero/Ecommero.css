@@ -1,0 +1,21 @@
+.lightDiv{
+    /* height:fit-content; */
+    width:100%;
+    margin:auto; 
+    background-color:rgba(218, 190, 163, 0.2);
+    margin-top: 5vmin;
+    padding-right: 1.5%;
+    padding-left: 1.5%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    text-align: start;
+    border-radius: 13px;
+}
+
+.divider{
+    background-color:#175CFF;
+    margin:auto;
+    margin-top:40px; 
+    width:74px;
+    height:2px;
+  }

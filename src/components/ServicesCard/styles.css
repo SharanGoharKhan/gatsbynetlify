@@ -1,0 +1,44 @@
+.service-card-image {
+  width: 100px;
+  height: 100px;
+}
+.service-card {
+  filter: drop-shadow(10px 10px 0px #179afb);
+  border: 1px solid gray;
+  border-radius: 0;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.2s ease-in;
+  margin-bottom: 10px;
+}
+.service-card:hover {
+  filter: drop-shadow(10px 10px 0px #f0f9ff);
+  background-color: #179afb;
+  transform: scale(0.8);
+}
+
+.image-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  margin: 5px;
+  width: 100px;
+  height: 100px;
+}
+.service-card:hover .image-wrapper {
+  background-color: white;
+}
+.service-card:hover .text {
+  color: white;
+}
+.service-card:hover .arrow {
+  color: white;
+}
+
+.image-wrapper img {
+  width: 60px;
+  margin: 0;
+}
