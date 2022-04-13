@@ -16,7 +16,7 @@ const useStyles = makeStyles(theme => ({
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-    margin: "auto",
+    margin: "10px 20px 10px 20px",
   },
 }))
 export default function SmallCarousel() {

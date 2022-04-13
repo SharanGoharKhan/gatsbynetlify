@@ -35,7 +35,7 @@ export default function TextMyGuest() {
           }
           subMenuText={"#000"}
         />
-        <Grid item xs={12} md={7} className="pink-guest-background">
+        <Grid item xs={12} md={7} id="pink-guest-background">
           <Box
             className="inside-pink"
             justifyContent={matches ? "center" : "flex-end"}
@@ -51,7 +51,7 @@ export default function TextMyGuest() {
               data-aos="fade-down-right"
             >
               {matches && <img src={WhiteLogo} alt="logo" width={220} />}
-              <Typography className="white-color" variant="h4">
+              <Typography id="white-color" variant="h4">
                 Keep Your Event <br /> Running Smoothly
               </Typography>
               <Typography variant="caption">
@@ -106,7 +106,7 @@ export default function TextMyGuest() {
             className="height100"
           >
             <Box>
-              <Typography className="white-color font-bold" variant="h2">
+              <Typography className="white-color" id="font-bold" variant="h2">
                 Two Way, <br /> Rich Media <br /> Text Messaging
               </Typography>
             </Box>
@@ -141,12 +141,13 @@ export default function TextMyGuest() {
           >
             <Box display={"flex"} justifyContent="space-around">
               <Typography
-                className="font-bold process-outline process"
+                id="font-bold"
+                className="process-outline process"
                 variant="h1"
               >
                 PROCESSING
               </Typography>
-              <Typography className="font-bold process" variant="h1">
+              <Typography className="process" id="font-bold" variant="h1">
                 PROCESSING
               </Typography>
             </Box>
@@ -245,7 +246,8 @@ export default function TextMyGuest() {
               </Box>
             </Box>
             <Typography
-              className="font-bold process white-color"
+              className="process white-color"
+              id="font-bold"
               variant="h1"
               style={{
                 marginRight: "-68px",
@@ -276,7 +278,8 @@ export default function TextMyGuest() {
             style={{ position: "relative", backgroundColor: "white" }}
           >
             <Typography
-              className="font-bold process pink-color"
+              className="process pink-color"
+              id="font-bold"
               variant="h1"
               style={{
                 letterSpacing: "10px",
@@ -327,17 +330,14 @@ export default function TextMyGuest() {
               }}
             >
               <Typography
-                className="font-bold pink-color"
+                className=" pink-color"
+                id="font-bold"
                 variant="h1"
                 style={{ fontSize: "15rem", marginBottom: "-5rem" }}
               >
                 Y
               </Typography>
-              <Typography
-                className="font-bold"
-                variant="caption"
-                align="center"
-              >
+              <Typography id="font-bold" variant="caption" align="center">
                 Your guests are taking pictures at your event, but not everyone
                 will post their pictures on #socialmedia. Encourage your guests
                 to reply via text - TextMyGuests organizes all your guests'
@@ -384,14 +384,16 @@ export default function TextMyGuest() {
             alignItems={"center"}
           >
             <Typography
-              className="font-bold process"
+              className="process"
               variant="h1"
+              id="font-bold"
               data-aos="slide-down"
             >
               TEAM
             </Typography>
             <Typography
-              className="font-bold process scaled pink-color"
+              className=" process scaled pink-color"
+              id="font-bold"
               variant="h1"
               data-aos="slide-up"
             >
@@ -429,7 +431,7 @@ export default function TextMyGuest() {
         <Button
           disableRipple
           target="_blank"
-          className="guest-btn"
+          id="guest-btn"
           href="https://textmyguests.com/"
         >
           Visit Webiste
@@ -454,13 +456,14 @@ function Avatar({ image, name, designation }) {
         style={{ width: "80px", borderRadius: "50%" }}
       />
       <Typography
-        className="font-bold white-color"
+        className=" white-color"
+        id="font-bold"
         variant="body2"
         align="center"
       >
         {name}
       </Typography>
-      <Typography className="font-bold" variant="caption" align="center">
+      <Typography id="font-bold" variant="caption" align="center">
         {designation}
       </Typography>
     </Box>

@@ -37,6 +37,7 @@ module.exports = {
     "gatsby-plugin-styled-components",
     "gatsby-plugin-image",
     "gatsby-plugin-react-helmet",
+    `gatsby-plugin-sass`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -60,4 +61,4 @@ module.exports = {
     },
     `gatsby-plugin-gatsby-cloud`,
   ],
-};
+}

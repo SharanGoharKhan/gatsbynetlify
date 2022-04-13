@@ -170,7 +170,12 @@ export default function EasyEats() {
 
         <div className="tilted-container">
           <Box mt={5}>
-            <Typography className="white-typo bold" variant="h5" align="center">
+            <Typography
+              className="white-typo "
+              id="bold"
+              variant="h5"
+              align="center"
+            >
               Typography <br /> & <br /> Fonts
             </Typography>
             <Typography
@@ -224,7 +229,7 @@ export default function EasyEats() {
             <Button
               disableRipple
               target="_blank"
-              className="easy-eats-btn"
+              id="easy-eats-btn"
               href="https://www.easyeatsdelivery.com/"
             >
               Visit Webiste

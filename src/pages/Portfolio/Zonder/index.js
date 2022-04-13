@@ -1,6 +1,5 @@
 import {
   Box,
-  Container,
   Divider,
   Grid,
   Typography,
@@ -19,9 +18,9 @@ import Board from "../../../images/board.png"
 import Mobiles from "../../../images/mobiles-zonder.png"
 import AddIcon from "@mui/icons-material/Add"
 import PersonIcon from "@mui/icons-material/Person"
-import "./styles.css"
 import BookmarkIcon from "@mui/icons-material/Bookmark"
 import ScreenShareIcon from "@mui/icons-material/ScreenShare"
+import "./styles.css"
 
 export default function Zonder() {
   const theme = useTheme()
@@ -35,15 +34,17 @@ export default function Zonder() {
       className="zonder-bg"
     >
       <Layout bar="transparent" font={"#fff"} mobileGradient={"#5beccc"}>
-        <Container className={"zonder-container"}>
-          <Typography className="white-color font-bold title">
-            zonder
-          </Typography>
-          <Typography variant="caption" className="white-color ">
-            A digital travel companion that keeps track of <br />
-            your experiences and rewards you for exploring <br /> new places
-            around the world.
-          </Typography>
+        <Box className={"zonder-container"}>
+          <Box mt={-10}>
+            <Typography variant="h4" className="white-color title-zonder">
+              zonder
+            </Typography>
+            <Typography variant="caption" className="white-color ">
+              A digital travel companion that keeps track of <br />
+              your experiences and rewards you for exploring <br /> new places
+              around the world.
+            </Typography>
+          </Box>
           <Box
             className="zonder-image1-container"
             display={{ xs: "none", sm: "block" }}
@@ -56,7 +57,7 @@ export default function Zonder() {
           >
             <img src={Device2} alt="main" style={{ marginTop: 2 }} />
           </Box>
-        </Container>
+        </Box>
         <Box className="blue-container">
           <Box
             className="inner-blue"
@@ -229,7 +230,7 @@ export default function Zonder() {
                   <Button
                     disableRipple
                     target="_blank"
-                    className="zonder-btn"
+                    id="zonder-btn"
                     href="https://zonderapp.com/"
                   >
                     Visit Webiste

@@ -18,17 +18,17 @@
   left: 5vmin;
   -webkit-text-stroke: 1px #179afb !important;
   -webkit-text-fill-color: transparent !important;
-  font-size: 5vmin;
+  font-size: 5vmin !important;
 }
 .typos-main {
   color: #000;
   font-weight: 800 !important;
-  font-size: 5vmin;
+  font-size: 5vmin !important;
 }
 .typos-after {
   font-weight: 800 !important;
   position: absolute !important;
   -webkit-text-stroke: 1px #000 !important;
   -webkit-text-fill-color: transparent !important;
-  font-size: 5vmin;
+  font-size: 5vmin !important;
 }

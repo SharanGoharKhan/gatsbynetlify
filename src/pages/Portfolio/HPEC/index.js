@@ -9,7 +9,6 @@ import {
 } from "@material-ui/core"
 import React from "react"
 import Layout from "../../../components/layout"
-import "./styles.css"
 import Circle from "../../../images/circle.svg"
 import Main from "../../../images/hpec-main.png"
 import WhiteBlock from "../../../images/white-block.svg"
@@ -26,6 +25,7 @@ import Mobile8 from "../../../images/mobile8.svg"
 import { useAnimation } from "../../../utils/useAnimation"
 import { colors } from "../../../utils/colors"
 import Blur from "../../../images/blur.png"
+import "./styles.css"
 
 export default function Hpec() {
   const theme = useTheme()
@@ -39,13 +39,29 @@ export default function Hpec() {
           <Grid container>
             <Grid item xs={12} md={6}>
               <Box style={{ marginTop: 20 }}>
-                <Typography variant="h3" className="main-text">
+                <Typography
+                  variant="h3"
+                  style={{
+                    fontSize: "5.5rem",
+                    color: "white",
+                    fontWeight: 200,
+                  }}
+                >
                   HPEC
                 </Typography>
-                <Typography variant="h5" className="secondary-text">
+                <Typography
+                  variant="h5"
+                  style={{
+                    fontSize: "3.5rem",
+                    color: "#3348b4",
+                    fontWeight: 800,
+                    marginLeft: "3rem",
+                    marginTop: "5px",
+                  }}
+                >
                   Physicians
                 </Typography>
-                <Typography variant="body2" className="caption-text">
+                <Typography variant="body2" id="caption-text">
                   We make it easy for physicians to lead the future of patient
                   care
                 </Typography>
@@ -96,7 +112,7 @@ export default function Hpec() {
               <img src={WhiteBlock} alt="white-block" />
               <Typography
                 variant="h1"
-                className={matches ? "question-mark-small" : "question-mark"}
+                id={matches ? "question-mark-small" : "question-mark"}
               >
                 ?
               </Typography>
@@ -113,17 +129,17 @@ export default function Hpec() {
               <Typography variant="h6" style={{ color: "white" }}>
                 The Problem
               </Typography>
-              <Typography variant="body1" className="comments">
+              <Typography variant="body1" id="comments">
                 USERS SAY:
               </Typography>
-              <Typography variant="body1" className="comments">
+              <Typography variant="body1" id="comments">
                 {"{ I need a doctor so privately }"} <br />- 25 y/o
               </Typography>
-              <Typography variant="body1" className="comments">
+              <Typography variant="body1" id="comments">
                 {"{ Always should search for groups of good physicians }"}{" "}
                 <br />- 34 y/o
               </Typography>
-              <Typography variant="body1" className="comments">
+              <Typography variant="body1" id="comments">
                 {"{ I can visit a hospital I can't travel }"} <br />- 55 y/o
               </Typography>
             </Grid>
@@ -146,7 +162,7 @@ export default function Hpec() {
           data-aos="slide-left"
           data-aos-easing="ease-in-sine"
         />
-        <Typography variant="h1" className="p">
+        <Typography variant="h1" id="p">
           P
         </Typography>
       </div>
@@ -161,7 +177,7 @@ export default function Hpec() {
         />
         <Typography
           variant="h1"
-          className="c"
+          id="c"
           data-aos="slide-left"
           data-aos-easing="ease-in-sine"
         >
@@ -192,7 +208,11 @@ export default function Hpec() {
             <>
               <Typography
                 variant="h2"
-                style={{ display: "inline", fontWeight: 800 }}
+                style={{
+                  display: "inline",
+                  fontWeight: 800,
+                  fontSize: "11vmin",
+                }}
                 mr={5}
               >
                 POPPINS
@@ -216,9 +236,13 @@ export default function Hpec() {
               </Typography>
               <Typography
                 variant="h2"
-                style={{ display: "inline", fontWeight: 800, color: "#3348b4" }}
+                style={{
+                  display: "inline",
+                  fontWeight: 800,
+                  color: "#3348b4",
+                  fontSize: "11vmin",
+                }}
               >
-                {" "}
                 POPPINS
               </Typography>
             </>
@@ -286,7 +310,7 @@ export default function Hpec() {
         </Box>
       </div>
 
-      <div className={matches ? "device-container-small" : "device-container"}>
+      <div id={matches ? "device-container-small" : "device-container"}>
         <img
           src={Mobile1}
           alt="mobile"
@@ -386,7 +410,7 @@ export default function Hpec() {
         <Box className={matches ? "blue-bg-small" : "blue-bg"}>
           <Grid
             container
-            className={matches ? "grid-container-small" : "grid-container"}
+            id={matches ? "grid-container-small" : "grid-container"}
           >
             <Grid item xs={1}></Grid>
             <Grid item xs={1}></Grid>
@@ -399,9 +423,8 @@ export default function Hpec() {
             <Grid item xs={1}></Grid>
             <Grid item xs={1}></Grid>
             <Grid item xs={1}></Grid>
-            <Box className="button-container">
-              <img src={Flow} alt="flow" />
-
+            <Box id="button-container">
+              <img src={Flow} alt="flow" id="flow" />
               <Box
                 style={{ textAlign: "center", border: "none" }}
                 mb={3}
@@ -410,7 +433,7 @@ export default function Hpec() {
                 <Button
                   disableRipple
                   target="_blank"
-                  className="hpec-btn"
+                  id="hpec-btn"
                   href="https://www.hpec.io/"
                 >
                   Visit Webiste

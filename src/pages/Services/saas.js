@@ -85,7 +85,7 @@ export default function Saas() {
                 </Typography>
                 <br />
                 <Link to="/Enatega" style={{ textDecoration: "none" }}>
-                  <Button variant="contained" className="case-btn">
+                  <Button variant="contained" id="case-btn">
                     Case Study
                   </Button>
                 </Link>
@@ -121,7 +121,7 @@ export default function Saas() {
               <br />
               want a ready-made solution
             </Typography>
-            <Button variant="contained" className="quote-btn" href="/#contact">
+            <Button variant="contained" id="quote-btn" href="/#contact">
               Get Quote
             </Button>
           </Box>
