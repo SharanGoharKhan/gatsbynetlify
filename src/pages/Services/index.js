@@ -1,3 +1,4 @@
+import { hot } from "react-hot-loader"
 import React from "react"
 import { Banner, BottomServices, ServicesCard, Typos } from "../../components"
 import Layout from "../../components/layout"
@@ -19,11 +20,10 @@ import CreditCardIcon from "@mui/icons-material/CreditCard"
 import CheckroomIcon from "@mui/icons-material/Checkroom"
 import Building from "../../images/building.png"
 import "./styles.css"
-import "../../utils/styles/styles.css"
 import { LeftCardData, RightCardData } from "../../utils/cardData"
 import { Link as GatsbyLink } from "gatsby"
 
-export default function Services() {
+function Services() {
   return (
     <Layout>
       <Banner
@@ -133,3 +133,5 @@ function SmallCard({ title, icon }) {
     </Paper>
   )
 }
+
+export default hot(module)(Services)

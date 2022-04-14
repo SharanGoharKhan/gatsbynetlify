@@ -1,3 +1,4 @@
+import { hot } from "react-hot-loader"
 import {
   Box,
   Container,
@@ -12,11 +13,10 @@ import IOSService from "../../images/ios.svg"
 import D1 from "../../images/Device1.png"
 import D2 from "../../images/Device2.png"
 import "./styles.css"
-import "../../utils/styles/styles.css"
 
 import { useTheme } from "@mui/material/styles"
 
-export default function Ios() {
+function Ios() {
   const theme = useTheme()
   const matches = useMediaQuery(theme.breakpoints.down("sm"))
   return (
@@ -163,7 +163,6 @@ export default function Ios() {
                     variant="h6"
                     style={{
                       fontWeight: 700,
-                      textAlign: "center",
                       textAlign: matches ? "start" : "center",
                       marginLeft: 10,
                     }}
@@ -198,7 +197,6 @@ export default function Ios() {
                     variant="h6"
                     style={{
                       fontWeight: 700,
-                      textAlign: "center",
                       textAlign: matches ? "start" : "center",
                       marginRight: 10,
                     }}
@@ -244,7 +242,6 @@ export default function Ios() {
                     variant="h6"
                     style={{
                       fontWeight: 700,
-                      textAlign: "center",
                       textAlign: matches ? "start" : "center",
                       marginLeft: 10,
                     }}
@@ -273,3 +270,5 @@ export default function Ios() {
     </Layout>
   )
 }
+
+export default hot(module)(Ios)

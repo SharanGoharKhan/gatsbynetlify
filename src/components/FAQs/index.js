@@ -101,7 +101,7 @@ const FAQ = () => {
     <>
       {questions.map((item, index) => {
         return (
-          <Grid item sm={6}>
+          <Grid item xs={12} sm={6}>
             <List
               component="nav"
               aria-labelledby="nested-list-subheader"

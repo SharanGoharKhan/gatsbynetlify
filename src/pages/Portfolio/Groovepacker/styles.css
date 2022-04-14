@@ -4,14 +4,14 @@
 .root {
   padding: 10;
 }
-.title {
+#title {
   color: #fff;
   font-weight: 900;
   font-size: 8.5vmin;
   font-family: Montserrat;
   margin-top: 40;
 }
-.subtitle {
+#subtitle {
   color: #fff;
   font-weight: 500;
   font-size: 4vmin;
@@ -109,7 +109,7 @@
   color: white;
 }
 
-.groove-btn {
+#groove-btn {
   background-color: #537e09;
   display: flex;
   justify-content: center;
@@ -120,7 +120,7 @@
   cursor: pointer;
   width: 200px;
 }
-.groove-btn:hover {
+#groove-btn:hover {
   background-color: #537e09;
 }
 .opacity-div {

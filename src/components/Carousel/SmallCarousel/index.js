@@ -13,11 +13,10 @@ const useStyles = makeStyles(theme => ({
     border: "2px solid #000",
     width: "250px",
     height: "120px",
-    margin: "10px 0px 10px 0px",
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-    marginLeft: 30,
+    margin: "10px 20px 10px 20px",
   },
 }))
 export default function SmallCarousel() {

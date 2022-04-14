@@ -1,3 +1,4 @@
+import { hot } from "react-hot-loader"
 import * as React from "react"
 import "./index.css"
 import "../components/layout.css"
@@ -528,7 +529,7 @@ const IndexPage = props => {
         <Box mt={10} />
 
         <SmallCarousel />
-        <Box mt={5}>
+        <Box mt={2}>
           <div style={{ postion: "relative" }}>
             <BottomServices />
             <Typos first="FA" second="FAQ'S" third={"S"} right={"4vmin"} />
@@ -554,4 +555,4 @@ const IndexPage = props => {
   )
 }
 
-export default IndexPage
+export default hot(module)(IndexPage)

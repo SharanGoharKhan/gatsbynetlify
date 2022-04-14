@@ -1,4 +1,4 @@
-.pink-guest-background {
+#pink-guest-background {
   background: linear-gradient(to bottom, #ff075d 0%, #ee3776 100%);
   min-height: 100vh;
   overflow: visible;
@@ -14,11 +14,11 @@
   align-items: center;
   overflow: visible;
 }
-.font-bold {
+#font-bold {
   font-weight: 900;
 }
-.white-color {
-  color: "white";
+#white-color {
+  color: white;
 }
 .pink-color {
   color: #ff075d;
@@ -69,7 +69,7 @@
   right: -3rem;
   overflow: visible;
 }
-.guest-btn {
+#guest-btn {
   background-color: #ff075d;
   display: flex;
   justify-content: center;
@@ -80,6 +80,12 @@
   cursor: pointer;
   width: 200px;
 }
-.guest-btn:hover {
+#guest-btn:hover {
   background-color: #be0948;
+}
+.rounded-mark {
+  width: 15px;
+  height: 15px;
+  background-color: #bd003e;
+  border-radius: 15px;
 }

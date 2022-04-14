@@ -1,6 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import CircularProgress from "@mui/material/CircularProgress"
+import { Backdrop } from "@material-ui/core"
 
 export default function HTML(props) {
   return (
@@ -30,7 +31,7 @@ export default function HTML(props) {
             transform: "translate(-50%, -50%)",
           }}
         >
-          <CircularProgress />
+          <CircularProgress style={{ color: "gray" }} />
         </div>
         <div
           key={`body`}

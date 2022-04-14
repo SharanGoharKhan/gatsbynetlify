@@ -34,7 +34,7 @@ export const lowerData = [
     title: "EASYEATS",
     cols: 2,
     rows: 2,
-    to: "/EasyEats/",
+    to: "/Easyeats/",
   },
   {
     img: GroovePacker,

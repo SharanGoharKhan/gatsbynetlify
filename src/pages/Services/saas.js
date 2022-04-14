@@ -1,3 +1,4 @@
+import { hot } from "react-hot-loader"
 import { Box, Button, Grid, Typography, useMediaQuery } from "@material-ui/core"
 import React from "react"
 import { Banner, BottomServices, Typos } from "../../components"
@@ -8,9 +9,8 @@ import Mockup2 from "../../images/mockup2.png"
 import { useTheme } from "@mui/material/styles"
 import { Link } from "gatsby"
 import "./styles.css"
-import "../../utils/styles/styles.css"
 
-export default function Saas() {
+function Saas() {
   const theme = useTheme()
   const matches = useMediaQuery(theme.breakpoints.down("sm"))
   return (
@@ -86,7 +86,7 @@ export default function Saas() {
                 </Typography>
                 <br />
                 <Link to="/Enatega" style={{ textDecoration: "none" }}>
-                  <Button variant="contained" className="case-btn">
+                  <Button variant="contained" id="case-btn">
                     Case Study
                   </Button>
                 </Link>
@@ -122,7 +122,7 @@ export default function Saas() {
               <br />
               want a ready-made solution
             </Typography>
-            <Button variant="contained" className="quote-btn" href="/#contact">
+            <Button variant="contained" id="quote-btn" href="/#contact">
               Get Quote
             </Button>
           </Box>
@@ -131,3 +131,5 @@ export default function Saas() {
     </Layout>
   )
 }
+
+export default hot(module)(Saas)

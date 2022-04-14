@@ -44,12 +44,12 @@ export default function Groovepack() {
               data-aos="zoom-out-left"
               data-aos-easing="ease-in-sine"
             >
-              <Typography variant="h3" gutterBottom className={"title"}>
+              <Typography variant="h3" gutterBottom id={"title"}>
                 {"GROOVE"}
                 <br />
                 {"PACKER"}
               </Typography>
-              <Typography variant="h3" gutterBottom className={"subtitle"}>
+              <Typography variant="h3" gutterBottom id={"subtitle"}>
                 {`BARCODE INVENTORY CONTROL & SCAN PACK QC SYSTEM`}
               </Typography>
             </Grid>
@@ -79,7 +79,6 @@ export default function Groovepack() {
           </Grid>
         </Container>
         <div style={{ textAlign: "center", position: "relative" }}>
-          {/* <div className="round-1"></div> */}
           <img
             src={Circle}
             alt="circle"
@@ -94,7 +93,6 @@ export default function Groovepack() {
           <Box mt={5} />
 
           <img src={Bar} alt="bar" style={{ width: "80%" }} />
-          {/* <div className="round-1"></div> */}
         </div>
         <Divider style={{ backgroundColor: "#7e7d7d", marginTop: 5 }} />
         <Box mt={20} />
@@ -118,7 +116,6 @@ export default function Groovepack() {
                   align="center"
                   style={{ marginBottom: "4rem" }}
                   data-aos="fade-left"
-                  data-aos-delay="1000"
                 >
                   <div className="icon-container">
                     <DoubleArrowIcon />
@@ -136,13 +133,7 @@ export default function Groovepack() {
                     looking for.
                   </Typography>
                 </Grid>
-                <Grid
-                  item
-                  md={6}
-                  align="center"
-                  data-aos="fade-left"
-                  data-aos-delay="1000"
-                >
+                <Grid item md={6} align="center" data-aos="fade-left">
                   <div className="icon-container">
                     <EqualizerIcon />
                   </div>
@@ -165,7 +156,6 @@ export default function Groovepack() {
                   align="center"
                   style={{ marginBottom: "4rem" }}
                   data-aos="fade-left"
-                  data-aos-delay="1000"
                 >
                   <div className="icon-container">
                     <LightbulbIcon />
@@ -183,13 +173,7 @@ export default function Groovepack() {
                     integrate into your existing shipping system.
                   </Typography>
                 </Grid>
-                <Grid
-                  item
-                  md={6}
-                  align="center"
-                  data-aos="fade-left"
-                  data-aos-delay="1000"
-                >
+                <Grid item md={6} align="center" data-aos="fade-left">
                   <div className="icon-container">
                     <DataUsageIcon />
                   </div>
@@ -317,7 +301,7 @@ export default function Groovepack() {
             <Button
               disableRipple
               target="_blank"
-              className="groove-btn"
+              id="groove-btn"
               href="https://groovepacker.com/"
             >
               Visit Webiste
