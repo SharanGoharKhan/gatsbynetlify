@@ -25,7 +25,7 @@ export const carouselData = [
   },
   {
     name: "Dan Gutting",
-    designation: "Co-founder",
+    designation: "Co-founder at GroovePacker",
     review: `Sharan is an excellent communicator. I was able to chat with him about the project requirements and discuss all aspects of the work. There was no doubt that everything was understood. I can't overstate how beneficial this was. He is resourceful and helpful. I also found that he was able to produce responsive React Native and React Native for web pages that followed the mockups closely. He has an eye for this which was a real benefit to the project.`,
   }
 ]
