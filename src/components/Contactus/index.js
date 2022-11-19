@@ -188,7 +188,7 @@ const ContactUs = () => {
             <Box style={{ textAlign: "center", padding: "2vmin" }}>
               <Typography className={classes.iconText}>Email</Typography>
               <Typography className={classes.iconText2}>
-                sharan@ninjascode.com
+                admin@ninjascode.com
               </Typography>
             </Box>
           </Box>

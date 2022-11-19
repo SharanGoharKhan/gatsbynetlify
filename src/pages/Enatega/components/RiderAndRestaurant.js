@@ -219,7 +219,7 @@ const RiderAndRestaurant = props => {
               </Grid>
               <Grid item xs={8}>
                 <MaterialLink
-                  href="mailto:sharan@ninjascode.com"
+                  href="mailto:admin@ninjascode.com"
                   target="_blank"
                   style={{ textDecoration: "none" }}
                 >

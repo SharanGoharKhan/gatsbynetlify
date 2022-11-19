@@ -4,6 +4,7 @@ import { Banner, BottomServices, Typos } from "../../components"
 import Layout from "../../components/layout"
 import TeamBg from "../../images/team-bg.png"
 import Sharan from "../../images/sharan.png"
+import Raffay from "../../images/raffay.jpeg"
 import Adnan from "../../images/adnan.png"
 import Shahzaib from "../../images/shahzaib.png"
 import Usama from "../../images/usama.png"
@@ -52,28 +53,28 @@ export default function Team() {
                 data-aos="slide-up"
                 data-aos-easing="ease-in-sine"
               >
-                <img src={Sharan} alt={"team"} />
+                <img src={Raffay} alt={"team"} />
                 <Typography variant="h5" className="name">
-                  SHARAN GOHAR
+                  RAFFAY GOHAR
                 </Typography>
                 <Typography variant="h6" className="designation">
                   CEO
                 </Typography>
                 <Box>
                   <a
-                    href="https://www.linkedin.com/in/sharan-gohar-khan/"
+                    href="https://www.linkedin.com/in/raffay-gohar-38936b159/"
                     target="_blank"
                     rel="noreferrer"
                   >
                     <LinkedInIcon className="icon-margin" />
                   </a>
-                  <a
+                  {/* <a
                     href="  https://github.com/SharanGoharKhan/"
                     target="_blank"
                     rel="noreferrer"
                   >
                     <GitHubIcon />
-                  </a>
+                  </a> */}
                 </Box>
               </Paper>
             </Grid>
@@ -146,12 +147,12 @@ export default function Team() {
                 data-aos="zoom-out"
                 data-aos-easing="ease-in-sine"
               >
-                <img src={Shahzaib} alt={"team"} />
+                <img src={Sharan} alt={"team"} />
                 <Typography variant="h5" className="name">
-                  SHAHZAIB
+                  SHARAN GOHAR
                 </Typography>
                 <Typography variant="h6" className="designation">
-                  UI/UX
+                  Tech Lead
                 </Typography>
                 <Box
                   display={"flex"}
@@ -159,22 +160,18 @@ export default function Team() {
                   alignItems={"center"}
                 >
                   <a
-                    href="https://www.linkedin.com/in/shahzaib-alic/"
+                    href="https://www.linkedin.com/in/sharan-gohar-khan/"
                     target="_blank"
                     rel="noreferrer"
                   >
                     <LinkedInIcon className="icon-margin" />
                   </a>
                   <a
-                    href="https://www.behance.net/shahzaibalic"
+                    href="  https://github.com/SharanGoharKhan/"
                     target="_blank"
                     rel="noreferrer"
                   >
-                    <img
-                      src={Behance}
-                      alt="behance"
-                      style={{ width: "20px" }}
-                    />
+                    <GitHubIcon />
                   </a>
                 </Box>
               </Paper>
