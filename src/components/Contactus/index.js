@@ -171,7 +171,7 @@ const ContactUs = () => {
             <Box style={{ padding: "2vmin" }}>
               <Typography className={classes.iconText}>Phone Number</Typography>
               <Typography className={classes.iconText2}>
-                (92) 3339461270
+                +1 (213) 72226874
               </Typography>
             </Box>
           </Box>
@@ -205,7 +205,7 @@ const ContactUs = () => {
             <Box style={{ padding: "2vmin" }}>
               <Typography className={classes.iconText}>Map Street</Typography>
               <Typography className={classes.iconText2}>
-                Islamabad, Pakistan
+                Califronia, USA
               </Typography>
             </Box>
           </Box>
