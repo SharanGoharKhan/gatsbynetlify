@@ -29,7 +29,7 @@ function Ios() {
       />
       <div style={{ position: "relative" }}>
         <BottomServices />
-        <Typos first="IOS" second="IOS DEVELOPEMENT" third="MEN" />
+        <Typos second="IOS DEVELOPEMENT " />
 
         <Container style={{ marginTop: "2rem", marginBottom: "2rem" }}>
           <Grid container>

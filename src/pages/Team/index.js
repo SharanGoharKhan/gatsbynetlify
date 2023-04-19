@@ -40,7 +40,7 @@ export default function Team() {
         className="team-background"
       >
         <BottomServices />
-        <Typos first="OUR" second="OUR TEAM" third="TEAM" right={"4vmin"} />
+        <Typos second="OUR TEAM " right={"4vmin"} />
 
         <Container
           style={{ marginTop: "2rem", marginBottom: "2rem" }}

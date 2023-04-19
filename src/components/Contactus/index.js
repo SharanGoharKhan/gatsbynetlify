@@ -71,7 +71,7 @@ const ContactUs = () => {
       >
         <Grid item xs={12}>
           <Typography className={classes.heading} variant="h3" gutterBottom>
-            Let's Talk with us
+            Contact Us
           </Typography>
         </Grid>
         <Grid container justify="center" alignItems="center">
@@ -188,7 +188,7 @@ const ContactUs = () => {
             <Box style={{ textAlign: "center", padding: "2vmin" }}>
               <Typography className={classes.iconText}>Email</Typography>
               <Typography className={classes.iconText2}>
-                admin@ninjascode.com
+                info@ninjascode.com
               </Typography>
             </Box>
           </Box>

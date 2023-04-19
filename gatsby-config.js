@@ -1,7 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `We Solve Business Problems with Modern Technologies`,
-    description: `Top Software development company for mobile and web development`,
+    title: `We Specialize in Rapid MVP Development and Design`,
+    description: `Get tangible results within a matter of weeks. We utilize agile methodologies and iterative design processes to provide custom and ready-made solutions for a wide range of industries.
+    `,
     author: `@ninjascode1`,
   },
   plugins: [

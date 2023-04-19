@@ -25,13 +25,7 @@ function Saas() {
       />
       <div style={{ position: "relative" }}>
         <BottomServices />
-        <Typos
-          first="START"
-          second="STARTUP SOLUTIONS"
-          third="SOLU"
-          top="0vmin"
-          right="19.5vmin"
-        />
+        <Typos second="STARTUP SOLUTIONS " top="0vmin" right="19.5vmin" />
 
         <Box style={{ marginTop: "2rem", marginBottom: "2rem" }}>
           <Grid container alignItems="center" spacing={3}>

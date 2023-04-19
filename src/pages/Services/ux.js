@@ -21,12 +21,7 @@ function Ux() {
       <div style={{ position: "relative" }}>
         <BottomServices />
 
-        <Typos
-          first="DESIGN"
-          second="UI/UX DESIGN"
-          upperLeft="20vmin"
-          upperTop="10vmin"
-        />
+        <Typos second="UI/UX DESIGN " upperLeft="20vmin" upperTop="10vmin" />
 
         <Box
           style={{

@@ -23,13 +23,7 @@ function Web() {
       />
       <div style={{ position: "relative" }}>
         <BottomServices />
-        <Typos
-          first="DEV"
-          second="DEVELOPEMENT PROCESS"
-          third="PRO"
-          top="0vmin"
-          right="17.5vmin"
-        />
+        <Typos second="DEVELOPEMENT PROCESS " top="0vmin" right="17.5vmin" />
 
         <Box
           style={{

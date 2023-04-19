@@ -51,33 +51,34 @@ const useStyles = makeStyles(theme => ({
 
 const questions = [
   {
-    title: "Estimated budget of your idea?",
+    title: "How should I budget my idea?",
     subtitle:
-      "We value your time & budget we iterate fast this is the reason that we give ourself a very short timeline of just one month. Within that budget and timeline you get flexibility for marketing.",
+      "Our recommended starting budget is $5000. We value your time and resources and strive to deliver an MVP within a month.",
   },
   {
-    title: "How long does it take to execute your idea?",
+    title: "How long will it take to build my idea?",
     subtitle:
-      "We already have designed, developed solution. So your idea is going to be customizations which takes roughly one month.",
+      "For most projects, our timeline is usually between 2 weeks to a month. However, for projects that require additional features and customizations, the timeline may vary. Contact us with your idea so we can create an organic timeline for your project.",
   },
   {
-    title: "What happens after the project is completed?",
+    title: "What happens once the project is completed?",
     subtitle:
-      "After you launch your product you can ask for feedback, our team is always going to be available to you to make any changes that you want to make. A project can never be complete because it will always require changes from constant feedback loop.",
+      "When it comes to MVP development, a project is never completed. In other words, there’s always room for improvement. There’s always changes and fixes that can be made after deployment. We’ll still be there to provide feedback and assist with any changes that you would want to make.",
   },
   {
-    title: "What is needed to get started?",
+    title: "What do I need to get started?",
     subtitle:
-      "No fancy documentation or white paper is required. We will conduct an interview and go through your idea. All requirements will be documented in a proper way by us.",
+      "Rest assured that we won't require any fancy documentation from you. We'll schedule an interview with you and discuss your idea thoroughly. Once we have gathered all the necessary information, we will handle the documentation of all the requirements in a proper and organized manner on your behalf.",
   },
   {
-    title: "Will you sign NDA?",
-    subtitle: "No problem.",
+    title: "Will you sign an NDA?",
+    subtitle:
+      "Yes, we have no issues with signing an NDA. Your confidentiality is very important to us.",
   },
   {
     title: "Do you provide marketing services?",
     subtitle:
-      "UI/UX, Web, Mobile development and QA management. We do not strive for average results so it is better to find marketing expert.",
+      "We are specialists in rapid MVP development, and as a company we believe that our focus should be on delivering the best possible MVP for our clients, which is why we would recommend an external marketing specialist for your needs.",
   },
 ]
 
