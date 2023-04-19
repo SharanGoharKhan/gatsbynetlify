@@ -5,8 +5,13 @@ import "../components/layout.css"
 import Seo from "../components/seo"
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward"
 import OpenSource from "../images/open-source.png"
+import Banner1 from "../images/Banner 1.png"
+import Banner2 from "../images/Banner2.png"
+import Banner3 from "../images/Banner3.png"
+import Banner4 from "../images/Banner4.png"
 import Bg from "../images/home-background.png"
 import ReviewsBg from "../images/reviews-background.png"
+import GitHub from "../images/GitHub.png"
 import WatchLaterIcon from "@mui/icons-material/WatchLater"
 import ViewQuiltIcon from "@mui/icons-material/ViewQuilt"
 import LocalOfferIcon from "@mui/icons-material/LocalOffer"
@@ -42,6 +47,8 @@ import Layout from "../components/layout"
 import { useAnimation } from "../utils/useAnimation"
 import TawkMessengerReact from "@tawk.to/tawk-messenger-react"
 import Splash from "../components/Splash"
+import { blue } from "@mui/material/colors"
+import { height } from "@mui/system"
 
 const useStyles = makeStyles(theme => ({
   container: {
@@ -58,6 +65,7 @@ const useStyles = makeStyles(theme => ({
   bold: {
     fontWeight: 900,
   },
+
   paper: {
     padding: theme.spacing(2),
     textAlign: "center",
@@ -120,12 +128,20 @@ const useStyles = makeStyles(theme => ({
     minHeight: "200px",
     border: "1px solid #179afb",
   },
-  insideCard: {
-    padding: "15px",
-    boxShadow: "2px 2px 0px 0px #000",
-    backgroundColor: "#fff",
-    border: "1px solid black",
+  projrctCard: {
+    display: "flex",
+    justifyContent: "center",
+    flexDirection: "column",
+    alignItems: "center",
+    minHeight: "200px",
+    border: "8px solid #179afb",
   },
+  // insideCard: {
+  //   padding: "15px",
+  //   boxShadow: "2px 2px 0px 0px #000",
+  //   backgroundColor: "#fff",
+  //   border: "1px solid black",
+  // },
   blueBox: {
     backgroundColor: "#179Afb",
     width: "100px",
@@ -157,10 +173,10 @@ const IndexPage = props => {
       <Seo title="Ninjas Code" />
       <Layout home={true}>
         <Banner
-          titleMain={"We Solve Business Problems with"}
-          titleSecondary={"Modern Technologies"}
+          titleMain={"We Specialize in Rapid MVP "}
+          titleSecondary={"Development and Design "}
           subTitle={
-            " Ready made solutions. Fully customizable with documentation and source code. Quickly and cheaply launch your MVP."
+            "Get tangible results within a matter of weeks. We utilize agile methodologies and iterative design processes to provide custom and ready-made solutions for a wide range of industries."
           }
           image={false}
         />
@@ -204,12 +220,7 @@ const IndexPage = props => {
             data-aos="flip-up"
           />
           <BottomServices />
-          <Typos
-            first="THREE"
-            second="THREE THINGS MAKE US UNIQUE"
-            third="QUE"
-            right="5.5vmin"
-          />
+          <Typos second="Revolutionize Your Process " right="5.5vmin" />
           <Box mt={small ? 5 : 20} mb={20}>
             <Container maxWidth="sm">
               <Grid container alignItems="center" spacing={3} data-aos="fade">
@@ -260,13 +271,14 @@ const IndexPage = props => {
                             className={classes.cardHeaderText}
                             gutterBottom
                           >
-                            Get feedback
+                            Test the Waters
                           </Typography>
 
                           <Typography className={classes.cardText} gutterBottom>
-                            Project budget is always tight, development cost
-                            needs to be minimized for marketing budget to test
-                            your idea.
+                            Instead of pouring resources into extensive market
+                            research, with our specialty in MVP development, you
+                            can save time and money while also getting valuable
+                            feedback from customers.
                           </Typography>
                         </div>
                       </Paper>
@@ -288,14 +300,14 @@ const IndexPage = props => {
                             className={classes.cardHeaderText}
                             gutterBottom
                           >
-                            Check Feasibility
+                            Evaluate Your Concept
                           </Typography>
 
                           <Typography className={classes.cardText} gutterBottom>
-                            You don't need to worry if your project will be
-                            executed on time. We already have a pre-made
-                            solution that gives your assurance about how the
-                            final product will be like.
+                            Check whether your concept can be implemented at all
+                            before you commit to creating your product. Check
+                            the feasibility of your product’s features and
+                            functionality first.
                           </Typography>
                         </div>
                       </Paper>
@@ -317,9 +329,7 @@ const IndexPage = props => {
           }}
         >
           <Typos
-            first="OUR"
-            second="OUR PROJECTS"
-            third={"PRO"}
+            second="OUR PROJECTS "
             upperTop="0vmin"
             upperLeft="5.2vmin"
             top="10vmin"
@@ -344,39 +354,294 @@ const IndexPage = props => {
               </Button>
             </GatsbyLink>
           </Box>
+
           <Typos
-            first="OPEN"
-            second="OPEN SOURCE PROJECTS"
-            third={"JECT"}
+            second="OUR OPEN SOURCE PROJECTS "
             upperTop="0vmin"
             upperLeft="5.2vmin"
             top="10vmin"
             right={"8vmin"}
           />
-          <Box mt={5} mb={5} textAlign="center">
-            <img
-              src={OpenSource}
-              alt="open-source"
-              width={"332px"}
-              style={{ maxWidth: "100%" }}
-              data-aos="zoom-out"
-            />
-          </Box>
-          <Box textAlign={"center"} mb={2}>
+
+          <Container maxWidth="md">
+            <Grid container spacing={8}>
+              <Grid item xs={6} data-aos="slide-right">
+                <Paper
+                  elevation={0}
+                  square={true}
+                  className={classes.projrctCard}
+                  data-aos="fade-up-right"
+                  data-aos-delay="800"
+                >
+                  <div
+                    style={{
+                      height: "85px",
+                      flex: "0.5",
+                      display: "flex",
+                      justifyContent: "center",
+                      alignItems: "center",
+                    }}
+                  >
+                    <Box
+                      // className={classes.insideCard}
+                      display="flex"
+                      alignItems="center"
+                    >
+                      <img
+                        src={Banner1}
+                        alt="open-source"
+                        height={"300px"}
+                        width={"100%"}
+                        style={{ maxWidth: "100%", maxHeight: "853px" }}
+                        data-aos="zoom-out"
+                      />
+                    </Box>
+                  </div>
+                  <div
+                    style={{
+                      display: "flex",
+                      flexDirection: "row",
+                      alignItems: "center",
+                      width: "100%",
+                      justifyContent: "space-between",
+                      alignContent: "space-between",
+                      padding: "12px",
+                      paddingTop: "5px",
+                    }}
+                  >
+                    <div>
+                      <Typography className={classes.bold} align="center">
+                        E Commero
+                      </Typography>
+                    </div>
+                    <div>
+                      <Button
+                        style={{ color: "blue" }}
+                        endIcon={<ArrowForwardIcon />}
+                        className={classes.bold}
+                        disableRipple
+                        target="_blank"
+                        href="https://github.com/Ninjas-Code-official/shopping-cart.git/"
+                      >
+                        GITHUB
+                      </Button>
+                    </div>
+                  </div>
+                </Paper>
+              </Grid>
+              <Grid item xs={6}>
+                <Paper
+                  elevation={0}
+                  square={true}
+                  className={classes.projrctCard}
+                  data-aos="fade-up-left"
+                  data-aos-delay="800"
+                >
+                  <div
+                    style={{
+                      height: "85px",
+                      flex: "0.5",
+                      display: "flex",
+                      justifyContent: "center",
+                      alignItems: "center",
+                    }}
+                  >
+                    <Box
+                      //className={classes.insideCard}
+                      display="flex"
+                      alignItems="center"
+                    >
+                      <img
+                        src={Banner2}
+                        alt="open-source"
+                        height={"300px"}
+                        width={"100%"}
+                        style={{ maxWidth: "100%" }}
+                        data-aos="zoom-out"
+                      />
+                    </Box>
+                  </div>
+                  <div
+                    style={{
+                      display: "flex",
+                      flexDirection: "row",
+                      alignItems: "center",
+                      width: "100%",
+                      justifyContent: "space-between",
+                      alignContent: "space-between",
+                      padding: "12px",
+                      paddingTop: "5px",
+                    }}
+                  >
+                    <div>
+                      <Typography className={classes.bold} align="center">
+                        Enatega Single-Vender
+                      </Typography>
+                    </div>
+                    <div>
+                      <Button
+                        endIcon={<ArrowForwardIcon />}
+                        className={classes.bold}
+                        style={{ color: "blue" }}
+                        color={"blue"}
+                        disableRipple
+                        target="_blank"
+                        href="https://github.com/Ninjas-Code-official/Enatega-Restaurant-Solution"
+                      >
+                        GITHUB
+                      </Button>
+                    </div>
+                  </div>
+                </Paper>
+              </Grid>
+              <Grid item xs={6}>
+                <Paper
+                  elevation={0}
+                  square={true}
+                  className={classes.projrctCard}
+                  data-aos="fade-down-right"
+                  data-aos-delay="800"
+                >
+                  <div
+                    style={{
+                      height: "85px",
+                      flex: "0.5",
+                      display: "flex",
+                      justifyContent: "center",
+                      alignItems: "center",
+                    }}
+                  >
+                    <Box
+                      //className={classes.insideCard}
+                      display="flex"
+                      justifyContent={"center"}
+                      alignItems="center"
+                    >
+                      <img
+                        src={Banner3}
+                        alt="open-source"
+                        width={"100%"}
+                        height={"300px"}
+                        style={{ maxWidth: "100%" }}
+                        data-aos="zoom-out"
+                      />
+                    </Box>
+                  </div>
+                  <div
+                    style={{
+                      display: "flex",
+                      flexDirection: "row",
+                      alignItems: "center",
+                      width: "100%",
+                      justifyContent: "space-between",
+                      alignContent: "space-between",
+                      padding: "12px",
+                      paddingTop: "5px",
+                    }}
+                  >
+                    <div>
+                      <Typography className={classes.bold} align="center">
+                        Enatega Multi-Vender
+                      </Typography>
+                    </div>
+                    <div>
+                      <Button
+                        endIcon={<ArrowForwardIcon />}
+                        className={classes.bold}
+                        style={{ color: "blue" }}
+                        disableRipple
+                        target="_blank"
+                        href="https://github.com/Ninjas-Code-official/Marketplace-Food-Delivery-Solution"
+                      >
+                        GITHUB
+                      </Button>
+                    </div>
+                  </div>
+                </Paper>
+              </Grid>
+              <Grid item xs={6}>
+                <Paper
+                  elevation={0}
+                  square={true}
+                  className={classes.projrctCard}
+                  data-aos="fade-down-left"
+                  data-aos-delay="800"
+                  //style={{ backgroundColor: "#179afb" }}
+                >
+                  <div
+                    style={{
+                      height: "85px",
+                      flex: "0.5",
+                      display: "flex",
+                      alignItems: "center",
+                    }}
+                  >
+                    <Box
+                      //className={classes.insideCard}
+                      display="flex"
+                      alignItems="center"
+                    >
+                      <img
+                        src={Banner4}
+                        alt="open-source"
+                        height={"300px"}
+                        width={"100%"}
+                        style={{ maxWidth: "100%" }}
+                        data-aos="zoom-out"
+                      />
+                    </Box>
+                  </div>
+                  <div
+                    style={{
+                      display: "flex",
+                      flexDirection: "row",
+                      alignItems: "center",
+                      width: "100%",
+                      justifyContent: "space-between",
+                      alignContent: "space-between",
+                      padding: "12px",
+                      paddingTop: "5px",
+                    }}
+                  >
+                    <div>
+                      <Typography className={classes.bold} align="center">
+                        OLO
+                      </Typography>
+                    </div>
+                    <div>
+                      <Button
+                        endIcon={<ArrowForwardIcon />}
+                        className={classes.bold}
+                        style={{ color: "blue" }}
+                        disableRipple
+                        target="_blank"
+                        href="https://github.com/Ninjas-Code-official/olxclone-backend"
+                      >
+                        GITHUB
+                      </Button>
+                    </div>
+                  </div>
+                </Paper>
+              </Grid>
+            </Grid>
+          </Container>
+
+          <Box textAlign={"center"} mb={2} style={{ marginTop: "50px" }}>
             <Button
               endIcon={<ArrowForwardIcon />}
               className={classes.bold}
+              style={{ color: "blue" }}
               disableRipple
               target="_blank"
-              href="https://github.com/Ninjas-Code-official/shopping-cart.git/"
+              href="https://github.com/Ninjas-Code-official/"
             >
-              GITHUB
+              SEE MORE
             </Button>
           </Box>
         </div>
         <div style={{ position: "relative" }}>
           <BottomServices />
-          <Typos first="WHY" second="WHY US" third={"US"} right={"4vmin"} />
+          <Typos second="WHY US " right={"4vmin"} />
           <Box mt={5} />
           <Container maxWidth="sm">
             <Grid container spacing={3}>
@@ -516,9 +781,7 @@ const IndexPage = props => {
         >
           <Box>
             <Typos
-              first="OUR"
-              second={"OUR CLIENTS ABOUT US"}
-              third={"US"}
+              second={"WHAT OUR CLIENTS SAY ABOUT US "}
               right={"4vmin"}
               color="white"
             />
@@ -532,7 +795,7 @@ const IndexPage = props => {
         <Box mt={2}>
           <div style={{ postion: "relative" }}>
             <BottomServices />
-            <Typos first="FA" second="FAQ'S" third={"S"} right={"4vmin"} />
+            <Typos second="Frequently Asked Questions " right={"4vmin"} />
             <Container>
               <Grid container spacing={2}>
                 <Faq />

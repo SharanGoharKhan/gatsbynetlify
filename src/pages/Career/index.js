@@ -24,13 +24,7 @@ export default function Career() {
         className="background-container"
       >
         <BottomServices />
-        <Typos
-          first="JOIN"
-          second="JOIN OUR TEAM"
-          third="TEAM"
-          top="0vmin"
-          right="4vmin"
-        />
+        <Typos second="JOIN OUR TEAM " top="0vmin" right="4vmin" />
 
         <Container style={{ marginTop: "2rem", marginBottom: "2rem" }}>
           <Grid container spacing={4} style={{ justifyContent: "center" }}>

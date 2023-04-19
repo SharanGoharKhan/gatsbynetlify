@@ -14,6 +14,7 @@ import { Link as GatsbyLink } from "gatsby"
 import InstaRound from "../../images/instagram-icon.svg"
 import TwitterRound from "../../images/twitter-icon.svg"
 import LinkedInRound from "../../images/linkedin-icon.svg"
+import GitHub from "../../images/icons8-github-100.svg"
 import { colors } from "../../utils/colors"
 
 const useStyles = makeStyles(theme => ({
@@ -84,8 +85,11 @@ const Footer = () => {
             </Grid>
             <Grid item xs={12}>
               <Typography className={classes.innerText} gutterBottom>
-                Ninjas Code is an software house who provide services and custom
-                apps to their clients
+                At our company, we value the importance of delivering an MVP in
+                the shortest possible time. To ensure efficiency and quality, we
+                employ agile development methodologies and iterative design
+                processes. Trust us to build your MVP quickly without
+                compromising on quality.
               </Typography>
             </Grid>
           </Grid>
@@ -148,7 +152,7 @@ const Footer = () => {
               container
               direction="row"
               spacing={1}
-              justify="center"
+              justifyContent="center"
               alignItems="center"
               className={classes.icons}
             >
@@ -178,6 +182,14 @@ const Footer = () => {
               </Grid>
               <Grid item xs={3} lg={2}>
                 <MaterialLink
+                  href="https://github.com/Ninjas-Code-official"
+                  target="_blank"
+                >
+                  <img width="500" height="600" src={GitHub} alt="github" />
+                </MaterialLink>
+              </Grid>
+              <Grid item xs={5} lg={2}>
+                <MaterialLink
                   href="https://twitter.com/NinjasCode1"
                   target="_blank"
                 >
@@ -193,7 +205,7 @@ const Footer = () => {
         <Grid item xs={12}>
           <Box style={{ display: "flex", justifyContent: "space-between" }}>
             <Typography className={classes.footerText} gutterBottom>
-              NinjasCode - © 2021 All Rights Reserved
+              Ninjas Code - © 2023 All Rights Reserved
             </Typography>
             <Box>
               <GatsbyLink

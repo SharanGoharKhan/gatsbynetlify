@@ -27,3 +27,10 @@
 body {
   background: linear-gradient(to bottom, #dde6ee 0%, #fff 100%);
 }
+.BackgroundImg{
+  background-image: url("../images/rectangle2.png");
+  background-position-y: 1280px;
+  background-position: center top;
+  position: relative;
+  
+}

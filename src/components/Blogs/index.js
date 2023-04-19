@@ -42,9 +42,7 @@ export default function Blogs() {
   return (
     <>
       <Typos
-        first="BLO"
-        second="BLOG & NEWS"
-        third={"WS"}
+        second="BLOG & NEWS "
         upperTop="0vmin"
         upperLeft="5.2vmin"
         top="10vmin"

@@ -23,7 +23,7 @@ function Web() {
       />
       <div style={{ position: "relative" }}>
         <BottomServices />
-        <Typos first="DESK" second="DESKTOP APP DEVELOPMENT" third="MEN" />
+        <Typos second="DESKTOP APP DEVELOPMENT" />
         <Box
           style={{
             textAlign: "center",

@@ -27,7 +27,7 @@ function Android() {
       />
       <div style={{ position: "relative" }}>
         <BottomServices />
-        <Typos first="AND" second="ANDROID DEVELOPEMENT" third="MEN" />
+        <Typos second="ANDROID DEVELOPEMENT " />
         <Box
           style={{
             textAlign: "center",

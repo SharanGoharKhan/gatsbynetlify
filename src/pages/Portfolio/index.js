@@ -20,7 +20,7 @@ export default function Portfolio() {
       />
       <div style={{ position: "relative" }}>
         <BottomServices />
-        <Typos first="PORT" second="PORTFOLIO" />
+        <Typos second="PORTFOLIO " />
         <Box
           style={{
             overflow: "visible",

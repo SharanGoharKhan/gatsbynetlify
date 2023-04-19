@@ -162,7 +162,7 @@ const Enatega = () => {
             <Grid container justify="flex-start" alignItems="center">
               <Grid item xs={12} sm={4}>
                 <MaterialLink
-                  href="mailto:admin@ninjascode.com"
+                  href="mailto:info@ninjascode.com"
                   target="_blank"
                   style={{ textDecoration: "none" }}
                 >
