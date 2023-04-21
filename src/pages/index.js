@@ -4,14 +4,8 @@ import "./index.css"
 import "../components/layout.css"
 import Seo from "../components/seo"
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward"
-import OpenSource from "../images/open-source.png"
-import Banner1 from "../images/Banner 1.png"
-import Banner2 from "../images/Banner2.png"
-import Banner3 from "../images/Banner3.png"
-import Banner4 from "../images/Banner4.png"
 import Bg from "../images/home-background.png"
 import ReviewsBg from "../images/reviews-background.png"
-import GitHub from "../images/GitHub.png"
 import WatchLaterIcon from "@mui/icons-material/WatchLater"
 import ViewQuiltIcon from "@mui/icons-material/ViewQuilt"
 import LocalOfferIcon from "@mui/icons-material/LocalOffer"
@@ -47,8 +41,7 @@ import Layout from "../components/layout"
 import { useAnimation } from "../utils/useAnimation"
 import TawkMessengerReact from "@tawk.to/tawk-messenger-react"
 import Splash from "../components/Splash"
-import { blue } from "@mui/material/colors"
-import { height } from "@mui/system"
+import OpenSource from "../components/OpenSource"
 
 const useStyles = makeStyles(theme => ({
   container: {
@@ -136,12 +129,6 @@ const useStyles = makeStyles(theme => ({
     minHeight: "200px",
     border: "8px solid #179afb",
   },
-  // insideCard: {
-  //   padding: "15px",
-  //   boxShadow: "2px 2px 0px 0px #000",
-  //   backgroundColor: "#fff",
-  //   border: "1px solid black",
-  // },
   blueBox: {
     backgroundColor: "#179Afb",
     width: "100px",
@@ -362,270 +349,7 @@ const IndexPage = props => {
             top="10vmin"
             right={"8vmin"}
           />
-
-          <Container maxWidth="md">
-            <Grid container spacing={8}>
-              <Grid item xs={6} data-aos="slide-right">
-                <Paper
-                  elevation={0}
-                  square={true}
-                  className={classes.projrctCard}
-                  data-aos="fade-up-right"
-                  data-aos-delay="800"
-                >
-                  <div
-                    style={{
-                      height: "85px",
-                      flex: "0.5",
-                      display: "flex",
-                      justifyContent: "center",
-                      alignItems: "center",
-                    }}
-                  >
-                    <Box
-                      // className={classes.insideCard}
-                      display="flex"
-                      alignItems="center"
-                    >
-                      <img
-                        src={Banner1}
-                        alt="open-source"
-                        height={"300px"}
-                        width={"100%"}
-                        style={{ maxWidth: "100%", maxHeight: "853px" }}
-                        data-aos="zoom-out"
-                      />
-                    </Box>
-                  </div>
-                  <div
-                    style={{
-                      display: "flex",
-                      flexDirection: "row",
-                      alignItems: "center",
-                      width: "100%",
-                      justifyContent: "space-between",
-                      alignContent: "space-between",
-                      padding: "12px",
-                      paddingTop: "5px",
-                    }}
-                  >
-                    <div>
-                      <Typography className={classes.bold} align="center">
-                        E Commero
-                      </Typography>
-                    </div>
-                    <div>
-                      <Button
-                        style={{ color: "blue" }}
-                        endIcon={<ArrowForwardIcon />}
-                        className={classes.bold}
-                        disableRipple
-                        target="_blank"
-                        href="https://github.com/Ninjas-Code-official/shopping-cart.git/"
-                      >
-                        GITHUB
-                      </Button>
-                    </div>
-                  </div>
-                </Paper>
-              </Grid>
-              <Grid item xs={6}>
-                <Paper
-                  elevation={0}
-                  square={true}
-                  className={classes.projrctCard}
-                  data-aos="fade-up-left"
-                  data-aos-delay="800"
-                >
-                  <div
-                    style={{
-                      height: "85px",
-                      flex: "0.5",
-                      display: "flex",
-                      justifyContent: "center",
-                      alignItems: "center",
-                    }}
-                  >
-                    <Box
-                      //className={classes.insideCard}
-                      display="flex"
-                      alignItems="center"
-                    >
-                      <img
-                        src={Banner2}
-                        alt="open-source"
-                        height={"300px"}
-                        width={"100%"}
-                        style={{ maxWidth: "100%" }}
-                        data-aos="zoom-out"
-                      />
-                    </Box>
-                  </div>
-                  <div
-                    style={{
-                      display: "flex",
-                      flexDirection: "row",
-                      alignItems: "center",
-                      width: "100%",
-                      justifyContent: "space-between",
-                      alignContent: "space-between",
-                      padding: "12px",
-                      paddingTop: "5px",
-                    }}
-                  >
-                    <div>
-                      <Typography className={classes.bold} align="center">
-                        Enatega Single-Vender
-                      </Typography>
-                    </div>
-                    <div>
-                      <Button
-                        endIcon={<ArrowForwardIcon />}
-                        className={classes.bold}
-                        style={{ color: "blue" }}
-                        color={"blue"}
-                        disableRipple
-                        target="_blank"
-                        href="https://github.com/Ninjas-Code-official/Enatega-Restaurant-Solution"
-                      >
-                        GITHUB
-                      </Button>
-                    </div>
-                  </div>
-                </Paper>
-              </Grid>
-              <Grid item xs={6}>
-                <Paper
-                  elevation={0}
-                  square={true}
-                  className={classes.projrctCard}
-                  data-aos="fade-down-right"
-                  data-aos-delay="800"
-                >
-                  <div
-                    style={{
-                      height: "85px",
-                      flex: "0.5",
-                      display: "flex",
-                      justifyContent: "center",
-                      alignItems: "center",
-                    }}
-                  >
-                    <Box
-                      //className={classes.insideCard}
-                      display="flex"
-                      justifyContent={"center"}
-                      alignItems="center"
-                    >
-                      <img
-                        src={Banner3}
-                        alt="open-source"
-                        width={"100%"}
-                        height={"300px"}
-                        style={{ maxWidth: "100%" }}
-                        data-aos="zoom-out"
-                      />
-                    </Box>
-                  </div>
-                  <div
-                    style={{
-                      display: "flex",
-                      flexDirection: "row",
-                      alignItems: "center",
-                      width: "100%",
-                      justifyContent: "space-between",
-                      alignContent: "space-between",
-                      padding: "12px",
-                      paddingTop: "5px",
-                    }}
-                  >
-                    <div>
-                      <Typography className={classes.bold} align="center">
-                        Enatega Multi-Vender
-                      </Typography>
-                    </div>
-                    <div>
-                      <Button
-                        endIcon={<ArrowForwardIcon />}
-                        className={classes.bold}
-                        style={{ color: "blue" }}
-                        disableRipple
-                        target="_blank"
-                        href="https://github.com/Ninjas-Code-official/Marketplace-Food-Delivery-Solution"
-                      >
-                        GITHUB
-                      </Button>
-                    </div>
-                  </div>
-                </Paper>
-              </Grid>
-              <Grid item xs={6}>
-                <Paper
-                  elevation={0}
-                  square={true}
-                  className={classes.projrctCard}
-                  data-aos="fade-down-left"
-                  data-aos-delay="800"
-                  //style={{ backgroundColor: "#179afb" }}
-                >
-                  <div
-                    style={{
-                      height: "85px",
-                      flex: "0.5",
-                      display: "flex",
-                      alignItems: "center",
-                    }}
-                  >
-                    <Box
-                      //className={classes.insideCard}
-                      display="flex"
-                      alignItems="center"
-                    >
-                      <img
-                        src={Banner4}
-                        alt="open-source"
-                        height={"300px"}
-                        width={"100%"}
-                        style={{ maxWidth: "100%" }}
-                        data-aos="zoom-out"
-                      />
-                    </Box>
-                  </div>
-                  <div
-                    style={{
-                      display: "flex",
-                      flexDirection: "row",
-                      alignItems: "center",
-                      width: "100%",
-                      justifyContent: "space-between",
-                      alignContent: "space-between",
-                      padding: "12px",
-                      paddingTop: "5px",
-                    }}
-                  >
-                    <div>
-                      <Typography className={classes.bold} align="center">
-                        OLO
-                      </Typography>
-                    </div>
-                    <div>
-                      <Button
-                        endIcon={<ArrowForwardIcon />}
-                        className={classes.bold}
-                        style={{ color: "blue" }}
-                        disableRipple
-                        target="_blank"
-                        href="https://github.com/Ninjas-Code-official/olxclone-backend"
-                      >
-                        GITHUB
-                      </Button>
-                    </div>
-                  </div>
-                </Paper>
-              </Grid>
-            </Grid>
-          </Container>
-
+          <OpenSource />
           <Box textAlign={"center"} mb={2} style={{ marginTop: "50px" }}>
             <Button
               endIcon={<ArrowForwardIcon />}
