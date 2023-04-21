@@ -38,9 +38,9 @@ import {
   useTheme,
 } from "@material-ui/core"
 import Layout from "../components/layout"
-// import { useAnimation } from "../utils/useAnimation"
+import { useAnimation } from "../utils/useAnimation"
 import TawkMessengerReact from "@tawk.to/tawk-messenger-react"
-// import Splash from "../components/Splash"
+import Splash from "../components/Splash"
 import OpenSource from "../components/OpenSource"
 
 const useStyles = makeStyles(theme => ({
@@ -143,17 +143,18 @@ const IndexPage = props => {
   const classes = useStyles()
   const theme = useTheme()
   const small = useMediaQuery(theme.breakpoints.down("sm"))
-  // useAnimation()
+  const [loading, setLoading] = React.useState(true)
+  useAnimation()
 
-  // React.useEffect(() => {
-  //   setTimeout(() => {
-  //     setLoading(false)
-  //   }, 2500)
-  // })
+  React.useEffect(() => {
+    setTimeout(() => {
+      setLoading(false)
+    }, 250)
+  })
 
-  // if (loading) {
-  //   return <Splash />
-  // }
+  if (loading) {
+    return <Splash />
+  }
   return (
     <>
       <Seo title="Ninjas Code" />
