@@ -5,6 +5,7 @@ import Twitter from "../../svg/twitter"
 import LinkedIn from "../../svg/linkedin"
 import useStyles from "./styles"
 import Instagram from "../../svg/instagram"
+import GithubIcon from "../../svg/GithubIcon"
 
 export default function BannerIcons() {
   const classes = useStyles()
@@ -39,10 +40,18 @@ export default function BannerIcons() {
       </Box>
       <Box className={classes.logoContainer}>
         <MaterialUILink
-          href="https://www.instagram.com/ninjas.code/"
+          href="https://www.instagram.com/ninjascodeofficial/"
           target="_blank"
         >
           <Instagram style={{ marginTop: 6 }} />
+        </MaterialUILink>
+      </Box>
+      <Box className={classes.logoContainer}>
+        <MaterialUILink
+          href="https://github.com/Ninjas-Code-official"
+          target="_blank"
+        >
+          <GithubIcon style={{ width: 30, marginTop: 6 }} fill={"white"} />
         </MaterialUILink>
       </Box>
     </Box>
