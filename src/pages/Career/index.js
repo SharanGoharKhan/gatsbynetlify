@@ -11,9 +11,13 @@ export default function Career() {
   return (
     <Layout>
       <Banner
-        titleMain={"JOIN OUR"}
-        titleSecondary={"TEAM"}
-        subTitle={"We are a team of engineers based in Islamabad, Pakistan"}
+        titleMain={"Join Our Team"}
+        titleSecondary={
+          "Shape Your Future in a Dynamic and Innovative Environment"
+        }
+        subTitle={
+          "Discover exciting career opportunities at our software development agency, where talented individuals come together to create exceptional digital solutions for businesses worldwide. We are always looking for passionate, dedicated professionals to join our growing team, spanning roles in web and mobile app development, UI/UX design, desktop applications, and startup solutions. As a part of our team, you'll enjoy a collaborative, innovative work environment that encourages personal growth and professional development. We are committed to fostering a diverse and inclusive culture, where each team member's unique skills and perspectives are valued. If you're ready to make a meaningful impact in the world of software development, we'd love to hear from you."
+        }
         image={false}
       />
       <div

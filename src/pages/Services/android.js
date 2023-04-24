@@ -18,10 +18,10 @@ function Android() {
   return (
     <Layout>
       <Banner
-        titleMain={"ANDROID"}
-        titleSecondary={"DEVELOPEMENT"}
+        titleMain={"Android Development Services"}
+        titleSecondary={"Creating Engaging Android Apps Tailored to Your Needs"}
         subTitle={
-          "We develop beautiful Android apps with UX as a primary focus"
+          "Our Android development services are dedicated to building feature-rich, high-performance apps that cater to the diverse needs of your business and user base. Leveraging the power of Kotlin and Java, our expert developers craft scalable, user-friendly applications that provide a seamless experience across a wide range of Android devices. We emphasize security, performance, and adaptability, ensuring your Android app stays ahead of the curve in the ever-evolving mobile landscape. From ideation to deployment on Google Play, we collaborate closely with you to bring your vision to life with a top-notch Android app that drives growth and customer engagement."
         }
         image={AndroidService}
       />

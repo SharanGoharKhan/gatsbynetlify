@@ -14,10 +14,12 @@ function Web() {
   return (
     <Layout>
       <Banner
-        titleMain={"WEB"}
-        titleSecondary={"DEVELOPEMENT"}
+        titleMain={"Web Development Services"}
+        titleSecondary={
+          "Building Impactful Digital Experiences for Your Business"
+        }
         subTitle={
-          "Create responsive and multi-purpose web solutions. With stunning design and amazing performance level."
+          "Our web development services are focused on creating stunning, high-performance websites and web applications that elevate your business's online presence. Our skilled team of developers uses a diverse range of modern technologies, including HTML, CSS, JavaScript, and popular frameworks such as React, Angular, and Vue.js. We prioritize responsiveness, accessibility, and security, ensuring your website delivers a seamless user experience across all devices and browsers. From custom e-commerce platforms to content-rich corporate websites, we collaborate with you throughout the development process to create tailored web solutions that effectively drive user engagement and business growth."
         }
         image={WebService}
       />

@@ -14,10 +14,12 @@ function Web() {
   return (
     <Layout>
       <Banner
-        titleMain={"DESKTOP APP"}
-        titleSecondary={"DEVELOPEMENT"}
+        titleMain={"Desktop App Development Services"}
+        titleSecondary={
+          "Delivering Powerful and User-Friendly Desktop Solutions"
+        }
         subTitle={
-          "We get the best out of this framework to build desktop apps that boost user retention"
+          "Our desktop app development services focus on creating robust, feature-rich applications that enhance productivity and streamline business processes for your organization. Our experienced team of developers leverages a diverse set of technologies and frameworks, such as Electron, .NET, and Java, to build cross-platform desktop applications tailored to your unique requirements. We prioritize performance, usability, and security, ensuring your desktop app offers a seamless and efficient user experience on Windows, macOS, and Linux platforms. From initial concept to deployment and ongoing support, we work closely with you to develop custom desktop solutions that drive success and boost operational efficiency."
         }
         image={DesktopService}
       />

@@ -16,10 +16,12 @@ function Saas() {
   return (
     <Layout>
       <Banner
-        titleMain={"SOFTWARE FOR"}
-        titleSecondary={"STARTUPS"}
+        titleMain={"Startup Solutions"}
+        titleSecondary={
+          "Accelerating Your Startup's Success with Tailored Tech Services"
+        }
         subTitle={
-          "We help startups test their ideas fast and on budget - applying our analytics and techinal expertises"
+          "Our startup solutions are designed to empower emerging businesses with the technology and tools they need to succeed in a competitive landscape. We work closely with you to understand your unique challenges, goals, and vision, creating tailored strategies that align with your startup's objectives. Our comprehensive range of services, from web and mobile app development to UI/UX design and cloud computing, ensures your startup is equipped with cutting-edge solutions that drive growth and user engagement. We also provide expert guidance on technology selection, product development, and scaling strategies, supporting your startup through every stage of its journey. With our dedicated startup solutions, we help turn your innovative ideas into thriving businesses."
         }
         image={StartUpImage}
       />

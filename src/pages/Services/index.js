@@ -27,10 +27,10 @@ function Services() {
   return (
     <Layout>
       <Banner
-        titleMain={"Expertise In"}
-        titleSecondary={"Every Technology"}
+        titleMain={"Our Comprehensive Services"}
+        titleSecondary={"Expert Solutions for Your Software Development Needs"}
         subTitle={
-          "Ninjascode provides full-stack Web, Desktop, and Mobile development services. We have huge experience in B2B and B2C solustion"
+          "At our software development agency, we offer a wide range of services tailored to meet the unique requirements of each client. From custom web and mobile app development to UI/UX design, API integration, and cloud computing solutions, our team is adept at providing end-to-end software development services. We also specialize in delivering quality assurance and testing services to ensure the seamless functionality of your applications. By leveraging the latest industry tools and technologies, we're committed to driving your business forward with scalable, secure, and efficient software solutions."
         }
         image={false}
       />

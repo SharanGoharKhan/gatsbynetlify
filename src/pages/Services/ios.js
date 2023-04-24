@@ -22,9 +22,11 @@ function Ios() {
   return (
     <Layout>
       <Banner
-        titleMain={"IOS"}
-        titleSecondary={"DEVELOPEMENT"}
-        subTitle={"We develop beautiful IOS apps with UX as a primary focus"}
+        titleMain={"iOS Development Services"}
+        titleSecondary={"Crafting Exceptional iOS Apps for Your Business"}
+        subTitle={
+          "Our iOS development services focus on delivering cutting-edge, user-centric apps designed to enhance your business's mobile presence. By harnessing the power of Swift and Objective-C, our experienced developers create seamless, feature-rich, and intuitive applications tailored to your target audience. We prioritize performance, security, and usability, ensuring your iOS app delivers a consistent and enjoyable user experience across all Apple devices. From concept to deployment on the App Store, we work closely with you to transform your vision into a high-quality iOS app that drives growth and customer engagement."
+        }
         image={IOSService}
       />
       <div style={{ position: "relative" }}>

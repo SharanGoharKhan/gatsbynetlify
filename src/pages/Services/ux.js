@@ -11,10 +11,10 @@ function Ux() {
   return (
     <Layout>
       <Banner
-        titleMain={"UI/UX"}
-        titleSecondary={"RENDER"}
+        titleMain={"UI/UX Design Services"}
+        titleSecondary={"Crafting Intuitive and Engaging User Experiences"}
         subTitle={
-          "We Create truly habit-forming products. With the beautiful look and UX in mind"
+          "Our UI/UX design services are focused on creating visually stunning and user-centric experiences that resonate with your target audience. Our talented team of designers collaborates closely with you to understand your business goals, user needs, and brand identity. We utilize a research-driven approach to develop intuitive interfaces and seamless user flows, ensuring your digital products are both aesthetically pleasing and highly functional. By prioritizing usability, consistency, and accessibility, we create engaging experiences that drive user satisfaction and promote customer loyalty. From wireframes and prototypes to fully realized designs, we deliver UI/UX solutions that elevate your digital presence and drive business success."
         }
         image={UXImage}
       />
