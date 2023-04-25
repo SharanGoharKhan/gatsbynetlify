@@ -3,6 +3,7 @@ module.exports = {
     title: `We Specialize in Rapid MVP Development and Design`,
     description: `Get tangible results within a matter of weeks. We utilize agile methodologies and iterative design processes to provide custom and ready-made solutions for a wide range of industries.
     `,
+    siteUrl: `https://ninjascode.com`,
     author: `@ninjascode1`,
   },
   plugins: [
@@ -61,5 +62,6 @@ module.exports = {
       },
     },
     `gatsby-plugin-gatsby-cloud`,
+    `gatsby-plugin-sitemap`,
   ],
 }
