@@ -12,6 +12,7 @@ import Behance from "../../images/behance.png"
 import Aos from "aos"
 import "aos/dist/aos.css"
 import { teamData } from "../../utils/teamData"
+import Seo from "../../components/seo"
 
 export default function Team() {
   useEffect(() => {
@@ -208,32 +209,35 @@ export default function Team() {
   }
 
   return (
-    <Layout>
-      <Banner
-        titleMain={"Meet Our Talented Team"}
-        titleSecondary={"A Collective of Skilled Developers and Visionaries"}
-        subTitle={
-          "Our team consists of passionate and experienced professionals who strive to bring innovative software solutions to life. With a diverse skill set ranging from web and mobile app development to UI/UX design and project management, we're committed to delivering exceptional results that exceed client expectations. By fostering a collaborative environment and leveraging the latest technologies, our team is dedicated to driving growth and success for businesses across various industries."
-        }
-        image={false}
-      />
-      <div
-        style={{
-          position: "relative",
-          backgroundImage: `url(${TeamBg})`,
-        }}
-        className="team-background"
-      >
-        <BottomServices />
-        <Typos second="OUR TEAM " right={"4vmin"} />
-
-        <Container
-          style={{ marginTop: "2rem", marginBottom: "2rem" }}
-          className="team"
+    <>
+      <Seo title="Meet Our Talented Team" />
+      <Layout>
+        <Banner
+          titleMain={"Meet Our Talented Team"}
+          titleSecondary={"A Collective of Skilled Developers and Visionaries"}
+          subTitle={
+            "Our team consists of passionate and experienced professionals who strive to bring innovative software solutions to life. With a diverse skill set ranging from web and mobile app development to UI/UX design and project management, we're committed to delivering exceptional results that exceed client expectations. By fostering a collaborative environment and leveraging the latest technologies, our team is dedicated to driving growth and success for businesses across various industries."
+          }
+          image={false}
+        />
+        <div
+          style={{
+            position: "relative",
+            backgroundImage: `url(${TeamBg})`,
+          }}
+          className="team-background"
         >
-          {teamMembers}
-        </Container>
-      </div>
-    </Layout>
+          <BottomServices />
+          <Typos second="OUR TEAM " right={"4vmin"} />
+
+          <Container
+            style={{ marginTop: "2rem", marginBottom: "2rem" }}
+            className="team"
+          >
+            {teamMembers}
+          </Container>
+        </div>
+      </Layout>
+    </>
   )
 }

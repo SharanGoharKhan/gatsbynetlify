@@ -21,6 +21,7 @@ import PersonIcon from "@mui/icons-material/Person"
 import BookmarkIcon from "@mui/icons-material/Bookmark"
 import ScreenShareIcon from "@mui/icons-material/ScreenShare"
 import "./styles.css"
+import Seo from "../../../components/seo"
 
 export default function Zonder() {
   const theme = useTheme()
@@ -33,6 +34,7 @@ export default function Zonder() {
       }}
       className="zonder-bg"
     >
+      <Seo title="Zonder" />
       <Layout bar="transparent" font={"#fff"} mobileGradient={"#5beccc"}>
         <Box className={"zonder-container"}>
           <Box mt={-10}>

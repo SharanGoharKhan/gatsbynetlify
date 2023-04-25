@@ -18,6 +18,7 @@ import Sharan from "../../../images/sharan-s.png"
 import Adnan from "../../../images/adnan-s.png"
 import { Footer, TopBar } from "../../../components"
 import { useAnimation } from "../../../utils/useAnimation"
+import Seo from "../../../components/seo"
 export default function TextMyGuest() {
   const theme = useTheme()
   const matches = useMediaQuery(theme.breakpoints.down("md"))
@@ -26,6 +27,7 @@ export default function TextMyGuest() {
   useAnimation()
   return (
     <>
+      <Seo title="TextMyGuests" />
       <Grid container style={{ postion: "relative" }}>
         <TopBar
           barColor={"transparent"}
