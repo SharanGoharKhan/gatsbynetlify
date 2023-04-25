@@ -1,5 +1,5 @@
 import React, { useEffect } from "react"
-import { Typography } from "@material-ui/core"
+import { Typography } from "@mui/material"
 import { Footer, TopBar } from "../../components"
 import "./TermsAndConditions.css"
 import Seo from "../../components/seo"

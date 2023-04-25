@@ -11,76 +11,16 @@ import {
   useMediaQuery,
   Box,
   Typography,
-} from "@material-ui/core"
-import ClearIcon from "@material-ui/icons/Clear"
-import { makeStyles } from "@material-ui/core/styles"
+  useTheme,
+} from "@mui/material"
+import ClearIcon from "@mui/icons-material/Clear"
 import "./TopBar.css"
 import { Link } from "react-scroll"
 import { Link as GatsbyLink } from "gatsby"
 import Logo from "../../images/NinjasCode.svg"
 import LogoBlack from "../../images/NinjasCodeBlack.svg"
-import BarChartIcon from "@material-ui/icons/BarChart"
+import BarChartIcon from "@mui/icons-material/BarChart"
 import { colors } from "../../utils/colors"
-
-const useStyles = makeStyles(theme => ({
-  root: {
-    flexGrow: 1,
-    overflow: "visible",
-  },
-  title: {
-    fontSize: 24,
-    fontWeight: 700,
-    color: colors.glassBlack,
-    fontFamily: "Montserrat",
-  },
-  sectionDesktop: {
-    display: "none",
-    overflow: "visible",
-    [theme.breakpoints.up("md")]: {
-      display: "flex",
-    },
-    alignItems: "center",
-  },
-  sectionMobile: {
-    display: "flex",
-    [theme.breakpoints.up("md")]: {
-      display: "none",
-    },
-  },
-  modal: {
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-  paper: {
-    padding: theme.spacing(1),
-    textAlign: "center",
-    backgroundColor: "inherit",
-  },
-  boxContainer: {
-    height: "100%",
-    width: "100%",
-  },
-  coolLink: {
-    display: "inline-block",
-    color: colors.black,
-    textDecoration: "none",
-  },
-  textHeading: {
-    color: colors.white,
-    fontWeight: "700",
-    textAlign: "center",
-    margin: "auto",
-  },
-  icon: {
-    color: colors.white,
-  },
-  paper1: {
-    padding: theme.spacing(2),
-    textAlign: "center",
-    color: theme.palette.text.secondary,
-  },
-}))
 
 const services = [
   { name: "IOS Developement", path: "/Services/ios" },
@@ -92,12 +32,72 @@ const services = [
 ]
 const timeoutLength = 200
 const TopBar = props => {
-  const classes = useStyles()
+  const theme = useTheme()
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null)
   const isMobileMenuOpen = Boolean(mobileMoreAnchorEl)
   const mobileMenuId = "primary-search-account-menu-mobile"
   const matches = useMediaQuery("(min-width:960px)")
   const [anchorElServices, setAnchorElServices] = React.useState(null)
+
+  const classes = {
+    root: {
+      flexGrow: 1,
+      overflow: "visible",
+    },
+    title: {
+      fontSize: 24,
+      fontWeight: 700,
+      color: colors.glassBlack,
+      fontFamily: "Montserrat",
+    },
+    sectionDesktop: {
+      display: "none",
+      overflow: "visible",
+      [theme.breakpoints.up("md")]: {
+        display: "flex",
+      },
+      alignItems: "center",
+    },
+    sectionMobile: {
+      display: "flex",
+      [theme.breakpoints.up("md")]: {
+        display: "none",
+      },
+    },
+    modal: {
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
+    },
+    paper: {
+      padding: 8,
+      textAlign: "center",
+      backgroundColor: "inherit",
+    },
+    boxContainer: {
+      height: "100%",
+      width: "100%",
+    },
+    coolLink: {
+      display: "inline-block",
+      color: colors.black,
+      textDecoration: "none",
+    },
+    textHeading: {
+      color: colors.white,
+      fontWeight: "700",
+      textAlign: "center",
+      margin: "auto",
+    },
+    icon: {
+      color: colors.white,
+    },
+    paper1: {
+      padding: 16,
+      textAlign: "center",
+      color: theme.palette.text.secondary,
+    },
+  }
 
   const handleMobileMenuClose = () => {
     setMobileMoreAnchorEl(null)

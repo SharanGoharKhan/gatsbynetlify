@@ -1,45 +1,43 @@
 import React from "react"
 import {
   Typography,
-  makeStyles,
   Grid,
   Button,
   useTheme,
   useMediaQuery,
-} from "@material-ui/core"
-import ArrowForwardIcon from "@material-ui/icons/ArrowForward"
+} from "@mui/material"
+import ArrowForwardIcon from "@mui/icons-material/ArrowForwardIos"
 import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 import "./Ecommero.css"
 import { colors } from "../../utils/colors"
 
-const useStyles = makeStyles(theme => ({
-  divider: {
-    backgroundColor: colors.blue2,
-    margin: "auto",
-    marginTop: theme.spacing(0),
-    width: "74px",
-    height: "2px",
-  },
-  paper: {
-    padding: theme.spacing(2),
-    color: theme.palette.text.secondary,
-  },
-  button: {
-    marginTop: theme.spacing(3),
-    backgroundColor: "transparent",
-    borderColor: colors.orange,
-    borderRadius: 10,
-    borderWidth: 1,
-    padding: theme.spacing(1),
-    marginBottom: theme.spacing(4),
-  },
-}))
-
 const Ecommero = () => {
   const theme = useTheme()
   const matches = useMediaQuery(theme.breakpoints.up("sm"))
-  const classes = useStyles()
+
+  const classes = {
+    divider: {
+      backgroundColor: colors.blue2,
+      margin: "auto",
+      marginTop: 0,
+      width: "74px",
+      height: "2px",
+    },
+    paper: {
+      padding: 16,
+      color: theme.palette.text.secondary,
+    },
+    button: {
+      marginTop: 24,
+      backgroundColor: "transparent",
+      borderColor: colors.orange,
+      borderRadius: 10,
+      borderWidth: 1,
+      padding: 8,
+      marginBottom: 32,
+    },
+  }
   return (
     <div className="lightDiv">
       <Grid container justify="center" alignItems="center">

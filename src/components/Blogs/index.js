@@ -3,42 +3,33 @@ import Blog1 from "../../images/blog-image.png"
 import Blog2 from "../../images/blog-image2.png"
 import { externalLinks } from "../../utils/links"
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward"
-import {
-  Grid,
-  Typography,
-  makeStyles,
-  Container,
-  Box,
-  Button,
-} from "@material-ui/core"
+import { Grid, Typography, Container, Box, Button } from "@mui/material"
 import { Typos } from ".."
 import { colors } from "../../utils/colors"
 
-const useStyles = makeStyles(theme => ({
-  blogBox: {
-    maxWidth: "400px",
-    padding: "1rem",
-    position: "absolute",
-    border: `2px solid ${colors.primary}`,
-    backgroundColor: "white",
-    zIndex: "10000",
-    top: "100px",
-  },
-  blogBackBox: {
-    border: "2px solid black",
-    position: "absolute",
-    top: 0,
-    height: " 400px",
-    maxWidth: "400px",
-    left: "5rem",
-  },
-  bold: {
-    fontWeight: 900,
-  },
-}))
 export default function Blogs() {
-  const classes = useStyles()
-
+  const classes = {
+    blogBox: {
+      maxWidth: "400px",
+      padding: "1rem",
+      position: "absolute",
+      border: `2px solid ${colors.primary}`,
+      backgroundColor: "white",
+      zIndex: "10000",
+      top: "100px",
+    },
+    blogBackBox: {
+      border: "2px solid black",
+      position: "absolute",
+      top: 0,
+      height: " 400px",
+      maxWidth: "400px",
+      left: "5rem",
+    },
+    bold: {
+      fontWeight: 900,
+    },
+  }
   return (
     <>
       <Typos

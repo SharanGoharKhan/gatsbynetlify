@@ -1,5 +1,5 @@
 import React, { useRef } from "react"
-import StarIcon from "@material-ui/icons/Star"
+import StarIcon from "@mui/icons-material/Star"
 import {
   Divider,
   Button,
@@ -10,76 +10,15 @@ import {
   CardActionArea,
   Avatar,
   CardContent,
-  makeStyles,
   Grid,
-  GridList,
-  GridListTile,
+  ImageList,
+  ImageListItem,
   IconButton,
-} from "@material-ui/core"
+  useTheme,
+} from "@mui/material"
 import ArrowLeftIcon from "../../svg/arrowLeftIcon"
 import ArrowRightIcon from "../../svg/arrowRightIcon"
 import { colors } from "../../utils/colors"
-
-const useStyles = makeStyles(theme => ({
-  root: {
-    display: "flex",
-    flexWrap: "wrap",
-    justifyContent: "space-around",
-    overflow: "hidden",
-    marginTop: 40,
-    height: "fit-content",
-    marginBottom: 100,
-    backgroundColor: theme.palette.background.paper,
-    WebkitOverflowScrolling: "touch",
-  },
-  gridList: {
-    flexWrap: "nowrap",
-    transform: "translateX(0) translateZ(0)",
-  },
-  titleText: {
-    color: colors.darkBlue,
-    fontWeight: 600,
-    padding: 20,
-    fontSize: "6vmin",
-    fontFamily: "Montserrat",
-  },
-  media: {
-    height: "10vmin",
-  },
-  large: {
-    width: theme.spacing(8),
-    height: theme.spacing(8),
-  },
-  BoxContainer: {
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "space-evenly",
-    padding: "3.8vmin",
-  },
-  cardTitle: {
-    color: colors.darkBlue,
-    fontFamily: "Montserrat",
-    fontSize: "3.8vmin",
-  },
-  cardSubTitle: {
-    color: colors.dullBlue,
-    letterSpacing: 1,
-    lineHeight: "4vmin",
-    fontFamily: "Montserrat",
-    fontSize: "2vmin",
-  },
-  divider: {
-    margin: theme.spacing(3),
-  },
-  star: {
-    color: colors.yellow,
-  },
-  paper: {
-    padding: theme.spacing(2),
-    textAlign: "center",
-    color: theme.palette.text.secondary,
-  },
-}))
 
 const tileData = [
   {
@@ -104,7 +43,68 @@ const tileData = [
 ]
 
 const Testimonial = () => {
-  const classes = useStyles()
+  const theme = useTheme()
+
+  const classes = {
+    root: {
+      display: "flex",
+      flexWrap: "wrap",
+      justifyContent: "space-around",
+      overflow: "hidden",
+      marginTop: 40,
+      height: "fit-content",
+      marginBottom: 100,
+      backgroundColor: theme.palette.background.paper,
+      WebkitOverflowScrolling: "touch",
+    },
+    gridList: {
+      flexWrap: "nowrap",
+      transform: "translateX(0) translateZ(0)",
+    },
+    titleText: {
+      color: colors.darkBlue,
+      fontWeight: 600,
+      padding: 20,
+      fontSize: "6vmin",
+      fontFamily: "Montserrat",
+    },
+    media: {
+      height: "10vmin",
+    },
+    large: {
+      width: 64,
+      height: 64,
+    },
+    BoxContainer: {
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "space-evenly",
+      padding: "3.8vmin",
+    },
+    cardTitle: {
+      color: colors.darkBlue,
+      fontFamily: "Montserrat",
+      fontSize: "3.8vmin",
+    },
+    cardSubTitle: {
+      color: colors.dullBlue,
+      letterSpacing: 1,
+      lineHeight: "4vmin",
+      fontFamily: "Montserrat",
+      fontSize: "2vmin",
+    },
+    divider: {
+      margin: 24,
+    },
+    star: {
+      color: colors.yellow,
+    },
+    paper: {
+      padding: 16,
+      textAlign: "center",
+      color: theme.palette.text.secondary,
+    },
+  }
 
   const ref = useRef([])
 
@@ -187,14 +187,14 @@ const Testimonial = () => {
       </Grid>
       <Grid item xs={12} sm={12} md={8}>
         <div className={classes.root}>
-          <GridList
+          <ImageList
             cellHeight={"auto"}
             className={classes.gridList}
             ref={ref}
             cols={matches ? 2.2 : 1.2}
           >
             {tileData.map((tile, index1) => (
-              <GridListTile key={index1}>
+              <ImageListItem key={index1}>
                 <Card elevation={5} style={{ width: "90%" }}>
                   <CardActionArea>
                     <CardContent>
@@ -248,9 +248,9 @@ const Testimonial = () => {
                     </Box>
                   </CardActionArea>
                 </Card>
-              </GridListTile>
+              </ImageListItem>
             ))}
-          </GridList>
+          </ImageList>
         </div>
       </Grid>
     </Grid>

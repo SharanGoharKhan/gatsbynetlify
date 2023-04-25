@@ -1,45 +1,44 @@
 import React from "react"
-import { Typography, makeStyles, Grid } from "@material-ui/core"
+import { Typography, Grid, useTheme } from "@mui/material"
 import Mockup4 from "../../../../images/Mockup4.svg"
 import Mockup5 from "../../../../images/Mockup5.svg"
 import Mockup6 from "../../../../images/Mockup6.svg"
-import CheckCircleIcon from "@material-ui/icons/CheckCircle"
-
-const useStyles = makeStyles(theme => ({
-  divider: {
-    backgroundColor: "#175CFF",
-    margin: "auto",
-    marginTop: "20px",
-    width: "74px",
-    height: "3px",
-  },
-  root: {
-    flexGrow: 1,
-    height: "fit-content",
-    marginTop: theme.spacing(0),
-    padding: theme.spacing(5),
-  },
-  images1: {
-    width: "80%",
-    margin: "auto",
-    marginTop: theme.spacing(5),
-  },
-  paper: {
-    padding: theme.spacing(2),
-    elevation: 1,
-    height: 150,
-    width: 250,
-    alignContent: "center",
-    color: theme.palette.text.secondary,
-  },
-  topConatainer: {
-    // textAlign: 'center',
-    marginTop: theme.spacing(5),
-  },
-}))
+import CheckCircleOutlineIcon from "@mui/icons-material/CheckCircleOutline"
 
 const Solution = props => {
-  const classes = useStyles()
+  const theme = useTheme()
+
+  const classes = {
+    divider: {
+      backgroundColor: "#175CFF",
+      margin: "auto",
+      marginTop: "20px",
+      width: "74px",
+      height: "3px",
+    },
+    root: {
+      flexGrow: 1,
+      height: "fit-content",
+      marginTop: 0,
+      padding: 40,
+    },
+    images1: {
+      width: "80%",
+      margin: "auto",
+      marginTop: 40,
+    },
+    paper: {
+      padding: 16,
+      elevation: 1,
+      height: 150,
+      width: 250,
+      alignContent: "center",
+      color: theme.palette.text.secondary,
+    },
+    topConatainer: {
+      marginTop: 40,
+    },
+  }
 
   return (
     <>
@@ -99,7 +98,7 @@ const Solution = props => {
               </Typography>
               <Grid container direction="row">
                 <Grid item xs={2} md={1}>
-                  <CheckCircleIcon style={{ color: "#7F7FFF" }} />
+                  <CheckCircleOutlineIcon style={{ color: "#7F7FFF" }} />
                 </Grid>
                 <Grid item xs={10} md={11}>
                   <Typography
@@ -119,7 +118,7 @@ const Solution = props => {
               </Grid>
               <Grid container direction="row">
                 <Grid item xs={2} md={1}>
-                  <CheckCircleIcon style={{ color: "#7F7FFF" }} />
+                  <CheckCircleOutlineIcon style={{ color: "#7F7FFF" }} />
                 </Grid>
                 <Grid item xs={10} md={11}>
                   <Typography
@@ -140,7 +139,7 @@ const Solution = props => {
               </Grid>
               <Grid container direction="row">
                 <Grid item xs={2} md={1}>
-                  <CheckCircleIcon style={{ color: "#7F7FFF" }} />
+                  <CheckCircleOutlineIcon style={{ color: "#7F7FFF" }} />
                 </Grid>
                 <Grid item xs={10} md={11}>
                   <Typography

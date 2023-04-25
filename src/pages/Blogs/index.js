@@ -8,12 +8,11 @@ import {
   Collapse,
   Divider,
   Typography,
-  makeStyles,
   useMediaQuery,
   Grid,
   useTheme,
-} from "@material-ui/core"
-import { red } from "@material-ui/core/colors"
+} from "@mui/material"
+import { red } from "@mui/material/colors"
 import Blog1 from "../../images/blog1.png"
 import Blog2 from "../../images/blog2.png"
 import Blog3 from "../../images/blog3.png"
@@ -22,54 +21,53 @@ import Blog5 from "../../images/blog5.png"
 import Blog6 from "../../images/blog6.png"
 import { ContactUs, Footer, TopBar } from "../../components"
 
-const useStyles = makeStyles(theme => ({
-  title: {
-    fontFamily: theme.typography,
-  },
-  divider: {
-    backgroundColor: "#175CFF",
-    margin: "auto",
-    marginTop: "40px",
-    width: "74px",
-    height: "2px",
-    marginBottom: theme.spacing(2),
-  },
-  root: {
-    padding: theme.spacing(3),
-  },
-  paper: {
-    padding: theme.spacing(2),
-    textAlign: "center",
-    color: theme.palette.text.secondary,
-  },
-  button: {
-    marginTop: theme.spacing(6),
-    backgroundColor: "#3751FF",
-    borderRadius: 10,
-    height: 60,
-  },
-  cardRoot: {
-    maxWidth: 345,
-  },
-  media: {
-    height: 200,
-  },
-  expand: {
-    transform: "rotate(0deg)",
-    transition: theme.transitions.create("transform", {
-      duration: theme.transitions.duration.shortest,
-    }),
-  },
-  expandOpen: {},
-  avatar: {
-    backgroundColor: red[500],
-  },
-}))
-
 const Blogs = () => {
   const theme = useTheme()
   const matches = useMediaQuery(theme.breakpoints.up("sm"))
-  const classes = useStyles()
+
+  const classes = {
+    title: {
+      fontFamily: theme.typography,
+    },
+    divider: {
+      backgroundColor: "#175CFF",
+      margin: "auto",
+      marginTop: "40px",
+      width: "74px",
+      height: "2px",
+      marginBottom: 16,
+    },
+    root: {
+      padding: 24,
+    },
+    paper: {
+      padding: 16,
+      textAlign: "center",
+      color: theme.palette.text.secondary,
+    },
+    button: {
+      marginTop: 48,
+      backgroundColor: "#3751FF",
+      borderRadius: 10,
+      height: 60,
+    },
+    cardRoot: {
+      maxWidth: 345,
+    },
+    media: {
+      height: 200,
+    },
+    expand: {
+      transform: "rotate(0deg)",
+      transition: theme.transitions.create("transform", {
+        duration: theme.transitions.duration.shortest,
+      }),
+    },
+    expandOpen: {},
+    avatar: {
+      backgroundColor: red[500],
+    },
+  }
 
   const [expanded] = React.useState(false)
 

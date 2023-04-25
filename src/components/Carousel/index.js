@@ -6,48 +6,48 @@ import StarIcon from "@mui/icons-material/Star"
 import {
   Paper,
   Typography,
-  makeStyles,
   Box,
   Divider,
   useMediaQuery,
   useTheme,
-} from "@material-ui/core"
+} from "@mui/material"
 import { colors } from "../../utils/colors"
-const useStyles = makeStyles(theme => ({
-  sliderPaper: {
-    padding: theme.spacing(1),
-    maxWidth: "400px",
-    minHeight: "480px",
-    transform: "scale(0.85)",
-    backgroundColor: colors.primary,
-  },
 
-  carousel: {
-    minHeight: "600px",
-    overflow: "visible !important",
-    display: "flex",
-    alignItems: "center",
-    "& *": {
-      overflow: "visible",
-    },
-
-    "& li": {
-      display: "flex",
-      justifyContent: "center",
-      alignItems: "center",
-    },
-    "& .selected": {
-      transform: "scale(1.18)",
-    },
-    "& .carousel-slider": {
-      margin: "auto !important",
-    },
-  },
-}))
 export default function CarouselComponent() {
-  const classes = useStyles()
   const theme = useTheme()
   const small = useMediaQuery(theme.breakpoints.down("md"))
+
+  const classes = {
+    sliderPaper: {
+      padding: 8,
+      maxWidth: "400px",
+      minHeight: "480px",
+      transform: "scale(0.85)",
+      backgroundColor: colors.primary,
+    },
+
+    carousel: {
+      minHeight: "600px",
+      overflow: "visible !important",
+      display: "flex",
+      alignItems: "center",
+      "& *": {
+        overflow: "visible",
+      },
+
+      "& li": {
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+      },
+      "& .selected": {
+        transform: "scale(1.18)",
+      },
+      "& .carousel-slider": {
+        margin: "auto !important",
+      },
+    },
+  }
   return (
     <div style={{ width: "100%", display: "flex", justifyContent: "center" }}>
       <Carousel

@@ -1,11 +1,5 @@
 import { hot } from "react-hot-loader"
-import {
-  Box,
-  Container,
-  Grid,
-  Typography,
-  useMediaQuery,
-} from "@material-ui/core"
+import { Box, Container, Grid, Typography, useMediaQuery } from "@mui/material"
 import React from "react"
 import { Banner, BottomServices, Typos } from "../../components"
 import Layout from "../../components/layout"
@@ -13,7 +7,6 @@ import IOSService from "../../images/ios.svg"
 import D1 from "../../images/Device1.png"
 import D2 from "../../images/Device2.png"
 import "./styles.css"
-
 import { useTheme } from "@mui/material/styles"
 import Seo from "../../components/seo"
 

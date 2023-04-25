@@ -9,7 +9,7 @@ import {
   Typography,
   useMediaQuery,
   Button,
-} from "@material-ui/core"
+} from "@mui/material"
 import Headphone from "../../../images/headphone.svg"
 import Circle from "../../../images/circle-groove.png"
 import Bar from "../../../images/bar-groove.png"

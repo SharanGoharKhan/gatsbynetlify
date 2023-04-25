@@ -1,8 +1,7 @@
 import React, { useEffect } from "react"
-import { Grid, Typography, useMediaQuery, useTheme } from "@material-ui/core"
-import useStyles from "./styles"
+import { Grid, Typography, useMediaQuery, useTheme } from "@mui/material"
 import BannerIcons from "../BannerIcons"
-import Particles from "react-tsparticles"
+// import Particles from "react-tsparticles"
 import Aos from "aos"
 import "aos/dist/aos.css"
 import { colors } from "../../utils/colors"
@@ -11,11 +10,87 @@ export default function Banner({ titleMain, titleSecondary, subTitle, image }) {
   useEffect(() => {
     Aos.init({ duration: 1000, once: true })
   }, [])
-
-  const classes = useStyles()
   const matches = useMediaQuery("(min-width:600px)")
   const theme = useTheme()
   const small = useMediaQuery(theme.breakpoints.down("sm"))
+
+  const classes = {
+    grid: {
+      padding: 32,
+      position: "relative",
+      zIndex: 99,
+    },
+    root: {
+      padding: 10,
+    },
+    title: {
+      color: colors.white,
+      fontWeight: 700,
+      fontSize: "8.5vmin",
+      fontFamily: "Montserrat",
+      marginTop: 40,
+    },
+    subtitle: {
+      color: colors.white,
+      fontWeight: 500,
+      fontSize: "3vmin",
+      lineHeight: "30px",
+      fontFamily: "Montserrat",
+      marginTop: 40,
+    },
+    cardHeaderText: {
+      fontWeight: 700,
+      fontSize: "3vmin",
+      fontFamily: "Montserrat",
+    },
+    boldText: {
+      color: colors.white,
+      fontWeight: 700,
+      fontSize: "4vmin",
+      fontFamily: "Montserrat",
+    },
+    number: {
+      color: colors.white,
+      padding: 8,
+      fontFamily: "Montserrat",
+    },
+    cardText: {
+      textAlign: "initial",
+      fontSize: "2.5vmin",
+      fontFamily: "Montserrat",
+    },
+    logoContainer: {
+      borderWidth: 1,
+      borderStyle: "solid",
+      width: "40px",
+      height: "40px",
+      borderColor: colors.white,
+    },
+    background: {
+      background: `linear-gradient(to bottom, ${colors.primary} 0%, ${colors.purple} 100%)`,
+      boxShadow: "0px 3px 2px rgb(206, 202, 202)",
+      paddingBottom: "2rem",
+      position: "relative",
+      minHeight: "95vh",
+      zIndex: 1,
+      display: "flex",
+      flexDirection: "column",
+      justifyContent: "center",
+    },
+    bg: {
+      position: "absolute",
+      right: 0,
+      top: 0,
+      width: "100%",
+      height: "100%",
+      opacity: "0.4",
+      zIndex: 2,
+    },
+    canvas: {
+      position: "absolute !important",
+      background: "red",
+    },
+  }
 
   return (
     <div id="Home" className={classes.background}>
@@ -75,90 +150,89 @@ export default function Banner({ titleMain, titleSecondary, subTitle, image }) {
 }
 
 function ParticleContainer() {
-  return (
-    <Particles
-      id="particles"
-      options={{
-        background: {
-          color: {
-            value: "transparent",
-          },
-        },
-        fpsLimit: 120,
-        interactivity: {
-          events: {
-            onClick: {
-              enable: true,
-              mode: "push",
-            },
-            onHover: {
-              enable: true,
-              mode: "repulse",
-            },
-            resize: true,
-          },
-          modes: {
-            bubble: {
-              distance: 400,
-              duration: 2,
-              opacity: 0.8,
-              size: 40,
-            },
-            push: {
-              quantity: 4,
-            },
-            repulse: {
-              distance: 100,
-              duration: 0.4,
-            },
-          },
-        },
-        particles: {
-          color: {
-            value: colors.particleDots,
-          },
-          links: {
-            color: colors.white,
-            distance: 150,
-            enable: true,
-            opacity: 0.5,
-            width: 1,
-          },
-          collisions: {
-            enable: false,
-          },
-          move: {
-            direction: "none",
-            enable: true,
-            outMode: "bounce",
-            random: false,
-            speed: 3,
-            straight: false,
-          },
-          number: {
-            density: {
-              enable: true,
-              area: 800,
-            },
-            value: 120,
-          },
-          opacity: {
-            value: 0.5,
-          },
-          shape: {
-            type: "circle",
-          },
-          size: {
-            random: true,
-            value: 5,
-          },
-        },
-        detectRetina: true,
-        style: {
-          position: "absolute",
-          height: "100%",
-        },
-      }}
-    />
-  )
+  return null
+  // <Particles
+  //   id="particles"
+  //   options={{
+  //     background: {
+  //       color: {
+  //         value: "transparent",
+  //       },
+  //     },
+  //     fpsLimit: 120,
+  //     interactivity: {
+  //       events: {
+  //         onClick: {
+  //           enable: true,
+  //           mode: "push",
+  //         },
+  //         onHover: {
+  //           enable: true,
+  //           mode: "repulse",
+  //         },
+  //         resize: true,
+  //       },
+  //       modes: {
+  //         bubble: {
+  //           distance: 400,
+  //           duration: 2,
+  //           opacity: 0.8,
+  //           size: 40,
+  //         },
+  //         push: {
+  //           quantity: 4,
+  //         },
+  //         repulse: {
+  //           distance: 100,
+  //           duration: 0.4,
+  //         },
+  //       },
+  //     },
+  //     particles: {
+  //       color: {
+  //         value: colors.particleDots,
+  //       },
+  //       links: {
+  //         color: colors.white,
+  //         distance: 150,
+  //         enable: true,
+  //         opacity: 0.5,
+  //         width: 1,
+  //       },
+  //       collisions: {
+  //         enable: false,
+  //       },
+  //       move: {
+  //         direction: "none",
+  //         enable: true,
+  //         outMode: "bounce",
+  //         random: false,
+  //         speed: 3,
+  //         straight: false,
+  //       },
+  //       number: {
+  //         density: {
+  //           enable: true,
+  //           area: 800,
+  //         },
+  //         value: 120,
+  //       },
+  //       opacity: {
+  //         value: 0.5,
+  //       },
+  //       shape: {
+  //         type: "circle",
+  //       },
+  //       size: {
+  //         random: true,
+  //         value: 5,
+  //       },
+  //     },
+  //     detectRetina: true,
+  //     style: {
+  //       position: "absolute",
+  //       height: "100%",
+  //     },
+  //   }}
+  // />
 }

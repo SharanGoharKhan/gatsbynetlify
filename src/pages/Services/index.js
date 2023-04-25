@@ -2,14 +2,7 @@ import { hot } from "react-hot-loader"
 import React from "react"
 import { Banner, BottomServices, ServicesCard, Typos } from "../../components"
 import Layout from "../../components/layout"
-import {
-  Box,
-  Container,
-  Divider,
-  Grid,
-  Paper,
-  Typography,
-} from "@material-ui/core"
+import { Box, Container, Divider, Grid, Paper, Typography } from "@mui/material"
 import LocalDiningIcon from "@mui/icons-material/LocalDining"
 import HealthAndSafetyIcon from "@mui/icons-material/HealthAndSafety"
 import ApartmentIcon from "@mui/icons-material/Apartment"

@@ -1,58 +1,59 @@
 import React from "react"
-import { Typography, makeStyles, Grid, Box } from "@material-ui/core"
+import { Typography, Grid, Box, useTheme } from "@mui/material"
 import Speedometer from "../../svg/speedometer"
 import BadgeIcon from "../../svg/badgeIcon"
 import TimeIcon from "../../svg/timeIcon"
 import ThunderIcon from "../../svg/thunderIcon"
 import { colors } from "../../utils/colors"
 
-const useStyles = makeStyles(theme => ({
-  paper: {
-    padding: theme.spacing(2),
-    textAlign: "center",
-    color: theme.palette.text.secondary,
-  },
-  background: {
-    marginTop: theme.spacing(6),
-    backgroundColor: colors.blue2,
-    height: "fit-content",
-    textAlign: "center",
-    padding: theme.spacing(6),
-  },
-  grid: {
-    marginTop: theme.spacing(5),
-  },
-  subTitle: {
-    fontWeight: 400,
-    padding: theme.spacing(3),
-    width: "100%",
-    lineHeight: "3vmin",
-    fontSize: "3vmin",
-    margin: "auto",
-    color: colors.white,
-    fontFamily: "Montserrat",
-  },
-  image: {
-    borderStyle: "solid",
-    borderWidth: 1,
-    borderColor: colors.white,
-    borderRadius: 10,
-    boxShadow: "2px -3vmin 1vmin #faf9f7",
-    display: "flex",
-    height: "100px",
-    width: "127px",
-    justifyContent: "center",
-    alignItems: "center",
-  },
-  container: {
-    display: "flex",
-    flexDirection: "column",
-    alignItems: "center",
-  },
-}))
-
 const WhyUs = () => {
-  const classes = useStyles()
+  const theme = useTheme()
+
+  const classes = {
+    paper: {
+      padding: 16,
+      textAlign: "center",
+      color: theme.palette.text.secondary,
+    },
+    background: {
+      marginTop: 48,
+      backgroundColor: colors.blue2,
+      height: "fit-content",
+      textAlign: "center",
+      padding: 48,
+    },
+    grid: {
+      marginTop: 40,
+    },
+    subTitle: {
+      fontWeight: 400,
+      padding: 24,
+      width: "100%",
+      lineHeight: "3vmin",
+      fontSize: "3vmin",
+      margin: "auto",
+      color: colors.white,
+      fontFamily: "Montserrat",
+    },
+    image: {
+      borderStyle: "solid",
+      borderWidth: 1,
+      borderColor: colors.white,
+      borderRadius: 10,
+      boxShadow: "2px -3vmin 1vmin #faf9f7",
+      display: "flex",
+      height: "100px",
+      width: "127px",
+      justifyContent: "center",
+      alignItems: "center",
+    },
+    container: {
+      display: "flex",
+      flexDirection: "column",
+      alignItems: "center",
+    },
+  }
+
   return (
     <div id="whyus" className={classes.background}>
       <Typography

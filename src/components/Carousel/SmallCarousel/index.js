@@ -1,26 +1,27 @@
 import React from "react"
-import { Paper, makeStyles } from "@material-ui/core"
+import { Paper, useTheme } from "@mui/material"
 import { smallCarouselData } from "../../../utils/carouselData"
 import { colors } from "../../../utils/colors"
 import Marquee from "react-fast-marquee"
 
-const useStyles = makeStyles(theme => ({
-  sliderPaper: {
-    padding: 25,
-    textAlign: "center",
-    color: theme.palette.text.secondary,
-    boxShadow: `10px 10px 2px 0px ${colors.primary}`,
-    border: "2px solid #000",
-    width: "250px",
-    height: "120px",
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-    margin: "10px 20px 10px 20px",
-  },
-}))
 export default function SmallCarousel() {
-  const classes = useStyles()
+  const theme = useTheme()
+
+  const classes = {
+    sliderPaper: {
+      padding: 25,
+      textAlign: "center",
+      color: theme.palette.text.secondary,
+      boxShadow: `10px 10px 2px 0px ${colors.primary}`,
+      border: "2px solid #000",
+      width: "250px",
+      height: "120px",
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
+      margin: "10px 20px 10px 20px",
+    },
+  }
 
   return (
     <>

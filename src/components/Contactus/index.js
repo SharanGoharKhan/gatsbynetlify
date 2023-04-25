@@ -1,65 +1,56 @@
 import React from "react"
-import {
-  makeStyles,
-  Grid,
-  Typography,
-  TextareaAutosize,
-  Button,
-  Box,
-} from "@material-ui/core"
+import { Grid, Typography, TextareaAutosize, Button, Box } from "@mui/material"
 import CallIcon from "../../svg/callIcon"
 import AddressIcon from "../../svg/addressIcon"
 import EmailIcon from "../../svg/emailIcon"
 import { colors } from "../../utils/colors"
 
-const useStyles = makeStyles(theme => ({
-  container: {
-    background: `linear-gradient(to bottom, ${colors.primary} 0%, ${colors.purple} 100%)`,
-    padding: theme.spacing(6),
-    height: "fit-content",
-    textAlign: "center",
-  },
-  textInput: {
-    width: "100%",
-    height: "7vmin",
-    borderRadius: 2,
-    color: colors.gray,
-    borderWidth: 1,
-    padding: 10,
-    fontFamily: "Montserrat",
-    fontWeight: "600",
-    fontSize: "2vmin",
-  },
-  label: {
-    textAlign: "left",
-    fontFamily: "Poppins",
-    color: colors.white,
-    fontWeight: "600",
-    fontSize: "2vmin",
-  },
-  heading: {
-    fontWeight: 700,
-    color: colors.white,
-    fontSize: "5vmin",
-    textAlign: "center",
-    fontFamily: "Montserrat",
-  },
-  iconText: {
-    fontSize: "2vmin",
-    fontWeight: 600,
-    color: colors.mediumGray,
-    fontFamily: "Montserrat",
-  },
-  iconText2: {
-    fontSize: "3vmin",
-    fontWeight: 700,
-    color: colors.white,
-    fontFamily: "Montserrat",
-  },
-}))
-
 const ContactUs = () => {
-  const classes = useStyles()
+  const classes = {
+    container: {
+      background: `linear-gradient(to bottom, ${colors.primary} 0%, ${colors.purple} 100%)`,
+      padding: 48,
+      height: "fit-content",
+      textAlign: "center",
+    },
+    textInput: {
+      width: "100%",
+      height: "7vmin",
+      borderRadius: 2,
+      color: colors.gray,
+      borderWidth: 1,
+      padding: 10,
+      fontFamily: "Montserrat",
+      fontWeight: "600",
+      fontSize: "2vmin",
+    },
+    label: {
+      textAlign: "left",
+      fontFamily: "Poppins",
+      color: colors.white,
+      fontWeight: "600",
+      fontSize: "2vmin",
+    },
+    heading: {
+      fontWeight: 700,
+      color: colors.white,
+      fontSize: "5vmin",
+      textAlign: "center",
+      fontFamily: "Montserrat",
+    },
+    iconText: {
+      fontSize: "2vmin",
+      fontWeight: 600,
+      color: colors.mediumGray,
+      fontFamily: "Montserrat",
+    },
+    iconText2: {
+      fontSize: "3vmin",
+      fontWeight: 700,
+      color: colors.white,
+      fontFamily: "Montserrat",
+    },
+  }
   return (
     <div id="contact" className={classes.container}>
       <Grid

@@ -2,43 +2,36 @@ import React from "react"
 import featureImage from "../../images/enategaHome.png"
 import macbookImage from "../../images/macbook.png"
 import FeaturedWorkComponent from "./FeaturedWork"
-import {
-  Divider,
-  Typography,
-  makeStyles,
-  useMediaQuery,
-  useTheme,
-} from "@material-ui/core"
+import { Divider, Typography, useMediaQuery, useTheme } from "@mui/material"
 import "./FeaturedWork.css"
 import { colors } from "../../utils/colors"
-
-const useStyles = makeStyles(theme => ({
-  title: {
-    fontFamily: theme.typography,
-  },
-  divider: {
-    backgroundColor: colors.blue,
-    margin: "auto",
-    marginTop: "40px",
-    width: "74px",
-    height: "2px",
-  },
-  paper: {
-    padding: theme.spacing(2),
-    color: theme.palette.text.secondary,
-  },
-  button: {
-    marginTop: theme.spacing(6),
-    backgroundColor: colors.blue2,
-    borderRadius: 10,
-    height: 60,
-  },
-}))
 
 const FeaturedWork = () => {
   const theme = useTheme()
   const matches = useMediaQuery(theme.breakpoints.up("sm"))
-  const classes = useStyles()
+
+  const classes = {
+    title: {
+      fontFamily: theme.typography,
+    },
+    divider: {
+      backgroundColor: colors.blue,
+      margin: "auto",
+      marginTop: "40px",
+      width: "74px",
+      height: "2px",
+    },
+    paper: {
+      padding: 16,
+      color: theme.palette.text.secondary,
+    },
+    button: {
+      marginTop: 48,
+      backgroundColor: colors.blue2,
+      borderRadius: 10,
+      height: 60,
+    },
+  }
 
   return (
     <div id="feature">

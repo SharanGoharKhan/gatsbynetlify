@@ -1,19 +1,19 @@
-import { Box, makeStyles } from "@material-ui/core"
+import { Box } from "@mui/material"
 import { ImageList, ImageListItem } from "@mui/material"
 import { Link } from "gatsby"
 import React from "react"
 import { lowerData, portfolioData } from "../../utils/portfolioData"
 import "./styles.css"
-const useStyles = makeStyles({
-  box: {
-    overflow: "visible",
-    "& > *": {
-      overflow: "visible !important",
-    },
-  },
-})
+
 export default function PortfolioProjects() {
-  const classes = useStyles()
+  const classes = {
+    box: {
+      overflow: "visible",
+      "& > *": {
+        overflow: "visible !important",
+      },
+    },
+  }
   return (
     <Box className={classes.box}>
       <ImageList

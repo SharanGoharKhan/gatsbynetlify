@@ -5,7 +5,7 @@ import {
   Typography,
   useMediaQuery,
   useTheme,
-} from "@material-ui/core"
+} from "@mui/material"
 import React from "react"
 import "./styles.css"
 import Group from "../../../images/group-pink.png"

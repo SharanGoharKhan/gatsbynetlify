@@ -1,5 +1,5 @@
 import { hot } from "react-hot-loader"
-import { Box, useMediaQuery, useTheme } from "@material-ui/core"
+import { Box, useMediaQuery, useTheme } from "@mui/material"
 import React, { useEffect } from "react"
 import { Banner, BottomServices, Typos } from "../../components"
 import Layout from "../../components/layout"

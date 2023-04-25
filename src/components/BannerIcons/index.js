@@ -1,14 +1,37 @@
 import React from "react"
-import { Box, Link as MaterialUILink } from "@material-ui/core"
+import { Box, Link as MaterialUILink, useTheme } from "@mui/material"
 import Facebook from "../../svg/facebook"
 import Twitter from "../../svg/twitter"
 import LinkedIn from "../../svg/linkedin"
-import useStyles from "./styles"
 import Instagram from "../../svg/instagram"
 import GithubIcon from "../../svg/GithubIcon"
+import { colors } from "../../utils/colors"
 
 export default function BannerIcons() {
-  const classes = useStyles()
+  const theme = useTheme()
+
+  const classes = {
+    container: {
+      display: "grid",
+      gridTemplateColumns: "repeat(12, 1fr)",
+      gridGap: 48,
+    },
+    logoContainer: {
+      borderWidth: 1,
+      borderStyle: "solid",
+      width: "40px",
+      height: "40px",
+      borderColor: colors.white,
+      margin: "auto",
+      [theme.breakpoints.up("sm")]: {
+        marginRight: 10,
+        margin: 10,
+      },
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
+    },
+  }
   return (
     <Box
       style={{

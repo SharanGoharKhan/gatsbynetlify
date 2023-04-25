@@ -1,14 +1,12 @@
 import React from "react"
 import {
-  makeStyles,
   Grid,
   Typography,
   Box,
   Button,
   Divider,
   Link as MaterialLink,
-} from "@material-ui/core"
-
+} from "@mui/material"
 import FacebookRound from "../../images/facebook-icon.svg"
 import { Link as GatsbyLink } from "gatsby"
 import InstaRound from "../../images/instagram-icon.svg"
@@ -17,55 +15,53 @@ import LinkedInRound from "../../images/linkedin-icon.svg"
 import GitHub from "../../images/icons8-github-100.svg"
 import { colors } from "../../utils/colors"
 
-const useStyles = makeStyles(theme => ({
-  container: {
-    backgroundColor: colors.white,
-    padding: theme.spacing(10),
-    height: "fit-content",
-    textAlign: "center",
-  },
-  heading: {
-    fontSize: "3.5vmin",
-    fontWeight: 700,
-    fontFamily: "Montserrat",
-  },
-  subHeading: {
-    fontSize: "2.5vmin",
-    fontWeight: 500,
-    fontFamily: "Montserrat",
-    textAlign: "left",
-  },
-  innerText: {
-    fontWeight: 400,
-    fontSize: "2.2vmin",
-    color: colors.lightGray,
-    opacity: "60%",
-    fontFamily: "Montserrat",
-  },
-  alignLeft: {
-    textAlign: "left",
-  },
-  footerText: {
-    color: colors.lightPurple,
-    fontWeight: 500,
-    fontSize: "2vmin",
-    fontFamily: "Montserrat",
-  },
-  links: {
-    textDecoration: "none",
-    color: "gray",
-    fontSize: "2.5vmin",
-  },
-  icons: {
-    "& img": {
-      width: 30,
-      height: 30,
-    },
-  },
-}))
-
 const Footer = () => {
-  const classes = useStyles()
+  const classes = {
+    container: {
+      backgroundColor: colors.white,
+      padding: 80,
+      height: "fit-content",
+      textAlign: "center",
+    },
+    heading: {
+      fontSize: "3.5vmin",
+      fontWeight: 700,
+      fontFamily: "Montserrat",
+    },
+    subHeading: {
+      fontSize: "2.5vmin",
+      fontWeight: 500,
+      fontFamily: "Montserrat",
+      textAlign: "left",
+    },
+    innerText: {
+      fontWeight: 400,
+      fontSize: "2.2vmin",
+      color: colors.lightGray,
+      opacity: "60%",
+      fontFamily: "Montserrat",
+    },
+    alignLeft: {
+      textAlign: "left",
+    },
+    footerText: {
+      color: colors.lightPurple,
+      fontWeight: 500,
+      fontSize: "2vmin",
+      fontFamily: "Montserrat",
+    },
+    links: {
+      textDecoration: "none",
+      color: "gray",
+      fontSize: "2.5vmin",
+    },
+    icons: {
+      "& img": {
+        width: 30,
+        height: 30,
+      },
+    },
+  }
 
   return (
     <div className={classes.container}>

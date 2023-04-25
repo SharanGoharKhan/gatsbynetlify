@@ -9,7 +9,7 @@ import ReviewsBg from "../images/reviews-background.png"
 import WatchLaterIcon from "@mui/icons-material/WatchLater"
 import ViewQuiltIcon from "@mui/icons-material/ViewQuilt"
 import LocalOfferIcon from "@mui/icons-material/LocalOffer"
-import LightbulbCircleIcon from "@mui/icons-material/LightbulbCircle"
+import LightbulbIcon from "@mui/icons-material/Lightbulb"
 import AddBoxOutlinedIcon from "@mui/icons-material/AddBoxOutlined"
 import FeedbackIcon from "@mui/icons-material/Feedback"
 import MonetizationOnIcon from "@mui/icons-material/MonetizationOn"
@@ -30,121 +30,119 @@ import {
   Grid,
   Paper,
   Typography,
-  makeStyles,
   useMediaQuery,
   Container,
   Box,
   Button,
   useTheme,
-} from "@material-ui/core"
+} from "@mui/material"
 import Layout from "../components/layout"
 import { useAnimation } from "../utils/useAnimation"
 import TawkMessengerReact from "@tawk.to/tawk-messenger-react"
 import Splash from "../components/Splash"
 import OpenSource from "../components/OpenSource"
 
-const useStyles = makeStyles(theme => ({
-  container: {
-    display: "grid",
-    gridTemplateColumns: "repeat(12, 1fr)",
-    gridGap: theme.spacing(6),
-  },
-  grid: {
-    padding: theme.spacing(4),
-  },
-  root: {
-    padding: 10,
-  },
-  bold: {
-    fontWeight: 900,
-  },
-
-  paper: {
-    padding: theme.spacing(2),
-    textAlign: "center",
-    color: theme.palette.text.secondary,
-    boxShadow: "10px 10px 0px 0px #000",
-    border: "2px solid #179afb",
-  },
-  sliderPaper: {
-    padding: theme.spacing(1),
-    border: "2px solid #179afb",
-    maxWidth: "400px",
-    minHeight: "480px",
-    transform: "scale(0.85)",
-  },
-  title: {
-    color: "#fff",
-    fontWeight: 700,
-    fontSize: "8.5vmin",
-    fontFamily: "Montserrat",
-  },
-  subtitle: {
-    color: "#fff",
-    fontWeight: 500,
-    fontSize: "3vmin",
-    lineHeight: "30px",
-  },
-  cardHeaderText: {
-    fontWeight: 900,
-    fontSize: "3vmin",
-    color: "#000",
-  },
-  boldText: {
-    color: "#fff",
-    fontWeight: 700,
-    fontSize: "4vmin",
-    fontFamily: "Montserrat",
-  },
-  number: {
-    color: "#fff",
-    padding: 8,
-    fontFamily: "Montserrat",
-  },
-  cardText: {
-    textAlign: "initial",
-    fontSize: "2vmin",
-    fontFamily: "Montserrat",
-  },
-  logoContainer: {
-    borderWidth: 1,
-    borderStyle: "solid",
-    width: "40px",
-    height: "40px",
-    borderColor: "#fff",
-  },
-  whyUsCard: {
-    display: "flex",
-    justifyContent: "center",
-    flexDirection: "column",
-    alignItems: "center",
-    minHeight: "200px",
-    border: "1px solid #179afb",
-  },
-  projrctCard: {
-    display: "flex",
-    justifyContent: "center",
-    flexDirection: "column",
-    alignItems: "center",
-    minHeight: "200px",
-    border: "8px solid #179afb",
-  },
-  blueBox: {
-    backgroundColor: "#179Afb",
-    width: "100px",
-    height: "100px",
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-  },
-}))
-
 const IndexPage = props => {
-  const classes = useStyles()
   const theme = useTheme()
   const small = useMediaQuery(theme.breakpoints.down("sm"))
   const [loading, setLoading] = React.useState(true)
   useAnimation()
+
+  const classes = {
+    container: {
+      display: "grid",
+      gridTemplateColumns: "repeat(12, 1fr)",
+      gridGap: 48,
+    },
+    grid: {
+      padding: 32,
+    },
+    root: {
+      padding: 10,
+    },
+    bold: {
+      fontWeight: 900,
+    },
+
+    paper: {
+      padding: 16,
+      textAlign: "center",
+      color: theme.palette.text.secondary,
+      boxShadow: "10px 10px 0px 0px #000",
+      border: "2px solid #179afb",
+    },
+    sliderPaper: {
+      padding: 8,
+      border: "2px solid #179afb",
+      maxWidth: "400px",
+      minHeight: "480px",
+      transform: "scale(0.85)",
+    },
+    title: {
+      color: "#fff",
+      fontWeight: 700,
+      fontSize: "8.5vmin",
+      fontFamily: "Montserrat",
+    },
+    subtitle: {
+      color: "#fff",
+      fontWeight: 500,
+      fontSize: "3vmin",
+      lineHeight: "30px",
+    },
+    cardHeaderText: {
+      fontWeight: 900,
+      fontSize: "3vmin",
+      color: "#000",
+    },
+    boldText: {
+      color: "#fff",
+      fontWeight: 700,
+      fontSize: "4vmin",
+      fontFamily: "Montserrat",
+    },
+    number: {
+      color: "#fff",
+      padding: 8,
+      fontFamily: "Montserrat",
+    },
+    cardText: {
+      textAlign: "initial",
+      fontSize: "2vmin",
+      fontFamily: "Montserrat",
+    },
+    logoContainer: {
+      borderWidth: 1,
+      borderStyle: "solid",
+      width: "40px",
+      height: "40px",
+      borderColor: "#fff",
+    },
+    whyUsCard: {
+      display: "flex",
+      justifyContent: "center",
+      flexDirection: "column",
+      alignItems: "center",
+      minHeight: "200px",
+      border: "1px solid #179afb",
+    },
+    projrctCard: {
+      display: "flex",
+      justifyContent: "center",
+      flexDirection: "column",
+      alignItems: "center",
+      minHeight: "200px",
+      border: "8px solid #179afb",
+    },
+    blueBox: {
+      backgroundColor: "#179Afb",
+      width: "100px",
+      height: "100px",
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
+    },
+  }
 
   React.useEffect(() => {
     setTimeout(() => {
@@ -422,7 +420,7 @@ const IndexPage = props => {
                       display="flex"
                       alignItems="center"
                     >
-                      <LightbulbCircleIcon />
+                      <LightbulbIcon />
                     </Box>
                   </div>
                   <Typography className={classes.bold} align="center">
