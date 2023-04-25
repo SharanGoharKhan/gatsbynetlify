@@ -34,7 +34,10 @@ export default function Zonder() {
       }}
       className="zonder-bg"
     >
-      <Seo title="Zonder" />
+      <Seo
+        title="Zonder"
+        description="A digital travel companion that keeps track of"
+      />
       <Layout bar="transparent" font={"#fff"} mobileGradient={"#5beccc"}>
         <Box className={"zonder-container"}>
           <Box mt={-10}>

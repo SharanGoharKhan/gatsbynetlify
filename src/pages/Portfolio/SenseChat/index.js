@@ -18,7 +18,11 @@ const SenseChat = () => {
 
   return (
     <div className="sense-container">
-      <Seo title="Sense.chat" />
+      <Seo
+        title="Sense.chat"
+        description="A new messenger built to communicate, organize, and reward your
+          communities and friends."
+      />
       <div className="senseHeader">
         <TopBar barColor="transparent" fontColor="#fff" />
         <Typography

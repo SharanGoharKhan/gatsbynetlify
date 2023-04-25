@@ -31,7 +31,10 @@ export default function Bundl() {
   useAnimation()
   return (
     <>
-      <Seo title="Bundl" />
+      <Seo
+        title="Bundl"
+        description="The number one destination for baby and children's resale apparel"
+      />
       <Layout bar="#62d7a5" font={"#fff"} mobileGradient={"#62d7a5"}>
         <div className="bundl-background">
           <img src={BundlLogo} alt="title" />

@@ -65,7 +65,11 @@ const Enatega = () => {
 
   return (
     <>
-      <Seo title="Enatega" />
+      <Seo
+        title="Enatega"
+        description=" A full fledged solution highly suitable to build any restaurant,
+              food delivery app for iOS & Android with"
+      />
       <TopBar barColor="#FAFBFF" fontColor="#070707" />
       <div
         className="enategaDiv"

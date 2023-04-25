@@ -16,7 +16,10 @@ function Saas() {
   const matches = useMediaQuery(theme.breakpoints.down("sm"))
   return (
     <>
-      <Seo title="Startup Solutions" />
+      <Seo
+        title="Startup Solutions"
+        description="Accelerating Your Startup's Success with Tailored Tech Services"
+      />
       <Layout>
         <Banner
           titleMain={"Startup Solutions"}

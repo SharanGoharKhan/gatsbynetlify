@@ -1,8 +1,8 @@
-import React, { useEffect } from 'react'
-import { Typography } from '@material-ui/core';
-import { Footer, TopBar } from "../../components";
-import "./TermsAndConditions.css";
-import Seo from '../../components/seo';
+import React, { useEffect } from "react"
+import { Typography } from "@material-ui/core"
+import { Footer, TopBar } from "../../components"
+import "./TermsAndConditions.css"
+import Seo from "../../components/seo"
 
 const terms = [
   {
@@ -105,9 +105,9 @@ const terms = [
       exclude any of our or your liabilities that may not be excluded under applicable law.
       The limitations and prohibitions of liability set in this Section and elsewhere in this disclaimer: (a) are subject to the preceding paragraph; and (b) govern all liabilities arising under the disclaimer, including liabilities arising in contract, in tort and for breach of statutory duty.
       
-      As long as the website and the information and services on the website are provided free of charge, we will not be liable for any loss or damage of any nature.`
-  }
-];
+      As long as the website and the information and services on the website are provided free of charge, we will not be liable for any loss or damage of any nature.`,
+  },
+]
 
 const TermsAndConditions = () => {
   useEffect(() => {
@@ -115,23 +115,60 @@ const TermsAndConditions = () => {
   }, [])
   return (
     <>
-      <Seo title="Terms and Conditions" />
+      <Seo title="Terms and Conditions" description="Terms and Conditions" />
       <TopBar barColor="#3751FF" fontColor="#fff" />
       <div style={{ marginTop: 20, padding: 30 }} className="container">
-        <Typography style={{ fontWeight: '700', lineHeight: '60px', fontFamily: 'Montserrat', fontSize: 20, color: '#3751FF' }} >Terms & Conditions</Typography>
-        <div style={{ backgroundColor: '#3751FF', padding: 5, width: 'fit-content', borderRadius: 3 }}>
-          <Typography style={{ color: '#fff', fontFamily: 'Montserrat' }}>Last update: 12th March 2021</Typography>
+        <Typography
+          style={{
+            fontWeight: "700",
+            lineHeight: "60px",
+            fontFamily: "Montserrat",
+            fontSize: 20,
+            color: "#3751FF",
+          }}
+        >
+          Terms & Conditions
+        </Typography>
+        <div
+          style={{
+            backgroundColor: "#3751FF",
+            padding: 5,
+            width: "fit-content",
+            borderRadius: 3,
+          }}
+        >
+          <Typography style={{ color: "#fff", fontFamily: "Montserrat" }}>
+            Last update: 12th March 2021
+          </Typography>
         </div>
         {terms.map((props, key) => (
           <div key={key} style={{ marginTop: 30 }}>
-            <Typography style={{ lineHeight: '60px', color: '#1E2022', fontWeight: '600', fontFamily: 'Montserrat', fontSize: 20 }}>{props.title}</Typography>
-            <Typography style={{ color: '#77838F', fontFamily: 'Montserrat', fontSize: 15 }}>{props.description}</Typography>
+            <Typography
+              style={{
+                lineHeight: "60px",
+                color: "#1E2022",
+                fontWeight: "600",
+                fontFamily: "Montserrat",
+                fontSize: 20,
+              }}
+            >
+              {props.title}
+            </Typography>
+            <Typography
+              style={{
+                color: "#77838F",
+                fontFamily: "Montserrat",
+                fontSize: 15,
+              }}
+            >
+              {props.description}
+            </Typography>
           </div>
         ))}
       </div>
       <Footer />
     </>
-  );
+  )
 }
 
-export default TermsAndConditions;
+export default TermsAndConditions

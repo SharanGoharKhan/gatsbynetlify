@@ -35,7 +35,10 @@ export default function Hpec() {
 
   return (
     <>
-      <Seo title="HPEC" />
+      <Seo
+        title="HPEC"
+        description="We make it easy for physicians to lead the future of patient care"
+      />
       <Layout bar={"#200E34"} font={colors.white}>
         <div className="hpec-background">
           <Container>

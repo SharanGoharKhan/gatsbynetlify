@@ -18,7 +18,10 @@ function Android() {
   const small = useMediaQuery(theme.breakpoints.down("md"))
   return (
     <>
-      <Seo title="Android Development Services" />
+      <Seo
+        title="Android Development Services"
+        description="Creating Engaging Android Apps Tailored to Your Needs"
+      />
       <Layout>
         <Banner
           titleMain={"Android Development Services"}

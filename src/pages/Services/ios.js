@@ -22,7 +22,10 @@ function Ios() {
   const matches = useMediaQuery(theme.breakpoints.down("sm"))
   return (
     <>
-      <Seo title="iOS Development Services" />
+      <Seo
+        title="iOS Development Services"
+        description="Crafting Exceptional iOS Apps for Your Business"
+      />
       <Layout>
         <Banner
           titleMain={"iOS Development Services"}

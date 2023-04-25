@@ -11,7 +11,10 @@ import Seo from "../../components/seo"
 export default function Career() {
   return (
     <>
-      <Seo title="Join Our Team" />
+      <Seo
+        title="Join Our Team"
+        description="Shape Your Future in a Dynamic and Innovative Environment"
+      />
       <Layout>
         <Banner
           titleMain={"Join Our Team"}

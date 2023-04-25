@@ -27,7 +27,10 @@ import Seo from "../../components/seo"
 function Services() {
   return (
     <>
-      <Seo title="Our Comprehensive Services" />
+      <Seo
+        title="Our Comprehensive Services"
+        description="Expert Solutions for Your Software Development Needs"
+      />
       <Layout>
         <Banner
           titleMain={"Our Comprehensive Services"}

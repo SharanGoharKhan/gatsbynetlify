@@ -13,7 +13,10 @@ import Seo from "../../components/seo"
 export default function Portfolio() {
   return (
     <>
-      <Seo title="Our Portfolio" />
+      <Seo
+        title="Our Portfolio"
+        description="Showcasing Our Expertise Through Successful Projects"
+      />
       <Layout>
         <Banner
           titleMain={"Our Portfolio"}

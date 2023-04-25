@@ -27,7 +27,10 @@ export default function TextMyGuest() {
   useAnimation()
   return (
     <>
-      <Seo title="TextMyGuests" />
+      <Seo
+        title="TextMyGuests"
+        description="Keep your guests informed with pre-scheduled text reminders and"
+      />
       <Grid container style={{ postion: "relative" }}>
         <TopBar
           barColor={"transparent"}

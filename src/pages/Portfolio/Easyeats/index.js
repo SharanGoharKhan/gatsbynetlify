@@ -32,7 +32,10 @@ export default function EasyEats() {
 
   return (
     <>
-      <Seo title="Easy Eats" />
+      <Seo
+        title="Easy Eats"
+        description="Meet Easy Eats, college campus food delivery"
+      />
       <Layout bar={"#fff"} font="#000" mobileGradient={"Gray"}>
         <div style={{ backgroundColor: "white" }}>
           <Box>

@@ -28,7 +28,10 @@ export default function Groovepack() {
   useAnimation()
   return (
     <>
-      <Seo title="GroovePacker" />
+      <Seo
+        title="GroovePacker"
+        description="BARCODE INVENTORY CONTROL & SCAN PACK QC SYSTEM"
+      />
       <Layout bar={"#000"} font="#fff" mobileGradient={"#000"}>
         <div id="Home" className="background-groove">
           <Container>

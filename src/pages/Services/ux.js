@@ -11,7 +11,10 @@ import Seo from "../../components/seo"
 function Ux() {
   return (
     <>
-      <Seo title="UI/UX Design Services" />
+      <Seo
+        title="UI/UX Design Services"
+        description="Crafting Intuitive and Engaging User Experiences"
+      />
       <Layout>
         <Banner
           titleMain={"UI/UX Design Services"}

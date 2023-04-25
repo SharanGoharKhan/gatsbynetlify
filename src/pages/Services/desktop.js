@@ -14,7 +14,10 @@ function Web() {
   const matches = useMediaQuery(theme.breakpoints.down("sm"))
   return (
     <>
-      <Seo title="Desktop App Development Services" />
+      <Seo
+        title="Desktop App Development Services"
+        description="Delivering Powerful and User-Friendly Desktop Solutions"
+      />
       <Layout>
         <Banner
           titleMain={"Desktop App Development Services"}

@@ -157,7 +157,7 @@ const IndexPage = props => {
   }
   return (
     <>
-      <Seo title="Ninjas Code" />
+      <Seo title="Ninjas Code" description="We Specialize in Rapid MVP" />
       <Layout home={true}>
         <Banner
           titleMain={"We Specialize in Rapid MVP "}

@@ -210,7 +210,10 @@ export default function Team() {
 
   return (
     <>
-      <Seo title="Meet Our Talented Team" />
+      <Seo
+        title="Meet Our Talented Team"
+        description="A Collective of Skilled Developers and Visionaries"
+      />
       <Layout>
         <Banner
           titleMain={"Meet Our Talented Team"}
