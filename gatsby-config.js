@@ -7,6 +7,7 @@ module.exports = {
     author: `@ninjascode1`,
   },
   plugins: [
+    `gatsby-plugin-advanced-sitemap`,
     {
       resolve: "gatsby-plugin-google-tagmanager",
       options: {
@@ -62,6 +63,5 @@ module.exports = {
       },
     },
     `gatsby-plugin-gatsby-cloud`,
-    `gatsby-plugin-sitemap`,
   ],
 }
