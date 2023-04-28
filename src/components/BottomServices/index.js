@@ -1,18 +1,13 @@
 import React from "react"
-import BlackWeb from "../../images/black-web.svg"
-import BlackRightWeb from "../../images/black-right-web.svg"
-import BlueWeb from "../../images/blue-web.svg"
-import BlueLeftweb from "../../images/blue-left-web.svg"
-import PurpleWeb from "../../images/purple-web.svg"
-import { useMediaQuery } from "@mui/material"
-import { useTheme } from "@mui/material/styles"
+//import { useMediaQuery } from "@mui/material"
+//import { useTheme } from "@mui/material/styles"
 
 export default function BottomServices() {
-  const theme = useTheme()
-  const matches = useMediaQuery(theme.breakpoints.down("md"))
+  //const theme = useTheme()
+  //const matches = useMediaQuery(theme.breakpoints.down("md"))
   return (
     <>
-      <img
+      {/* <img
         src={BlackRightWeb}
         alt="web"
         style={{
@@ -77,7 +72,7 @@ export default function BottomServices() {
           zIndex: -99,
           display: matches ? "none" : "inline-block",
         }}
-      />
+      /> */}
     </>
   )
 }

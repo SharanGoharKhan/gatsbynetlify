@@ -19,11 +19,12 @@ export default function CarouselComponent() {
 
   const classes = {
     sliderPaper: {
-      padding: 8,
+      padding: "8px",
       maxWidth: "400px",
       minHeight: "480px",
       transform: "scale(0.85)",
-      backgroundColor: colors.primary,
+      backgroundColor: "White",
+      border: "10px solid #179afb"
     },
 
     carousel: {
@@ -61,19 +62,20 @@ export default function CarouselComponent() {
         showStatus={false}
         className={classes.carousel}
         autoPlay={true}
-        interval={3000}
+        interval={2000}
         width={small ? "30%" : "90%"}
       >
         {carouselData.map((item, index) => {
           return (
             <Paper
-              className={`${classes.sliderPaper} ${classes.activeCard}`}
+              //className={`${classes.sliderPaper} ${classes.activeCard}`}
+              style={classes.sliderPaper}
               square={true}
               key={index}
             >
               <div
                 style={{
-                  backgroundColor: colors.white,
+                  backgroundColor: "colors.white",
                   width: "100%",
                   height: "100%",
                 }}
@@ -122,7 +124,6 @@ export default function CarouselComponent() {
                       }}
                     />
                     <Typography
-                      className={classes.bold}
                       variant="caption"
                       style={{ color: colors.primary }}
                     >

@@ -55,7 +55,7 @@ const WhyUs = () => {
   }
 
   return (
-    <div id="whyus" className={classes.background}>
+    <Box id="whyus" sx={classes.background}>
       <Typography
         style={{
           color: colors.white,
@@ -67,33 +67,33 @@ const WhyUs = () => {
       >
         Why Us
       </Typography>
-      <Grid container spacing={3} justify="center" className={classes.grid}>
-        <Grid item xs={6} sm={6} md={6} lg={3} className={classes.container}>
-          <Box className={classes.image}>
+      <Grid container spacing={3} justify="center" sx={classes.grid}>
+        <Grid item xs={6} sm={6} md={6} lg={3} sx={classes.container}>
+          <Box sx={classes.image}>
             <Speedometer />
           </Box>
-          <div className={classes.subTitle}>UX driven approach</div>
+          <Box sx={classes.subTitle}>UX driven approach</Box>
         </Grid>
-        <Grid item xs={6} sm={6} md={6} lg={3} className={classes.container}>
-          <Box className={classes.image}>
+        <Grid item xs={6} sm={6} md={6} lg={3} sx={classes.container}>
+          <Box sx={classes.image}>
             <BadgeIcon />
           </Box>
-          <div className={classes.subTitle}>1 month time to market</div>
+          <Box sx={classes.subTitle}>1 month time to market</Box>
         </Grid>
-        <Grid item xs={6} sm={6} md={6} lg={3} className={classes.container}>
-          <Box className={classes.image}>
+        <Grid item xs={6} sm={6} md={6} lg={3} sx={classes.container}>
+          <Box sx={classes.image}>
             <TimeIcon />
           </Box>
-          <div className={classes.subTitle}>$10,000 costs limit</div>
+          <Box sx={classes.subTitle}>$10,000 costs limit</Box>
         </Grid>
-        <Grid item xs={6} sm={6} md={6} lg={3} className={classes.container}>
-          <Box className={classes.image}>
+        <Grid item xs={6} sm={6} md={6} lg={3} sx={classes.container}>
+          <Box sx={classes.image}>
             <ThunderIcon />
           </Box>
-          <div className={classes.subTitle}>Complete process transparency</div>
+          <Box sx={classes.subTitle}>Complete process transparency</Box>
         </Grid>
       </Grid>
-    </div>
+    </Box>
   )
 }
 

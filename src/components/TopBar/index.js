@@ -45,7 +45,7 @@ const TopBar = props => {
       overflow: "visible",
     },
     title: {
-      fontSize: 24,
+      fontSize: "24px",
       fontWeight: 700,
       color: colors.glassBlack,
       fontFamily: "Montserrat",
@@ -70,7 +70,7 @@ const TopBar = props => {
       justifyContent: "center",
     },
     paper: {
-      padding: 8,
+      padding: "8px",
       textAlign: "center",
       backgroundColor: "inherit",
     },
@@ -93,7 +93,7 @@ const TopBar = props => {
       color: colors.white,
     },
     paper1: {
-      padding: 16,
+      padding: "16px",
       textAlign: "center",
       color: theme.palette.text.secondary,
     },
@@ -124,7 +124,7 @@ const TopBar = props => {
     <Modal
       aria-labelledby="transition-modal-title"
       aria-describedby="transition-modal-description"
-      className={classes.modal}
+      sx={classes.modal}
       open={isMobileMenuOpen}
       onClose={handleMobileMenuClose}
       closeAfterTransition
@@ -138,19 +138,19 @@ const TopBar = props => {
         <Box
           component="span"
           m={1}
-          className={classes.boxContainer}
+          sx={classes.boxContainer}
           style={{
             background: props?.mobileGradient
               ? props.mobileGradient
               : `linear-gradient(to bottom, ${colors.primary} 0%, ${colors.purple} 100%)`,
           }}
         >
-          <Box style={{ textAlign: "end", paddingTop: "2%" }}>
+          <Box sx={{ textAlign: "end", paddingTop: "2%" }}>
             <IconButton aria-label="close" onClick={handleMobileMenuClose}>
-              <ClearIcon className={classes.icon} fontSize="large" />
+              <ClearIcon sx={classes.icon} fontSize="large" />
             </IconButton>
           </Box>
-          <Box style={{ width: "50%", margin: "auto", height: "100%" }}>
+          <Box sx={{ width: "50%", margin: "auto", height: "100%" }}>
             <Grid
               container
               direction="row"
@@ -159,7 +159,7 @@ const TopBar = props => {
               spacing={2}
             >
               <Grid item xs={12}>
-                <Paper elevation={0} className={classes.paper}>
+                <Paper elevation={0} sx={classes.paper}>
                   <GatsbyLink
                     style={{ color: props.fontColor }}
                     className={
@@ -175,7 +175,7 @@ const TopBar = props => {
                 </Paper>
               </Grid>
               <Grid item xs={12}>
-                <Paper elevation={0} className={classes.paper}>
+                <Paper elevation={0} sx={classes.paper}>
                   <GatsbyLink
                     style={{ color: props.fontColor }}
                     className={
@@ -191,7 +191,7 @@ const TopBar = props => {
                 </Paper>
               </Grid>
               <Grid item xs={12}>
-                <Paper elevation={0} className={classes.paper}>
+                <Paper elevation={0} sx={classes.paper}>
                   <GatsbyLink
                     style={{ color: props.fontColor }}
                     className={
@@ -207,7 +207,7 @@ const TopBar = props => {
                 </Paper>
               </Grid>
               <Grid item xs={12}>
-                <Paper elevation={0} className={classes.paper}>
+                <Paper elevation={0} sx={classes.paper}>
                   <GatsbyLink
                     style={{ color: props.fontColor }}
                     className={
@@ -223,7 +223,7 @@ const TopBar = props => {
                 </Paper>
               </Grid>
               <Grid item xs={12}>
-                <Paper elevation={0} className={classes.paper}>
+                <Paper elevation={0} sx={classes.paper}>
                   <GatsbyLink
                     style={{
                       color: props.fontColor,
@@ -252,7 +252,7 @@ const TopBar = props => {
     </Modal>
   )
   return (
-    <div className={classes.root}>
+    <Box sx={classes.root}>
       <AppBar
         style={{
           background: props.barColor,
@@ -270,9 +270,9 @@ const TopBar = props => {
             smooth={true}
             offset={-30}
             duration={500}
-            className={classes.root}
+            style={classes.root}
           >
-            <IconButton className={classes.title}>
+            <IconButton sx={classes.title}>
               <GatsbyLink to="/">
                 {" "}
                 <img
@@ -283,7 +283,7 @@ const TopBar = props => {
               </GatsbyLink>
             </IconButton>
           </Link>
-          <div className={classes.sectionDesktop}>
+          <Box sx={classes.sectionDesktop}>
             <GatsbyLink
               style={{
                 color: props.fontColor,
@@ -410,8 +410,8 @@ const TopBar = props => {
                 Contact Us
               </GatsbyLink>
             )}
-          </div>
-          <div className={classes.sectionMobile}>
+          </Box>
+          <Box sx={classes.sectionMobile}>
             <IconButton
               aria-label="show more"
               aria-controls={mobileMenuId}
@@ -426,11 +426,11 @@ const TopBar = props => {
                 }}
               />
             </IconButton>
-          </div>
+          </Box>
         </Toolbar>
       </AppBar>
       {renderMobileMenu}
-    </div>
+    </Box>
   )
 }
 

@@ -104,7 +104,7 @@ const FAQ = () => {
             <List
               component="nav"
               aria-labelledby="nested-list-subheader"
-              className={classes.container}
+              sx={classes.container}
             >
               <ListItem button onClick={() => handleClick(index)} disableRipple>
                 <ListItemText>
@@ -121,7 +121,7 @@ const FAQ = () => {
               <Collapse in={open[index]} timeout="auto" unmountOnExit>
                 <ListItemText>
                   <Typography
-                    className={classes.listSubText}
+                    sx={classes.listSubText}
                     variant="h3"
                     gutterBottom
                   >

@@ -3,9 +3,8 @@ import { Box, Button, Grid, Typography, useMediaQuery } from "@mui/material"
 import React from "react"
 import { Banner, BottomServices, Typos } from "../../components"
 import Layout from "../../components/layout"
-import StartUpImage from "../../images/starups.svg"
-import Mockup1 from "../../images/mockup1.png"
-import Mockup2 from "../../images/mockup2.png"
+import StartUpImage from "../../images/starups.webp"
+import { StaticImage } from "gatsby-plugin-image"
 import { useTheme } from "@mui/material/styles"
 import { Link } from "gatsby"
 import "./styles.css"
@@ -45,7 +44,7 @@ function Saas() {
                   justifyContent: matches ? "center" : "flex-end",
                 }}
               >
-                <img src={Mockup1} className="mockup-images" alt="mockup" />
+                <StaticImage src="../../images/mockup1.png" quality={40} className="mockup-images" alt="mockup" />
               </Grid>
               <Grid item md={4}>
                 <Box style={{ textAlign: matches ? "center" : "start" }}>
@@ -103,7 +102,7 @@ function Saas() {
                   order: matches && 1,
                 }}
               >
-                <img src={Mockup2} className="mockup-images" alt="mockup" />
+                <StaticImage src="../../images/mockup2.png" quality={40} className="mockup-images" alt="mockup" />
               </Grid>
             </Grid>
             <Box

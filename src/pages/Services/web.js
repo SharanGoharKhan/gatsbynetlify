@@ -3,8 +3,8 @@ import { Box, useMediaQuery } from "@mui/material"
 import React from "react"
 import { Banner, BottomServices, Typos } from "../../components"
 import Layout from "../../components/layout"
-import WebService from "../../images/web-banner.svg"
-import WebGroup from "../../images/group-web.png"
+import WebService from "../../images/web-banner.webp"
+import { StaticImage } from "gatsby-plugin-image"
 import { useTheme } from "@mui/material/styles"
 import "./styles.css"
 import Seo from "../../components/seo"
@@ -40,8 +40,9 @@ function Web() {
               marginBottom: "2rem",
             }}
           >
-            <img
-              src={WebGroup}
+            <StaticImage
+              src="../../images/group-web.png"
+              quality={40}
               className={matches ? "web-image-small" : "web-image"}
               alt="web"
             />

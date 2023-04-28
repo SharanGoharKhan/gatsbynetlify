@@ -51,9 +51,9 @@ const Testimonial = () => {
       flexWrap: "wrap",
       justifyContent: "space-around",
       overflow: "hidden",
-      marginTop: 40,
+      marginTop: "40px",
       height: "fit-content",
-      marginBottom: 100,
+      marginBottom: "100px",
       backgroundColor: theme.palette.background.paper,
       WebkitOverflowScrolling: "touch",
     },
@@ -64,7 +64,7 @@ const Testimonial = () => {
     titleText: {
       color: colors.darkBlue,
       fontWeight: 600,
-      padding: 20,
+      padding: "20px",
       fontSize: "6vmin",
       fontFamily: "Montserrat",
     },
@@ -72,8 +72,8 @@ const Testimonial = () => {
       height: "10vmin",
     },
     large: {
-      width: 64,
-      height: 64,
+      width: "64px",
+      height: "64px",
     },
     BoxContainer: {
       display: "flex",
@@ -94,13 +94,13 @@ const Testimonial = () => {
       fontSize: "2vmin",
     },
     divider: {
-      margin: 24,
+      margin: "24px",
     },
     star: {
       color: colors.yellow,
     },
     paper: {
-      padding: 16,
+      padding: "16px",
       textAlign: "center",
       color: theme.palette.text.secondary,
     },
@@ -147,7 +147,7 @@ const Testimonial = () => {
             Testimonials
           </Typography>
         </Button>
-        <Typography className={classes.titleText} variant="h3" gutterBottom>
+        <Typography style={classes.titleText} variant="h3" gutterBottom>
           WHAT OUR CLIENTS TELL ABOUT US
         </Typography>
         <IconButton onClick={() => scroll(-400)}>
@@ -186,10 +186,10 @@ const Testimonial = () => {
         </IconButton>
       </Grid>
       <Grid item xs={12} sm={12} md={8}>
-        <div className={classes.root}>
+        <div style={classes.root}>
           <ImageList
             cellHeight={"auto"}
-            className={classes.gridList}
+            style={classes.gridList}
             ref={ref}
             cols={matches ? 2.2 : 1.2}
           >
@@ -198,17 +198,17 @@ const Testimonial = () => {
                 <Card elevation={5} style={{ width: "90%" }}>
                   <CardActionArea>
                     <CardContent>
-                      <Box component="span" className={classes.BoxContainer}>
+                      <Box component="span" style={classes.BoxContainer}>
                         <Avatar
                           alt={tile.name}
                           src={tile.img}
-                          className={classes.large}
+                          style={classes.large}
                         />
                         <Box component="span" m={1}>
                           <Typography
                             gutterBottom
                             variant="h5"
-                            className={classes.cardTitle}
+                            style={classes.cardTitle}
                             component="h2"
                           >
                             {tile.name}
@@ -216,17 +216,17 @@ const Testimonial = () => {
                           <Typography
                             gutterBottom
                             variant="body2"
-                            className={classes.cardSubTitle}
+                            style={classes.cardSubTitle}
                             component="p"
                           >
                             {tile.designation}
                           </Typography>
                         </Box>
                       </Box>
-                      <Divider className={classes.divider} variant="middle" />
+                      <Divider style={classes.divider} variant="middle" />
                       <Typography
                         variant="body2"
-                        className={classes.cardSubTitle}
+                        style={classes.cardSubTitle}
                         color="textSecondary"
                         component="p"
                       >
@@ -235,15 +235,15 @@ const Testimonial = () => {
                     </CardContent>
                     <Box
                       component="span"
-                      className={classes.BoxContainer}
+                      style={classes.BoxContainer}
                       m={1}
                     >
                       <Box component="span">
-                        <StarIcon className={classes.star} />
-                        <StarIcon className={classes.star} />
-                        <StarIcon className={classes.star} />
-                        <StarIcon className={classes.star} />
-                        <StarIcon className={classes.star} />
+                        <StarIcon style={classes.star} />
+                        <StarIcon style={classes.star} />
+                        <StarIcon style={classes.star} />
+                        <StarIcon style={classes.star} />
+                        <StarIcon style={classes.star} />
                       </Box>
                     </Box>
                   </CardActionArea>

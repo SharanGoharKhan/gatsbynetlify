@@ -28,6 +28,7 @@ export default function Blogs() {
     },
     bold: {
       fontWeight: 900,
+      color: 'Black'
     },
   }
   return (
@@ -55,8 +56,8 @@ export default function Blogs() {
             <Box>
               <img src={Blog1} alt="blog" />
             </Box>
-            <Box className={classes.blogBox} style={{ left: "-10px" }}>
-              <Typography className={classes.bold} align="center">
+            <Box sx={classes.blogBox} style={{ left: "-10px" }}>
+              <Typography sx={classes.bold} align="center">
                 How javascript works behind the scenes
               </Typography>
               <Typography style={{ color: colors.primary }} align="center">
@@ -69,7 +70,7 @@ export default function Blogs() {
               <Box textAlign={"center"}>
                 <Button
                   endIcon={<ArrowForwardIcon />}
-                  className={classes.bold}
+                  sx={classes.bold}
                   href={externalLinks.blog1}
                   target="_blank"
                 >
@@ -102,8 +103,8 @@ export default function Blogs() {
                 overflow: "visible",
               }}
             >
-              <Box className={classes.blogBox} style={{ right: "-10px" }}>
-                <Typography className={classes.bold} align="center">
+              <Box sx={classes.blogBox} style={{ right: "-10px" }}>
+                <Typography sx={classes.bold} align="center">
                   How to Calculate the Cost of App Development?
                 </Typography>
                 <Typography style={{ color: colors.primary }} align="center">
@@ -117,7 +118,7 @@ export default function Blogs() {
                 <Box textAlign={"center"}>
                   <Button
                     endIcon={<ArrowForwardIcon />}
-                    className={classes.bold}
+                    sx={classes.bold}
                     href={externalLinks.blog2}
                     target="_blank"
                   >
@@ -132,7 +133,7 @@ export default function Blogs() {
         <Box textAlign={"center"}>
           <Button
             variant="outlined"
-            style={{ border: "2px solid black", borderRadius: "0" }}
+            sx={{ border: "2px solid black", borderRadius: "0" }}
             href={externalLinks.allBlogs}
             target="_blank"
           >

@@ -1,4 +1,4 @@
-import { Typography } from "@mui/material"
+import { Box, Typography } from "@mui/material"
 import React from "react"
 import { useAnimation } from "../../utils/useAnimation"
 
@@ -52,13 +52,13 @@ export default function Typos({
     },
   }
   return (
-    <div className={classes.typos}>
-      <Typography variant="h2" display="inline" className={classes.brackets}>
+    <Box sx={classes.typos}>
+      <Typography variant="h2" display="inline" sx={classes.brackets}>
         {"{"}
         <Typography
           variant="h4"
           display="inline"
-          className={classes.typosBefore}
+          sx={classes.typosBefore}
           style={{
             top: upperTop && upperTop,
             right: upperRight && upperRight,
@@ -72,7 +72,7 @@ export default function Typos({
         <Typography
           variant="h4"
           display="inline"
-          className={classes.typosMain}
+          sx={classes.typosMain}
           style={{ color: color && color }}
         >
           {" "}
@@ -81,7 +81,7 @@ export default function Typos({
         <Typography
           variant="h4"
           display="inline"
-          className={classes.typosAfter}
+          sx={classes.typosAfter}
           style={{
             top: top ? top : "0vmin",
             right: right ? right : "7vmin",
@@ -92,6 +92,6 @@ export default function Typos({
         </Typography>
         {"}"}
       </Typography>
-    </div>
+    </Box>
   )
 }

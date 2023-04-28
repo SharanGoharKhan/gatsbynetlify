@@ -1,5 +1,5 @@
 import React, { useEffect } from "react"
-import { Grid, Typography, useMediaQuery, useTheme } from "@mui/material"
+import { Grid, Typography, useMediaQuery, useTheme,Box } from "@mui/material"
 import BannerIcons from "../BannerIcons"
 // import Particles from "react-tsparticles"
 import Aos from "aos"
@@ -16,19 +16,19 @@ export default function Banner({ titleMain, titleSecondary, subTitle, image }) {
 
   const classes = {
     grid: {
-      padding: 32,
+      padding: "32px",
       position: "relative",
       zIndex: 99,
     },
     root: {
-      padding: 10,
+      padding: "10px",
     },
     title: {
       color: colors.white,
       fontWeight: 700,
       fontSize: "8.5vmin",
       fontFamily: "Montserrat",
-      marginTop: 40,
+      marginTop: "40px",
     },
     subtitle: {
       color: colors.white,
@@ -36,7 +36,7 @@ export default function Banner({ titleMain, titleSecondary, subTitle, image }) {
       fontSize: "3vmin",
       lineHeight: "30px",
       fontFamily: "Montserrat",
-      marginTop: 40,
+      marginTop: "40px",
     },
     cardHeaderText: {
       fontWeight: 700,
@@ -51,7 +51,7 @@ export default function Banner({ titleMain, titleSecondary, subTitle, image }) {
     },
     number: {
       color: colors.white,
-      padding: 8,
+      padding: "8px",
       fontFamily: "Montserrat",
     },
     cardText: {
@@ -93,13 +93,13 @@ export default function Banner({ titleMain, titleSecondary, subTitle, image }) {
   }
 
   return (
-    <div id="Home" className={classes.background}>
+    <Box id="Home" sx={classes.background}>
       <ParticleContainer />
       <Grid
         container
         direction="row"
         alignItems="center"
-        className={classes.grid}
+        sx={classes.grid}
         spacing={0}
       >
         <Grid
@@ -113,12 +113,12 @@ export default function Banner({ titleMain, titleSecondary, subTitle, image }) {
           data-aos="zoom-out-left"
           data-aos-easing="ease-in-sine"
         >
-          <Typography variant="h3" gutterBottom className={classes.title}>
+          <Typography variant="h3" gutterBottom sx={classes.title}>
             {titleMain}
             <br />
             {titleSecondary}
           </Typography>
-          <Typography variant="h3" gutterBottom className={classes.subtitle}>
+          <Typography variant="h3" gutterBottom sx={classes.subtitle}>
             {subTitle}
           </Typography>
           <BannerIcons />
@@ -145,7 +145,7 @@ export default function Banner({ titleMain, titleSecondary, subTitle, image }) {
           </Grid>
         )}
       </Grid>
-    </div>
+    </Box>
   )
 }
 

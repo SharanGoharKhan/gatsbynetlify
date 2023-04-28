@@ -3,12 +3,11 @@ import { Box, Container, Grid, Typography, useMediaQuery } from "@mui/material"
 import React from "react"
 import { Banner, BottomServices, Typos } from "../../components"
 import Layout from "../../components/layout"
-import IOSService from "../../images/ios.svg"
-import D1 from "../../images/Device1.png"
-import D2 from "../../images/Device2.png"
+import IOSService from "../../images/ios.png"
 import "./styles.css"
 import { useTheme } from "@mui/material/styles"
 import Seo from "../../components/seo"
+import { StaticImage } from "gatsby-plugin-image"
 
 function Ios() {
   const theme = useTheme()
@@ -62,8 +61,9 @@ function Ios() {
                       future work and consider all potential goings-on.
                     </Typography>
                   </Box>
-                  <img
-                    src={D1}
+                  <StaticImage
+                    src="../../images/Device1.png"
+                    quality={40}
                     alt="d1"
                     className={matches ? "small-device-image" : "device-image"}
                   />
@@ -75,8 +75,9 @@ function Ios() {
               <Grid item md={6}></Grid>
               <Grid item md={6}>
                 <Box className="left-content">
-                  <img
-                    src={D2}
+                  <StaticImage
+                    src="../../images/Device2.png"
+                    quality={40}
                     alt="d1"
                     className={matches ? "small-device-image" : "device-image"}
                   />
@@ -140,8 +141,9 @@ function Ios() {
                       each operating system.
                     </Typography>
                   </Box>
-                  <img
-                    src={D1}
+                  <StaticImage
+                    src="../../images/Device1.png"
+                    quality={40}
                     alt="d1"
                     className={matches ? "small-device-image" : "device-image"}
                   />
@@ -154,8 +156,9 @@ function Ios() {
               <Grid item md={6}></Grid>
               <Grid item md={6}>
                 <Box className="left-content">
-                  <img
-                    src={D2}
+                  <StaticImage
+                    src="../../images/Device2.png"
+                    quality={40}
                     alt="d1"
                     className={matches ? "small-device-image" : "device-image"}
                   />
@@ -220,8 +223,9 @@ function Ios() {
                       control.
                     </Typography>
                   </Box>
-                  <img
-                    src={D1}
+                  <StaticImage
+                    src="../../images/Device1.png"
+                    quality={40}
                     alt="d1"
                     className={matches ? "small-device-image" : "device-image"}
                   />
@@ -234,8 +238,9 @@ function Ios() {
               <Grid item md={6}></Grid>
               <Grid item md={6}>
                 <Box className="left-content">
-                  <img
-                    src={D2}
+                  <StaticImage
+                    src="../../images/Device2.png"
+                    quality={40}
                     alt="d1"
                     className={matches ? "small-device-image" : "device-image"}
                   />

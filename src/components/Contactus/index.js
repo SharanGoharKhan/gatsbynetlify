@@ -9,7 +9,7 @@ const ContactUs = () => {
   const classes = {
     container: {
       background: `linear-gradient(to bottom, ${colors.primary} 0%, ${colors.purple} 100%)`,
-      padding: 48,
+      padding: "48px",
       height: "fit-content",
       textAlign: "center",
     },
@@ -19,7 +19,7 @@ const ContactUs = () => {
       borderRadius: 2,
       color: colors.gray,
       borderWidth: 1,
-      padding: 10,
+      padding: "10px",
       fontFamily: "Montserrat",
       fontWeight: "600",
       fontSize: "2vmin",
@@ -52,7 +52,7 @@ const ContactUs = () => {
     },
   }
   return (
-    <div id="contact" className={classes.container}>
+    <div id="contact" style={classes.container}>
       <Grid
         container
         justify="center"
@@ -61,13 +61,13 @@ const ContactUs = () => {
         alignItems="center"
       >
         <Grid item xs={12}>
-          <Typography className={classes.heading} variant="h3" gutterBottom>
+          <Typography style={classes.heading} variant="h3" gutterBottom>
             Contact Us
           </Typography>
         </Grid>
         <Grid container justify="center" alignItems="center">
           <form
-            style={{ width: "80%", textAlign: "center" }}
+            style={{ width: "80%", margin: "auto" }}
             name="contact"
             method="post"
             data-netlify="true"
@@ -79,29 +79,29 @@ const ContactUs = () => {
                 style={{
                   display: "flex",
                   justifyContent: "space-between",
-                  marginBottom: 20,
+                  marginBottom: "20px",
                 }}
               >
                 <div style={{ width: "45%" }}>
-                  <Typography className={classes.label}>Name</Typography>
+                  <Typography style={classes.label}>Name</Typography>
                   <input
                     name="name"
                     type="text"
-                    className={classes.textInput}
+                    style={classes.textInput}
                     placeholder="Enter your name"
                   />
                 </div>
                 <div style={{ width: "45%" }}>
-                  <Typography className={classes.label}>Email</Typography>
+                  <Typography style={classes.label}>Email</Typography>
                   <input
                     name="email"
                     type="email"
-                    className={classes.textInput}
+                    style={classes.textInput}
                     placeholder="Enter your email"
                   />
                 </div>
               </div>
-              <Typography className={classes.label}>Message</Typography>
+              <Typography style={classes.label}>Message</Typography>
               <TextareaAutosize
                 name="quote"
                 style={{
@@ -112,7 +112,7 @@ const ContactUs = () => {
                   color: colors.gray,
                   fontWeight: "600",
                   borderRadius: "8px",
-                  padding: 10,
+                  padding: "10px",
                 }}
                 aria-label="empty textarea"
                 placeholder="Message..."
@@ -125,7 +125,7 @@ const ContactUs = () => {
                   style={{
                     width: "160px",
                     color: colors.blue2,
-                    marginTop: 20,
+                    marginTop: "20px",
                     fontFamily: "Montserrat",
                     backgroundColor: colors.paleBlue,
                   }}
@@ -146,7 +146,7 @@ const ContactUs = () => {
           </form>
         </Grid>
         <Grid item xs={12}>
-          <Typography className={classes.heading} variant="h3" gutterBottom>
+          <Typography style={classes.heading} variant="h3" gutterBottom>
             Get in Touch
           </Typography>
         </Grid>
@@ -160,8 +160,8 @@ const ContactUs = () => {
           >
             <CallIcon />
             <Box style={{ padding: "2vmin" }}>
-              <Typography className={classes.iconText}>Phone Number</Typography>
-              <Typography className={classes.iconText2}>
+              <Typography style={classes.iconText}>Phone Number</Typography>
+              <Typography style={classes.iconText2}>
                 +1 (213) 72226874
               </Typography>
             </Box>
@@ -177,8 +177,8 @@ const ContactUs = () => {
           >
             <EmailIcon />
             <Box style={{ textAlign: "center", padding: "2vmin" }}>
-              <Typography className={classes.iconText}>Email</Typography>
-              <Typography className={classes.iconText2}>
+              <Typography style={classes.iconText}>Email</Typography>
+              <Typography style={classes.iconText2}>
                 info@ninjascode.com
               </Typography>
             </Box>
@@ -194,8 +194,8 @@ const ContactUs = () => {
           >
             <AddressIcon />
             <Box style={{ padding: "2vmin" }}>
-              <Typography className={classes.iconText}>Map Street</Typography>
-              <Typography className={classes.iconText2}>
+              <Typography style={classes.iconText}>Map Street</Typography>
+              <Typography style={classes.iconText2}>
                 Califronia, USA
               </Typography>
             </Box>

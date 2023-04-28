@@ -39,13 +39,12 @@ import {
 import Layout from "../components/layout"
 import { useAnimation } from "../utils/useAnimation"
 import TawkMessengerReact from "@tawk.to/tawk-messenger-react"
-import Splash from "../components/Splash"
 import OpenSource from "../components/OpenSource"
 
 const IndexPage = props => {
   const theme = useTheme()
   const small = useMediaQuery(theme.breakpoints.down("sm"))
-  const [loading, setLoading] = React.useState(true)
+  //const [loading, setLoading] = React.useState(true)
   useAnimation()
 
   const classes = {
@@ -55,24 +54,24 @@ const IndexPage = props => {
       gridGap: 48,
     },
     grid: {
-      padding: 32,
+      padding: "32px",
     },
     root: {
-      padding: 10,
+      padding: "10px",
     },
     bold: {
       fontWeight: 900,
     },
 
     paper: {
-      padding: 16,
+      padding: "16px",
       textAlign: "center",
       color: theme.palette.text.secondary,
       boxShadow: "10px 10px 0px 0px #000",
       border: "2px solid #179afb",
     },
     sliderPaper: {
-      padding: 8,
+      padding: "8px",
       border: "2px solid #179afb",
       maxWidth: "400px",
       minHeight: "480px",
@@ -144,15 +143,15 @@ const IndexPage = props => {
     },
   }
 
-  React.useEffect(() => {
-    setTimeout(() => {
-      setLoading(false)
-    }, 250)
-  })
+  // React.useEffect(() => {
+  //   setTimeout(() => {
+  //     setLoading(false)
+  //   }, 250)
+  // })
 
-  if (loading) {
-    return <Splash />
-  }
+  // if (loading) {
+  //   return <Splash />
+  // }
   return (
     <>
       <Seo title="Ninjas Code" description="We Specialize in Rapid MVP" />
@@ -167,7 +166,7 @@ const IndexPage = props => {
         />
         <div style={{ position: "relative", margin: "10px 0px 10px 0px" }}>
           <Box
-            className={classes.blueBox}
+            sx={classes.blueBox}
             style={{
               position: "absolute",
               left: "15%",
@@ -178,7 +177,7 @@ const IndexPage = props => {
             data-aos="flip-right"
           />
           <Box
-            className={classes.blueBox}
+            sx={classes.blueBox}
             style={{
               position: "absolute",
               right: "5%",
@@ -191,7 +190,7 @@ const IndexPage = props => {
             data-aos-delay="200"
           />
           <Box
-            className={classes.blueBox}
+            sx={classes.blueBox}
             style={{
               position: "absolute",
               left: "30%",
@@ -209,8 +208,8 @@ const IndexPage = props => {
           <Box mt={small ? 5 : 20} mb={20}>
             <Container maxWidth="sm">
               <Grid container alignItems="center" spacing={3} data-aos="fade">
-                <Grid item xs={6} md={6}>
-                  <Paper className={classes.paper} square={true}>
+                <Grid item xs={6} md={6} style={{ paddingBottom: "22px", paddingRight: "22px" }}>
+                  <Paper sx={classes.paper} square={true}>
                     <div
                       style={{
                         display: "flex",
@@ -219,17 +218,17 @@ const IndexPage = props => {
                         alignItems: "flex-start",
                       }}
                     >
-                      <Box className={classes.blueBox}>
+                      <Box sx={classes.blueBox}>
                         <MonetizationOnIcon style={{ color: "black" }} />
                       </Box>
                       <Typography
-                        className={classes.cardHeaderText}
+                        sx={classes.cardHeaderText}
                         gutterBottom
                         align="left"
                       >
                         Raise Funds
                       </Typography>
-                      <Typography className={classes.cardText} gutterBottom>
+                      <Typography sx={classes.cardText} gutterBottom>
                         Venture capitals now need a working product not just an
                         idea. You have to prove that you are able to execute
                         your idea.
@@ -239,8 +238,8 @@ const IndexPage = props => {
                 </Grid>
                 <Grid item xs={6} md={6}>
                   <Grid container flexDirection="column" spacing={3}>
-                    <Grid item xs={12}>
-                      <Paper className={classes.paper} square={true}>
+                    <Grid item xs={12} style={{ paddingBottom: "22px", paddingRight: "22px" }}>
+                      <Paper sx={classes.paper} square={true}>
                         <div
                           style={{
                             display: "flex",
@@ -249,17 +248,17 @@ const IndexPage = props => {
                             alignItems: "flex-start",
                           }}
                         >
-                          <Box className={classes.blueBox}>
+                          <Box sx={classes.blueBox}>
                             <FeedbackIcon style={{ color: "black" }} />
                           </Box>
                           <Typography
-                            className={classes.cardHeaderText}
+                            sx={classes.cardHeaderText}
                             gutterBottom
                           >
                             Test the Waters
                           </Typography>
 
-                          <Typography className={classes.cardText} gutterBottom>
+                          <Typography sx={classes.cardText} gutterBottom>
                             Instead of pouring resources into extensive market
                             research, with our specialty in MVP development, you
                             can save time and money while also getting valuable
@@ -268,8 +267,8 @@ const IndexPage = props => {
                         </div>
                       </Paper>
                     </Grid>
-                    <Grid item xs={12} style={{ paddingBottom: "22px" }}>
-                      <Paper className={classes.paper} square={true}>
+                    <Grid item xs={12} style={{ paddingBottom: "22px", paddingRight: "22px" }}>
+                      <Paper sx={classes.paper} square={true}>
                         <div
                           style={{
                             display: "flex",
@@ -278,17 +277,17 @@ const IndexPage = props => {
                             alignItems: "flex-start",
                           }}
                         >
-                          <Box className={classes.blueBox}>
+                          <Box sx={classes.blueBox}>
                             <AddBoxOutlinedIcon style={{ color: "black" }} />
                           </Box>
                           <Typography
-                            className={classes.cardHeaderText}
+                            sx={classes.cardHeaderText}
                             gutterBottom
                           >
                             Evaluate Your Concept
                           </Typography>
 
-                          <Typography className={classes.cardText} gutterBottom>
+                          <Typography sx={classes.cardText} gutterBottom>
                             Check whether your concept can be implemented at all
                             before you commit to creating your product. Check
                             the feasibility of your product’s features and
@@ -332,7 +331,7 @@ const IndexPage = props => {
             <GatsbyLink to="/Portfolio/" style={{ textDecoration: "none" }}>
               <Button
                 endIcon={<ArrowForwardIcon />}
-                className={classes.bold}
+                sx={classes.bold}
                 disableRipple
               >
                 SEE MORE
@@ -351,7 +350,7 @@ const IndexPage = props => {
           <Box textAlign={"center"} mb={2} style={{ marginTop: "50px" }}>
             <Button
               endIcon={<ArrowForwardIcon />}
-              className={classes.bold}
+              sx={classes.bold}
               style={{ color: "blue" }}
               disableRipple
               target="_blank"
@@ -371,7 +370,7 @@ const IndexPage = props => {
                 <Paper
                   elevation={0}
                   square={true}
-                  className={classes.whyUsCard}
+                  sx={classes.whyUsCard}
                   style={{ backgroundColor: "#179afb" }}
                   data-aos="fade-up-right"
                   data-aos-delay="800"
@@ -386,14 +385,14 @@ const IndexPage = props => {
                     }}
                   >
                     <Box
-                      className={classes.insideCard}
+                      sx={classes.insideCard}
                       display="flex"
                       alignItems="center"
                     >
                       <WatchLaterIcon />
                     </Box>
                   </div>
-                  <Typography className={classes.bold} align="center">
+                  <Typography sx={classes.bold} align="center">
                     1 month time to market
                   </Typography>
                 </Paper>
@@ -402,7 +401,7 @@ const IndexPage = props => {
                 <Paper
                   elevation={0}
                   square={true}
-                  className={classes.whyUsCard}
+                  sx={classes.whyUsCard}
                   data-aos="fade-up-left"
                   data-aos-delay="800"
                 >
@@ -416,14 +415,14 @@ const IndexPage = props => {
                     }}
                   >
                     <Box
-                      className={classes.insideCard}
+                      sx={classes.insideCard}
                       display="flex"
                       alignItems="center"
                     >
                       <LightbulbIcon />
                     </Box>
                   </div>
-                  <Typography className={classes.bold} align="center">
+                  <Typography sx={classes.bold} align="center">
                     Complete process transparency
                   </Typography>
                 </Paper>
@@ -432,7 +431,7 @@ const IndexPage = props => {
                 <Paper
                   elevation={0}
                   square={true}
-                  className={classes.whyUsCard}
+                  sx={classes.whyUsCard}
                   data-aos="fade-down-right"
                   data-aos-delay="800"
                 >
@@ -446,7 +445,7 @@ const IndexPage = props => {
                     }}
                   >
                     <Box
-                      className={classes.insideCard}
+                      sx={classes.insideCard}
                       display="flex"
                       justifyContent={"center"}
                       alignItems="center"
@@ -454,7 +453,7 @@ const IndexPage = props => {
                       <ViewQuiltIcon />
                     </Box>
                   </div>
-                  <Typography className={classes.bold}>
+                  <Typography sx={classes.bold}>
                     UX driven approach
                   </Typography>
                 </Paper>
@@ -463,7 +462,7 @@ const IndexPage = props => {
                 <Paper
                   elevation={0}
                   square={true}
-                  className={classes.whyUsCard}
+                  sx={classes.whyUsCard}
                   data-aos="fade-down-left"
                   data-aos-delay="800"
                   style={{ backgroundColor: "#179afb" }}
@@ -477,14 +476,14 @@ const IndexPage = props => {
                     }}
                   >
                     <Box
-                      className={classes.insideCard}
+                      sx={classes.insideCard}
                       display="flex"
                       alignItems="center"
                     >
                       <LocalOfferIcon />
                     </Box>
                   </div>
-                  <Typography className={classes.bold}>
+                  <Typography sx={classes.bold}>
                     $10,000 costs limit
                   </Typography>
                 </Paper>

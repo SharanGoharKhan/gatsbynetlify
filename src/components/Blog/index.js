@@ -100,7 +100,7 @@ const Blog = () => {
         >
           We're like to write about latest technologies!
         </Typography>
-        <Divider className={classes.divider} />
+        <Divider sx={classes.divider} />
       </div>
       <Grid container spacing={1} justify="space-evenly" alignItems="center">
         <Grid item sm={12} lg={3}>
@@ -139,7 +139,7 @@ const Blog = () => {
                 target="_blank"
               >
                 <IconButton
-                  className={clsx(classes.expand, {
+                  sx={clsx(classes.expand, {
                     [classes.expandOpen]: expanded,
                   })}
                   //   onClick={handleExpandClick}
@@ -213,7 +213,7 @@ const Blog = () => {
                 target="_blank"
               >
                 <IconButton
-                  className={clsx(classes.expand, {
+                  sx={clsx(classes.expand, {
                     [classes.expandOpen]: expanded,
                   })}
                   //   onClick={handleExpandClick}
@@ -286,7 +286,7 @@ const Blog = () => {
                 target="_blank"
               >
                 <IconButton
-                  className={clsx(classes.expand, {
+                  sx={clsx(classes.expand, {
                     [classes.expandOpen]: expanded,
                   })}
                   //   onClick={handleExpandClick}

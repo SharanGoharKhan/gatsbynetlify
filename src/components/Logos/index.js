@@ -1,5 +1,5 @@
 import React from "react"
-import { Grid } from "@mui/material"
+import { Grid, Box } from "@mui/material"
 import EasyEats from "../../images/easyEats.png"
 import StylizeNow from "../../svg/Stylize"
 import Vinifynd from "../../svg/easyEats"
@@ -19,7 +19,7 @@ const Logos = () => {
   }
 
   return (
-    <div className={classes.container}>
+    <Box sx={classes.container}>
       <Grid
         container
         direction="row"
@@ -37,7 +37,7 @@ const Logos = () => {
           <img src={EasyEats} alt="easy-eats" />
         </Grid>
       </Grid>
-    </div>
+    </Box>
   )
 }
 
