@@ -4,7 +4,6 @@ import {
   Toolbar,
   IconButton,
   Modal,
-  Backdrop,
   Fade,
   Grid,
   Paper,
@@ -45,7 +44,7 @@ const TopBar = props => {
       overflow: "visible",
     },
     title: {
-      fontSize: "24px",
+      fontSize: 24,
       fontWeight: 700,
       color: colors.glassBlack,
       fontFamily: "Montserrat",
@@ -70,7 +69,7 @@ const TopBar = props => {
       justifyContent: "center",
     },
     paper: {
-      padding: "8px",
+      padding: theme.spacing(1),
       textAlign: "center",
       backgroundColor: "inherit",
     },
@@ -93,7 +92,7 @@ const TopBar = props => {
       color: colors.white,
     },
     paper1: {
-      padding: "16px",
+      padding: theme.spacing(2),
       textAlign: "center",
       color: theme.palette.text.secondary,
     },
@@ -122,17 +121,17 @@ const TopBar = props => {
 
   const renderMobileMenu = (
     <Modal
-      aria-labelledby="transition-modal-title"
-      aria-describedby="transition-modal-description"
-      sx={classes.modal}
-      open={isMobileMenuOpen}
-      onClose={handleMobileMenuClose}
-      closeAfterTransition
-      onBackdropClick={handleMobileMenuClose}
-      BackdropComponent={Backdrop}
-      BackdropProps={{
-        timeout: 500,
-      }}
+    aria-labelledby="transition-modal-title"
+    aria-describedby="transition-modal-description"
+    style={classes.modal}
+    open={isMobileMenuOpen}
+    onClose={handleMobileMenuClose}
+     closeAfterTransition
+     onBackdropClick={handleMobileMenuClose}
+    //BackdropComponent={Backdrop}
+    BackdropProps={{
+      timeout: 500,
+    }}
     >
       <Fade in={isMobileMenuOpen}>
         <Box
@@ -147,7 +146,7 @@ const TopBar = props => {
         >
           <Box sx={{ textAlign: "end", paddingTop: "2%" }}>
             <IconButton aria-label="close" onClick={handleMobileMenuClose}>
-              <ClearIcon sx={classes.icon} fontSize="large" />
+              <ClearIcon style={classes.icon} fontSize="large" />
             </IconButton>
           </Box>
           <Box sx={{ width: "50%", margin: "auto", height: "100%" }}>
@@ -159,7 +158,7 @@ const TopBar = props => {
               spacing={2}
             >
               <Grid item xs={12}>
-                <Paper elevation={0} sx={classes.paper}>
+                <Paper elevation={0} style={classes.paper}>
                   <GatsbyLink
                     style={{ color: props.fontColor }}
                     className={
@@ -175,7 +174,7 @@ const TopBar = props => {
                 </Paper>
               </Grid>
               <Grid item xs={12}>
-                <Paper elevation={0} sx={classes.paper}>
+                <Paper elevation={0} style={classes.paper}>
                   <GatsbyLink
                     style={{ color: props.fontColor }}
                     className={
@@ -191,7 +190,7 @@ const TopBar = props => {
                 </Paper>
               </Grid>
               <Grid item xs={12}>
-                <Paper elevation={0} sx={classes.paper}>
+                <Paper elevation={0} style={classes.paper}>
                   <GatsbyLink
                     style={{ color: props.fontColor }}
                     className={
@@ -207,7 +206,7 @@ const TopBar = props => {
                 </Paper>
               </Grid>
               <Grid item xs={12}>
-                <Paper elevation={0} sx={classes.paper}>
+                <Paper elevation={0} style={classes.paper}>
                   <GatsbyLink
                     style={{ color: props.fontColor }}
                     className={
@@ -223,7 +222,7 @@ const TopBar = props => {
                 </Paper>
               </Grid>
               <Grid item xs={12}>
-                <Paper elevation={0} sx={classes.paper}>
+                <Paper elevation={0} style={classes.paper}>
                   <GatsbyLink
                     style={{
                       color: props.fontColor,

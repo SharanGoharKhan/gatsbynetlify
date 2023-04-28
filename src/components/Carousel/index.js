@@ -24,7 +24,12 @@ export default function CarouselComponent() {
       minHeight: "480px",
       transform: "scale(0.85)",
       backgroundColor: "White",
-      border: "10px solid #179afb"
+      border: "10px solid #179afb",
+      // padding: "8px",
+      // maxWidth: "400px",
+      // minHeight: "480px",
+      // transform: "scale(0.85)",
+      // backgroundColor: colors.primary,
     },
 
     carousel: {
@@ -60,7 +65,7 @@ export default function CarouselComponent() {
         showThumbs={false}
         showArrows={false}
         showStatus={false}
-        className={classes.carousel}
+        sx={classes.carousel}
         autoPlay={true}
         interval={2000}
         width={small ? "30%" : "90%"}
@@ -68,7 +73,7 @@ export default function CarouselComponent() {
         {carouselData.map((item, index) => {
           return (
             <Paper
-              //className={`${classes.sliderPaper} ${classes.activeCard}`}
+              //sx={`${classes.sliderPaper} ${classes.activeCard}`}
               style={classes.sliderPaper}
               square={true}
               key={index}
