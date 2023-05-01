@@ -3,42 +3,34 @@ import Blog1 from "../../images/blog-image.png"
 import Blog2 from "../../images/blog-image2.png"
 import { externalLinks } from "../../utils/links"
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward"
-import {
-  Grid,
-  Typography,
-  makeStyles,
-  Container,
-  Box,
-  Button,
-} from "@material-ui/core"
+import { Grid, Typography, Container, Box, Button } from "@mui/material"
 import { Typos } from ".."
 import { colors } from "../../utils/colors"
 
-const useStyles = makeStyles(theme => ({
-  blogBox: {
-    maxWidth: "400px",
-    padding: "1rem",
-    position: "absolute",
-    border: `2px solid ${colors.primary}`,
-    backgroundColor: "white",
-    zIndex: "10000",
-    top: "100px",
-  },
-  blogBackBox: {
-    border: "2px solid black",
-    position: "absolute",
-    top: 0,
-    height: " 400px",
-    maxWidth: "400px",
-    left: "5rem",
-  },
-  bold: {
-    fontWeight: 900,
-  },
-}))
 export default function Blogs() {
-  const classes = useStyles()
-
+  const classes = {
+    blogBox: {
+      maxWidth: "400px",
+      padding: "1rem",
+      position: "absolute",
+      border: `2px solid ${colors.primary}`,
+      backgroundColor: "white",
+      zIndex: "10000",
+      top: "100px",
+    },
+    blogBackBox: {
+      border: "2px solid black",
+      position: "absolute",
+      top: 0,
+      height: " 400px",
+      maxWidth: "400px",
+      left: "5rem",
+    },
+    bold: {
+      fontWeight: 900,
+      color: 'Black'
+    },
+  }
   return (
     <>
       <Typos
@@ -64,8 +56,8 @@ export default function Blogs() {
             <Box>
               <img src={Blog1} alt="blog" />
             </Box>
-            <Box className={classes.blogBox} style={{ left: "-10px" }}>
-              <Typography className={classes.bold} align="center">
+            <Box sx={classes.blogBox} style={{ left: "-10px" }}>
+              <Typography sx={classes.bold} align="center">
                 How javascript works behind the scenes
               </Typography>
               <Typography style={{ color: colors.primary }} align="center">
@@ -78,7 +70,7 @@ export default function Blogs() {
               <Box textAlign={"center"}>
                 <Button
                   endIcon={<ArrowForwardIcon />}
-                  className={classes.bold}
+                  sx={classes.bold}
                   href={externalLinks.blog1}
                   target="_blank"
                 >
@@ -111,8 +103,8 @@ export default function Blogs() {
                 overflow: "visible",
               }}
             >
-              <Box className={classes.blogBox} style={{ right: "-10px" }}>
-                <Typography className={classes.bold} align="center">
+              <Box sx={classes.blogBox} style={{ right: "-10px" }}>
+                <Typography sx={classes.bold} align="center">
                   How to Calculate the Cost of App Development?
                 </Typography>
                 <Typography style={{ color: colors.primary }} align="center">
@@ -126,7 +118,7 @@ export default function Blogs() {
                 <Box textAlign={"center"}>
                   <Button
                     endIcon={<ArrowForwardIcon />}
-                    className={classes.bold}
+                    sx={classes.bold}
                     href={externalLinks.blog2}
                     target="_blank"
                   >
@@ -141,7 +133,7 @@ export default function Blogs() {
         <Box textAlign={"center"}>
           <Button
             variant="outlined"
-            style={{ border: "2px solid black", borderRadius: "0" }}
+            sx={{ border: "2px solid black", borderRadius: "0" }}
             href={externalLinks.allBlogs}
             target="_blank"
           >

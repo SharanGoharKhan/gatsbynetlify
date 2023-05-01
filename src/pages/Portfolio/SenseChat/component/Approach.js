@@ -1,51 +1,49 @@
 import React from "react"
-import { Typography, makeStyles, Grid } from "@material-ui/core"
+import { Typography, Grid } from "@mui/material"
 import { colors } from "../../../../utils/colors"
 
-const useStyles = makeStyles(theme => ({
-  divider: {
-    backgroundColor: colors.blue,
-    margin: "auto",
-    marginTop: "20px",
-    width: "74px",
-    height: "3px",
-  },
-  root: {
-    flexGrow: 1,
-    height: "fit-content",
-    marginTop: theme.spacing(0),
-    padding: theme.spacing(5),
-  },
-  tableContainer: {
-    borderWidth: 1,
-    borderTopWidth: 0,
-    borderLeftWidth: 0,
-    borderColor: "#C4C4C4",
-    backgroundColor: "#F9F9FC",
-    borderStyle: "solid",
-    width: theme.spacing(10),
-    height: theme.spacing(10),
-    padding: theme.spacing(2),
-  },
-  tableText: {
-    color: "#2C272E",
-    fontSize: "2vmin",
-    fontWeight: "700",
-    fontFamily: "Poppins",
-    margin: "auto",
-    textAlign: "center",
-  },
-  tableTextNormal: {
-    color: "#2C272E",
-    fontSize: "2vmin",
-    fontFamily: "Poppins",
-    margin: "auto",
-    textAlign: "center",
-  },
-}))
-
 const Approach = props => {
-  const classes = useStyles()
+  const classes = {
+    divider: {
+      backgroundColor: colors.blue,
+      margin: "auto",
+      marginTop: "20px",
+      width: "74px",
+      height: "3px",
+    },
+    root: {
+      flexGrow: 1,
+      height: "fit-content",
+      marginTop: 0,
+      padding: 40,
+    },
+    tableContainer: {
+      borderWidth: 1,
+      borderTopWidth: 0,
+      borderLeftWidth: 0,
+      borderColor: "#C4C4C4",
+      backgroundColor: "#F9F9FC",
+      borderStyle: "solid",
+      width: 80,
+      height: 80,
+      padding: 16,
+    },
+    tableText: {
+      color: "#2C272E",
+      fontSize: "2vmin",
+      fontWeight: "700",
+      fontFamily: "Poppins",
+      margin: "auto",
+      textAlign: "center",
+    },
+    tableTextNormal: {
+      color: "#2C272E",
+      fontSize: "2vmin",
+      fontFamily: "Poppins",
+      margin: "auto",
+      textAlign: "center",
+    },
+  }
 
   return (
     <>

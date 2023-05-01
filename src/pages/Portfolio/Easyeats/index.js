@@ -21,7 +21,7 @@ import {
   useTheme,
   useMediaQuery,
   Button,
-} from "@material-ui/core"
+} from "@mui/material"
 import Seo from "../../../components/seo"
 
 export default function EasyEats() {

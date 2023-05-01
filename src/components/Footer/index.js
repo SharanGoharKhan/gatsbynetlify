@@ -1,74 +1,70 @@
 import React from "react"
 import {
-  makeStyles,
   Grid,
   Typography,
   Box,
   Button,
   Divider,
   Link as MaterialLink,
-} from "@material-ui/core"
-
-import FacebookRound from "../../images/facebook-icon.svg"
+} from "@mui/material"
 import { Link as GatsbyLink } from "gatsby"
-import InstaRound from "../../images/instagram-icon.svg"
-import TwitterRound from "../../images/twitter-icon.svg"
-import LinkedInRound from "../../images/linkedin-icon.svg"
-import GitHub from "../../images/icons8-github-100.svg"
+import FacebookRoundedIcon from '@mui/icons-material/FacebookRounded';
+import TwitterIcon from '@mui/icons-material/Twitter';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import InstagramIcon from '@mui/icons-material/Instagram';
+import GitHubIcon from '@mui/icons-material/GitHub';
 import { colors } from "../../utils/colors"
 
-const useStyles = makeStyles(theme => ({
-  container: {
-    backgroundColor: colors.white,
-    padding: theme.spacing(10),
-    height: "fit-content",
-    textAlign: "center",
-  },
-  heading: {
-    fontSize: "3.5vmin",
-    fontWeight: 700,
-    fontFamily: "Montserrat",
-  },
-  subHeading: {
-    fontSize: "2.5vmin",
-    fontWeight: 500,
-    fontFamily: "Montserrat",
-    textAlign: "left",
-  },
-  innerText: {
-    fontWeight: 400,
-    fontSize: "2.2vmin",
-    color: colors.lightGray,
-    opacity: "60%",
-    fontFamily: "Montserrat",
-  },
-  alignLeft: {
-    textAlign: "left",
-  },
-  footerText: {
-    color: colors.lightPurple,
-    fontWeight: 500,
-    fontSize: "2vmin",
-    fontFamily: "Montserrat",
-  },
-  links: {
-    textDecoration: "none",
-    color: "gray",
-    fontSize: "2.5vmin",
-  },
-  icons: {
-    "& img": {
-      width: 30,
-      height: 30,
-    },
-  },
-}))
-
 const Footer = () => {
-  const classes = useStyles()
+  const classes = {
+    container: {
+      backgroundColor: colors.white,
+      padding: 80,
+      height: "fit-content",
+      textAlign: "center",
+    },
+    heading: {
+      fontSize: "3.5vmin",
+      fontWeight: 700,
+      fontFamily: "Montserrat",
+    },
+    subHeading: {
+      fontSize: "2.5vmin",
+      fontWeight: 500,
+      fontFamily: "Montserrat",
+      textAlign: "left",
+    },
+    innerText: {
+      fontWeight: 400,
+      fontSize: "2.2vmin",
+      color: colors.lightGray,
+      opacity: "60%",
+      fontFamily: "Montserrat",
+    },
+    alignLeft: {
+      textAlign: "left",
+    },
+    footerText: {
+      color: colors.lightPurple,
+      fontWeight: 500,
+      fontSize: "2vmin",
+      fontFamily: "Montserrat",
+    },
+    links: {
+      textDecoration: "none",
+      color: "gray",
+      fontSize: "2.5vmin",
+    },
+    icons: {
+      "& img": {
+        width: 30,
+        height: 30,
+      },
+    },
+  }
 
   return (
-    <div className={classes.container}>
+    <div style={classes.container}>
       <Grid container justify="center" spacing={6}>
         <Grid item xs={12} sm={6} md={4}>
           <Grid
@@ -79,12 +75,12 @@ const Footer = () => {
             alignItems="center"
           >
             <Grid item xs={12}>
-              <Typography className={classes.heading} gutterBottom>
+              <Typography style={classes.heading} gutterBottom>
                 Ninjas Code
               </Typography>
             </Grid>
             <Grid item xs={12}>
-              <Typography className={classes.innerText} gutterBottom>
+              <Typography style={classes.innerText} gutterBottom>
                 At our company, we value the importance of delivering an MVP in
                 the shortest possible time. To ensure efficiency and quality, we
                 employ agile development methodologies and iterative design
@@ -103,32 +99,32 @@ const Footer = () => {
             alignItems="center"
           >
             <Grid item xs={12}>
-              <Typography className={classes.subHeading} gutterBottom>
+              <Typography style={classes.subHeading} gutterBottom>
                 Quick Links
               </Typography>
             </Grid>
             <Grid item xs={12}>
-              <GatsbyLink to={"/Portfolio"} className={classes.links}>
+              <GatsbyLink to={"/Portfolio"} style={classes.links}>
                 Portfolio
               </GatsbyLink>
             </Grid>
             <Grid item xs={12}>
-              <GatsbyLink to={"/Services"} className={classes.links}>
+              <GatsbyLink to={"/Services"} style={classes.links}>
                 Services
               </GatsbyLink>
             </Grid>
             <Grid item xs={12}>
-              <GatsbyLink to={"/Career"} className={classes.links}>
+              <GatsbyLink to={"/Career"} style={classes.links}>
                 Career
               </GatsbyLink>
             </Grid>
             <Grid item xs={12}>
-              <GatsbyLink to={"/Team"} className={classes.links}>
+              <GatsbyLink to={"/Team"} style={classes.links}>
                 Team
               </GatsbyLink>
             </Grid>
             <Grid item xs={12}>
-              <GatsbyLink to={"/#contact"} className={classes.links}>
+              <GatsbyLink to={"/#contact"} style={classes.links}>
                 ContactUs
               </GatsbyLink>
             </Grid>
@@ -144,7 +140,7 @@ const Footer = () => {
             alignItems="center"
           >
             <Grid item xs={12}>
-              <Typography className={classes.subHeading} gutterBottom>
+              <Typography style={classes.subHeading} gutterBottom>
                 Follow Us
               </Typography>
             </Grid>
@@ -154,14 +150,14 @@ const Footer = () => {
               spacing={1}
               justifyContent="center"
               alignItems="center"
-              className={classes.icons}
+              style={classes.icons}
             >
               <Grid item xs={3} lg={2}>
                 <MaterialLink
                   href="https://www.facebook.com/ninjascodeofficial"
                   target="_blank"
                 >
-                  <img src={FacebookRound} alt="facebook" />
+                  <FacebookRoundedIcon style={{color: "black"}} fontSize="large"/>
                 </MaterialLink>
               </Grid>
               <Grid item xs={3} lg={2}>
@@ -169,7 +165,7 @@ const Footer = () => {
                   href="https://www.instagram.com/ninjascodeofficial/"
                   target="_blank"
                 >
-                  <img src={InstaRound} alt="instagram" />
+                  <InstagramIcon style={{color: "black"}} fontSize="large"/>
                 </MaterialLink>
               </Grid>
               <Grid item xs={3} lg={2}>
@@ -177,7 +173,7 @@ const Footer = () => {
                   href="https://www.linkedin.com/company/14512538"
                   target="_blank"
                 >
-                  <img src={LinkedInRound} alt="linkedin" />
+                  <LinkedInIcon style={{color: "black"}} fontSize="large"/>
                 </MaterialLink>
               </Grid>
               <Grid item xs={3} lg={2}>
@@ -185,15 +181,15 @@ const Footer = () => {
                   href="https://github.com/Ninjas-Code-official"
                   target="_blank"
                 >
-                  <img width="500" height="600" src={GitHub} alt="github" />
+                  <GitHubIcon style={{color: "black"}} fontSize="large"/>
                 </MaterialLink>
               </Grid>
-              <Grid item xs={5} lg={2}>
+              <Grid item xs={3} lg={2}>
                 <MaterialLink
                   href="https://twitter.com/NinjasCode1"
                   target="_blank"
                 >
-                  <img src={TwitterRound} alt="twitter" />
+                  <TwitterIcon style={{color: "black"}} fontSize="large"/>
                 </MaterialLink>
               </Grid>
             </Grid>
@@ -204,7 +200,7 @@ const Footer = () => {
         </Grid>
         <Grid item xs={12}>
           <Box style={{ display: "flex", justifyContent: "space-between" }}>
-            <Typography className={classes.footerText} gutterBottom>
+            <Typography style={classes.footerText} gutterBottom>
               Ninjas Code - © 2023 All Rights Reserved
             </Typography>
             <Box>
@@ -213,13 +209,13 @@ const Footer = () => {
                 style={{ textDecoration: "none" }}
               >
                 <Button>
-                  <Typography className={classes.footerText} gutterBottom>
+                  <Typography style={classes.footerText} gutterBottom>
                     Terms and conditions
                   </Typography>
                 </Button>
               </GatsbyLink>
               <Button>
-                <Typography className={classes.footerText} gutterBottom>
+                <Typography style={classes.footerText} gutterBottom>
                   -
                 </Typography>
               </Button>
@@ -228,7 +224,7 @@ const Footer = () => {
                 style={{ textDecoration: "none" }}
               >
                 <Button>
-                  <Typography className={classes.footerText} gutterBottom>
+                  <Typography style={classes.footerText} gutterBottom>
                     Privacy Policy
                   </Typography>
                 </Button>

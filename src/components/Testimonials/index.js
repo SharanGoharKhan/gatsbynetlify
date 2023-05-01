@@ -1,5 +1,5 @@
 import React, { useRef } from "react"
-import StarIcon from "@material-ui/icons/Star"
+import StarIcon from "@mui/icons-material/Star"
 import {
   Divider,
   Button,
@@ -10,76 +10,15 @@ import {
   CardActionArea,
   Avatar,
   CardContent,
-  makeStyles,
   Grid,
-  GridList,
-  GridListTile,
+  ImageList,
+  ImageListItem,
   IconButton,
-} from "@material-ui/core"
+  useTheme,
+} from "@mui/material"
 import ArrowLeftIcon from "../../svg/arrowLeftIcon"
 import ArrowRightIcon from "../../svg/arrowRightIcon"
 import { colors } from "../../utils/colors"
-
-const useStyles = makeStyles(theme => ({
-  root: {
-    display: "flex",
-    flexWrap: "wrap",
-    justifyContent: "space-around",
-    overflow: "hidden",
-    marginTop: 40,
-    height: "fit-content",
-    marginBottom: 100,
-    backgroundColor: theme.palette.background.paper,
-    WebkitOverflowScrolling: "touch",
-  },
-  gridList: {
-    flexWrap: "nowrap",
-    transform: "translateX(0) translateZ(0)",
-  },
-  titleText: {
-    color: colors.darkBlue,
-    fontWeight: 600,
-    padding: 20,
-    fontSize: "6vmin",
-    fontFamily: "Montserrat",
-  },
-  media: {
-    height: "10vmin",
-  },
-  large: {
-    width: theme.spacing(8),
-    height: theme.spacing(8),
-  },
-  BoxContainer: {
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "space-evenly",
-    padding: "3.8vmin",
-  },
-  cardTitle: {
-    color: colors.darkBlue,
-    fontFamily: "Montserrat",
-    fontSize: "3.8vmin",
-  },
-  cardSubTitle: {
-    color: colors.dullBlue,
-    letterSpacing: 1,
-    lineHeight: "4vmin",
-    fontFamily: "Montserrat",
-    fontSize: "2vmin",
-  },
-  divider: {
-    margin: theme.spacing(3),
-  },
-  star: {
-    color: colors.yellow,
-  },
-  paper: {
-    padding: theme.spacing(2),
-    textAlign: "center",
-    color: theme.palette.text.secondary,
-  },
-}))
 
 const tileData = [
   {
@@ -104,7 +43,68 @@ const tileData = [
 ]
 
 const Testimonial = () => {
-  const classes = useStyles()
+  const theme = useTheme()
+
+  const classes = {
+    root: {
+      display: "flex",
+      flexWrap: "wrap",
+      justifyContent: "space-around",
+      overflow: "hidden",
+      marginTop: "40px",
+      height: "fit-content",
+      marginBottom: "100px",
+      backgroundColor: theme.palette.background.paper,
+      WebkitOverflowScrolling: "touch",
+    },
+    gridList: {
+      flexWrap: "nowrap",
+      transform: "translateX(0) translateZ(0)",
+    },
+    titleText: {
+      color: colors.darkBlue,
+      fontWeight: 600,
+      padding: "20px",
+      fontSize: "6vmin",
+      fontFamily: "Montserrat",
+    },
+    media: {
+      height: "10vmin",
+    },
+    large: {
+      width: "64px",
+      height: "64px",
+    },
+    BoxContainer: {
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "space-evenly",
+      padding: "3.8vmin",
+    },
+    cardTitle: {
+      color: colors.darkBlue,
+      fontFamily: "Montserrat",
+      fontSize: "3.8vmin",
+    },
+    cardSubTitle: {
+      color: colors.dullBlue,
+      letterSpacing: 1,
+      lineHeight: "4vmin",
+      fontFamily: "Montserrat",
+      fontSize: "2vmin",
+    },
+    divider: {
+      margin: "24px",
+    },
+    star: {
+      color: colors.yellow,
+    },
+    paper: {
+      padding: "16px",
+      textAlign: "center",
+      color: theme.palette.text.secondary,
+    },
+  }
 
   const ref = useRef([])
 
@@ -147,7 +147,7 @@ const Testimonial = () => {
             Testimonials
           </Typography>
         </Button>
-        <Typography className={classes.titleText} variant="h3" gutterBottom>
+        <Typography style={classes.titleText} variant="h3" gutterBottom>
           WHAT OUR CLIENTS TELL ABOUT US
         </Typography>
         <IconButton onClick={() => scroll(-400)}>
@@ -186,29 +186,29 @@ const Testimonial = () => {
         </IconButton>
       </Grid>
       <Grid item xs={12} sm={12} md={8}>
-        <div className={classes.root}>
-          <GridList
+        <div style={classes.root}>
+          <ImageList
             cellHeight={"auto"}
-            className={classes.gridList}
+            style={classes.gridList}
             ref={ref}
             cols={matches ? 2.2 : 1.2}
           >
             {tileData.map((tile, index1) => (
-              <GridListTile key={index1}>
+              <ImageListItem key={index1}>
                 <Card elevation={5} style={{ width: "90%" }}>
                   <CardActionArea>
                     <CardContent>
-                      <Box component="span" className={classes.BoxContainer}>
+                      <Box component="span" style={classes.BoxContainer}>
                         <Avatar
                           alt={tile.name}
                           src={tile.img}
-                          className={classes.large}
+                          style={classes.large}
                         />
                         <Box component="span" m={1}>
                           <Typography
                             gutterBottom
                             variant="h5"
-                            className={classes.cardTitle}
+                            style={classes.cardTitle}
                             component="h2"
                           >
                             {tile.name}
@@ -216,17 +216,17 @@ const Testimonial = () => {
                           <Typography
                             gutterBottom
                             variant="body2"
-                            className={classes.cardSubTitle}
+                            style={classes.cardSubTitle}
                             component="p"
                           >
                             {tile.designation}
                           </Typography>
                         </Box>
                       </Box>
-                      <Divider className={classes.divider} variant="middle" />
+                      <Divider style={classes.divider} variant="middle" />
                       <Typography
                         variant="body2"
-                        className={classes.cardSubTitle}
+                        style={classes.cardSubTitle}
                         color="textSecondary"
                         component="p"
                       >
@@ -235,22 +235,22 @@ const Testimonial = () => {
                     </CardContent>
                     <Box
                       component="span"
-                      className={classes.BoxContainer}
+                      style={classes.BoxContainer}
                       m={1}
                     >
                       <Box component="span">
-                        <StarIcon className={classes.star} />
-                        <StarIcon className={classes.star} />
-                        <StarIcon className={classes.star} />
-                        <StarIcon className={classes.star} />
-                        <StarIcon className={classes.star} />
+                        <StarIcon style={classes.star} />
+                        <StarIcon style={classes.star} />
+                        <StarIcon style={classes.star} />
+                        <StarIcon style={classes.star} />
+                        <StarIcon style={classes.star} />
                       </Box>
                     </Box>
                   </CardActionArea>
                 </Card>
-              </GridListTile>
+              </ImageListItem>
             ))}
-          </GridList>
+          </ImageList>
         </div>
       </Grid>
     </Grid>

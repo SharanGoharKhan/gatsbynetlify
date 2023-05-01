@@ -1,5 +1,5 @@
 import React from "react"
-import { Typography, Box, useTheme, useMediaQuery } from "@material-ui/core"
+import { Typography, Box, useTheme, useMediaQuery } from "@mui/material"
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward"
 import "./styles.css"
 

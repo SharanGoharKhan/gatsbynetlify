@@ -1,10 +1,10 @@
 import { hot } from "react-hot-loader"
-import { Box } from "@material-ui/core"
+import { Box } from "@mui/material"
 import React from "react"
 import { Banner, BottomServices, Typos } from "../../components"
 import Layout from "../../components/layout"
-import UXImage from "../../images/ux-logo.png"
-import UXGroup from "../../images/ux-group.png"
+import UXImage from "../../images/ux-logo.webp"
+import { StaticImage } from "gatsby-plugin-image"
 import "./styles.css"
 import Seo from "../../components/seo"
 
@@ -36,7 +36,7 @@ function Ux() {
               marginBottom: "2rem",
             }}
           >
-            <img src={UXGroup} className="ux-image" alt="ux" />
+            <StaticImage src="../../images/ux-group.png" className="ux-image" alt="ux" />
           </Box>
         </div>
       </Layout>

@@ -1,4 +1,4 @@
-import { Box, Container, Grid, Paper, Typography } from "@material-ui/core"
+import { Box, Container, Grid, Paper, Typography } from "@mui/material"
 import React, { useEffect } from "react"
 import { Banner, BottomServices, Typos } from "../../components"
 import Layout from "../../components/layout"
@@ -6,13 +6,11 @@ import TeamBg from "../../images/team-bg.png"
 import "./styles.css"
 import LinkedInIcon from "@mui/icons-material/LinkedIn"
 import GitHubIcon from "@mui/icons-material/GitHub"
-import BlueCard from "../../images/strip-card-blue.png"
-import PurpleCard from "../../images/strip-card.png"
-import Behance from "../../images/behance.png"
 import Aos from "aos"
 import "aos/dist/aos.css"
 import { teamData } from "../../utils/teamData"
 import Seo from "../../components/seo"
+import { StaticImage } from "gatsby-plugin-image"
 
 export default function Team() {
   useEffect(() => {
@@ -50,11 +48,12 @@ export default function Team() {
               )}
               {teamMember1.behance && (
                 <a href={teamMember1.behance} target="_blank" rel="noreferrer">
-                  <img
-                    src={Behance}
+                  {/* <StaticImage
+                    src="../../images/behance.png"
+                    quality={40}
                     alt={teamMember1.name}
                     style={{ width: 25, height: 25 }}
-                  />
+                  /> */}
                 </a>
               )}
             </Box>
@@ -69,7 +68,7 @@ export default function Team() {
           align="center"
         >
           <Paper className="strip-container">
-            <img src={BlueCard} alt={"team"} />
+            <StaticImage src="../../images/strip-card-blue.png" quality={40} alt={"team"} />
           </Paper>
         </Box>
         <Grid item xs={6} md={4} align="center">
@@ -100,8 +99,9 @@ export default function Team() {
               )}
               {teamMember2.behance && (
                 <a href={teamMember2.behance} target="_blank" rel="noreferrer">
-                  <img
-                    src={Behance}
+                  <StaticImage
+                    src="../../images/behance.png"
+                    quality={40}
                     alt={teamMember2.name}
                     style={{ width: 25, height: 25 }}
                   />
@@ -130,7 +130,7 @@ export default function Team() {
           align="center"
         >
           <Paper className="strip-container">
-            <img src={PurpleCard} alt={"team"} />
+            <StaticImage src="../../images/strip-card.png" quality={40} alt={"team"} />
           </Paper>
         </Box>
         <Grid item xs={12} md={4} align="center">
@@ -161,8 +161,9 @@ export default function Team() {
               )}
               {teamMember.behance && (
                 <a href={teamMember.behance} target="_blank" rel="noreferrer">
-                  <img
-                    src={Behance}
+                  <StaticImage
+                    src="../../images/behance.png"
+                    quality={40}
                     alt={teamMember.name}
                     style={{ width: 25, height: 25 }}
                   />
@@ -179,7 +180,7 @@ export default function Team() {
           align="center"
         >
           <Paper className="strip-container">
-            <img src={PurpleCard} alt={"team"} />
+            <StaticImage src="../../images/strip-card.png"  quality={40} alt={"team"} />
           </Paper>
         </Box>
       </Grid>

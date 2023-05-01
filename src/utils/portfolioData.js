@@ -1,50 +1,42 @@
-import SenseChat from "../images/sense-chat.png"
-import Hpec from "../images/Hpec.png"
-import Bundl from "../images/Bundl.png"
-import Guest from "../images/Guest.png"
-import EasyEats from "../images/EasyEats-p.png"
-import GroovePacker from "../images/GroovePacker.png"
-import Zonder from "../images/Zonder.png"
-
 export const portfolioData = [
   {
-    img: SenseChat,
+    img:"sense-chat.png",
     title: "Sense",
     to: "/SenseChat/",
   },
   {
-    img: Hpec,
+    img: "Hpec.png",
     title: "HPEC",
     to: "/HPEC/",
   },
   {
-    img: Bundl,
+    img: "Bundl.png",
     title: "BUNDL",
     to: "/Bundl/",
   },
   {
-    img: Guest,
+    img: "Guest.png",
     title: "TEXTMYGUEST",
     to: "/TextMyGuest/",
   },
 ]
 export const lowerData = [
   {
-    img: EasyEats,
+    img: "EasyEats-p.png",
     title: "EASYEATS",
     cols: 2,
     rows: 2,
     to: "/Easyeats/",
   },
   {
-    img: GroovePacker,
+    img: "GroovePacker.png",
     title: "GROOVEPACKER",
     rows: 2,
     cols: 2,
     to: "/Groovepacker/",
   },
   {
-    img: Zonder,
+    img: "Zonder.png",
     title: "ZONDER",
     rows: 2,
     cols: 2,

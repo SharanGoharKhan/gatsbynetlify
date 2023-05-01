@@ -1,53 +1,15 @@
 import {
   Typography,
-  makeStyles,
   List,
   ListItem,
   ListItemText,
   Grid,
-} from "@material-ui/core"
-import Collapse from "@material-ui/core/Collapse"
-import ExpandLess from "@material-ui/icons/ExpandLess"
-import ExpandMore from "@material-ui/icons/ExpandMore"
+  Collapse,
+} from "@mui/material"
+import ExpandLessIcon from "@mui/icons-material/ExpandLess"
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore"
 import React from "react"
 import { colors } from "../../utils/colors"
-
-const useStyles = makeStyles(theme => ({
-  container: {
-    backgroundColor: colors.darkPurple,
-    margin: "2rem",
-    border: `2px solid ${colors.primary}`,
-    padding: "1.8rem",
-    display: "flex",
-    justifyContent: "space-between",
-    flexDirection: "column",
-  },
-  button: {
-    marginTop: theme.spacing(6),
-    backgroundColor: colors.blue2,
-    borderRadius: 10,
-    height: 60,
-  },
-  nested: {
-    paddingLeft: theme.spacing(4),
-  },
-  ListText: {
-    fontWeight: 500,
-    color: colors.mediumGray,
-    fontSize: "3.5vmin",
-    fontFamily: "Montserrat",
-    lineHeight: "5vmin",
-  },
-  listSubText: {
-    color: colors.gray,
-    fontSize: "2vmin",
-    fontWeight: 400,
-    letterSpacing: 0.5,
-    textAlign: "left",
-    fontFamily: "Montserrat",
-    lineHeight: "4vmin",
-  },
-}))
 
 const questions = [
   {
@@ -83,7 +45,6 @@ const questions = [
 ]
 
 const FAQ = () => {
-  const classes = useStyles()
   const [open, setOpen] = React.useState([
     false,
     false,
@@ -98,6 +59,43 @@ const FAQ = () => {
     setOpen(tempOpen)
   }
 
+  const classes = {
+    container: {
+      backgroundColor: colors.darkPurple,
+      margin: "2rem",
+      border: `2px solid ${colors.primary}`,
+      padding: "1.8rem",
+      display: "flex",
+      justifyContent: "space-between",
+      flexDirection: "column",
+    },
+    button: {
+      marginTop: 48,
+      backgroundColor: colors.blue2,
+      borderRadius: 10,
+      height: 60,
+    },
+    nested: {
+      paddingLeft: 32,
+    },
+    ListText: {
+      fontWeight: 500,
+      color: colors.mediumGray,
+      fontSize: "3.5vmin",
+      fontFamily: "Montserrat",
+      lineHeight: "5vmin",
+    },
+    listSubText: {
+      color: colors.gray,
+      fontSize: "2vmin",
+      fontWeight: 400,
+      letterSpacing: 0.5,
+      textAlign: "left",
+      fontFamily: "Montserrat",
+      lineHeight: "4vmin",
+    },
+  }
+
   return (
     <>
       {questions.map((item, index) => {
@@ -106,7 +104,7 @@ const FAQ = () => {
             <List
               component="nav"
               aria-labelledby="nested-list-subheader"
-              className={classes.container}
+              sx={classes.container}
             >
               <ListItem button onClick={() => handleClick(index)} disableRipple>
                 <ListItemText>
@@ -115,15 +113,15 @@ const FAQ = () => {
                   </Typography>
                 </ListItemText>
                 {open[index] ? (
-                  <ExpandLess style={{ color: "white" }} />
+                  <ExpandLessIcon style={{ color: "white" }} />
                 ) : (
-                  <ExpandMore style={{ color: "white" }} />
+                  <ExpandMoreIcon style={{ color: "white" }} />
                 )}
               </ListItem>
               <Collapse in={open[index]} timeout="auto" unmountOnExit>
                 <ListItemText>
                   <Typography
-                    className={classes.listSubText}
+                    sx={classes.listSubText}
                     variant="h3"
                     gutterBottom
                   >

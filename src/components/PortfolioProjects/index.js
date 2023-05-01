@@ -1,19 +1,48 @@
-import { Box, makeStyles } from "@material-ui/core"
+import { Box } from "@mui/material"
 import { ImageList, ImageListItem } from "@mui/material"
 import { Link } from "gatsby"
 import React from "react"
 import { lowerData, portfolioData } from "../../utils/portfolioData"
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
+import { graphql, useStaticQuery } from 'gatsby';
 import "./styles.css"
-const useStyles = makeStyles({
-  box: {
-    overflow: "visible",
-    "& > *": {
-      overflow: "visible !important",
-    },
-  },
-})
+
 export default function PortfolioProjects() {
-  const classes = useStyles()
+  const classes = {
+    box: {
+      overflow: "visible",
+      "& > *": {
+        overflow: "visible !important",
+      },
+    },
+  }
+  const data = useStaticQuery(graphql`
+  query {
+    allImageSharp {
+      nodes {
+        gatsbyImageData(layout: FULL_WIDTH,quality: 50)
+        parent {
+          ... on File {
+            relativePath
+          }
+        }
+      }
+    }
+  }
+`);
+
+
+  // Create a lookup table for images
+  const imageLookup = data.allImageSharp.nodes.reduce((acc, node) => {
+    const path = node.parent.relativePath;
+    acc[path] = node.gatsbyImageData;
+    return acc;
+  }, {});
+  const imageLookup1 = data.allImageSharp.nodes.reduce((acc, node) => {
+    const path = node.parent.relativePath;
+    acc[path] = node.gatsbyImageData;
+    return acc;
+  }, {});
   return (
     <Box className={classes.box}>
       <ImageList
@@ -29,14 +58,9 @@ export default function PortfolioProjects() {
             className={"imageCard"}
           >
             <Link to={`/Portfolio${item.to}`}>
-              <img
-                {...srcset(item.img, 121, item.rows, item.cols)}
-                alt={item.title}
-                loading="lazy"
-                style={{
-                  width: "100%",
-                }}
-              />
+            {imageLookup[item.img] && (
+            <GatsbyImage image={getImage(imageLookup[item.img])} alt={item.title} />
+          )}
             </Link>
           </ImageListItem>
         ))}
@@ -54,26 +78,13 @@ export default function PortfolioProjects() {
             className={"imageCard"}
           >
             <Link to={`/Portfolio${item.to}`}>
-              <img
-                {...srcset(item.img, 121, item.rows, item.cols)}
-                alt={item.title}
-                loading="lazy"
-                style={{
-                  width: "100%",
-                }}
-              />
+            {imageLookup1[item.img] && (
+            <GatsbyImage image={getImage(imageLookup1[item.img])} alt={item.title} />
+          )}
             </Link>
           </ImageListItem>
         ))}
       </ImageList>
     </Box>
   )
-}
-function srcset(image, size, rows = 1, cols = 1) {
-  return {
-    src: `${image}?w=${size * cols}&h=${size * rows}&fit=crop&auto=format`,
-    srcSet: `${image}?w=${size * cols}&h=${
-      size * rows
-    }&fit=crop&auto=format&dpr=2 2x`,
-  }
 }

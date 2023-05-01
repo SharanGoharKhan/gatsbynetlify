@@ -1,10 +1,10 @@
 import { hot } from "react-hot-loader"
-import { Box, Typography, useMediaQuery } from "@material-ui/core"
+import { Box, Typography, useMediaQuery } from "@mui/material"
 import React from "react"
 import { Banner, BottomServices, Typos } from "../../components"
 import Layout from "../../components/layout"
-import DesktopService from "../../images/desktop-banner.svg"
-import DesktopGroup from "../../images/desktop-group.png"
+import DesktopService from "../../images/desktop-banner.webp"
+import { StaticImage } from "gatsby-plugin-image"
 import { useTheme } from "@mui/material/styles"
 import "./styles.css"
 import Seo from "../../components/seo"
@@ -39,8 +39,9 @@ function Web() {
               marginBottom: "2rem",
             }}
           >
-            <img
-              src={DesktopGroup}
+            <StaticImage
+              src="../../images/desktop-group.png"
+              quality={40}
               alt="desktop"
               className={matches ? "small-desktop-image" : "desktop-image"}
             />

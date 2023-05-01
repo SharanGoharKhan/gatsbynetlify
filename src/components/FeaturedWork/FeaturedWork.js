@@ -2,41 +2,40 @@ import React from "react"
 import "./FeaturedWork.css"
 import {
   Typography,
-  makeStyles,
   Grid,
   Button,
   useTheme,
   useMediaQuery,
-} from "@material-ui/core"
-import ArrowForwardIcon from "@material-ui/icons/ArrowForward"
+} from "@mui/material"
+import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos"
 import { Link } from "gatsby"
 import { colors } from "../../utils/colors"
-
-const useStyles = makeStyles(theme => ({
-  divider: {
-    backgroundColor: colors.blue,
-    margin: "auto",
-    marginTop: theme.spacing(0),
-    width: "74px",
-    height: "2px",
-  },
-  paper: {
-    padding: theme.spacing(2),
-    color: theme.palette.text.secondary,
-  },
-  button: {
-    marginTop: theme.spacing(3),
-    backgroundColor: colors.blue2,
-    borderRadius: 10,
-    padding: theme.spacing(1),
-    marginBottom: theme.spacing(4),
-  },
-}))
 
 const FeaturedWorkComponent = props => {
   const theme = useTheme()
   const matches = useMediaQuery(theme.breakpoints.up("sm"))
-  const classes = useStyles()
+
+  const classes = {
+    divider: {
+      backgroundColor: colors.blue,
+      margin: "auto",
+      marginTop: 0,
+      width: "74px",
+      height: "2px",
+    },
+    paper: {
+      padding: 16,
+      color: theme.palette.text.secondary,
+    },
+    button: {
+      marginTop: 24,
+      backgroundColor: colors.blue2,
+      borderRadius: 10,
+      padding: 8,
+      marginBottom: 32,
+    },
+  }
+
   return (
     <div className="featureLightDiv">
       <Grid container justify="center" alignItems="center">
@@ -73,7 +72,7 @@ const FeaturedWorkComponent = props => {
               color="primary"
               size="large"
               className={classes.button}
-              endIcon={<ArrowForwardIcon />}
+              endIcon={<ArrowForwardIosIcon />}
             >
               <Typography
                 style={{

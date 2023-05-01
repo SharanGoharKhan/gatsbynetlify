@@ -1,58 +1,57 @@
 import React from "react"
 import {
   Typography,
-  makeStyles,
   Grid,
   Button,
   Link as MaterialLink,
-} from "@material-ui/core"
+  useTheme,
+} from "@mui/material"
 import enategaMobile from "../../../images/iphoneGroup.png"
-import CheckCircleSharpIcon from "@material-ui/icons/CheckCircleSharp"
-
-const useStyles = makeStyles(theme => ({
-  divider: {
-    backgroundColor: "#6FCF96",
-    margin: "auto",
-    marginTop: "40px",
-    width: "74px",
-    height: "2px",
-  },
-
-  root: {
-    flexGrow: 1,
-    backgroundColor: "#6FCF96",
-    marginTop: theme.spacing(10),
-  },
-  images1: {
-    width: "80%",
-    margin: "auto",
-    marginTop: theme.spacing(5),
-  },
-  paper: {
-    padding: theme.spacing(2),
-    elevation: 1,
-    height: 150,
-    width: 250,
-    alignContent: "center",
-    color: theme.palette.text.secondary,
-  },
-  button: {
-    textAlign: "center",
-    marginTop: theme.spacing(4),
-  },
-  buttonInner: {
-    backgroundColor: "#fff",
-    padding: theme.spacing(1),
-    // width:'3%',
-    color: "#6FCF96",
-    textAlign: "left",
-    fontFamily: "Montserrat",
-    marginBottom: 10,
-  },
-}))
+import CheckCircleOutlineIcon from "@mui/icons-material/CheckCircleOutline"
 
 const RiderAndRestaurant = props => {
-  const classes = useStyles()
+  const theme = useTheme()
+
+  const classes = {
+    divider: {
+      backgroundColor: "#6FCF96",
+      margin: "auto",
+      marginTop: "40px",
+      width: "74px",
+      height: "2px",
+    },
+
+    root: {
+      flexGrow: 1,
+      backgroundColor: "#6FCF96",
+      marginTop: 80,
+    },
+    images1: {
+      width: "80%",
+      margin: "auto",
+      marginTop: 40,
+    },
+    paper: {
+      padding: 16,
+      elevation: 1,
+      height: 150,
+      width: 250,
+      alignContent: "center",
+      color: theme.palette.text.secondary,
+    },
+    button: {
+      textAlign: "center",
+      marginTop: 32,
+    },
+    buttonInner: {
+      backgroundColor: "#fff",
+      padding: 8,
+      color: "#6FCF96",
+      textAlign: "left",
+      fontFamily: "Montserrat",
+      marginBottom: 10,
+    },
+  }
 
   return (
     <>
@@ -85,7 +84,7 @@ const RiderAndRestaurant = props => {
                 </Typography>
                 <Grid container direction="row" justify="center">
                   <Grid item xs={1}>
-                    <CheckCircleSharpIcon
+                    <CheckCircleOutlineIcon
                       style={{ fontSize: 25, color: "#fff" }}
                     />
                   </Grid>
@@ -104,7 +103,7 @@ const RiderAndRestaurant = props => {
                 </Grid>
                 <Grid container direction="row" justify="center">
                   <Grid item xs={1}>
-                    <CheckCircleSharpIcon
+                    <CheckCircleOutlineIcon
                       style={{ fontSize: 25, color: "#fff" }}
                     />
                   </Grid>
@@ -123,7 +122,7 @@ const RiderAndRestaurant = props => {
                 </Grid>
                 <Grid container direction="row" justify="center">
                   <Grid item xs={1}>
-                    <CheckCircleSharpIcon
+                    <CheckCircleOutlineIcon
                       style={{ fontSize: 25, color: "#fff" }}
                     />
                   </Grid>
@@ -142,7 +141,7 @@ const RiderAndRestaurant = props => {
                 </Grid>
                 <Grid container direction="row" justify="center">
                   <Grid item xs={1}>
-                    <CheckCircleSharpIcon
+                    <CheckCircleOutlineIcon
                       style={{ fontSize: 25, color: "#fff" }}
                     />
                   </Grid>
@@ -161,7 +160,7 @@ const RiderAndRestaurant = props => {
                 </Grid>
                 <Grid container direction="row" justify="center">
                   <Grid item xs={1}>
-                    <CheckCircleSharpIcon
+                    <CheckCircleOutlineIcon
                       style={{ fontSize: 25, color: "#fff" }}
                     />
                   </Grid>
@@ -180,7 +179,7 @@ const RiderAndRestaurant = props => {
                 </Grid>
                 <Grid container direction="row" justify="center">
                   <Grid item xs={1}>
-                    <CheckCircleSharpIcon
+                    <CheckCircleOutlineIcon
                       style={{ fontSize: 25, color: "#fff" }}
                     />
                   </Grid>
@@ -199,7 +198,7 @@ const RiderAndRestaurant = props => {
                 </Grid>
                 <Grid container direction="row" justify="center">
                   <Grid item xs={1}>
-                    <CheckCircleSharpIcon
+                    <CheckCircleOutlineIcon
                       style={{ fontSize: 25, color: "#fff" }}
                     />
                   </Grid>

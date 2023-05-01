@@ -1,13 +1,12 @@
 import React, { useEffect } from "react"
 import {
   Typography,
-  makeStyles,
   Grid,
   Button,
   useMediaQuery,
   useTheme,
   Link as MaterialLink,
-} from "@material-ui/core"
+} from "@mui/material"
 import "./Enatega.css"
 import { TopBar } from "../../components"
 import ColorScheme from "./components/ColorScheme"
@@ -21,47 +20,47 @@ import { Footer } from "../../components"
 import { StaticImage } from "gatsby-plugin-image"
 import Seo from "../../components/seo"
 
-const useStyles = makeStyles(theme => ({
-  divider: {
-    backgroundColor: "#175CFF",
-    margin: "auto",
-    marginTop: "40px",
-    width: "74px",
-    height: "2px",
-  },
-  paper: {
-    padding: theme.spacing(2),
-    color: theme.palette.text.secondary,
-  },
-  button: {
-    marginTop: theme.spacing(6),
-    backgroundColor: "#6BCF93",
-    borderRadius: 4,
-    height: 52,
-    width: 160,
-    borderWidth: 1,
-    borderColor: "#6BCF93",
-    borderStyle: "solid",
-  },
-  button2: {
-    marginTop: theme.spacing(6),
-    borderColor: "#6BCF93",
-    borderStyle: "solid",
-    borderRadius: 4,
-    borderWidth: 1,
-    backgroundColor: "transparent",
-    height: 52,
-    width: 160,
-  },
-}))
-
 const Enatega = () => {
   const theme = useTheme()
   const matches = useMediaQuery(theme.breakpoints.up("sm"))
-  const classes = useStyles()
+
   useEffect(() => {
     window.scrollTo(0, 0)
   }, [])
+
+  const classes = {
+    divider: {
+      backgroundColor: "#175CFF",
+      margin: "auto",
+      marginTop: "40px",
+      width: "74px",
+      height: "2px",
+    },
+    paper: {
+      padding: 16,
+      color: theme.palette.text.secondary,
+    },
+    button: {
+      marginTop: 48,
+      backgroundColor: "#6BCF93",
+      borderRadius: 4,
+      height: 52,
+      width: 160,
+      borderWidth: 1,
+      borderColor: "#6BCF93",
+      borderStyle: "solid",
+    },
+    button2: {
+      marginTop: 48,
+      borderColor: "#6BCF93",
+      borderStyle: "solid",
+      borderRadius: 4,
+      borderWidth: 1,
+      backgroundColor: "transparent",
+      height: 52,
+      width: 160,
+    },
+  }
 
   return (
     <>

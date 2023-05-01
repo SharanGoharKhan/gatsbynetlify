@@ -1,42 +1,42 @@
 import React from "react"
-import { Typography, makeStyles, Grid } from "@material-ui/core"
+import { Typography, Grid, useTheme } from "@mui/material"
 import { StaticImage } from "gatsby-plugin-image"
 
-const useStyles = makeStyles(theme => ({
-  divider: {
-    backgroundColor: "#175CFF",
-    margin: "auto",
-    marginTop: "20px",
-    width: "74px",
-    height: "3px",
-  },
-  root: {
-    flexGrow: 1,
-    height: "fit-content",
-    marginTop: theme.spacing(0),
-    padding: theme.spacing(5),
-  },
-  images1: {
-    width: "80%",
-    margin: "auto",
-    marginTop: theme.spacing(5),
-  },
-  paper: {
-    padding: theme.spacing(2),
-    elevation: 1,
-    height: 150,
-    width: 250,
-    alignContent: "center",
-    color: theme.palette.text.secondary,
-  },
-  imagesContainer: {
-    textAlign: "center",
-    marginTop: theme.spacing(5),
-  },
-}))
-
 const OutComeAndBenefits = props => {
-  const classes = useStyles()
+  const theme = useTheme()
+
+  const classes = {
+    divider: {
+      backgroundColor: "#175CFF",
+      margin: "auto",
+      marginTop: "20px",
+      width: "74px",
+      height: "3px",
+    },
+    root: {
+      flexGrow: 1,
+      height: "fit-content",
+      marginTop: 0,
+      padding: 40,
+    },
+    images1: {
+      width: "80%",
+      margin: "auto",
+      marginTop: 40,
+    },
+    paper: {
+      padding: 16,
+      elevation: 1,
+      height: 150,
+      width: 250,
+      alignContent: "center",
+      color: theme.palette.text.secondary,
+    },
+    imagesContainer: {
+      textAlign: "center",
+      marginTop: 40,
+    },
+  }
 
   return (
     <>

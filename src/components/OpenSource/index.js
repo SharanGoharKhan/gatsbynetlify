@@ -1,36 +1,53 @@
-import { Box } from "@material-ui/core"
+import { Box } from "@mui/material"
 import { Container, Paper, Grid, Typography } from "@mui/material"
 import React from "react"
-import Banner1 from "../../images/Banner1.png"
-import Banner2 from "../../images/Banner2.png"
-import Banner3 from "../../images/Banner3.png"
-import Banner4 from "../../images/Banner4.png"
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
+import { graphql, useStaticQuery } from 'gatsby';
 
 const gridItems = [
   {
-    image: Banner1,
+    image: "Banner1.png",
     title: "Ecommero",
     link: "https://github.com/Ninjas-Code-official/shopping-cart/",
   },
   {
-    image: Banner2,
+    image: "Banner2.png",
     title: "Enatega Single Vendor",
     link: "https://github.com/Ninjas-Code-official/Enatega-Restaurant-Solution",
   },
   {
-    image: Banner3,
+    image: "Banner3.png",
     title: "Enatega Multi Vendor",
     link:
       "https://github.com/Ninjas-Code-official/Marketplace-Food-Delivery-Solution",
   },
   {
-    image: Banner4,
+    image: "Banner4.png",
     title: "OLO Listing App",
     link: "https://github.com/Ninjas-Code-official/olxclone-backend",
   },
 ]
 
 export default function OpenSource() {
+  const data = useStaticQuery(graphql`
+  query {
+    allImageSharp {
+      nodes {
+        gatsbyImageData(layout: FULL_WIDTH,quality: 50)
+        parent {
+          ... on File {
+            relativePath
+          }
+        }
+      }
+    }
+  }
+`);
+const imageLookup = data.allImageSharp.nodes.reduce((acc, node) => {
+  const path = node.parent.relativePath;
+  acc[path] = node.gatsbyImageData;
+  return acc;
+}, {});
   return (
     <Container style={{ justifyContent: "center", display: "flex" }}>
       <Grid container spacing={2} maxWidth="md">
@@ -44,12 +61,9 @@ export default function OpenSource() {
               style={{ textDecoration: "none" }}
             >
               <Paper style={{ border: "10px solid #179afb" }}>
-                <img
-                  src={item.image}
-                  style={{ width: "100%" }}
-                  alt={item.title}
-                  data-aos="zoom-out"
-                />
+              {imageLookup[item.image] && (
+                <GatsbyImage image={getImage(imageLookup[item.image])} alt={item.title} />
+              )}
                 <Box display="flex" justifyContent="center" alignItems="center">
                   <Typography style={{ fontWeight: "bolder" }}>
                     {item.title}

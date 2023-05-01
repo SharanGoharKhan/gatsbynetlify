@@ -1,5 +1,5 @@
 import React from "react"
-import { Typography, Box } from "@material-ui/core"
+import { Typography, Box } from "@mui/material"
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward"
 import { Link as GatsbyLink } from "gatsby"
 import { colors } from "../../utils/colors"

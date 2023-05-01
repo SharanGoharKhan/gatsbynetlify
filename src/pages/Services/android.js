@@ -1,10 +1,10 @@
 import { hot } from "react-hot-loader"
-import { Box, useMediaQuery, useTheme } from "@material-ui/core"
+import { Box, useMediaQuery, useTheme } from "@mui/material"
 import React, { useEffect } from "react"
 import { Banner, BottomServices, Typos } from "../../components"
 import Layout from "../../components/layout"
-import AndroidService from "../../images/android.svg"
-import AndroidGroup from "../../images/android-group.png"
+import { StaticImage } from "gatsby-plugin-image"
+import AndroidService from "../../images/android.webp"
 import "./styles.css"
 import Aos from "aos"
 import "aos/dist/aos.css"
@@ -43,8 +43,9 @@ function Android() {
               marginBottom: "2rem",
             }}
           >
-            <img
-              src={AndroidGroup}
+            <StaticImage
+              src="../../images/android-group.png"
+              quality={40}
               className={small ? "android-image-small" : "android-image"}
               alt="android"
             />
