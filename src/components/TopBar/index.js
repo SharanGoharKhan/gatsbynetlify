@@ -127,11 +127,11 @@ const TopBar = props => {
     open={isMobileMenuOpen}
     onClose={handleMobileMenuClose}
      closeAfterTransition
-     onBackdropClick={handleMobileMenuClose}
+     //onBackdropClick={handleMobileMenuClose}
     //BackdropComponent={Backdrop}
-    BackdropProps={{
-      timeout: 500,
-    }}
+    //BackdropProps={{
+      //timeout: 500,
+    //}}
     >
       <Fade in={isMobileMenuOpen}>
         <Box

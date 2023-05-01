@@ -157,11 +157,11 @@ const IndexPage = props => {
       <Seo title="Ninjas Code" description="We Specialize in Rapid MVP" />
       <Layout home={true}>
         <Banner
-          titleMain={"We Specialize in Rapid MVP "}
-          titleSecondary={"Development and Design "}
-          subTitle={
-            "Get tangible results within a matter of weeks. We utilize agile methodologies and iterative design processes to provide custom and ready-made solutions for a wide range of industries."
-          }
+          // titleMain={"We Specialize in Rapid MVP "}
+          // titleSecondary={"Development and Design "}
+          // subTitle={
+          //   "Get tangible results within a matter of weeks. We utilize agile methodologies and iterative design processes to provide custom and ready-made solutions for a wide range of industries."
+          // }
           image={false}
         />
         <div style={{ position: "relative", margin: "10px 0px 10px 0px" }}>
