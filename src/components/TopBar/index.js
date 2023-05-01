@@ -267,7 +267,7 @@ const TopBar = props => {
             to="/"
             spy={true}
             smooth={true}
-            offset={-30}
+            //offset={-30}
             duration={500}
             style={classes.root}
           >

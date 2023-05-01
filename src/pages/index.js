@@ -1,5 +1,5 @@
 import { hot } from "react-hot-loader"
-import * as React from "react"
+import  React, {useEffect} from "react"
 import "./index.css"
 import "../components/layout.css"
 import Seo from "../components/seo"
@@ -14,6 +14,7 @@ import AddBoxOutlinedIcon from "@mui/icons-material/AddBoxOutlined"
 import FeedbackIcon from "@mui/icons-material/Feedback"
 import MonetizationOnIcon from "@mui/icons-material/MonetizationOn"
 import { Link as GatsbyLink } from "gatsby"
+import Splash from "../components/Splash"
 
 import {
   ContactUs,
@@ -44,7 +45,7 @@ import OpenSource from "../components/OpenSource"
 const IndexPage = props => {
   const theme = useTheme()
   const small = useMediaQuery(theme.breakpoints.down("sm"))
-  //const [loading, setLoading] = React.useState(true)
+  const [loading, setLoading] = React.useState(true)
   useAnimation()
 
   const classes = {
@@ -143,25 +144,35 @@ const IndexPage = props => {
     },
   }
 
-  // React.useEffect(() => {
-  //   setTimeout(() => {
-  //     setLoading(false)
-  //   }, 250)
-  // })
+  useEffect(() => {
+    const handleLoad = () => {
+      setLoading(false);
+    };
 
-  // if (loading) {
-  //   return <Splash />
-  // }
+    const maxDuration = 800; // Adjust the maximum duration as needed
+    const timer = setTimeout(handleLoad, maxDuration);
+
+    window.addEventListener('load', handleLoad);
+    return () => {
+      window.removeEventListener('load', handleLoad);
+      clearTimeout(timer);
+    };
+  }, []);
+
+
+  if (loading) {
+    return <Splash />
+  }
   return (
     <>
       <Seo title="Ninjas Code" description="We Specialize in Rapid MVP" />
       <Layout home={true}>
         <Banner
-          // titleMain={"We Specialize in Rapid MVP "}
-          // titleSecondary={"Development and Design "}
-          // subTitle={
-          //   "Get tangible results within a matter of weeks. We utilize agile methodologies and iterative design processes to provide custom and ready-made solutions for a wide range of industries."
-          // }
+          titleMain={"We Specialize in Rapid MVP "}
+          titleSecondary={"Development and Design "}
+          subTitle={
+            "Get tangible results within a matter of weeks. We utilize agile methodologies and iterative design processes to provide custom and ready-made solutions for a wide range of industries."
+          }
           image={false}
         />
         <div style={{ position: "relative", margin: "10px 0px 10px 0px" }}>

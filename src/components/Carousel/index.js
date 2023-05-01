@@ -1,22 +1,50 @@
-import React from "react"
-import "react-responsive-carousel/lib/styles/carousel.min.css" // requires a loader
-import { Carousel } from "react-responsive-carousel"
-import { carouselData } from "../../utils/carouselData"
-import StarIcon from "@mui/icons-material/Star"
-import {
-  Paper,
-  Typography,
-  Box,
-  Divider,
-  useMediaQuery,
-  useTheme,
-} from "@mui/material"
-import { colors } from "../../utils/colors"
+import React from "react";
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import { Carousel } from "react-responsive-carousel";
+import { carouselData } from "../../utils/carouselData";
+import StarIcon from "@mui/icons-material/Star";
+import Paper from "@mui/material/Paper";
+import Typography from "@mui/material/Typography";
+import Box from "@mui/material/Box";
+import Divider from "@mui/material/Divider";
+import useMediaQuery from "@mui/material/useMediaQuery";
+import { useTheme } from "@mui/material/styles";
+import { styled } from "@mui/system";
+import { colors } from "../../utils/colors";
 
+const SliderPaper = styled(Paper)(({ theme }) => ({
+  padding: theme.spacing(1),
+  maxWidth: "400px",
+  minHeight: "480px",
+  transform: "scale(0.85)",
+  backgroundColor: colors.primary,
+}));
+
+const StyledCarousel = styled(Carousel)(({ theme }) => ({
+  minHeight: "600px",
+  overflow: "visible !important",
+  display: "flex",
+  alignItems: "center",
+  "& *": {
+    overflow: "visible",
+  },
+
+  "& li": {
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  "& .selected": {
+    transform: "scale(1.18)",
+  },
+  "& .carousel-slider": {
+    margin: "auto !important",
+  },
+}));
 export default function CarouselComponent() {
   const theme = useTheme()
   const small = useMediaQuery(theme.breakpoints.down("md"))
-
+  
   const classes = {
     sliderPaper: {
       padding: "8px",
@@ -29,7 +57,7 @@ export default function CarouselComponent() {
       // maxWidth: "400px",
       // minHeight: "480px",
       // transform: "scale(0.85)",
-      // backgroundColor: colors.primary,
+      // backgroundColor: "colors.primary",
     },
 
     carousel: {
@@ -56,31 +84,31 @@ export default function CarouselComponent() {
   }
   return (
     <div style={{ width: "100%", display: "flex", justifyContent: "center" }}>
-      <Carousel
-        centerMode={small ? false : true}
-        centerSlidePercentage="33.33"
-        infiniteLoop={true}
-        dynamicHeight={true}
-        showIndicators={false}
-        showThumbs={false}
-        showArrows={false}
-        showStatus={false}
-        sx={classes.carousel}
-        autoPlay={true}
-        interval={2000}
-        width={small ? "30%" : "90%"}
+      <StyledCarousel
+       centerMode={small ? false : true}
+       centerSlidePercentage="33.33"
+       infiniteLoop={true}
+       dynamicHeight={true}
+       showIndicators={false}
+       showThumbs={false}
+       showArrows={false}
+       showStatus={false}
+       //className={classes.carousel}
+       autoPlay={true}
+       interval={3000}
+       width={small ? "30%" : "90%"}
       >
         {carouselData.map((item, index) => {
           return (
-            <Paper
+            <SliderPaper 
               //sx={`${classes.sliderPaper} ${classes.activeCard}`}
-              style={classes.sliderPaper}
+              //sx={classes.sliderPaper}
               square={true}
               key={index}
             >
               <div
                 style={{
-                  backgroundColor: "colors.white",
+                  backgroundColor: colors.white,
                   width: "100%",
                   height: "100%",
                 }}
@@ -129,6 +157,7 @@ export default function CarouselComponent() {
                       }}
                     />
                     <Typography
+                      sx={classes.bold}
                       variant="caption"
                       style={{ color: colors.primary }}
                     >
@@ -152,10 +181,10 @@ export default function CarouselComponent() {
                   {item.review}
                 </Typography>
               </div>
-            </Paper>
+            </SliderPaper >
           )
         })}
-      </Carousel>
+      </StyledCarousel>
     </div>
   )
 }
