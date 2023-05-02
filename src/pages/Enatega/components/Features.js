@@ -6,6 +6,7 @@ import Artboard3 from "../../../images/artboard3.svg"
 import Artboard4 from "../../../images/artboard4.svg"
 import Artboard5 from "../../../images/artboard5.svg"
 import Artboard6 from "../../../images/artboard6.svg"
+import Seo from "../../../components/seo"
 
 const Features = props => {
   const theme = useTheme()
@@ -36,6 +37,11 @@ const Features = props => {
 
   function FormRow(box1, box2, box3) {
     return (
+      <>
+       <Seo
+        title="Features"
+        description="Features for enatega "
+      />
       <React.Fragment>
         <Grid
           item
@@ -132,6 +138,7 @@ const Features = props => {
           </Paper>
         </Grid>
       </React.Fragment>
+      </>
     )
   }
 

@@ -2,6 +2,7 @@ import React from "react"
 import { Typography, Grid, useTheme } from "@mui/material"
 import CheckCircleOutlineIcon from "@mui/icons-material/CheckCircleOutline"
 import { StaticImage } from "gatsby-plugin-image"
+import Seo from "../../../components/seo"
 
 const Dashboard = props => {
   const theme = useTheme()
@@ -37,6 +38,10 @@ const Dashboard = props => {
 
   return (
     <>
+     <Seo
+        title="Dashboard Features"
+        description="Dashboard features for enatega "
+      />
       <div className={classes.root}>
         <Grid container direction="row">
           <Grid item xs={12} lg={7}>

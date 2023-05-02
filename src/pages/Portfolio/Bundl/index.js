@@ -38,14 +38,14 @@ export default function Bundl() {
       <Layout bar="#62d7a5" font={"#fff"} mobileGradient={"#62d7a5"}>
         <div className="bundl-background">
           <img src={BundlLogo} alt="title" />
-          <Typography
+          <h1
             variant="body1"
             align="center"
             style={{ color: "#fff", fontWeight: 800 }}
           >
             The number one destination for baby and <br />
             children's resale apparel
-          </Typography>
+          </h1>
         </div>
         <div style={{ backgroundColor: colors.white }}>
           <div className="bundl-lower-container">

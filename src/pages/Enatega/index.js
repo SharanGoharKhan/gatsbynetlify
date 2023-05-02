@@ -82,7 +82,7 @@ const Enatega = () => {
           alignItems="center"
         >
           <Grid item xs={12} md={6} sm={12}>
-            <Typography
+            <h1
               style={{
                 letterSpacing: 1,
                 fontFamily: "Montserrat",
@@ -93,7 +93,7 @@ const Enatega = () => {
               gutterBottom
             >
               Enatega
-            </Typography>
+            </h1>
             <Typography
               style={{
                 letterSpacing: 1,
