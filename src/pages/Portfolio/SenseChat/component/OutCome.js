@@ -16,37 +16,37 @@ const OutComeAndBenefits = props => {
     root: {
       flexGrow: 1,
       height: "fit-content",
-      marginTop: 0,
-      padding: 40,
+      marginTop: "0px",
+      padding: "40px",
     },
     images1: {
       width: "80%",
       margin: "auto",
-      marginTop: 40,
+      marginTop: "40px",
     },
     paper: {
-      padding: 16,
-      elevation: 1,
-      height: 150,
-      width: 250,
+      padding: "16px",
+      elevation: "1px",
+      height: "150px",
+      width: "250px",
       alignContent: "center",
       color: theme.palette.text.secondary,
     },
     imagesContainer: {
       textAlign: "center",
-      marginTop: 40,
+      marginTop: "40px",
     },
   }
 
   return (
     <>
-      <div className={classes.root}>
+      <div style={classes.root}>
         <div
           style={{
             backgroundColor: "#7F7FFF",
-            padding: 5,
+            padding: "5px",
             width: "fit-content",
-            borderRadius: 3,
+            borderRadius: "3px",
           }}
         >
           <Typography style={{ color: "#fff" }}>
@@ -58,7 +58,7 @@ const OutComeAndBenefits = props => {
           gutterBottom
           style={{
             lineHeight: "30px",
-            marginTop: 20,
+            marginTop: "20px",
             fontFamily: "Montserrat",
             fontSize: "5vmin",
             fontWeight: "700",
@@ -70,7 +70,7 @@ const OutComeAndBenefits = props => {
           variant="h5"
           gutterBottom
           style={{
-            marginTop: 10,
+            marginTop: "10px",
             lineHeight: "30px",
             fontFamily: "Montserrat",
             fontSize: "2vh",
@@ -85,23 +85,23 @@ const OutComeAndBenefits = props => {
         </Typography>
         {/* <Typography variant="h5" gutterBottom style={{ marginTop: 10, fontFamily: 'Montserrat', fontSize: 16 }}>the user should never have to leave the app</Typography> */}
         {/* <Typography variant="h5" gutterBottom style={{ marginTop: 10, fontFamily: 'Montserrat', fontSize: 16 }}>The onboarding should behave similarly on both platforms - iOS and Androtechnologies we use for the solution must be available on all users’ mobile devices.</Typography> */}
-        <div className={classes.imagesContainer}>
+        <div style={classes.imagesContainer}>
           <Grid container justify="center" alignItems="center">
             <Grid item xs={12} sm={6} md={3}>
               <StaticImage
-                style={{ width: "36vmin" }}
+                style={{ width: "36vmin", paddingTop: "50px" }}
                 src="../../../../images/Mockup7.svg"
               />
             </Grid>
             <Grid item xs={12} sm={6} md={3}>
               <StaticImage
-                style={{ width: "36vmin" }}
+                style={{ width: "36vmin", paddingTop: "50px" }}
                 src={"../../../../images/Mockup8.svg"}
               />
             </Grid>
             <Grid item xs={12} sm={6} md={3}>
               <StaticImage
-                style={{ width: "36vmin" }}
+                style={{ width: "36vmin", paddingTop: "50px" }}
                 src="../../../../images/Mockup9.svg"
               />
             </Grid>

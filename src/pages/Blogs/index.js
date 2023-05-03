@@ -20,6 +20,7 @@ import Blog4 from "../../images/blog4.png"
 import Blog5 from "../../images/blog5.png"
 import Blog6 from "../../images/blog6.png"
 import { ContactUs, Footer, TopBar } from "../../components"
+import Seo from "../../components/seo"
 
 const Blogs = () => {
   const theme = useTheme()
@@ -73,6 +74,10 @@ const Blogs = () => {
 
   return (
     <>
+     <Seo
+        title="Blogs and news"
+        description="We're like to write about latest technologies!"
+      />
       <TopBar barColor="#3751FF" fontColor="#fff" />
       <div id="feature" className={classes.root}>
         <div
@@ -82,7 +87,7 @@ const Blogs = () => {
             textAlign: "center",
           }}
         >
-          <Typography
+          <h1
             style={{
               fontWeight: 700,
               fontSize: "6vmin",
@@ -92,7 +97,7 @@ const Blogs = () => {
             gutterBottom
           >
             Blogs and News
-          </Typography>
+          </h1>
           <Typography
             style={{
               fontWeight: 400,
@@ -512,6 +517,7 @@ const Blogs = () => {
             </Card>
           </Grid>
         </Grid>
+        
       </div>
       <ContactUs />
       <Footer />

@@ -1,5 +1,6 @@
 import React from "react"
 import { Divider, Typography, Grid, useTheme } from "@mui/material"
+import Seo from "../../../components/seo"
 
 const ColorScheme = props => {
   const theme = useTheme()
@@ -41,6 +42,10 @@ const ColorScheme = props => {
 
   return (
     <>
+     <Seo
+        title="Color Scheme"
+        description="Colors are picked carefully to match the asthetic of the App Design"
+      />
       <div className={classes.root}>
         <Typography
           variant="h5"
