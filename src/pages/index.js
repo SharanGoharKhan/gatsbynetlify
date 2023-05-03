@@ -45,7 +45,7 @@ import OpenSource from "../components/OpenSource"
 const IndexPage = props => {
   const theme = useTheme()
   const small = useMediaQuery(theme.breakpoints.down("sm"))
-  //const [loading, setLoading] = React.useState(true)
+  const [loading, setLoading] = React.useState(true)
   useAnimation()
 
   const classes = {
@@ -144,25 +144,25 @@ const IndexPage = props => {
     },
   }
 
-  // useEffect(() => {
-  //   const handleLoad = () => {
-  //     setLoading(false);
-  //   };
+  useEffect(() => {
+    const handleLoad = () => {
+      setLoading(false);
+    };
 
-  //   const maxDuration = 800; // Adjust the maximum duration as needed
-  //   const timer = setTimeout(handleLoad, maxDuration);
+    const maxDuration = 800; // Adjust the maximum duration as needed
+    const timer = setTimeout(handleLoad, maxDuration);
 
-  //   window.addEventListener('load', handleLoad);
-  //   return () => {
-  //     window.removeEventListener('load', handleLoad);
-  //     clearTimeout(timer);
-  //   };
-  // }, []);
+    window.addEventListener('load', handleLoad);
+    return () => {
+      window.removeEventListener('load', handleLoad);
+      clearTimeout(timer);
+    };
+  }, []);
 
 
-  // if (loading) {
-  //   return <Splash />
-  // }
+  if (loading) {
+    return <Splash />
+  }
   return (
     <>
       <Seo title="Ninjas Code" description="We Specialize in Rapid MVP" />

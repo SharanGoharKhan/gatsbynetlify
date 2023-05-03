@@ -50,9 +50,9 @@ export default function EasyEats() {
               alt="berries"
               className="berries"
               style={{
-                width: small && 120,
-                top: 0,
-                left: 0,
+                width: small && "120px",
+                top: "0px",
+                left: "0px",
               }}
             />
             <img
@@ -84,7 +84,7 @@ export default function EasyEats() {
               <Typography
                 align="center"
                 variant="body2"
-                style={{ fontWeight: "900" }}
+                style={{ fontWeight: "900px" }}
               >
                 PROCESS
               </Typography>
@@ -196,7 +196,7 @@ export default function EasyEats() {
                 <div className="color-cube">
                   <Typography
                     variant="caption"
-                    style={{ color: "white", fontWeight: 900 }}
+                    style={{ color: "white", fontWeight: "900px" }}
                   >
                     #7CAE33
                   </Typography>
@@ -205,7 +205,7 @@ export default function EasyEats() {
                   className="color-cube"
                   style={{ backgroundColor: "white" }}
                 >
-                  <Typography variant="caption" style={{ fontWeight: 900 }}>
+                  <Typography variant="caption" style={{ fontWeight: "900px" }}>
                     #FFFFFF
                   </Typography>
                 </div>

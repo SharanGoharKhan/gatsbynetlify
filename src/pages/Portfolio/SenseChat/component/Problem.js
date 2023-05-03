@@ -14,38 +14,38 @@ const Problem = props => {
       height: "3px",
     },
     root: {
-      flexGrow: 1,
+      flexGrow: "1px",
       height: "fit-content",
-      padding: 40,
+      padding: "40px",
     },
     images1: {
       width: "80%",
       margin: "auto",
-      marginTop: 40,
+      marginTop: "40px",
     },
     paper: {
-      padding: 16,
+      padding: "16px",
       elevation: 1,
-      height: 150,
-      width: 250,
+      height: "150px",
+      width: "250px",
       alignContent: "center",
       color: theme.palette.text.secondary,
     },
     imagesContainer: {
       textAlign: "center",
-      marginTop: 40,
+      marginTop: "40px",
     },
   }
 
   return (
     <>
-      <div className={classes.root}>
+      <div style={classes.root}>
         <div
           style={{
             backgroundColor: "#7F7FFF",
-            padding: 5,
+            padding: "5px",
             width: "fit-content",
-            borderRadius: 3,
+            borderRadius: "3px",
           }}
         >
           <Typography style={{ color: "#fff" }}>2. Problem</Typography>
@@ -55,7 +55,7 @@ const Problem = props => {
           gutterBottom
           style={{
             lineHeight: "5vmin",
-            marginTop: 20,
+            marginTop: "20px",
             fontFamily: "Montserrat",
             fontSize: "5vmin",
             fontWeight: "bolder",
@@ -67,7 +67,7 @@ const Problem = props => {
           variant="h5"
           gutterBottom
           style={{
-            marginTop: 10,
+            marginTop: "10px",
             lineHeight: "4vmin",
             fontFamily: "Montserrat",
             fontSize: "2.5vmin",
@@ -82,7 +82,7 @@ const Problem = props => {
           variant="h5"
           gutterBottom
           style={{
-            marginTop: 10,
+            marginTop: "10px",
             fontFamily: "Montserrat",
             lineHeight: "4vmin",
             fontSize: "2.5vmin",
@@ -92,7 +92,7 @@ const Problem = props => {
             style={{ fontWeight: "bold", fontSize: "3vmin", display: "inline" }}
           >
             {" "}
-            *{" "}
+            ●{" "}
           </Typography>
           The codebase should have 100% complete code coverage using test driven
           development
@@ -101,7 +101,7 @@ const Problem = props => {
           variant="h5"
           gutterBottom
           style={{
-            marginTop: 10,
+            marginTop: "10px",
             lineHeight: "4vmin",
             fontFamily: "Montserrat",
             fontSize: "2.5vmin",
@@ -139,7 +139,7 @@ const Problem = props => {
           variant="h5"
           gutterBottom
           style={{
-            marginTop: 10,
+            marginTop: "10px",
             lineHeight: "4vmin",
             fontFamily: "Montserrat",
             fontSize: "2.5vmin",
@@ -176,7 +176,7 @@ const Problem = props => {
           variant="h5"
           gutterBottom
           style={{
-            marginTop: 10,
+            marginTop: "10px",
             lineHeight: "4vmin",
             fontFamily: "Montserrat",
             fontSize: "2.5vmin",
@@ -192,23 +192,23 @@ const Problem = props => {
           to make the product better than the previous iteration writing tests
           for every code so we have battle tested code.
         </Typography>
-        <div className={classes.imagesContainer}>
+        <div style={classes.imagesContainer}>
           <Grid container justify="center" alignItems="center">
             <Grid item xs={12} sm={6} md={3}>
               <StaticImage
-                style={{ width: "36vmin" }}
+                style={{ width: "36vmin", paddingTop: "50px" }}
                 src={"../../../../images/Mockup1.svg"}
               />
             </Grid>
             <Grid item xs={12} sm={6} md={3}>
               <StaticImage
-                style={{ width: "36vmin" }}
+                style={{ width: "36vmin", paddingTop: "50px" }}
                 src={"../../../../images/Mockup2.svg"}
               />
             </Grid>
             <Grid item xs={12} sm={6} md={3}>
               <StaticImage
-                style={{ width: "36vmin" }}
+                style={{ width: "36vmin", paddingTop: "50px" }}
                 src={"../../../../images/Mockup1.svg"}
               />
             </Grid>

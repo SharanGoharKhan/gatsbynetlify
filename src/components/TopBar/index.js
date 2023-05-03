@@ -285,7 +285,7 @@ const TopBar = props => {
           <Box sx={classes.sectionDesktop}>
             <GatsbyLink
               style={{
-                color: props.fontColor,
+                color: "props.fontColor",
                 position: "relative",
                 overflow: "visible",
               }}
@@ -317,7 +317,7 @@ const TopBar = props => {
                         <Typography
                           variant="body2"
                           textAlign="center"
-                          style={{ color: props.subMenuText }}
+                          style={{ color: "black" }}
                         >
                           {setting.name}
                         </Typography>
@@ -341,7 +341,7 @@ const TopBar = props => {
               Portfolio
             </GatsbyLink>
 
-            <GatsbyLink
+            {/* <GatsbyLink
               style={{ color: props.fontColor }}
               className={
                 props.fontColor === colors.white
@@ -352,7 +352,7 @@ const TopBar = props => {
               to="/Career"
             >
               Career
-            </GatsbyLink>
+            </GatsbyLink> */}
             <GatsbyLink
               style={{ color: props.fontColor }}
               className={

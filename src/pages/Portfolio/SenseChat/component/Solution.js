@@ -19,36 +19,36 @@ const Solution = props => {
     root: {
       flexGrow: 1,
       height: "fit-content",
-      marginTop: 0,
-      padding: 40,
+      marginTop: "0px",
+      padding: "40px",
     },
     images1: {
       width: "80%",
       margin: "auto",
-      marginTop: 40,
+      marginTop: "40px",
     },
     paper: {
-      padding: 16,
-      elevation: 1,
-      height: 150,
-      width: 250,
+      padding: "16px",
+      elevation: "1px",
+      height: "150px",
+      width: "250px",
       alignContent: "center",
       color: theme.palette.text.secondary,
     },
     topConatainer: {
-      marginTop: 40,
+      marginTop: "40px",
     },
   }
 
   return (
     <>
-      <div className={classes.root}>
+      <div style={classes.root}>
         <div
           style={{
             backgroundColor: "#7F7FFF",
-            padding: 5,
+            padding: "5px",
             width: "fit-content",
-            borderRadius: 3,
+            borderRadius: "3px",
           }}
         >
           <Typography style={{ color: "#fff" }}>4. Solution</Typography>
@@ -57,10 +57,10 @@ const Solution = props => {
           variant="h5"
           gutterBottom
           style={{
-            marginTop: 20,
+            marginTop: "20px",
             fontFamily: "Poppins",
             fontSize: "5vmin",
-            letterSpacing: 1,
+            letterSpacing: "1px",
             fontWeight: "700",
           }}
         >
@@ -73,7 +73,7 @@ const Solution = props => {
                 variant="h5"
                 gutterBottom
                 style={{
-                  marginTop: 10,
+                  marginTop: "10px",
                   fontFamily: "Poppins",
                   fontSize: "90%",
                 }}
@@ -88,7 +88,7 @@ const Solution = props => {
                 variant="h5"
                 gutterBottom
                 style={{
-                  marginTop: 10,
+                  marginTop: "10px",
                   fontFamily: "Poppins",
                   fontSize: "90%",
                 }}
@@ -162,7 +162,7 @@ const Solution = props => {
             </Grid>
           </Grid>
         </div>
-        <div className={classes.topConatainer}>
+        <div style={classes.topConatainer}>
           <Grid container justify="center" alignItems="center">
             <Grid item xs={12} direction="row" justify="flex-end" md={4}>
               <img alt="sense.chat" style={{ width: "35vmin" }} src={Mockup5} />
@@ -172,7 +172,7 @@ const Solution = props => {
                 variant="h5"
                 gutterBottom
                 style={{
-                  marginTop: 10,
+                  marginTop: "10px",
                   lineHeight: "30px",
                   fontFamily: "Poppins",
                   fontSize: "90%",
@@ -185,7 +185,7 @@ const Solution = props => {
                 variant="h5"
                 gutterBottom
                 style={{
-                  marginTop: 10,
+                  marginTop: "10px",
                   lineHeight: "30px",
                   fontFamily: "Poppins",
                   fontSize: "90%",
@@ -206,14 +206,14 @@ const Solution = props => {
             </Grid>
           </Grid>
         </div>
-        <div className={classes.topConatainer}>
+        <div style={classes.topConatainer}>
           <Grid container spacing={10} justify="center" alignItems="center">
             <Grid item xs={12} direction="row" md={8}>
               <Typography
                 variant="h5"
                 gutterBottom
                 style={{
-                  marginTop: 10,
+                  marginTop: "10px",
                   lineHeight: "30px",
                   fontFamily: "Poppins",
                   fontSize: "90%",

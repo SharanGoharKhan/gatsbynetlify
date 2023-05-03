@@ -36,7 +36,7 @@ const Introduction = props => {
 
   return (
     <>
-      <div className={classes.root}>
+      <div style={classes.root}>
         <div
           style={{
             backgroundColor: "#7F7FFF",

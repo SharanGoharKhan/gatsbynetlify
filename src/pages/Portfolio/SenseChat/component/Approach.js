@@ -14,19 +14,19 @@ const Approach = props => {
     root: {
       flexGrow: 1,
       height: "fit-content",
-      marginTop: 0,
-      padding: 40,
+      marginTop: "0px",
+      padding: "40px",
     },
     tableContainer: {
-      borderWidth: 1,
-      borderTopWidth: 0,
-      borderLeftWidth: 0,
+      borderWidth: "1px",
+      borderTopWidth: "0px",
+      borderLeftWidth: "0px",
       borderColor: "#C4C4C4",
       backgroundColor: "#F9F9FC",
       borderStyle: "solid",
-      width: 80,
-      height: 80,
-      padding: 16,
+      width: "80px",
+      height: "80px",
+      padding: "16px",
     },
     tableText: {
       color: "#2C272E",
@@ -47,7 +47,7 @@ const Approach = props => {
 
   return (
     <>
-      <div className={classes.root}>
+      <div style={classes.root}>
         <div
           style={{
             backgroundColor: "#7F7FFF",
@@ -63,7 +63,7 @@ const Approach = props => {
           gutterBottom
           style={{
             lineHeight: "40px",
-            marginTop: 20,
+            marginTop: "20px",
             fontFamily: "Montserrat",
             fontSize: "5vmin",
             fontWeight: "700",
@@ -75,7 +75,7 @@ const Approach = props => {
           variant="h5"
           gutterBottom
           style={{
-            marginTop: 10,
+            marginTop: "10px",
             lineHeight: "4vmin",
             fontFamily: "Montserrat",
             fontSize: "2.5vmin",
@@ -89,7 +89,7 @@ const Approach = props => {
           variant="h5"
           gutterBottom
           style={{
-            marginTop: 10,
+            marginTop: "10px",
             lineHeight: "4vmin",
             fontFamily: "Montserrat",
             fontSize: "2.5vmin",
@@ -104,30 +104,30 @@ const Approach = props => {
         </Typography>
         <Grid container justify="center" alignItems="center">
           <Grid
-            className={classes.tableContainer}
+            style={classes.tableContainer}
             item
             direction="row"
             justify="center"
             alignItems="flex-end"
             xs={4}
           >
-            <Typography className={classes.tableText}>Functionality</Typography>
+            <Typography style={classes.tableText}>Functionality</Typography>
           </Grid>
-          <Grid className={classes.tableContainer} item xs={4}>
-            <Typography className={classes.tableText}>ios support</Typography>
+          <Grid style={classes.tableContainer} item xs={4}>
+            <Typography style={classes.tableText}>ios support</Typography>
           </Grid>
           <Grid
-            className={[classes.tableContainer]}
+            sx={[classes.tableContainer]}
             style={{ borderRightWidth: 0 }}
             item
             xs={4}
           >
-            <Typography className={classes.tableText}>
+            <Typography style={classes.tableText}>
               Android support
             </Typography>
           </Grid>
           <Grid
-            className={classes.tableContainer}
+            sx={classes.tableContainer}
             style={{ backgroundColor: colors.white }}
             item
             direction="row"
@@ -135,51 +135,51 @@ const Approach = props => {
             alignItems="flex-end"
             xs={4}
           >
-            <Typography className={classes.tableText}>
+            <Typography style={classes.tableText}>
               getstream.io for chat functionality
             </Typography>
           </Grid>
           <Grid
-            className={classes.tableContainer}
+            sx={classes.tableContainer}
             style={{ backgroundColor: colors.white }}
             item
             xs={4}
           >
-            <Typography className={classes.tableTextNormal}>Yes</Typography>
+            <Typography style={classes.tableTextNormal}>Yes</Typography>
           </Grid>
           <Grid
-            className={[classes.tableContainer]}
+            sx={[classes.tableContainer]}
             style={{ borderRightWidth: 0, backgroundColor: colors.white }}
             item
             xs={4}
           >
-            <Typography className={classes.tableTextNormal}>Yes</Typography>
+            <Typography style={classes.tableTextNormal}>Yes</Typography>
           </Grid>
           <Grid
-            className={classes.tableContainer}
+            style={classes.tableContainer}
             item
             direction="row"
             justify="center"
             alignItems="flex-end"
             xs={4}
           >
-            <Typography className={classes.tableText}>
+            <Typography style={classes.tableText}>
               Functional test, unit tests and end to end testing
             </Typography>
           </Grid>
-          <Grid className={classes.tableContainer} item xs={4}>
-            <Typography className={classes.tableTextNormal}>Yes</Typography>
+          <Grid style={classes.tableContainer} item xs={4}>
+            <Typography style={classes.tableTextNormal}>Yes</Typography>
           </Grid>
           <Grid
-            className={[classes.tableContainer]}
+            sx={[classes.tableContainer]}
             style={{ borderRightWidth: 0 }}
             item
             xs={4}
           >
-            <Typography className={classes.tableTextNormal}>Yes</Typography>
+            <Typography style={classes.tableTextNormal}>Yes</Typography>
           </Grid>
           <Grid
-            className={classes.tableContainer}
+            sx={classes.tableContainer}
             style={{ backgroundColor: colors.white }}
             item
             direction="row"
@@ -187,48 +187,48 @@ const Approach = props => {
             alignItems="flex-end"
             xs={4}
           >
-            <Typography className={classes.tableText}>
+            <Typography style={classes.tableText}>
               Using cross platform share feature using Branch.io
             </Typography>
           </Grid>
           <Grid
-            className={classes.tableContainer}
+            sx={classes.tableContainer}
             style={{ backgroundColor: colors.white }}
             item
             xs={4}
           >
-            <Typography className={classes.tableTextNormal}>Yes</Typography>
+            <Typography style={classes.tableTextNormal}>Yes</Typography>
           </Grid>
           <Grid
-            className={[classes.tableContainer]}
+            sx={[classes.tableContainer]}
             style={{ borderRightWidth: 0, backgroundColor: colors.white }}
             item
             xs={4}
           >
-            <Typography className={classes.tableTextNormal}>Yes</Typography>
+            <Typography style={classes.tableTextNormal}>Yes</Typography>
           </Grid>
           <Grid
-            className={classes.tableContainer}
+            style={classes.tableContainer}
             item
             direction="row"
             justify="center"
             alignItems="flex-end"
             xs={4}
           >
-            <Typography className={classes.tableText}>
+            <Typography style={classes.tableText}>
               Using fluid navigation using React Navigation
             </Typography>
           </Grid>
-          <Grid className={classes.tableContainer} item xs={4}>
-            <Typography className={classes.tableTextNormal}>Yes</Typography>
+          <Grid style={classes.tableContainer} item xs={4}>
+            <Typography style={classes.tableTextNormal}>Yes</Typography>
           </Grid>
           <Grid
-            className={[classes.tableContainer]}
+            sx={[classes.tableContainer]}
             style={{ borderRightWidth: 0 }}
             item
             xs={4}
           >
-            <Typography className={classes.tableTextNormal}>Yes</Typography>
+            <Typography style={classes.tableTextNormal}>Yes</Typography>
           </Grid>
         </Grid>
       </div>

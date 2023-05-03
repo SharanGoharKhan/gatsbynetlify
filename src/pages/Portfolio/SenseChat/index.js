@@ -31,7 +31,7 @@ const SenseChat = () => {
             lineHeight: "60px",
             textAlign: "center",
             fontFamily: "Montserrat",
-            fontSize: 30,
+            fontSize: "30px",
             color: "#fff",
           }}
         >
@@ -42,7 +42,7 @@ const SenseChat = () => {
             textAlign: "center",
             width: "40%",
             margin: "auto",
-            marginBottom: 50,
+            marginBottom: "50px",
             fontFamily: "Montserrat",
             color: "#fff",
           }}
@@ -50,7 +50,7 @@ const SenseChat = () => {
           A new messenger built to communicate, organize, and reward your
           communities and friends.
         </Typography>
-        <div style={{ textAlign: "center", height: 200 }}>
+        <div style={{ textAlign: "center", height: "200px" }}>
           <img
             style={{ width: "53vmin", height: "70vmin" }}
             src={Chat}
@@ -58,15 +58,16 @@ const SenseChat = () => {
           />
         </div>
       </div>
-      <div style={{ textAlign: "center", marginTop: 250 }}>
+      <div style={{ textAlign: "center", marginTop: "250px" }}>
         <FormatQuoteIcon style={{ color: "#5150A4", fontSize: 30 }} />
         <Typography
           style={{
             textAlign: "center",
             width: "40%",
             margin: "auto",
-            marginBottom: 30,
+            marginBottom: "30px",
             fontFamily: "Montserrat",
+            marginTop: "100px"
           }}
         >
           Ninjas Code has the best software developers I have worked with. They
@@ -89,7 +90,7 @@ const SenseChat = () => {
           style={{
             textAlign: "center",
             width: "40%",
-            fontSize: 12,
+            fontSize: "12px",
             opacity: 0.3,
             fontWeight: "600",
             margin: "auto",
@@ -109,7 +110,7 @@ const SenseChat = () => {
         disableRipple
         target="_blank"
         className="sense-btn"
-        href="https://sense.chat/"
+        href="https://www.sensetoken.com/"
       >
         Visit Webiste
       </Button>
